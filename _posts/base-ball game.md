@@ -1,0 +1,169 @@
+---
+layout: post
+title:  "base-ball game coding"
+date:   2018-06-18 11:30:00 +0900
+categories: jekyll update
+---
+
+# main method 하나에 다 때려박기
+
+
+# 연습한 것
+
+	import java.util.Scanner;
+	class BaseBallGame{
+	public static void main(String[] args){
+	int[] ran = new int[3];
+	int[] sel = new int[3];
+	Scanner sc = new Scanner(System.in);
+	// 번호 생성 (0~9사이의 중복되지 않는 랜덤한 정수를 int[]형으로 반환)
+	for (int i = 0; i < 3 ; i++){
+		ran[i] = (int)((Math.random() * 10));
+		for (int j = 0; j < 3 ; j++){
+			if (ran[i] == ran[j] && i != j){
+				ran[i] = (int)((Math.random() * 10));
+				i--;
+				break;
+			}// if
+		}// ifor
+	}// ofor
+	// 번호 맞추기 입력
+
+	int strike = 0;
+	int ball = 0;
+	int out = 0;
+	while (true){
+	strike = 0;
+	ball = 0; // 볼카운트 초기화
+	for (int i = 0; i < 3 ; i++){
+		System.out.print((i+1) + "번째숫자를 입력하시오: ");
+		sel[i] = sc.nextInt();
+		for (int j = 0; j <= i ; j++){
+			if (sel[i] > 9 || sel[i] < 0){
+				System.out.printf("범위를 벗어났습니다. 다시 입력해 주세요%n");
+				i--;
+				break;
+			}else if (sel[i] == sel[j] && i !=j){
+				System.out.printf("중복값을 입력하셨습니다. 다시 입력해 주세요!%n");
+				i--;
+				break;
+			}// if
+		}// ifor
+	}// ofor
+
+	for (int i = 0; i < 3 ; i++){
+		System.out.printf(sel[i] + " ");
+	}// 입력한 숫자를 뿌려주는 for
+		System.out.println();
+
+	for (int i = 0; i < 3; i++){
+		for (int j = 0; j < 3; j++){
+			if ( i == j && sel[i] == ran[j]){
+				strike++;
+			}
+			if (i!=j && sel[i]==ran[j]){
+				ball++;
+			}// S와 B를 비교하는if
+		}// ifor
+	}// ofor
+	out++; // 시도횟수 카운트 
+	System.out.printf("이번 결과는 %d스트라이크 %d볼입니다. 현재%dout%n", strike, ball, out);
+
+	if (strike == 3){
+		System.out.printf("축하합니다. 당신이 승리하셨습니다. 시도횟수 %dout%n", out);
+	break;
+	} else if (out == 10){
+		System.out.printf("안타깝지만. 당신은 패배자!.%n");
+		break;
+	} // 결과를 뿌려주는 if
+	}// while
+	}// main
+	}
+
+  
+  
+
+	import java.util.*;
+	class BaseBallGameMethod{
+	public static void main(String[] args){
+		baseBall();
+	} // main
+
+	public static void baseBall(){
+		int[] ran = new int[3];
+		int[] sel = new int[3];
+		int count = 0;
+
+		randomNum(ran);
+		while (true){
+		count++;
+		selNum(sel);
+		int s = testNum(count, ran, sel);
+		if (s == 3){
+			System.out.printf("올ㅋ 좀하는데?%n");
+			break;
+		}
+		if (count == 10){
+			System.out.printf("당신은 패배자 ㅋㅋㅋㅋㅋㅋㅋㅋ%n");
+			break;
+		}// if
+		}// while
+	}// baseBall
+
+	public static void randomNum(int[] ran){
+		for (int i = 0; i < 3 ; i++){
+			ran[i] = (int)(Math.random() * 10);
+			for (int j = 0; j <= i ; j++){
+				if (ran[i] == ran[j] && i !=j){
+					i--;
+					break;
+				}// if
+			}// ifor
+		}// ofor
+	}// randomNum
+
+	public static void selNum(int[] sel){
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < 3 ; i++){
+			System.out.printf("%d번째 번호를 입력해 주세요: ", i+1);
+			sel[i] = sc.nextInt();
+			for (int j = 0; j <= i; j++){
+				if (sel[i] < 0 || sel[i] > 9){
+					System.out.printf("0~9만 입력하라고!쫌!%n");
+					i--;
+					break;
+				} else if (sel[i] == sel[j] && i !=j){
+					System.out.printf("중뷁!%n");
+					i--;
+					break;
+				}// if
+			}// ifor
+		}// ofor
+		for (int i = 0; i < 3; i++){
+			System.out.printf("%d ", sel[i]);
+		}
+		System.out.println();
+	}// selNum
+	public static int testNum(int count, int[] ran, int[] sel){
+		int strike = 0;
+		int ball = 0;
+		for (int i = 0; i < 3; i++){
+			for (int j = 0; j < 3; j++){
+				if (ran[i] == sel[j] && i == j){
+					strike +=1;
+				} else if (ran[i] == sel[j] && i !=j){
+					ball +=1;
+				}// if
+			}// ifor
+		}// ofor
+		System.out.printf("%d스트라이크! %d볼! (시도횟수: %d)%n", strike, ball, count);
+		return strike;
+	}// testNum
+	}// class
+
+
+# method 분류시키기
+
+# class 분류시키기
+
+# 실무수준 코딩규약 따라서 base-ball game 업그레이드
