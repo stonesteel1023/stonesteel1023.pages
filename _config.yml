@@ -2,7 +2,7 @@
 title:              Stonesteel's home
 bio:                'Pro "Grammar" 돈 받고 글 짓는 사람'
 description:        "돈 받고 글 짓는 사람"
-reading_time:       true
+reading_time:       false
 words_per_minute:   200
 logo:               'assets/img/stonesteel.jpg'
 background:         'assets/img/placeholder-big.jpg'
