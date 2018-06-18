@@ -4,7 +4,7 @@ bio:                'Pro "Grammar" 돈 받고 글 짓는 사람'
 description:        "돈 받고 글 짓는 사람"
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.jpg'
+logo:               'assets/img/stonesteel.jpg'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           true   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
