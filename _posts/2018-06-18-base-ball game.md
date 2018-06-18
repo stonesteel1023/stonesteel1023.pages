@@ -9,10 +9,10 @@ tag:
 comments: true
 ---
 
-# main method 하나에 다 때려박기
+## main method 하나에 다 때려박기
 
 
-# 연습한 것
+## 연습한 것
 
 	import java.util.Scanner;
 	class BaseBallGame{
@@ -166,8 +166,8 @@ comments: true
 	}// class
 
 
-# method 분류시키기
+## method 분류시키기
 
-# class 분류시키기
+## class 분류시키기
 
-# 실무수준 코딩규약 따라서 base-ball game 업그레이드
+## 실무수준 코딩규약 따라서 base-ball game 업그레이드
