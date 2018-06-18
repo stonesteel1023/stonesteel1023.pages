@@ -2,7 +2,11 @@
 layout: post
 title:  "base-ball game coding"
 date:   2018-06-18 11:30:00 +0900
-categories: jekyll update
+excerpt: "main method 하나에 다 때려박기"
+project: true
+tag:
+- 야구게임 
+comments: true
 ---
 
 # main method 하나에 다 때려박기
