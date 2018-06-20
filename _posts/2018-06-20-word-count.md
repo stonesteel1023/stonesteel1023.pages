@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "wordCounter"
+title:  "여러가지 방법으로 코딩해보기"
 date:   2018-06-20
-excerpt: "wordCounter"
-project: true
+categories: wordCounter
 tag:
 - wordCounter 
 - 글자세기
@@ -25,21 +24,19 @@ This is my Java programming practice. There are many "Counting words in differen
     import java.util.Map;
     import java.util.Map.Entry;
     / **
-     * OBJECTIVE - to understand the interface of java.util.Map and its implementations <br/>
-     * Optional: sort out the API for sorting <br/>
-     * Optional: understand the use of regular expressions in Java <br/>
-     *
-     * ASSIGNMENT <br/>
-     * Calculate the number of occurrences of words in the text without regard to the case of characters. <br/>
-     *
-     * REQUIREMENTS <br/>
+     * OBJECTIVE - to understand the interface of java.util.Map and its implementations
+     * Optional: sort out the API for sorting
+     * Optional: understand the use of regular expressions in Java
+     * ASSIGNMENT
+     * Calculate the number of occurrences of words in the text without regard to the case of characters.
+     * REQUIREMENTS
      * A word is any sequence of characters allocated by an arbitrary
-     * the number of spaces, tab characters, and line transfers. <br/>
+     * the number of spaces, tab characters, and line transfers. 
      * It is necessary to calculate the number of occurrences of words in the text without regard for the case of characters
-     * (the words 'Program' and 'program' are considered the same word!). <br/>
+     * (the words 'Program' and 'program' are considered the same word!).
      * ADDITIONALLY it is possible to arrange the counting results in the order
      * decrease in the number of occurrences of a word,
-     * as well as exclusion from consideration of the words enclosed inside & lt; & gt ;. <br/>
+     * as well as exclusion from consideration of the words enclosed inside & lt; & gt ;.
      *
      * /
     public interface WordCounter
