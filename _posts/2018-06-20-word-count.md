@@ -3,9 +3,6 @@ layout: post
 title:  "여러가지 방법으로 코딩해보기"
 date:   2018-06-20
 categories: wordCounter
-tag:
-- wordCounter 
-- 글자세기
 ---
 
 <center><b>wordCounter</b> is a basic-programming, one small application.</center>
