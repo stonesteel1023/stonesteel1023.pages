@@ -1,72 +1,71 @@
 ---
 layout: post
-title:  "Moon Jekyll Theme"
-date:   2016-04-06
-excerpt: "Minimal, one column Jekyll theme for your blog."
+title:  "wordCounter"
+date:   2018-06-20
+excerpt: "wordCounter"
 project: true
 tag:
-- jekyll 
-- moon
-- blog
-- about
-- theme
+- wordCounter 
+- 글자세기
 comments: true
 ---
 
 <center><b>wordCounter</b> is a basic-programming, one small application.</center>
      
-It is my java programming practice. Give a **star** for motivation, It makes me happy.
+This is my Java programming practice. There are many "Counting words in different programming languages" but it is in different coding style for counting words by Java language.
     
 ## 여러가지 방법으로 코딩해보기
 
 #### Lambda Function coding practice
 #### Class & Interface coding practice
-import java.io.PrintStream;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-/ **
- * OBJECTIVE - to understand the interface of java.util.Map and its implementations <br/>
- * Optional: sort out the API for sorting <br/>
- * Optional: understand the use of regular expressions in Java <br/>
- *
- * ASSIGNMENT <br/>
- * Calculate the number of occurrences of words in the text without regard to the case of characters. <br/>
- *
- * REQUIREMENTS <br/>
- * A word is any sequence of characters allocated by an arbitrary
- * the number of spaces, tab characters, and line transfers. <br/>
- * It is necessary to calculate the number of occurrences of words in the text without regard for the case of characters
- * (the words 'Program' and 'program' are considered the same word!). <br/>
- * ADDITIONALLY it is possible to arrange the counting results in the order
- * decrease in the number of occurrences of a word,
- * as well as exclusion from consideration of the words enclosed inside & lt; & gt ;. <br/>
- *
- * /
-public interface WordCounter
-{
-    void setText (String text);
 
-    String getText ();
 
-    Map<String, Long> getWordCounts ();
+    import java.io.PrintStream;
+    import java.util.List;
+    import java.util.Map;
+    import java.util.Map.Entry;
+    / **
+     * OBJECTIVE - to understand the interface of java.util.Map and its implementations <br/>
+     * Optional: sort out the API for sorting <br/>
+     * Optional: understand the use of regular expressions in Java <br/>
+     *
+     * ASSIGNMENT <br/>
+     * Calculate the number of occurrences of words in the text without regard to the case of characters. <br/>
+     *
+     * REQUIREMENTS <br/>
+     * A word is any sequence of characters allocated by an arbitrary
+     * the number of spaces, tab characters, and line transfers. <br/>
+     * It is necessary to calculate the number of occurrences of words in the text without regard for the case of characters
+     * (the words 'Program' and 'program' are considered the same word!). <br/>
+     * ADDITIONALLY it is possible to arrange the counting results in the order
+     * decrease in the number of occurrences of a word,
+     * as well as exclusion from consideration of the words enclosed inside & lt; & gt ;. <br/>
+     *
+     * /
+    public interface WordCounter
+        {
+        void setText (String text);
 
-    List<Map.Entry<String, Long>> getWordCountsSorted ();
+        String getText ();
 
-    List<Map.Entry<String, Long>> sortWordCounts (Map<String, Long> orig);
+        Map<String, Long> getWordCounts ();
 
-    void printWordCounts (PrintStream ps);
+        List<Map.Entry<String, Long>> getWordCountsSorted ();
 
-    void printWordCountsSorted (PrintStream ps);
-}
+        List<Map.Entry<String, Long>> sortWordCounts (Map<String, Long> orig);
 
-import java.io.PrintStream;
-import java.util.*;
+        void printWordCounts (PrintStream ps);
 
-public class WordCounterImpl implements WordCounter {
-    private String text = null;
-    private Map<String, Long> dict = null;
+        void printWordCountsSorted (PrintStream ps);
+        }
 
+    import java.io.PrintStream;
+    import java.util.*;
+
+    public class WordCounterImpl implements WordCounter {
+        private String text = null;
+        private Map<String, Long> dict = null;
+    
     @Override
     public void setText(String text) {
         this.text = text;
@@ -161,4 +160,4 @@ public class WordCounterImpl implements WordCounter {
             ps.format("%s %d\n", entry.getKey(), entry.getValue());
         }
     }
-}
+    }
