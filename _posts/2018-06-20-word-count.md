@@ -6,17 +6,18 @@ categories: wordCounter
 tag:
 - wordCounter 
 - 글자세기
-comments: true
 ---
 
 <center><b>wordCounter</b> is a basic-programming, one small application.</center>
      
-This is my Java programming practice. There are many "Counting words in different programming languages" but it is in different coding style for counting words by Java language.
+This is my Java programming practice. 
+There are many "Counting words in different programming languages" 
+but it is in different coding style for counting words by Java language.
     
 ## 여러가지 방법으로 코딩해보기
 
-#### Lambda Function coding practice
-#### Class & Interface coding practice
+### Lambda Function coding practice
+### Class & Interface coding practice
 
 
     import java.io.PrintStream;
