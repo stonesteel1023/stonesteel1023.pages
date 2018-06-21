@@ -6,7 +6,7 @@ excerpt:
 project: false
 tag:
 - 야구게임 
-comments: true
+comments: false
 ---
 
 ## main method 하나에 다 때려박기
