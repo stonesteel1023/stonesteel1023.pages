@@ -2,10 +2,9 @@
 layout: post
 title:  "Moon Jekyll Theme"
 date:   2016-04-06 11:30:00 +0900
-tag:
+tag: 
 - jekyll 
 ---
-#
 
 ![Moon Homepage](https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png)    
 
@@ -101,7 +100,7 @@ Set your disqus shortname in `_config.yml` to use comments.
 
 ---
 
-### Navigation Links
+## Navigation Links
 
 To set what links appear in the top navigation edit `_data/navigation.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window.*
 
@@ -128,7 +127,7 @@ To set what links appear in the top navigation edit `_data/navigation.yml`. Use 
 
 Moon Theme use [Jekyll Compress](https://github.com/penibelst/jekyll-compress-html) to compress html output. But it can cause errors if you use "linenos" (line numbers). I suggest don't use line numbers for codes, because it won't look good with this theme, also i didn't give a proper style for them. If you insist to use line numbers, just remove `layout: compress` string from layouts. It will disable compressing.
 
-### Feature Image
+#### Feature Image
 
 You can set feature image per post. Just add `feature: some link` to your post's front matter.
 
@@ -142,18 +141,18 @@ feaure: http://example.com/some-image.png
 
 ![Moon Twitter Card](https://cloud.githubusercontent.com/assets/754514/14509719/61c5751c-01d6-11e6-8c29-ce8ccad149bf.png)
 
-### Comments
+#### Comments
 
 To show disqus comments for your post add `comments: true` to your post's front matter.
 
 ---
 
-## Questions
+#### Questions
 
 Found a bug or aren't quite sure how something works? By all means [file a GitHub Issue](https://github.com/TaylanTatli/Moon/issues/new). And if you make something cool with this theme feel free to let me know.
 
 ---
 
-## License
+#### License
 
 This theme is free and open source software, distributed under the MIT License. So feel free to use this Jekyll theme on your site without linking back to me or including a disclaimer.
