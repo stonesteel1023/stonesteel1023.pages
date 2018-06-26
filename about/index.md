@@ -6,23 +6,19 @@ date: 2016-03-21
 comments: false
 ---
     
-<center><a href="https://stonesteel1023.github.io">This blog</a> is a minimal, one column jekyll theme.</center>
+<center><a href="https://stonesteel1023.github.io">This blog</a> is Stonesteel's blog, a.k.a. Homepage.</center>
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+## Name
+* 최석철(Choi seok cheol) born in Seoul, Korea.
+* Michael Choi 2012~2013 in Ghana in West Africa.
+* 崔錫徹(チェソクチョル) 2015~2018 in Tokyo, Japan.
 
-## Preview
 
+## Bio
+* 1984.09.20
 
     
 
-## Getting Started
+## 
+2012~2013 Project Manager
+2015~2018 Web-Programmer & Assistant Manager in Mori System 
