@@ -19,6 +19,6 @@ comments: false
 
     
 
-## 
-2012~2013 Project Manager
-2015~2018 Web-Programmer & Assistant Manager in Mori System 
+## Career
+* 2012~2013 Project Manager
+* 2015~2018 Web-Programmer & Assistant Manager in Mori System 
