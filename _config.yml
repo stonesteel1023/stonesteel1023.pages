@@ -1,6 +1,7 @@
+© 2018 GitHub, Inc.
 # Site
-title:              Stonesteel's blog
-name:				stonesteel (Michael Choi)
+title:              Stonesteel's 블로그
+name:				Michael Choi
 bio:                'Pro "Grammar" 돈 받고 글 짓는 사람'
 description:        "돈 받고 글 짓는 사람"
 reading_time:       false
@@ -72,6 +73,27 @@ gems:
 
 jekyll-mentions:
     base_url: https://github.com
-
+    
+# Exclude from processing.
 # Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+- node_modules
+- gulpfile.js
+- package.json
+- _site
+- src
+- .settings
+- .DS_Store
+- vendor
+- CNAME
+- LICENSE
+- Rakefile
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
