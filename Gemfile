@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+<<<<<<< HEAD
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -30,5 +31,13 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
+=======
+gem "jekyll", "~> 3.2.1"
+gem "jekyll-sitemap"
+gem "jekyll-gist"
+gem 'jekyll-mentions'
+gem 'jekyll-feed'
+>>>>>>> 125eb6637446199d16c9066bbe4bd738699a0e57
+
 
 
