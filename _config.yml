@@ -71,7 +71,16 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+  
+
 jekyll-mentions:
+    base_url: https://github.com
+    
+jekyll-sitemap:
     base_url: https://github.com
     
 # Exclude from processing.
@@ -91,9 +100,3 @@ exclude:
 - CNAME
 - LICENSE
 - Rakefile
-
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
