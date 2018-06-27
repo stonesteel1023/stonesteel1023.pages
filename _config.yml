@@ -70,16 +70,7 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
-  
-
 jekyll-mentions:
-    base_url: https://github.com
-    
-jekyll-sitemap:
     base_url: https://github.com
     
 # Exclude from processing.
@@ -94,6 +85,7 @@ exclude:
 - _site
 - src
 - .settings
+- .project
 - .DS_Store
 - vendor
 - CNAME
