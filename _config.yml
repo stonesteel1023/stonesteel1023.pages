@@ -1,6 +1,6 @@
 # Site
-title:              Stonesteel's 블로그
-name:	              Michael Choi
+title:              Stonesteel's 개발블로그
+name:	            Michael Choi
 bio:                'Pro "Grammar" 돈 받고 글 짓는 사람'
 description:        "돈 받고 글 짓는 사람"
 reading_time:       false
@@ -31,9 +31,9 @@ disqus_shortname:   https-stonesteel1023-github-io
 
 # Social
 # if you don't have any of social below, comment the line.
-#google:
-  #plus:            #username
-  #analytics:
+google:
+  #plus:            stonesteel1023@gmail.com
+  analytics:        stonesteel1023@gmail.com
   #verify:
   #ad-client:
   #ad-slot:
