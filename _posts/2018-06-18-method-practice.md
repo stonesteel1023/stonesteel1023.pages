@@ -1,12 +1,11 @@
 ---
 layout: post
 title:  "method-practice"
-date:   2018-06-18 12:45:00 +0900
+date:   2018-06-18 12:45:00
 excerpt: "main method, method chain"
 project: false
 tag:
 - baseball
-comments: false
 ---
 
 # main method 하나에 다 때려박기

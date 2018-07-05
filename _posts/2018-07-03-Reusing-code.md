@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reusing-code"
-date:   2018-07-03 12:45:00 +0900
+date:   2018-07-03 12:45:00
 excerpt: "reusing"
 project: false
 tag:
