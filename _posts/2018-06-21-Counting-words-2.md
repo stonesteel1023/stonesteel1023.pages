@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Counting-words"
+title:  Counting-words-2
 date:   2018-06-21 12:45:00 +0900
 tag: wordCounter
 ---

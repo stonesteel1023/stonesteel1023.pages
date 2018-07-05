@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  method-practice
-date:   2018-06-18 11:30:00 +0900
-tag: 야구게임
+date:   2018-06-18 12:45:00 +0900
+tag: baseball
 ---
 
 # main method 하나에 다 때려박기

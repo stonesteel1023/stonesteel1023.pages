@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  Reusing-code
-date:   2018-07-03
-tag: 
+date:   2018-07-03 12:45:00 +0900 
+tag: reusing
+categories: jekyll update
 ---
 
 # 코드 재사용

@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "Moon Jekyll Theme"
+title:  Moon Jekyll Theme
 date:   2016-04-06 11:30:00 +0900
 excerpt: "Minimal, one column Jekyll theme for your blog."
 project: true
-tag: 
-- jekyll 
-comments: false
+tag: jekyll 
+categories: jekyll update
 ---
 
 ![Moon Homepage](https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png)    
