@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "new"
+title:  Reusing-code
 date:   2018-07-03
 tag: 
 ---

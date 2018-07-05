@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  TIL180618
+title:  method-practice
 date:   2018-06-18 11:30:00 +0900
 tag: 야구게임
 ---
