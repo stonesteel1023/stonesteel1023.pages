@@ -2,10 +2,10 @@
 layout: post
 title:  "method-practice"
 date:   2018-06-18 12:45:00
-excerpt: "main method, method chain"
 tag:
 - baseball
 ---
+
 
 # main method 하나에 다 때려박기
 
@@ -82,10 +82,11 @@ public static void main(String[] args){
     }
 ```
 
+
 # method 분류시키기
 
-```java
 
+```java
     import java.util.*;
     class BaseBallGameMethod{
     public static void main(String[] args){
@@ -163,18 +164,13 @@ public static void main(String[] args){
         return strike;
     }// testNum
 }// class
-
-
 ```
-
-
 
 # class 분류시키기
 
 ## GenerateRandom  <- randomNum
 
 ```java
-
 public class GenerateRandom{
     public static final ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
     static ArrayList<Integer> resultNumbers = new ArrayList<>();
@@ -199,26 +195,22 @@ public class GenerateRandom{
         return Integer.parseInt(result);
     }
 }
-
 ```
 
 ## input  <- selNum
 
 ```java
-
 public class Input{
     public int input(){
         Scanner scan = new Scanner(System.in);
         return scan.nextInt();
     }
 }
-
 ```
 
 ## Operator  <- testNum
 
 ```java
-
 public class Operator{
     private final ArrayList<Integer> splitInt = new ArrayList<>();
     
@@ -280,19 +272,16 @@ public class Operator{
     }
     
 }
-
 ```
 
 ## Operator2  <- baseball
 
 ```java
-
 ```
 
 ## main 
 
 ```java
-
 public class PlayGame{
     public static void main(String[] args){
         ArrayList<Integer> shuffle = GenerateRandom.shuffle(GenerateRandom.numbers);
@@ -332,7 +321,6 @@ public class PlayGame{
         }
     }
 }
-
 ```
 
 # 실무수준 코딩규약 따라서 base-ball game 업그레이드
