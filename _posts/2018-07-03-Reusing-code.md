@@ -6,7 +6,6 @@ excerpt: "reusing"
 project: false
 tag:
 - reusing
-comments: false
 ---
 
 # 코드 재사용

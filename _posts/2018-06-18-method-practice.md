@@ -3,7 +3,6 @@ layout: post
 title:  "method-practice"
 date:   2018-06-18 12:45:00
 excerpt: "main method, method chain"
-project: false
 tag:
 - baseball
 ---

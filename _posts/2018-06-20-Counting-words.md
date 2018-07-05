@@ -5,7 +5,6 @@ date:   2018-06-20 12:45:00
 project: false
 tag:
 - wordCounter
-comments: false
 ---
 
 # 여러가지 방법으로 코딩해보기
