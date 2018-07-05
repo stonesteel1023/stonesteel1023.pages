@@ -1,8 +1,12 @@
 ---
 layout: post
-title:  Counting-words-1
+title:  "Counting-words-1"
 date:   2018-06-20 12:45:00 +0900
-tag: wordCounter
+excerpt: "wordCounter for coding practice"
+project: false
+tag:
+- wordCounter
+comments: false
 ---
 
 # 여러가지 방법으로 코딩해보기
