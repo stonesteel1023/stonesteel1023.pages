@@ -2,12 +2,9 @@
 layout: post
 title:  "method-practice"
 date:   2018-06-18 17:30:00 +0900
-tag:
-- baseball
 categories: coding
 comments : false
 ---
-
 # main method 하나에 다 때려박기
 
 ```java
