@@ -1,16 +1,15 @@
 ---
 layout: post
 title:  "Reusing-code"
-date:   2018-07-03 17:30:00 +0900
+date:   2018-07-03 09:00:00 +0900
 categories: coding
 comments : true
 ---
 
 # 코드 재사용
 
-##
-
 ```javascript
+
 const cache = () => {
   const store = {}
 
@@ -38,11 +37,13 @@ simpleCache.set('b', 3)
 console.log(simpleCache.remove('a')) // 1
 console.log(simpleCache.remove('b')) // 3
 console.log(simpleCache.remove('b')) // undefined
+
 ```
 
-##
+# code reusing
 
 ```javascript
+
 const cache = () => {
   const store = {}
 
@@ -111,4 +112,5 @@ console.log(expiringCache.remove('a')) // undefined
 setTimeout(() => {
   console.log(expiringCache.remove('b')) // undefined
 }, 1100)
+
 ```

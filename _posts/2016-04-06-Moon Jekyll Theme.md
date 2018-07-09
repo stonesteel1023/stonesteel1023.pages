@@ -2,10 +2,13 @@
 layout: post
 title:  "Moon Jekyll Theme"
 date:   2016-04-06 11:30:00 +0900
+excerpt: "Minimal, one column Jekyll theme for your blog."
 project: true
-categories: jekyll theme
-comments : false
+tag: 
+- jekyll 
+comments: true
 ---
+
 ![Moon Homepage](https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png)    
 
 <iframe src="https://ghbtns.com/github-btn.html?user=TaylanTatli&repo=Moon&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>

@@ -10,7 +10,9 @@ comments : true
 
 ## Lambda Function coding practice
 
-## Class & Interface coding practice
+### Class & Interface coding practice
+
+# coding
 
 * interface
 
@@ -50,8 +52,6 @@ comments : true
 
         void printWordCountsSorted ();
     }
-    
-
 ```
 
 * class implemented interface
@@ -171,6 +171,4 @@ public class WordCounterImpl implements WordCounter {
 
     }
  }
-
-
 ```

@@ -78,10 +78,10 @@ public static void main(String[] args){
     } // 결과를 뿌려주는 if
     }// while
     }// main
-    }
+}
 ```
 
-# method 분류시키기
+## method 분류시키기
 
 ```java
     import java.util.*;
@@ -163,9 +163,9 @@ public static void main(String[] args){
 }// class
 ```
 
-# class 분류시키기
+### class 분류시키기
 
-## GenerateRandom  <- randomNum
+#### GenerateRandom  <- randomNum
 
 ```java
 public class GenerateRandom{
@@ -194,7 +194,7 @@ public class GenerateRandom{
 }
 ```
 
-## input  <- selNum
+#### input  <- selNum
 
 ```java
 public class Input{
@@ -205,7 +205,7 @@ public class Input{
 }
 ```
 
-## Operator  <- testNum
+#### Operator  <- testNum
 
 ```java
 public class Operator{
@@ -271,12 +271,12 @@ public class Operator{
 }
 ```
 
-## Operator2  <- baseball
+#### Operator2  <- baseball
 
 ```java
 ```
 
-## main
+#### main
 
 ```java
 public class PlayGame{
@@ -318,6 +318,7 @@ public class PlayGame{
         }
     }
 }
+
 ```
 
 # 실무수준 코딩규약 따라서 base-ball game 업그레이드
