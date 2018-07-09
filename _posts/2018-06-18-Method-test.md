@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "method-practice"
+title:  "Method-test"
 date:   2018-06-18 17:30:00 +0900
 tag:
 - baseball
