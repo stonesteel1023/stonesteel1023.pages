@@ -3,8 +3,9 @@ layout: post
 title:  "method-practice"
 date:   2018-06-18 17:30:00 +0900
 categories: coding
-comments : false
+comments : true
 ---
+
 # main method 하나에 다 때려박기
 
 ```java
@@ -218,7 +219,7 @@ public class Operator{
         Collections.reverse(splitInt);
         return splitInt;
     }
-    
+
     public int findStrike(ArrayList<Integer> inputSplit, ArrayList<Integer> shuffle){
         int countStrike = 0;
         for(int i=0; i<inputSplit.size(); i++){

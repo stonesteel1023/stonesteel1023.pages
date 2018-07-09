@@ -3,8 +3,9 @@ layout: post
 title:  "Counting-words"
 date:   2018-06-20 7:30:00 +0900
 categories: coding
-comments : false
+comments : true
 ---
+
 # 여러가지 방법으로 코딩해보기
 
 ## Lambda Function coding practice

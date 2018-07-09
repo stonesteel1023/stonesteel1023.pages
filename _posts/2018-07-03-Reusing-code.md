@@ -3,8 +3,9 @@ layout: post
 title:  "Reusing-code"
 date:   2018-07-03 17:30:00 +0900
 categories: coding
-comments : false
+comments : true
 ---
+
 # 코드 재사용
 
 ##
