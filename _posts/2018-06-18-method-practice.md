@@ -2,11 +2,11 @@
 layout: post
 title:  "method-practice"
 date:   2018-06-18 17:30:00 +0900
-categories: coding
 tag:
 - baseball
+categories: coding
+comments : false
 ---
-
 
 # main method 하나에 다 때려박기
 
@@ -15,7 +15,7 @@ import java.util.Scanner;
 class BaseBallGame{
 
 public static void main(String[] args){
-	int[] ran = new int[3];
+    int[] ran = new int[3];
     int[] sel = new int[3];
     Scanner sc = new Scanner(System.in);
       // 번호 생성 (0~9사이의 중복되지 않는 랜덤한 정수를 int[]형으로 반환)
@@ -83,9 +83,7 @@ public static void main(String[] args){
     }
 ```
 
-
 # method 분류시키기
-
 
 ```java
     import java.util.*;
@@ -175,19 +173,19 @@ public static void main(String[] args){
 public class GenerateRandom{
     public static final ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
     static ArrayList<Integer> resultNumbers = new ArrayList<>();
-    
+
     public static ArrayList<Integer> shuffle(ArrayList<Integer> numbers){
         Collections.shuffle(numbers2);
         return numbers;
     }
-    
+
     public static ArrayList<Integer> resultNumber(ArrayList<Integer> shuffle){
         for(int i=0; i<3; i++){
             resultNumbers.add(shuffle.get(i));
         }
         return resultNumbers;
     }
-    
+
     public static int result(ArrayList<Integer> resultNumbers){
         String result = "";
         for(int i=0; i<resultNumbers.size(); i++){
@@ -214,7 +212,7 @@ public class Input{
 ```java
 public class Operator{
     private final ArrayList<Integer> splitInt = new ArrayList<>();
-    
+
     public ArrayList<Integer> splitInt(int inputNumber){
         while(inputNumber != 0){
             splitInt.add(inputNumber % 10);
@@ -233,7 +231,7 @@ public class Operator{
         }
         return countStrike;
     }
-    
+
     public void resultStrike(int countNumber){
         if(countNumber == 3){
             System.out.println("3 strike!!");
@@ -243,7 +241,7 @@ public class Operator{
             System.out.println("1 strike");
         }
     }
-    
+
     public int findBall(ArrayList<Integer> inputSplit, ArrayList<Integer> shuffle){
         int countBall = 0;
         for(int i=0; i<inputSplit.size(); i++){
@@ -255,7 +253,7 @@ public class Operator{
         }
         return countBall;
     }
-    
+
     public void resultBall(int countBall){
         if(countBall == 3){
             System.out.println("3 ball");
@@ -265,13 +263,13 @@ public class Operator{
             System.out.println("1 ball");
         }
     }
-    
+
     public void printNothing(int countBall, int countNumber){
         if(countBall == 0 && countNumber == 0){
             System.out.println("Nothing");
         }
     }
-    
+
 }
 ```
 
@@ -280,7 +278,7 @@ public class Operator{
 ```java
 ```
 
-## main 
+## main
 
 ```java
 public class PlayGame{
@@ -289,7 +287,7 @@ public class PlayGame{
         ArrayList<Integer> resultNumbers = GenerateRandom.resultNumber(shuffle);
         int result = GenerateRandom.result(resultNumbers);
         Input inputClass = new Input();
-        
+
         //game play count
         int count = 0;
         try{
@@ -298,18 +296,18 @@ public class PlayGame{
                 int inputNumbers = inputClass.input();
                 Operator operator = new Operator();
                 ArrayList<Integer> inputSplit = operator.splitInt(inputNumbers);
-            
+
                 //result strike, ball, out
                 int countStrike = operator.findStrike(inputSplit, shuffle);
                 operator.resultStrike(countStrike);
-            
+
                 int countBall = operator.findBall(intputSplit, shuffle);
                 operator.resultBall(countBall);
-            
+
                 operator.printNothing(countBall, countStrike);
-            
+
                 count++;
-            
+
                 //finish
                 if(inputNumber == result){
                     System.out.println("Game Finished");

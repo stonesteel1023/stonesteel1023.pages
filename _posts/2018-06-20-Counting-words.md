@@ -2,9 +2,10 @@
 layout: post
 title:  "Counting-words-1"
 date:   2018-06-20 7:30:00 +0900
-project: false
 tag:
 - wordCounter
+categories: coding
+comments : false
 ---
 
 # 여러가지 방법으로 코딩해보기
