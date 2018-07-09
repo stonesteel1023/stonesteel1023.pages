@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "method-practice"
-date:   2018-06-18 12:45:00
+date:   2018-06-18 17:30:00 +0900
+categories: coding
 tag:
 - baseball
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Counting-words-1"
-date:   2018-06-20 12:45:00
+date:   2018-06-20 7:30:00 +0900
 project: false
 tag:
 - wordCounter
