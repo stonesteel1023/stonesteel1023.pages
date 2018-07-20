@@ -11,74 +11,74 @@ comments : true
 ```java
 import java.util.Scanner;
 
-class BaseBallGame{
+public class BaseBallGame{
 
 public static void main(String[] args){
-    int[] ran = new int[3];
-    int[] sel = new int[3];
-    Scanner sc = new Scanner(System.in);
-      // 번호 생성 (0~9사이의 중복되지 않는 랜덤한 정수를 int[]형으로 반환)
-      for (int i = 0; i < 3 ; i++){
-      ran[i] = (int)((Math.random() * 10));
-      for (int j = 0; j < 3 ; j++){
-      if (ran[i] == ran[j] && i != j){
-      ran[i] = (int)((Math.random() * 10));
-      i--;
-      break;
-      }// if
-    }// ifor
-    }// ofor
-    // 번호 맞추기 입력
+int[] ran = new int[3];
+int[] sel = new int[3];
+Scanner sc = new Scanner(System.in);
+// 번호 생성 (0~9사이의 중복되지 않는 랜덤한 정수를 int[]형으로 반환)
+for (int i = 0; i < 3 ; i++){
+ran[i] = (int)((Math.random() * 10));
+for (int j = 0; j < 3 ; j++){
+if (ran[i] == ran[j] && i != j){
+ran[i] = (int)((Math.random() * 10));
+i--;
+break;
+}// if
+}// ifor
+}// ofor
 
-    int strike = 0;
-    int ball = 0;
-    int count = 0;
-    while (true){
-    strike = 0;
-    ball = 0; // 볼카운트 초기화
-    for (int i = 0; i < 3 ; i++){
-        System.out.print((i+1) + "번째숫자를 입력하시오: ");
-        sel[i] = sc.nextInt();
-        for (int j = 0; j <= i ; j++){
-            if (sel[i] > 9 || sel[i] < 0){
-                System.out.printf("범위를 벗어났습니다. 다시 입력해 주세요%n");
-                i--;
-                break;
-            }else if (sel[i] == sel[j] && i !=j){
-                System.out.printf("중복값을 입력하셨습니다. 다시 입력해 주세요!%n");
-                i--;
-                break;
-            }// if
-        }// ifor
-    }// ofor
+// 번호 맞추기 입력
+int strike = 0;
+int ball = 0;
+int count = 0;
+while (true){
+strike = 0;
+ball = 0; // 볼카운트 초기화
+for (int i = 0; i < 3 ; i++){
+System.out.print((i+1) + "번째숫자를 입력하시오: ");
+sel[i] = sc.nextInt();
+for (int j = 0; j <= i ; j++){
+if (sel[i] > 9 || sel[i] < 0){
+System.out.printf("범위를 벗어났습니다. 다시 입력해 주세요%n");
+i--;
+break;
+}else if (sel[i] == sel[j] && i !=j){
+System.out.printf("중복값을 입력하셨습니다. 다시 입력해 주세요!%n");
+i--;
+break;
+}// if
+}// ifor
+}// ofor
 
-    for (int i = 0; i < 3 ; i++){
-        System.out.printf(sel[i] + " ");
-    }// 입력한 숫자를 뿌려주는 for
-        System.out.println();
+for (int i = 0; i < 3 ; i++){
+System.out.printf(sel[i] + " ");
+}// 입력한 숫자를 뿌려주는 for
+System.out.println();
 
-    for (int i = 0; i < 3; i++){
-        for (int j = 0; j < 3; j++){
-            if ( i == j && sel[i] == ran[j]){
-                strike++;
-            }
-            if (i!=j && sel[i]==ran[j]){
-                ball++;
-            }// S와 B를 비교하는if
-        }// ifor
-    }// ofor
-    count++; // 시도횟수 카운트 
-    System.out.printf("이번 결과는 %d스트라이크 %d볼입니다. 현재%dout%n", strike, ball, count);
+for (int i = 0; i < 3; i++){
+for (int j = 0; j < 3; j++){
+if ( i == j && sel[i] == ran[j]){
+strike++;
+}
+if (i!=j && sel[i]==ran[j]){
+ball++;
+}// S와 B를 비교하는if
+}// ifor
+}// ofor
+count++; // 시도횟수 카운트 
+System.out.printf("이번 결과는 %d스트라이크 %d볼입니다. 현재%dout%n", strike, ball, count);
 
-    if (strike == 3){
-        System.out.printf("축하합니다. 당신이 승리하셨습니다. 시도횟수 %dout%n", count);
-    break;
-    } else if (count == 10){
-        System.out.printf("안타깝지만. 당신은 패배자!.%n");
-        break;
-    } // 결과를 뿌려주는 if
-    }// while
-    }// main
+if (strike == 3){
+System.out.printf("축하합니다. 당신이 승리하셨습니다. 시도횟수 %dout%n", count);
+break;
+}else if (count == 10){
+System.out.printf("안타깝지만. 당신은 패배자!.%n");
+break;
+} // 결과를 뿌려주는 if
+}// while
+}// main
 }
 
 ```
