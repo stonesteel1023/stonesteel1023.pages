@@ -81,11 +81,9 @@ break;
 }// main
 }
 
-```
 
 # method 분류시키기
 
-```java
 import java.util.*;
 
 class BaseBallGameMethod{
@@ -166,7 +164,6 @@ class BaseBallGameMethod{
     }// testNum
 }// class
 
-```
 
 # class 분류시키기
 
@@ -201,11 +198,9 @@ public class GenerateRandom{
     
 }
 
-```
 
 ## input  <- selNum
 
-```java
 public class Input{
     public int input(){
         Scanner scan = new Scanner(System.in);
@@ -213,11 +208,11 @@ public class Input{
     }
 }
 
-```
+
 
 ## Operator  <- testNum
 
-```java
+
 
 public class Operator{
     private final ArrayList<Integer> splitInt = new ArrayList<>();
@@ -280,17 +275,15 @@ public class Operator{
     }
 }
 
-```
+
 
 ## Operator2  <- baseball
 
-```
- 
-```
+
 
 ## main
 
-```java
+
 
 public class PlayGame{
     public static void main(String[] args){
