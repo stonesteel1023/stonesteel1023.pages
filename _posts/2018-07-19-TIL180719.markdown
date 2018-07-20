@@ -82,11 +82,11 @@ break;
 }// main
 }
 
-```
 
-# method
 
-```java
+//method
+
+
 
 import java.util.*;
 
@@ -170,7 +170,9 @@ class BaseBallGameMethod{
 
 ```
 
+
 # class 
+
 
 // GenerateRandom  <- randomNum
 
