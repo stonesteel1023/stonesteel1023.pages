@@ -9,6 +9,7 @@ comments : true
 # main method 하나에 다 때려박기
 
 ```java
+
 import java.util.Scanner;
 
 public class BaseBallGame{
@@ -82,7 +83,7 @@ break;
 }
 
 
-# method 분류시키기
+*/ method 분류시키기 /*
 
 import java.util.*;
 
@@ -165,9 +166,9 @@ class BaseBallGameMethod{
 }// class
 
 
-# class 분류시키기
+/* class 분류시키기 /*
 
-## GenerateRandom  <- randomNum
+// GenerateRandom  <- randomNum
 
 ```java
 
@@ -199,7 +200,7 @@ public class GenerateRandom{
 }
 
 
-## input  <- selNum
+// input  <- selNum
 
 public class Input{
     public int input(){
@@ -210,7 +211,7 @@ public class Input{
 
 
 
-## Operator  <- testNum
+// Operator  <- testNum
 
 
 
@@ -277,11 +278,11 @@ public class Operator{
 
 
 
-## Operator2  <- baseball
+// Operator2  <- baseball 
 
 
 
-## main
+*/ main /*
 
 
 
