@@ -3,6 +3,8 @@ layout: post
 title:  "method-practice"
 date:   2018-06-18 17:30:00 +0900
 categories: coding
+tag:
+- java
 comments : true
 ---
 
@@ -66,7 +68,7 @@ public static void main(String[] args){
             }// S와 B를 비교하는if
         }// ifor
     }// ofor
-    count++; // 시도횟수 카운트 
+    count++; // 시도횟수 카운트
     System.out.printf("이번 결과는 %d스트라이크 %d볼입니다. 현재%dout%n", strike, ball, count);
 
     if (strike == 3){

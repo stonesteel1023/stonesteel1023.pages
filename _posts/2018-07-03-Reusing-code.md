@@ -3,6 +3,8 @@ layout: post
 title:  "Reusing-code"
 date:   2018-07-03 09:00:00 +0900
 categories: coding
+tag:
+- JavaScript
 comments : true
 ---
 

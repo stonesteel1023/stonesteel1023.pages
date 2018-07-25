@@ -3,6 +3,8 @@ layout: post
 title:  "Big-o"
 date:   2018-06-24 17:30:00 +0900
 categories: algorithm
+tag:
+- algorithm
 comments : true
 ---
 

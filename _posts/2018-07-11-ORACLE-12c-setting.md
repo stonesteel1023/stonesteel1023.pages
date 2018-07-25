@@ -1,23 +1,25 @@
 ---
 
 layout : post
-title : "MD file copying"
+title : "ORACLE 12c setting"
 date : 2018-07-11 11:11:00 +0900
-categories : MD
+categories : db
+tag:
+- db
 comments : true
 
 ---
 
-# 어제 작성한 MD파일 다시 써보기
+# oracle 12c release2
 
-> oracle 12c release2
+> 오라클 12 Cloud 릴리즈2 바전 세팅
 
- 
+
 ## 실행 (윈도우키 + R) -> sqlplus / as sysdba
 
 ```create user 계정 identified by 암호;```
 
-- ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다. 
+- ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다.
 
   > 오라클 12c부터는 cdb의 계정명은 C## 혹은 c## (대소문을 구분함)
 
@@ -25,7 +27,7 @@ comments : true
 
 - 사용자가 생성되었습니다.
 
- 
+
 
 ## 계정을 생성한 후 권한 주기
 
@@ -51,25 +53,25 @@ comments : true
 ```create user c##scott identified by tiger;```
 
 ```alter user c##scott default tablespace users quota unlimited on users;```
- 
+
 ```create role c##plustrace;```
- 
+
 ```grant select on v_$sesstat to c##plustrace;```
- 
+
 ```grant select on v_$statname to c##plustrace;```
- 
+
 ```grant select on v_$mystat to c##plustrace;```
- 
+
 ```grant c##plustrace to dba with admin option;```
 
 ```grant connect, resource to c##scott;```
 
 ```grant c##plustrace to c##scott;```
- 
+
 ```grant create view to c##scott;```
 
 ```grant create sequence to c##scott;```
- 
+
 ### c##scott 으로 접속하기
 
 ```connect c##scott / tiger```
@@ -78,11 +80,11 @@ comments : true
 
 ```alter session set nls_language = 'korean';```
 
-```@E:\app\com\virtual\product\12.2.0\dbhome_1\rdbms\admin\scott.sql``` 
+```@E:\app\com\virtual\product\12.2.0\dbhome_1\rdbms\admin\scott.sql```
 
 - 에러날 경우 위에 부분 지우기)
 
- 
+
 ### 테스트
 
 ```SQL> set linesize 280;```

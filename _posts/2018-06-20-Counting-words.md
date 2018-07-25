@@ -3,6 +3,8 @@ layout: post
 title:  "Counting-words"
 date:   2018-06-20 7:30:00 +0900
 categories: coding
+tag:
+- java
 comments : true
 ---
 
@@ -29,7 +31,7 @@ comments : true
     * Calculate the number of occurrences of words in the text without regard to the case of characters.
     * REQUIREMENTS
     * A word is any sequence of characters allocated by an arbitrary
-    * the number of spaces, tab characters, and line transfers. 
+    * the number of spaces, tab characters, and line transfers.
     * It is necessary to calculate the number of occurrences of words in the text without regard for the case of characters
     * (the words Program and program are considered the same word!).
     * ADDITIONALLY it is possible to arrange the counting results in the order

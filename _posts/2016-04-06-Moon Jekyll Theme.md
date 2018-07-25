@@ -4,8 +4,9 @@ title:  "Moon Jekyll Theme"
 date:   2016-04-06 11:30:00 +0900
 excerpt: "Minimal, one column Jekyll theme for your blog."
 project: true
-tag: 
-- jekyll 
+tag:
+- jekyll moon
+- theme
 comments: true
 ---
 
