@@ -27,13 +27,17 @@ Once you have tomcat configured:
 11. Click "Debug" to start testing your configuration.
 12. Open your browser and work with Sakai until you reach your breakpoint.  You should be directed into Eclipse where you will see the line of code with your breakpoint, a list of variables, etc., etc.
 
-```If you do not see the console output when using this method, you can simply keep open a separate window that displays the last contents of catalina.out.```
+```
+If you do not see the console output when using this method, you can simply keep open a separate window that displays the last contents of catalina.out
+```
 
 # Debugging Tomcat as an External Tool from within Eclipse
 
  > You can also configure Eclipse to be able to start and stop tomcat as a program (this approach also seems to work well on Windows).  To configure Eclipse to be able to start and stop tomcat:
 
-```If you have already completed the above steps, you will need to stop tomcat to use the steps below.```
+```
+If you have already completed the above steps, you will need to stop tomcat to use the steps below.
+```
 
 1. If you have not already done so, set a breakpoint somewhere in your code (preferably something not associated with startup) by left-clicking to the left of a line of code.
 2. Under the "Run" menu, select the "External Tools" sub-menu, then the "External Tools" heading.
@@ -55,15 +59,19 @@ Once you have tomcat configured:
 
 Once you exit the debugger and stop tomcat, you should be able to start and stop tomcat with debugging enabled from within Eclipse by opening the "Run" menu and selecting "External Tools".  You can also begin debugging your code by opening the "Run" menu and selecting "Debug".
 
-```tomcat will start when you run it as an external tool, but you will probably not see console output.  You'll need to open another window that contains the contents of catalina.out to keep track of the startup or use jpda run```
+```
+tomcat will start when you run it as an external tool, but you will probably not see console output.  You'll need to open another window that contains the contents of catalina.out to keep track of the startup or use jpda run
+```
 
 # Configuring Tomcat as a Known Server from within Eclipse
 
  > You can also configure Eclipse to be able to start and stop tomcat as a server (this approach seems to work well on Unix).  To configure Eclipse to be aware of tomcat as a server:
 
-```If you have already completed the above steps, you will need to stop tomcat to use the steps below.```
+```
+If you have already completed the above steps, you will need to stop tomcat to use the steps below.
+```
 
-1. Edit ~/eclipse/eclipse.ini and change the memory settings as follows: 
+1. Edit ~/eclipse/eclipse.ini and change the memory settings as follows:
 
 ```
 -vmargs
@@ -76,11 +84,11 @@ Once you exit the debugger and stop tomcat, you should be able to start and stop
 2. If you have not already done so, set a breakpoint somewhere in your code (preferably something not associated with startup) by left-clicking to the left of a line of code.
 
 3. Configure Eclipse to launch the desired JVM with the appropriate memory settings:	 
- a. Under the "Eclipse" menu, select "Preferences"
- b. Open the "Java" heading and the "Installed JREs" subheading.
- c. Single-click the desired run-time, then click "Edit".
- d. Under "Default VM Arguments", enter "-server -XX:+UseParallelGC -Xmx1024m -XX:MaxPermSize=384m -Djava.awt.headless=true", then click "OK".
- e. Click "OK" again to close the preferences dialog.
+ -. Under the "Eclipse" menu, select "Preferences"
+ -. Open the "Java" heading and the "Installed JREs" subheading.
+ -. Single-click the desired run-time, then click "Edit".
+ -. Under "Default VM Arguments", enter "-server -XX:+UseParallelGC -Xmx1024m -XX:MaxPermSize=384m -Djava.awt.headless=true", then click "OK".
+ -. Click "OK" again to close the preferences dialog.
 
 4. Add the Sakai tomcat instance to the list of known runtimes:	 
  -. Under the "Eclipse" menu, select "Preferences"
@@ -92,29 +100,28 @@ Once you exit the debugger and stop tomcat, you should be able to start and stop
  -. Click "Finish".
 
 5. Add the server to the debug view	 Open the "Debug" view.
- a. Open the "Servers" tab.
- b. Using the right mouse button (or control-click on the mac), open the dialog to create a new server.
- c. Under "Server's host name", fill in "localhost" if it doesn't already appear.
- d. Open the "Apache" heading, then select "Tomcat v5.5 Server".
- e. Under "Server Runtime", select the runtime you defined earlier.
- f. Click "Finish" (you're not actually finished  )
- g. Double-click the new server entry, a dialog should appear with more advanced options.
- h. Change "Server name" to something meaningful like "Sakai 2.4 (Server)".
- i. Uncheck "Run modules directly from the workspace".
- j. Click "Open launch configuration".
- k. On the dialog that appears, open the "Arguments" tab.  Change "program arguments" to "jpda start".		 
- 
+ - Open the "Servers" tab.
+ - Using the right mouse button (or control-click on the mac), open the dialog to create a new server.
+ - Under "Server's host name", fill in "localhost" if it doesn't already appear.
+ - Open the "Apache" heading, then select "Tomcat v5.5 Server".
+ - Under "Server Runtime", select the runtime you defined earlier.
+ - Click "Finish" (you're not actually finished  )
+ - Double-click the new server entry, a dialog should appear with more advanced options.
+ - Change "Server name" to something meaningful like "Sakai 2.4 (Server)".
+ - Uncheck "Run modules directly from the workspace".
+ - Click "Open launch configuration".
+ - On the dialog that appears, open the "Arguments" tab.  Change "program arguments" to "jpda start".		 
+
   * <b>NOTE:</b> If you use "jdpa run" rather than "jpda start", Tomcat will not open a new window to start in and will instead give you all it's standard err and standard out in the Eclipse console window. This is usefull for Windows developers who don't like to read console output from a DOS window.
 
- l. On the same dialog, change "VM arguments" so that catalina.base is set to the tomcat home directory.
- m. Open the "Source" tab, then click "Add".
- n. On the dialog that appears, single-click "Java Project", then click "OK".
- o. On the dialog that appears, click "Select All", then click "OK".
- p. Open the "Environment" tab, then click "New".
- r. Enter "JPDA_ADDRESS" for "Name", and "8000" for "Value", then click "OK".
- s. Click "Add" again, then enter "JPDA_TRANSPORT" for "Name" and "dt_socket" for "Value".  Click "OK".
- t. Click "Apply", then "OK" to save your launch settings.
- u. <b>IMPORTANT:</b>  Under the "File" menu, select "Save" to save your overall server definition.
- v. You should now be able to start up the server by right clicking (or control clicking) its heading in the "Servers" tab and selecting "Start".
- w. Once Sakai finishes starting up, open your browser and work with Sakai until you reach your breakpoint. You should be directed into Eclipse where you will see the line of code with your breakpoint, a list of variables, etc., etc.
- 
+ - On the same dialog, change "VM arguments" so that catalina.base is set to the tomcat home directory.
+ - Open the "Source" tab, then click "Add".
+ - On the dialog that appears, single-click "Java Project", then click "OK".
+ - On the dialog that appears, click "Select All", then click "OK".
+ -  Open the "Environment" tab, then click "New".
+ - Enter "JPDA_ADDRESS" for "Name", and "8000" for "Value", then click "OK".
+ - Click "Add" again, then enter "JPDA_TRANSPORT" for "Name" and "dt_socket" for "Value".  Click "OK".
+ - Click "Apply", then "OK" to save your launch settings.
+ - <b>IMPORTANT:</b>  Under the "File" menu, select "Save" to save your overall server definition.
+ - You should now be able to start up the server by right clicking (or control clicking) its heading in the "Servers" tab and selecting "Start".
+ - Once Sakai finishes starting up, open your browser and work with Sakai until you reach your breakpoint. You should be directed into Eclipse where you will see the line of code with your breakpoint, a list of variables, etc., etc.
