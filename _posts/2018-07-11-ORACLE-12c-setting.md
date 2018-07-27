@@ -1,5 +1,4 @@
 ---
-
 layout : post
 title : "ORACLE 12c setting"
 date : 2018-07-11 11:11:00 +0900
@@ -7,7 +6,6 @@ categories : db
 tag:
 - db
 comments : true
-
 ---
 
 # oracle 12c release2
@@ -74,25 +72,39 @@ comments : true
 
 ### c##scott 으로 접속하기
 
-```connect c##scott / tiger```
+```sqlplus
+connect c##scott / tiger
+```
 
-```alter session set nls_date_format = 'DD-MM-YYYY';```
+```sqlplus
+SQL>alter session set nls_date_format = 'DD-MM-YYYY';
+```
 
-```alter session set nls_language = 'korean';```
+```sqlplus
+SQL>alter session set nls_language = 'korean';
+```
 
-```@E:\app\com\virtual\product\12.2.0\dbhome_1\rdbms\admin\scott.sql```
-
-- 에러날 경우 위에 부분 지우기)
+```sqlplus
+SQL> @E:\app\com\virtual\product\12.2.0\dbhome_1\rdbms\admin\scott.sql
+```
+> 에러날 경우 위에 부분 지우기)
 
 
 ### 테스트
 
-```SQL> set linesize 280;```
+```sqlplus
+SQL> set linesize 280;
+```
 
-```SQL> set pagesize 100```
+```sqlplus
+SQL> set pagesize 100
+```
 
-```SQL> select * from emp;```
+```sqlplus
+SQL> select * from emp;
+```
 
+```SQL
 ​     EMPNO ENAME                JOB                       MGR HIREDATE        SAL       COMM     DEPTNO
 
 ---------- -------------------- ------------------ ---------- -------- ---------- ---------- ----------
@@ -121,6 +133,7 @@ comments : true
 
 ​      7934 MILLER               CLERK                    7782 82/01/23       1300                    10
 
-```12 행이 선택되었습니다.```
+12 행이 선택되었습니다.
+```
 
 개발시작!
