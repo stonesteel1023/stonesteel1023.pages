@@ -66,16 +66,14 @@ Once you exit the debugger and stop tomcat, you should be able to start and stop
  > You can also configure Eclipse to be able to start and stop tomcat as a server (this approach seems to work well on Unix).  To configure Eclipse to be aware of tomcat as a server:
 
 
-##### If you have already completed the above steps, you will need to stop tomcat to use the steps below.
+#### If you have already completed the above steps, you will need to stop tomcat to use the steps below.
 
 1. Edit ~/eclipse/eclipse.ini and change the memory settings as follows:
-```
--vmargs
--Xms256m
--Xmx1024m
-```
+ - vmargs
+ - Xms256m
+ - Xmx1024m
 
- > <b>NOTE:</b> Eclipse has to have enough available memory to actually run Sakai within it
+    > <b>NOTE:</b> Eclipse has to have enough available memory to actually run Sakai within it
 
 2. If you have not already done so, set a breakpoint somewhere in your code (preferably something not associated with startup) by left-clicking to the left of a line of code.
 

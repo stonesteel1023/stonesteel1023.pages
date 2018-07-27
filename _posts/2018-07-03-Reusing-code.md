@@ -11,25 +11,21 @@ comments : true
 # 코드 재사용
 
 ```javascript
-
 const cache = () => {
   const store = {}
 
   const set = (key, value) => {
     store[key] = value
   }
-
   const remove = key => {
     const value = store[key]
     delete store[key]
     return value
   }
-
   return { set, remove }
 }
 
 // Let's use the cache
-
 const simpleCache = cache()
 
 simpleCache.set('a', 1)
@@ -45,7 +41,6 @@ console.log(simpleCache.remove('b')) // undefined
 # code reusing
 
 ```javascript
-
 const cache = () => {
   const store = {}
 
@@ -88,7 +83,6 @@ const expire = (cache, ttl, expirationHandler) => {
 }
 
 // Let's use the simple cache
-
 const simpleCache = cache()
 
 simpleCache.set('a', 1)
@@ -100,7 +94,6 @@ console.log(simpleCache.remove('b')) // 3
 console.log(simpleCache.remove('b')) // undefined
 
 // Let's use the expiring cache
-
 const expirationHandler = (key, value) => {
   console.log(`expired ${key}: ${value}`)
 }
