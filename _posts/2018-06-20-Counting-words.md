@@ -19,22 +19,7 @@ comments : true
 interface
 
 ```java
-/**
-* OBJECTIVE - to understand the interface of java.util.Map and its implementations
-* Optional: sort out the API for sorting
-* Optional: understand the use of regular expressions in Java
-* ASSIGNMENT
-* Calculate the number of occurrences of words in the text without regard to the case of characters.
-* REQUIREMENTS
-* A word is any sequence of characters allocated by an arbitrary
-* the number of spaces, tab characters, and line transfers.
-* It is necessary to calculate the number of occurrences of words in the text without regard for the case of characters
-* (the words Program and program are considered the same word!).
-* ADDITIONALLY it is possible to arrange the counting results in the order
-* decrease in the number of occurrences of a word,
-* as well as exclusion from consideration of the words enclosed inside &lt; &gt ;.
-*
-*/
+
     import java.util.List;
     import java.util.Map;
     import java.util.Map.Entry;
