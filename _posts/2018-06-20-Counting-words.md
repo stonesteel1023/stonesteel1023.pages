@@ -16,7 +16,7 @@ comments : true
 
 ## coding
 
-* interface
+interface
 
 ```java
 /**
@@ -55,10 +55,8 @@ comments : true
 
         void printWordCountsSorted ();
     }
-
 ```
 
-* class implemented interface
 
 ```java
 
