@@ -10,36 +10,37 @@ comments : true
 
 # 여러가지 방법으로 코딩해보기
 
-## Lambda Function coding practice
+ Lambda Function coding practice
 
-### Class & Interface coding practice
+ Class & Interface coding practice
 
-# coding
+## coding
 
 * interface
 
 ```java
-
+/**
+* OBJECTIVE - to understand the interface of java.util.Map and its implementations
+* Optional: sort out the API for sorting
+* Optional: understand the use of regular expressions in Java
+* ASSIGNMENT
+* Calculate the number of occurrences of words in the text without regard to the case of characters.
+* REQUIREMENTS
+* A word is any sequence of characters allocated by an arbitrary
+* the number of spaces, tab characters, and line transfers.
+* It is necessary to calculate the number of occurrences of words in the text without regard for the case of characters
+* (the words Program and program are considered the same word!).
+* ADDITIONALLY it is possible to arrange the counting results in the order
+* decrease in the number of occurrences of a word,
+* as well as exclusion from consideration of the words enclosed inside &lt; &gt ;.
+*
+*/
     import java.util.List;
     import java.util.Map;
     import java.util.Map.Entry;
-    /**
-    * OBJECTIVE - to understand the interface of java.util.Map and its implementations
-    * Optional: sort out the API for sorting
-    * Optional: understand the use of regular expressions in Java
-    * ASSIGNMENT
-    * Calculate the number of occurrences of words in the text without regard to the case of characters.
-    * REQUIREMENTS
-    * A word is any sequence of characters allocated by an arbitrary
-    * the number of spaces, tab characters, and line transfers.
-    * It is necessary to calculate the number of occurrences of words in the text without regard for the case of characters
-    * (the words Program and program are considered the same word!).
-    * ADDITIONALLY it is possible to arrange the counting results in the order
-    * decrease in the number of occurrences of a word,
-    * as well as exclusion from consideration of the words enclosed inside &lt; &gt ;.
-    *
-    */
-    public interface WordCounter{  
+
+    public interface WordCounter{
+
         void setText (String text);
 
         String getText ();
@@ -54,6 +55,7 @@ comments : true
 
         void printWordCountsSorted ();
     }
+
 ```
 
 * class implemented interface
@@ -61,7 +63,7 @@ comments : true
 ```java
 
 import java.io.PrintStream;
-import java.util.*;
+import java.util.Map;
 
 public class WordCounterImpl implements WordCounter {
    private String text = null;
@@ -163,7 +165,7 @@ public class WordCounterImpl implements WordCounter {
     }
 
     public stataic void main(String[] args){
-        WordCounterImpl wordCounter = new WordCounterImpl*(;
+        WordCounterImpl wordCounter = new WordCounterImpl();
         Scanner scan = new Scanner(System.in);
         String text = scan.nextLine();
 
@@ -172,5 +174,6 @@ public class WordCounterImpl implements WordCounter {
         wordCounter.printWordCountsSorted();
 
     }
- }
+}
+
 ```
