@@ -40,10 +40,8 @@ interface
 
         void printWordCountsSorted ();
     }
-```
 
-
-```java
+---------------------------------------------------------------------------
 
 import java.io.PrintStream;
 import java.util.Map;
