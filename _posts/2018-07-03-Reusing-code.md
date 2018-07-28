@@ -11,7 +11,8 @@ comments : true
 # 코드 재사용
 
 
-```
+```javascript
+
 const cache = () => {
   const store = {}
 
@@ -36,13 +37,11 @@ simpleCache.set('b', 3)
 console.log(simpleCache.remove('a')) // 1
 console.log(simpleCache.remove('b')) // 3
 console.log(simpleCache.remove('b')) // undefined
-```
 
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+// 메소드 통채로 복사해서 재사용
 
-
-```
 const cache = () => {
   const store = {}
 
@@ -109,4 +108,5 @@ console.log(expiringCache.remove('a')) // undefined
 setTimeout(() => {
   console.log(expiringCache.remove('b')) // undefined
 }, 1100)
+
 ```
