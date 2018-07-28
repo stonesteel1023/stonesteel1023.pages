@@ -36,11 +36,10 @@ console.log(simpleCache.remove('a')) // 1
 console.log(simpleCache.remove('b')) // 3
 console.log(simpleCache.remove('b')) // undefined
 
-```
 
-# code reusing
+-----------------------------------------------------------------------------------------------------------
 
-```javascript
+
 const cache = () => {
   const store = {}
 
