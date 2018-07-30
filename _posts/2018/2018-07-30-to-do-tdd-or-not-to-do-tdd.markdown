@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "To-TDD-or-NOT-to-do-TDD"
+title: "To do TDD-or-NOT to do TDD"
 date: "2018-07-30 22:37"
 categories: coding
 tag:
@@ -24,4 +24,6 @@ comments : true
 * 5단계 : "TDD는 죽거나 살아있거나 한 게 아님. TDD는 API 변경이나 초보자의 미숙한
 기술이나 기존의 설계 등에 대한 리스크를 포함한 기회비용을 대표함" - Kent Beck
 
-### 출처 : 설레발 주도개발
+### 출처 : [설레발 주도개발][c572fd98]
+
+  [c572fd98]: https://lazygyu.net/blog/hype_driven_development "설레발 주도개발"
