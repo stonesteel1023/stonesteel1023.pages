@@ -2,6 +2,10 @@
 layout: post
 title: opensource maker
 date: 2018-08-02 21:43+0900
+categories: opensource
+tag:
+- opensource
+comments : true
 ---
 
 # '이런 사람 꼭 있다'
