@@ -88,7 +88,7 @@ Collection values()  |    HashMap에 저장된 모든 값을 컬렉션의 형태
 
 아래는 대학교에 다니는 학생들을 저장하는 collection 구조입니다.
 
-```java
+
 public class Student {
     private String name;
     private String grade;
@@ -108,9 +108,9 @@ public class Student {
     }
 }
 
-// 학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
+학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
 
-// 대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
+대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
 
 public class CHashMap {
     static HashMap<Integer, Student> student = new HashMap<Integer, Student>();
@@ -241,7 +241,7 @@ pubilc class HashMapDemo
   }
 
 }
-```
+
 
 
 * 결과
