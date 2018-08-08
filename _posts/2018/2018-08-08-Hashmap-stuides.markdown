@@ -1,7 +1,9 @@
 ---
 layout: "post"
-title: "HashMap-Stuides"
+title: "HashMap-Studies"
 date: "2018-08-08 23:27"
+tag: data_structure
+comment: true
 ---
 
 > 본문 : https://d2.naver.com/helloworld/831311
@@ -93,6 +95,7 @@ Collection values()  |    HashMap에 저장된 모든 값을 컬렉션의 형태
 
 - 대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
 
+'''java
 public class Student {
     private String name;
     private String grade;
@@ -145,7 +148,7 @@ public class CHashMap {
         }
     }
 }
-
+'''
 
 먼저 put 함수를 이용하여 키(key)와 값(value)을 저장했습니다.
 
