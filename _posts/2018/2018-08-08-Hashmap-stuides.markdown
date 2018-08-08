@@ -107,14 +107,11 @@ public class Student {
         this.major = major;
     }
 }
-```
 
+// 학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
 
-학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
+// 대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
 
-대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
-
-```java
 public class CHashMap {
     static HashMap<Integer, Student> student = new HashMap<Integer, Student>();
 
@@ -151,7 +148,7 @@ public class CHashMap {
         }
     }
 }
-```
+
 
 먼저 put 함수를 이용하여 키(key)와 값(value)을 저장했습니다.
 
@@ -183,7 +180,6 @@ HashMap API 문서에 따르면, HashMap은 해당 map의 순서를 보장하지
 
 [* 구현 ](http://vaert.tistory.com/107)
 
-```java
 import java.util.HashMap;
 
 import java.util.Iterator;
