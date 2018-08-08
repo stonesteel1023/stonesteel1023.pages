@@ -112,15 +112,10 @@ public class Student {
     }
 }
 
-<<<<<<< HEAD
-=======
-
 학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
 
 대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
 
-
->>>>>>> 5ad9c99dca84ffc288fb4960c1e8ff02db62e064
 public class CHashMap {
 
     static HashMap<Integer, Student> student = new HashMap<Integer, Student>();
