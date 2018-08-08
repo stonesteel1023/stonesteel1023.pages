@@ -4,7 +4,7 @@ title: "HashMap-Stuides"
 date: "2018-08-08 23:27"
 ---
 
-> 출처 : https://d2.naver.com/helloworld/831311
+> 본문 : https://d2.naver.com/helloworld/831311
 
 # 댓글
 
@@ -30,47 +30,43 @@ int index = X.hashCode() % M;
 * 이런식으로 M개의 해시 버킷에 저장을 하게 되는 것이고, 따라서 같은 버킷에 저장되어 있는 객체들의 해시 값이 동일한 것이 아닙니다. 다음으로, Total Ordering에 문제가 생긴다는 것은 모든 객체에 대해 유일한 해시코드를 생성할 수 없어서 발생하는 것입니다. tieBreakOrder() 메서드는 동일한 해시코드를 가진 객체에 대해 대소비교를 해야할 필요가 있을 때 쓰이는 것이구요.
 
 
-[# JAVA의 HashMap, HashTable에 대해서][d9b8d2d0]
 
-Map - HashTable, HashMap
+# Map - HashTable, HashMap
 
   [d9b8d2d0]: http://swalloow.tistory.com/40 "해쉬맵"
+  [출처 : JAVA의 HashMap, HashTable][d9b8d2d0]
 
+### HashMap은
 
 * 자바 컬렉션에서 제공하는 Map 인터페이스는 키(key)와 값(value)을 묶어서 하나의 데이터로 저장하는 구조입니다.
 
-Set 구조와 달리 중복을 허용하는 특징이 있습니다.
+* Set 구조와 달리 중복을 허용하는 특징이 있습니다.
 
-키(key)의 경우에는 유일해야 하지만 값(value)은 데이터의 중복을 허용합니다.
+* 키(key)의 경우에는 유일해야 하지만 값(value)은 데이터의 중복을 허용합니다.
 
-HashMap은 내부적으로 해싱(Hashing)을 이용해서 구현한 컬렉션이기 때문에
+* HashMap은 내부적으로 해싱(Hashing)을 이용해서 구현한 컬렉션이기 때문에 많은 양의 데이터를 검색하는데 있어 뛰어난 성능을 보입니다.
 
-많은 양의 데이터를 검색하는데 있어 뛰어난 성능을 보입니다.
+### HashTable 또한
 
+* Map 인터페이스를 구현한 구조입니다.
 
+* 하지만 1.2 버전 이후부터 HashMap이 나오면서 HashTable에 비해 다양한 함수를 제공하는 HashMap으로 대체되었습니다.
 
-* HashTable 또한 Map 인터페이스를 구현한 구조입니다.
+* HashTable과 HashMap의 차이는 null 값을 허용하는데에 있습니다.
 
-하지만 1.2 버전 이후부터 HashMap이 나오면서
-
-HashTable에 비해 다양한 함수를 제공하는 HashMap으로 대체되었습니다.
-
-HashTable과 HashMap의 차이는 null 값을 허용하는데에 있습니다.
-
-HashTable은 null 값을 허용하지 않지만, HashMap은 null 값을 허용합니다.
+* HashTable은 null 값을 허용하지 않지만, HashMap은 null 값을 허용합니다.
 
 
 
-** 추가
+### 추가
 
-HashMap API 문서에 따르면, "This implementation is not synchronized" 라고 명시되어 있습니다.
+* HashMap API 문서에 따르면, "This implementation is not synchronized" 라고 명시되어 있습니다.
 
-따라서, 멀티쓰레드를 사용하는 경우에는 Collections.synchronizedMap 으로 매핑시켜 주어야 합니
+* 따라서, 멀티쓰레드를 사용하는 경우에는 Collections.synchronizedMap 으로 매핑시켜 주어야 합니
 
-AVA의 HashMap 구현
+# JAVA의 HashMap 구현
 
-
-HashMap의 위와 같은 특징 때문에 관계형 데이터베이스(RDBMS)와 유사한 모습을 가지고 있습니다.
+* HashMap의 위와 같은 특징 때문에 관계형 데이터베이스(RDBMS)와 유사한 모습을 가지고 있습니다.
 
 우선 주요 메서드와 사용법을 알아보겠습니다.
 
@@ -182,3 +178,82 @@ HashMap API 문서에 따르면, HashMap은 해당 map의 순서를 보장하지
 따라서 출력결과가 HashMap에 넣은 순서와 관계없이 출력된 것입니다.
 
 하지만, LinkedHashMap 클래스를 사용하면 삽입된 순서대로 반복문을 수행하도록 할 수 있다고 합니다.
+
+# 사용
+
+[* 구현 ](http://vaert.tistory.com/107)
+
+```java
+import java.util.HashMap;
+
+import java.util.Iterator;
+
+import java.util.Map;
+
+import java.util.Set;
+
+
+
+pubilc class HashMapDemo
+
+{
+
+ public static void main(String[] args)
+
+ {
+
+  HashMap<String, Integer> fruitMap = new HashMap();
+
+  fruitMap.put("사과", 1000);
+
+  fruitMap.put("배", 2000);
+
+  fruitMap.put("자두", 3000);
+
+  fruitMap.put("수박", 4000);
+
+
+
+  // get() --> Key에 해당하는 Value를 출력한다.
+
+  System.out.println( fruitMap.get("자두") );   // 3000
+
+
+
+        // values() --> 저장된 모든 값 출력
+
+  System.out.println( fruitMap.values() ); // [1000, 2000, 3000, 4000]
+
+
+
+  // HashMap에 넣은 Key와 Value를 Set에 넣고 iterator에 값으로 Set정보를 담에 준다.
+
+  // Interator itr = fruitMap.entrySet().interator(); 와 같다.
+
+  Set<Entry<String, Integer>> set = fruitMap.entrySet();
+
+  Interator<Entry<String, Integer>> itr = set.interator();
+
+  while (itr.hasNext())
+
+  {
+
+   Map.Entry<String, Integer> e = (Map.Entry<String, Integer>)itr.next();
+
+   System.out.println("이름 : " + e.getKey() + ", 가격 : " + e.getValue() + "원");
+
+  }
+
+}
+```
+
+
+* 결과
+
+```이름 : 사과, 가격 : 1000원```
+
+```이름 : 배, 가격 : 2000원```
+
+```이름 : 자두, 가격 : 3000원```
+
+```이름 : 수박, 가격 :  4000원```
