@@ -5,7 +5,8 @@ date: 2018-08-09 23:27
 comment: true
 ---
 
-# 위키피디아 영문판
+# Software-test
+- 위키피디아 영문판
 > https://en.m.wikipedia.org/wiki/Software_testing
 
 ## 소프트웨어 테스트는 
