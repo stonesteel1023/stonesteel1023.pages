@@ -22,7 +22,7 @@ comment: true
 
 ## 대댓글
 
-* 일단, 본문에 나와 있듯이 맵에 객체를 저장할 때는 해시 값 자체를 이용하는 것이 아닙니다. 따라서 HashMap을 비롯한 많은 해시 함수를 이용하는 associative array 구현체에서는 메모리를 절약하기 위하여 실제 해시 함수의 표현 정수 범위 hashmap3보다 작은 M개의 원소가 있는 배열만을 사용한다. 따라서 다음과 같이 객체에 대한 해시 코드의 나머지 값을 해시 버킷 인덱스 값으로 사용한다.
+* 일단, 본문에 나와 있듯이 맵에 객체를 저장할 때는 해시 값 자체를 이용하는 것이 아닙니다. 따라서 HashMap을 비롯한 많은 해시 함수를 이용하는 associative array 구현체에서는 메모리를 절약하기 위하여 실제 해시 함수의 표현 정수 범위 hashmap3보다 작은 M개의 원소가 있는 배열만을 사용합니다. 따라서 다음과 같이 객체에 대한 해시 코드의 나머지 값을 해시 버킷 인덱스 값으로 사용합니다.
 
 예제 2 해시를 사용하는 associative array 구현체에서 저장/조회할 해시 버킷을 계산하는 방법
 
@@ -64,7 +64,7 @@ int index = X.hashCode() % M;
 
 * HashMap API 문서에 따르면, "This implementation is not synchronized" 라고 명시되어 있습니다.
 
-* 따라서, 멀티쓰레드를 사용하는 경우에는 Collections.synchronizedMap 으로 매핑시켜 주어야 합니
+* 따라서, 멀티쓰레드를 사용하는 경우에는 Collections.synchronizedMap 으로 매핑시켜 주어야 합니다.
 
 # JAVA의 HashMap 구현
 
