@@ -114,10 +114,11 @@ public class Student {
         this.major = major;
     }
 }
-
-
-public class CHashMap {
-
+        
+        
+    
+    public class CHashMap {
+    
     static HashMap<Integer, Student> student = new HashMap<Integer, Student>();
 
     public static void main(String[] args) {
