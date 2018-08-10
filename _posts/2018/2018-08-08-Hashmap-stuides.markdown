@@ -25,14 +25,11 @@ comments : true
 
 * 일단, 본문에 나와 있듯이 맵에 객체를 저장할 때는 해시 값 자체를 이용하는 것이 아닙니다. 따라서 HashMap을 비롯한 많은 해시 함수를 이용하는 associative array 구현체에서는 메모리를 절약하기 위하여 실제 해시 함수의 표현 정수 범위 hashmap3보다 작은 M개의 원소가 있는 배열만을 사용한다. 따라서 다음과 같이 객체에 대한 해시 코드의 나머지 값을 해시 버킷 인덱스 값으로 사용한다.
 
-예제 2 해시를 사용하는 associative array 구현체에서 저장/조회할 해시 버킷을 계산하는 방법
+#### 예제 2 해시를 사용하는 associative array 구현체에서 저장/조회할 해시 버킷을 계산하는 방법
 
-int index = X.hashCode() % M;
-
+`int index = X.hashCode() % M;`
 
 * 이런식으로 M개의 해시 버킷에 저장을 하게 되는 것이고, 따라서 같은 버킷에 저장되어 있는 객체들의 해시 값이 동일한 것이 아닙니다. 다음으로, Total Ordering에 문제가 생긴다는 것은 모든 객체에 대해 유일한 해시코드를 생성할 수 없어서 발생하는 것입니다. tieBreakOrder() 메서드는 동일한 해시코드를 가진 객체에 대해 대소비교를 해야할 필요가 있을 때 쓰이는 것이구요.
-
-
 
 # Map - HashTable, HashMap
 
@@ -59,8 +56,6 @@ int index = X.hashCode() % M;
 
 * HashTable은 null 값을 허용하지 않지만, HashMap은 null 값을 허용합니다.
 
-
-
 ### 추가
 
 * HashMap API 문서에 따르면, "This implementation is not synchronized" 라고 명시되어 있습니다.
@@ -71,8 +66,7 @@ int index = X.hashCode() % M;
 
 * HashMap의 위와 같은 특징 때문에 관계형 데이터베이스(RDBMS)와 유사한 모습을 가지고 있습니다.
 
-우선 주요 메서드와 사용법을 알아보겠습니다.
-
+** 우선 주요 메서드와 사용법을 알아보겠습니다.
 
 Method  |  Description
 --|--
@@ -89,7 +83,7 @@ Collection values()  |    HashMap에 저장된 모든 값을 컬렉션의 형태
 
 * 이제 HashMap을 이용한 코드를 통해 어떻게 적용하는지 알아보겠습니다.
 
-아래는 대학교에 다니는 학생들을 저장하는 collection 구조입니다.
+** 아래는 대학교에 다니는 학생들을 저장하는 collection 구조입니다.
 
 
 - 학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
@@ -113,7 +107,6 @@ public class Student {
         this.grade = grade;
         this.major = major;
     }
-}
         
         
     
@@ -153,7 +146,6 @@ public class Student {
             System.out.println(key+" "+student.get(key).getName()+" "+student.get(key).getGrade()+" "+student.get(key).getMajor());
         }
     }
-}
 
 
 먼저 put 함수를 이용하여 키(key)와 값(value)을 저장했습니다.
@@ -188,11 +180,8 @@ HashMap API 문서에 따르면, HashMap은 해당 map의 순서를 보장하지
 
 
 import java.util.HashMap;
-
 import java.util.Iterator;
-
 import java.util.Map;
-
 import java.util.Set;
 
 
@@ -231,11 +220,11 @@ pubilc class HashMapDemo
 
   // HashMap에 넣은 Key와 Value를 Set에 넣고 iterator에 값으로 Set정보를 담에 준다.
 
-  // Interator itr = fruitMap.entrySet().interator(); 와 같다.
+  // Iterator itr = fruitMap.entrySet().iterator(); 와 같다.
 
   Set<Entry<String, Integer>> set = fruitMap.entrySet();
 
-  Interator<Entry<String, Integer>> itr = set.interator();
+  Iterator<Entry<String, Integer>> itr = set.iterator();
 
   while (itr.hasNext())
 
