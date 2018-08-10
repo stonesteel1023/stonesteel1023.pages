@@ -91,66 +91,68 @@ Collection values()  |    HashMap에 저장된 모든 값을 컬렉션의 형태
 - 대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
 
 
-```
-public class Student {
 
-    private String name;
-    private String grade;
-    private String major;
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
-    public String getGrade() {return grade;}
-    public void setGrade(String grade) {this.grade = grade;}
-    public String getMajor() {return major;}
-    public void setMajor(String major) {this.major = major;}
 
-    public Student(String name, String grade, String major) {
+
+    public class Student {
+
+      private String name;
+      private String grade;
+      private String major;
+
+      public String getName() {return name;}
+      public void setName(String name) {this.name = name;}
+      public String getGrade() {return grade;}
+      public void setGrade(String grade) {this.grade = grade;}
+      public String getMajor() {return major;}
+      public void setMajor(String major) {this.major = major;}
+
+      public Student(String name, String grade, String major) {
         this.name = name;
         this.grade = grade;
         this.major = major;
+        }
     }
-}
+    public class CHashMap {
+      static HashMap<Integer, Student> student = new HashMap<Integer, Student>();
 
+      public static void main(String[] args) {
+          student.put(1111, new Student("김예시", "3학년", "영문과"));
+          student.put(2222, new Student("정예시", "1학년", "영문과"));
+          student.put(3333, new Student("김예시", "2학년", "컴공과"));
+          student.put(4444, new Student("이예시", "4학년", "중문과"));
+          student.put(5555, new Student("문예시", "4학년", "의예과"));
 
-public class CHashMap {
-
-  static HashMap<Integer, Student> student = new HashMap<Integer, Student>();
-
-  public static void main(String[] args) {
-      student.put(1111, new Student("김예시", "3학년", "영문과"));
-      student.put(2222, new Student("정예시", "1학년", "영문과"));
-      student.put(3333, new Student("김예시", "2학년", "컴공과"));
-      student.put(4444, new Student("이예시", "4학년", "중문과"));
-      student.put(5555, new Student("문예시", "4학년", "의예과"));
-
-      printKey();
-      printValue();
-      printAll();
-  }
-
-  static public void printKey() {
-      System.out.println("this is key----------");
-      for(int key : student.keySet()) {
-          System.out.println(key);
+          printKey();
+          printValue();
+          printAll();
       }
-  }
 
-  static public void printValue() {
-      System.out.println("this is value----------");
-      for(Student student : student.values()) {
-          System.out.println(student.getName()+" "+student.getGrade()+" "+student.getMajor());
+      static public void printKey() {
+          System.out.println("this is key----------");
+          for(int key : student.keySet()) {
+              System.out.println(key);
+          }
       }
-  }
 
-  static public void printAll() {
-      System.out.println("this is all----------");
-      for(int key : student.keySet()) {
-          System.out.println(key+" "+student.get(key).getName()+" "+student.get(key).getGrade()+" "+student.get(key).getMajor());
+      static public void printValue() {
+          System.out.println("this is value----------");
+          for(Student student : student.values()) {
+              System.out.println(student.getName()+" "+student.getGrade()+" "+student.getMajor());
+          }
       }
-  }
-}
-```
+
+      static public void printAll() {
+          System.out.println("this is all----------");
+          for(int key : student.keySet()) {
+              System.out.println(key+" "+student.get(key).getName()+" "+student.get(key).getGrade()+" "+student.get(key).getMajor());
+          }
+      }
+    }
+
+
+
 
 먼저 put 함수를 이용하여 키(key)와 값(value)을 저장했습니다.
 
