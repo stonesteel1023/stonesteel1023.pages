@@ -182,7 +182,7 @@ HashMap API 문서에 따르면, HashMap은 해당 map의 순서를 보장하지
 
 [* 구현 ](http://vaert.tistory.com/107)
 
-```java
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -241,7 +241,7 @@ pubilc class HashMapDemo
   }
 
 }
-```
+
 
 
 * 결과
