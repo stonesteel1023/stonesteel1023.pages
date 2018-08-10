@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Hash-map-Studies #2"
+title: "Hashmap-studies #2"
 date: "2018-08-10 23:30"
 tag:
 - HashMap
@@ -242,7 +242,7 @@ because Robin Hood Hashing.
 
   <a href="https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png"><img data-attachment-id="1629" data-permalink="https://probablydance.com/2014/05/03/i-wrote-a-fast-hash-table/scattered_unsuccessful_lookup/" data-orig-file="https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png?w=650" data-orig-size="605,340" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="scattered_unsuccessful_lookup" data-image-description="" data-medium-file="https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png?w=650?w=300" data-large-file="https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png?w=650?w=605" class="alignnone size-full wp-image-1629" src="https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png?w=650" alt="scattered_unsuccessful_lookup" srcset="https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png 605w, https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png?w=150 150w, https://probablydance.files.wordpress.com/2014/05/scattered_unsuccessful_lookup.png?w=300 300w" sizes="(max-width: 605px) 100vw, 605px"   /></a>
 
-  
+
 * In all of these lower numbers are better. So sherwood_map doesn't do terribly, but unfortunately the right hand side of that graph doesn't really count. The left hand side is interesting because at least for me most maps have few elements. Unfortunately I ran my comparison above on the right hand side of the graph. I didn't do that intentionally, I just ran a test that took long enough to be easy to measure.
 
 * So what do I take from this? Time to optimize sherwood_map :-). I spend all of my time on the calculation for the bucket of a given index. The way you find out when to stop iterating in Robin Hood Linear Probing is to look at how far you are from the initial bucket of a given element. When you find an element that's less steps away from its initial bucket than your element is from your initial bucket, then you can stop iterating because you know that your object is not in the map. Unfortunately that means that as you're iterating you keep on having to calculate the initial bucket of elements that you walk past. So I'll play around with caching that calculation. If that doesn't work I could also change my bucket count to be a power of two. That's frowned upon for hashtables because it increases clustering but the increased clustering may be worth it if iterating over those clusters to find your element is cheap.
