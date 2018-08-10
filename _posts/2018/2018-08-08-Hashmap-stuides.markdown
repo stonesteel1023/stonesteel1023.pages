@@ -1,9 +1,10 @@
 ---
 layout: "post"
-title: "HashMap-Studies"
+title: "HashMap-Stuides"
 date: "2018-08-08 23:27"
-tag: data_structure
-comment: true
+tag:
+- HashMap
+comments : true
 ---
 
 > 본문 : https://d2.naver.com/helloworld/831311
@@ -22,7 +23,7 @@ comment: true
 
 ## 대댓글
 
-* 일단, 본문에 나와 있듯이 맵에 객체를 저장할 때는 해시 값 자체를 이용하는 것이 아닙니다. 따라서 HashMap을 비롯한 많은 해시 함수를 이용하는 associative array 구현체에서는 메모리를 절약하기 위하여 실제 해시 함수의 표현 정수 범위 hashmap3보다 작은 M개의 원소가 있는 배열만을 사용합니다. 따라서 다음과 같이 객체에 대한 해시 코드의 나머지 값을 해시 버킷 인덱스 값으로 사용합니다.
+* 일단, 본문에 나와 있듯이 맵에 객체를 저장할 때는 해시 값 자체를 이용하는 것이 아닙니다. 따라서 HashMap을 비롯한 많은 해시 함수를 이용하는 associative array 구현체에서는 메모리를 절약하기 위하여 실제 해시 함수의 표현 정수 범위 hashmap3보다 작은 M개의 원소가 있는 배열만을 사용한다. 따라서 다음과 같이 객체에 대한 해시 코드의 나머지 값을 해시 버킷 인덱스 값으로 사용한다.
 
 예제 2 해시를 사용하는 associative array 구현체에서 저장/조회할 해시 버킷을 계산하는 방법
 
@@ -64,7 +65,7 @@ int index = X.hashCode() % M;
 
 * HashMap API 문서에 따르면, "This implementation is not synchronized" 라고 명시되어 있습니다.
 
-* 따라서, 멀티쓰레드를 사용하는 경우에는 Collections.synchronizedMap 으로 매핑시켜 주어야 합니다.
+* 따라서, 멀티쓰레드를 사용하는 경우에는 Collections.synchronizedMap 으로 매핑시켜 주어야 합니
 
 # JAVA의 HashMap 구현
 
@@ -95,17 +96,18 @@ Collection values()  |    HashMap에 저장된 모든 값을 컬렉션의 형태
 
 - 대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
 
-
 public class Student {
     private String name;
     private String grade;
     private String major;
+
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
     public String getGrade() {return grade;}
     public void setGrade(String grade) {this.grade = grade;}
     public String getMajor() {return major;}
     public void setMajor(String major) {this.major = major;}
+
     public Student(String name, String grade, String major) {
         this.name = name;
         this.grade = grade;
@@ -113,34 +115,45 @@ public class Student {
     }
 }
 
-//학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
+<<<<<<< HEAD
+=======
 
-//대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
+학생은 이름, 학년, 전공 값을 가지며 중복이 가능합니다. (동명이인, 동기...)
 
+대부분 대학교는 학번으로 학생을 구분하기 때문에 키(key)는 학번이 됩니다.
+
+
+>>>>>>> 5ad9c99dca84ffc288fb4960c1e8ff02db62e064
 public class CHashMap {
+
     static HashMap<Integer, Student> student = new HashMap<Integer, Student>();
+
     public static void main(String[] args) {
         student.put(1111, new Student("김예시", "3학년", "영문과"));
         student.put(2222, new Student("정예시", "1학년", "영문과"));
         student.put(3333, new Student("김예시", "2학년", "컴공과"));
         student.put(4444, new Student("이예시", "4학년", "중문과"));
         student.put(5555, new Student("문예시", "4학년", "의예과"));
+
         printKey();
         printValue();
         printAll();
     }
+
     static public void printKey() {
         System.out.println("this is key----------");
         for(int key : student.keySet()) {
             System.out.println(key);
         }
     }
+
     static public void printValue() {
         System.out.println("this is value----------");
         for(Student student : student.values()) {
             System.out.println(student.getName()+" "+student.getGrade()+" "+student.getMajor());
         }
     }
+
     static public void printAll() {
         System.out.println("this is all----------");
         for(int key : student.keySet()) {
@@ -150,7 +163,7 @@ public class CHashMap {
 }
 
 
-* 먼저 put 함수를 이용하여 키(key)와 값(value)을 저장했습니다.
+먼저 put 함수를 이용하여 키(key)와 값(value)을 저장했습니다.
 
 그리고 키를 출력하는 함수, 값을 출력하는 함수, 키와 값을 함께 출력하는 함수를 만들었습니다.
 
