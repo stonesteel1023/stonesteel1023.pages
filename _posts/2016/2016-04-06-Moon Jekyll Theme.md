@@ -102,7 +102,6 @@ It's enabled. But if you don't want to use it. Set it false in  `_config.yml`.
 
 Set your disqus shortname in `_config.yml` to use comments.
 
----
 
 ## Navigation Links
 
@@ -126,7 +125,6 @@ To set what links appear in the top navigation edit `_data/navigation.yml`. Use 
 
 {% endhighlight %}
 
----
 
 ## Layouts and Content
 
@@ -136,11 +134,10 @@ Moon Theme use [Jekyll Compress](https://github.com/penibelst/jekyll-compress-ht
 
 You can set feature image per post. Just add `feature: some link` to your post's front matter.
 
-```
 feature: /assets/img/some-image.png
 or
 feaure: http://example.com/some-image.png
-```
+
  This also will be used for twitter card:
 
 ![Moon Twitter Card](https://cloud.githubusercontent.com/assets/754514/14509719/61c5751c-01d6-11e6-8c29-ce8ccad149bf.png)
@@ -149,13 +146,10 @@ feaure: http://example.com/some-image.png
 
 To show disqus comments for your post add `comments: true` to your post's front matter.
 
----
-
 #### Questions
 
 Found a bug or aren't quite sure how something works? By all means [file a GitHub Issue](https://github.com/TaylanTatli/Moon/issues/new). And if you make something cool with this theme feel free to let me know.
 
----
 
 #### License
 
