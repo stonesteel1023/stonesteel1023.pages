@@ -24,7 +24,11 @@ comments: false
 
 * 2015~2018 Web-Programmer & Assistant Manager in Mori System
 
+## GitHub
+* One day one commit Project
+<img src="https://ghchart.rshah.org/stonesteel1023" alt="Github Image" style="max-width:100%">
 
+* TIL(Today I Learned It!) Posting Project
 
 ## RESUME
 * Coming soon
