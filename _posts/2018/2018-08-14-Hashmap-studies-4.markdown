@@ -150,5 +150,5 @@ public class HashMapToArrayListExample
 <strong>Output :</strong>
 ArrayList Of Keys :<br /> Rakesh Sharma<br /> Anjali N<br /> Smith Jacob<br /> John Kevin<br /> Ivan Jose<br /> Prachi D<br /> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br /> ArrayList Of Values :<br /> Good<br /> Bad<br /> Very Good<br /> Average<br /> Very Bad<br /> Very Good<br /> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br /> ArrayList of Key-Values :<br /> Rakesh Sharma : Good<br /> Anjali N : Bad<br /> Smith Jacob : Very Good<br /> John Kevin : Average<br /> Ivan Jose : Very Bad<br /> Prachi D : Very Good</p><p><strong>References :</strong></p>
 
-<ul><li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html" target="_blank">HashMap</a></li><li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank">ArrayList</a></li></ul><hr />
+<ul><li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html" target="_blank">HashMap</a></li><li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank">ArrayList</a></li></ul>
 
