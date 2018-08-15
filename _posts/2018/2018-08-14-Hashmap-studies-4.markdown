@@ -24,7 +24,7 @@ Let's see these three methods in detail.
 
 For this, we use <em>keySet()</em> method of <em>HashMap</em> which returns the <em>Set</em> containing all keys of the <em>HashMap</em>. And then we pass this <em>Set</em> while constructing the <em>ArrayList</em>.
 
-```java
+
 //Creating a HashMap object
 		
 HashMap&lt;String, String&gt; map = new HashMap&lt;String, String&gt;();
@@ -121,7 +121,7 @@ public class HashMapToArrayListExample
 		}
 	}	
 }
-```
+
 
 ### Output :
 
