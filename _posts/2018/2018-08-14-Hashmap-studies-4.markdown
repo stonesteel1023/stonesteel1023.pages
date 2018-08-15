@@ -20,6 +20,7 @@ comment : true
 You can convert <em>HashMap</em> keys into <em>ArrayList</em> or you can convert <em>HashMap</em> values into <em>ArrayList</em> or you can convert key-value pairs into <em>ArrayList</em>. 
 
 * Let's see these three methods in detail.
+
 <strong>a) Conversion Of HashMap Keys Into ArrayList :</strong>
 
 For this, we use <em>keySet()</em> method of <em>HashMap</em> which returns the <em>Set</em> containing all keys of the <em>HashMap</em>. And then we pass this <em>Set</em> while constructing the <em>ArrayList</em>.
