@@ -19,6 +19,7 @@ comments: false
 * 2003.03. entered Hankuk Univ.
 * 2006~2008 had serviced Korea Marin Corps.
 
+---
 # Career
 ---
 - 2012~2013 Project Manager in Brancom
@@ -37,8 +38,8 @@ comments: false
 
 ### Web App
 * Tachi-kawa Church home
----
 
+---
 # RESUME
 ---
 * Coming soon
