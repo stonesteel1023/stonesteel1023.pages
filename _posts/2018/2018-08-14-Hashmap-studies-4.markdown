@@ -8,7 +8,6 @@ comment : true
 
 # How To Convert HashMap To ArrayList In Java?
 
-<a href="https://javaconceptoftheday.com/how-to-convert-hashmap-to-arraylist-in-java/#comments" class="comments-link" itemprop="discussionURL">4</a>
 <em>HashMap</em> and <em>ArrayList</em> are two most used data structures in java. Both classes inherit from different hierarchies. 
 <em>HashMap</em> is inherited from <em>Map</em> interface which represents the data in the form of key-value pairs. <em>ArrayList</em> is inherited from <em>List</em> interface which arranges the data in the sequential manner. Conversion of <em>HashMap</em> to <em>ArrayList</em> has also become a regular question in the java interviews as there is no direct methods in <em>HashMap</em> which converts the <em>HashMap</em> to <em>ArrayList</em>. 
 
@@ -19,7 +18,7 @@ comment : true
 * As <em>HashMap</em> contains key-value pairs, there are three ways you can convert given <em>HashMap</em> to <em>ArrayList</em>. 
 You can convert <em>HashMap</em> keys into <em>ArrayList</em> or you can convert <em>HashMap</em> values into <em>ArrayList</em> or you can convert key-value pairs into <em>ArrayList</em>. 
 
-* Let's see these three methods in detail.
+*Let's see these three methods in detail.
 
 <strong>a) Conversion Of HashMap Keys Into ArrayList :</strong>
 
