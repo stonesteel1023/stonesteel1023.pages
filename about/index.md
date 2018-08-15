@@ -20,13 +20,13 @@ comments: false
 * 2006~2008 had serviced Korea Marin Corps.
 
 # Career
--
-* 2012~2013 Project Manager in Brancom
+---
+- 2012~2013 Project Manager in Brancom
 
-* 2015~2018 Web-Programmer & Assistant Manager in Mori System
+- 2015~2018 Web-Programmer & Assistant Manager in Mori System
 
 # Project
--
+---
 ### Github 
 * One day/one commit Project
 <img src="https://ghchart.rshah.org/stonesteel1023" alt="Github Image" style="max-width:100%">
@@ -40,5 +40,5 @@ comments: false
 ---
 
 # RESUME
--
+---
 * Coming soon
