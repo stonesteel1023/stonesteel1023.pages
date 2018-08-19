@@ -4,13 +4,13 @@ title: "TestHashMap"
 date: "2018-08-20 01:26"
 ---
 
-```java
+```
 package jp.mori;
 
 import java.util.*;
 import java.util.Map.Entry;
 
-public class CodeUtil {
+public class UtilTest {
 
 	Scanner scan = new Scanner(System.in);
 	HashMap<String, cdDTO> hmap;
@@ -18,8 +18,7 @@ public class CodeUtil {
 	cdDTO deleted;
 	cdDTO result;
 
-	public CodeUtil() {
-		// TODO Auto-generated constructor stub
+	public UtilTest() {
 		hmap = new HashMap<String, cdDTO>();
 		rembang = 1;
 		deleted = null;
@@ -36,7 +35,12 @@ public class CodeUtil {
 
 	while(exitCode) {
 
-		System.out.print("input:1, delete:2, search:3, selectAll:4, EXIT:5, Recover:9 >>");
+		System.out.print("input:1
+    , delete:2
+    , search:3
+    , selectAll:4
+    , EXIT:5
+    , Recover:9 >>");
 
 		int pattern = scan.nextInt();
 				switch(pattern) {
@@ -49,7 +53,6 @@ public class CodeUtil {
 					putHashMap(hmap).put(String.valueOf(rembang), dto);
 					rembang ++;
 					dto.tableMap.putAll(hmap);
-					System.out.println("==========================================================================================");
 					scan.reset();
 					break;
 				case 2:
@@ -63,18 +66,16 @@ public class CodeUtil {
 						try {
 							deleted = putHashMap(hmap).remove(del_code);
 						}catch(Exception e) {
-							System.out.println(del_code + " is not exist" + e.getStackTrace());
+							System.out.println(del_code + " is not exist");
 						}
 					}else if(reDel.equals("N")||reDel.equals("n")) {
 						break;
 					}
 					System.out.println( deleted + " is deleted");
-					System.out.println("==========================================================================================");
 					scan.reset();
 					break;
 
 				case 3:
-					System.out.println("==========================================================================================");
 					System.out.println("Tablemap  = " + dto.getTableMap() + "\n");
 					//System.out.print("SEARCH CODE(rembang) >>");
 					//String get_rembang = scan.next();
@@ -102,25 +103,21 @@ public class CodeUtil {
 					//System.out.println(list.get(0));
 
 
-					System.out.println("=================================       View ALL       ===================================");
 					for(Entry<String, cdDTO> entrySet : putHashMap(hmap).entrySet()) {
-						System.out.println("Key = " + entrySet.getKey()+" Value = "+ entrySet.getValue());
+						System.out.println("Key = " + entrySet.getKey()
+                            +" Value = "+ entrySet.getValue());
 					}
-					System.out.println("==========================================================================================");
 					scan.reset();
 					break;
 				case 4:
-					System.out.println("==========================================================================================");
 					System.out.println("All Count = " + putHashMap(hmap).size());
 					System.out.println("Tablemap  = " + dto.getTableMap());
-					System.out.println("==========================================================================================");
 					Set<String> entrySet = putHashMap(hmap).keySet();
 					Iterator<String> itr = entrySet.iterator();
 					while(itr.hasNext()) {
 						String str = itr.next();
 						System.out.println(putHashMap(hmap).get(str));
 					}
-					System.out.println("==========================================================================================");
 					scan.reset();
 					break;
 				case 5:
@@ -174,5 +171,4 @@ public class CodeUtil {
 	}
 
 }
-
 ```
