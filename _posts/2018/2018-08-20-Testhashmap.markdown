@@ -10,13 +10,11 @@ comment: true
 
 * TestHashMap
 
-`
-public class UtilTest {
 
 	Scanner scan = new Scanner(System.in);
 	HashMap<String, cdDTO> hmap;
 	static int rembang;
-  cdDTO deleted;
+	cdDTO deleted;
 	cdDTO result;
 
 	public UtilTest() {
@@ -170,6 +168,3 @@ public class UtilTest {
 			operation(0);
 		}
 	}
-
-}
-`
