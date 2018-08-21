@@ -4,12 +4,7 @@ title: "TestHashMap"
 date: "2018-08-20 01:26"
 ---
 
-```
-package jp.mori;
-
-import java.util.*;
-import java.util.Map.Entry;
-
+```java
 public class UtilTest {
 
 	Scanner scan = new Scanner(System.in);
