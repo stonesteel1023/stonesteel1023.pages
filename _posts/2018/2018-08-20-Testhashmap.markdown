@@ -2,14 +2,15 @@
 layout: "post"
 title: "TestHashMap"
 date: "2018-08-20 01:26"
+comment: true
 ---
+
 # source CODE
  > HashMap TUI
 
 * TestHashMap
 
-```java
-
+`
 public class UtilTest {
 
 	Scanner scan = new Scanner(System.in);
@@ -171,5 +172,4 @@ public class UtilTest {
 	}
 
 }
-
-```
+`
