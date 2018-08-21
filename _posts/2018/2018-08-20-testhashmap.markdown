@@ -3,14 +3,19 @@ layout: "post"
 title: "TestHashMap"
 date: "2018-08-20 01:26"
 ---
+# source CODE
+ > HashMap TUI
 
+* TestHashMap
+*
 ```java
+
 public class UtilTest {
 
 	Scanner scan = new Scanner(System.in);
 	HashMap<String, cdDTO> hmap;
 	static int rembang;
-	cdDTO deleted;
+  cdDTO deleted;
 	cdDTO result;
 
 	public UtilTest() {
@@ -166,4 +171,5 @@ public class UtilTest {
 	}
 
 }
+
 ```
