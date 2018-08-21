@@ -10,7 +10,6 @@ comment: true
 
 * TestHashMap
 
-
 	Scanner scan = new Scanner(System.in);
 	HashMap<String, cdDTO> hmap;
 	static int rembang;
@@ -47,8 +46,7 @@ comment: true
 				scan.reset();
 				operation(pattern);
 	case 1:
-			cdDTO dto = new cdDTO();
-
+		cdDTO dto = new cdDTO();
 		putHashMap(hmap).put(String.valueOf(rembang), dto);
 		rembang ++;
 		dto.tableMap.putAll(hmap);
@@ -81,7 +79,6 @@ comment: true
 			//result = putHashMap(hmap).get(get_rembang);
 			//System.out.println("==> "+putHashMap(hmap).get(get_rembang));
 			//int get_kubun = 1;
-
 			HashMap<String, cdDTO> reMap = new HashMap<String, cdDTO>();
 			Collection<cdDTO> result2 = putHashMap(hmap).values();
 			Iterator<cdDTO> itr2 = result2.iterator();
@@ -94,14 +91,11 @@ comment: true
 			System.out.print("SEARCH ZAIRYU_CODE >>");
 			String get_kubun = scan.next();
 			System.out.println(">>" + reMap.get(get_kubun));
-
 			ArrayList<cdDTO> list = new ArrayList<>();
 			for(Entry<String, cdDTO> resultSet : putHashMap(hmap).entrySet()) {
 				list.add(resultSet.getValue());
 			}
 			//System.out.println(list.get(0));
-
-
 			for(Entry<String, cdDTO> entrySet : putHashMap(hmap).entrySet()) {
 				System.out.println("Key = " + entrySet.getKey()
 												+" Value = "+ entrySet.getValue());
@@ -129,7 +123,6 @@ comment: true
 			System.out.print("Really Recover? (Y/N) >>" );
 			Scanner scan4 = new Scanner(System.in);
 			String reInput = scan4.nextLine();
-
 			if(reInput.equals("Y")||reInput.equals("y")) {
 				HashMap<String, cdDTO> newMap = new HashMap<String, cdDTO>();
 				newMap.put(String.valueOf(rembang+1), deleted);
@@ -143,13 +136,11 @@ comment: true
 			}else if(reInput.equals("N")||reInput.equals("n")) {
 				break;
 			}
-
 			rembang ++;
 			scan4.reset();
 			scan.reset();
 			break;
 		}
-
 		pattern = a;
 		scan.reset();
 		}
@@ -168,4 +159,4 @@ comment: true
 	}else if(exit.equals("N")||exit.equals("n")) {
 	operation(0);
 	}
-	}
+}
