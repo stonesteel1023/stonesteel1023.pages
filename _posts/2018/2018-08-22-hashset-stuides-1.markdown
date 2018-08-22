@@ -62,44 +62,35 @@ LinkedHashSet	| 연결된 목록 타입으로 구현된 hash table에 데이터 
 
  1) 배열을 리턴 받는다. (입력 순서대로 리턴 받을 수 없다.)
 
-     - toArray()
+- toArray()
 
-`Object[] valueList = dateSet.toArray();
-
-
-for (int i = 0; i < valueList.length; i++) {
-  System.out.println(valueList[i]);
-}``
+`Object[] valueList = dateSet.toArray(); for (int i = 0; i < valueList.length; i++) {System.out.println(valueList[i]); }`
 
  2) 값을 꺼내주는 메서드를 이용한다.
 
-     - iterator()
-`Iterator iterator = dateSet.iterator();
-while (iterator.hasNext()) { // hasNext() -> 꺼낼 데이터가 있는가?
-  System.out.println(iterator.next());
-}`
+ - iterator()
+`Iterator iterator = dateSet.iterator(); while (iterator.hasNext()) { System.out.println(iterator.next()); }`
 
 * 주의!
   HashSet 컬렉션에 값을 저장할 때,
   인스턴스의 주소가 영향을 끼치는 것이 아니라
   hashCode()의 리턴 값이 영향을 끼친다.
 
-
 * HashSet과 hashCode() 메서드 예제
-
 
 public static void main(String[] args) {
 
-  HashSet set = new HashSet();
+ HashSet set = new HashSet();
 
-  set.add(new String("홍길동"));
-  set.add(new String("임꺽정"));
-  set.add(new String("유관순"));
-  set.add(new String("윤봉길"));
-  set.add(new String("안중근"));
-  set.add(new String("김구"));
-  set.add(new String("김구"));
-    /* "김구" 문자열인 경우엔 서로 다른 인스턴스 임에도 불구하고 중복되지 않는다.
+ set.add(new String("홍길동"));
+ set.add(new String("임꺽정"));
+ set.add(new String("유관순"));
+ set.add(new String("윤봉길"));
+ set.add(new String("안중근"));
+ set.add(new String("김구"));
+ set.add(new String("김구"));
+ 
+   /* "김구" 문자열인 경우엔 서로 다른 인스턴스 임에도 불구하고 중복되지 않는다.
      *  왜?
      *  => Set은 객체(의 주소)를 저장할 때 그 객체에 대해 hashCode() 메소드를 호출한 후
      *     그 리턴 값을 위치를 계산한다.
@@ -109,22 +100,23 @@ public static void main(String[] args) {
      *     값이 같기 때문에 hashCode()의 리턴값도 같다.
      *     그래서 위치를 계산한 값도 같다.
      *     위치 계산 값이 같아서 같은 값으로 간주하기 때문에 중복 저장되지 않는다.
-     */
+    */
 
-  // 증명! -> 값이 다 똑같이 출력된다.
-  System.out.println(new String("김구").hashCode());
-  System.out.println(new String("김구").hashCode());
-  System.out.println(new String("김구").hashCode());
+ // 증명! -> 값이 다 똑같이 출력된다.
+ System.out.println(new String("김구").hashCode());
+ System.out.println(new String("김구").hashCode());
+ System.out.println(new String("김구").hashCode());
 
 
-  /* 결론!
+ /* 결론!
     * HashSet 컬렉션에 값을 저장할 때,
     * 인스턴스의 주소가 영향을 끼치는 것이 아니라
     * hashCode()의 리턴 값이 영향을 끼친다.
-  */
+ */
 
   Iterator iterator = set.iterator();
   while (iterator.hasNext()) { // 꺼낼 데이터가 있는가?
   System.out.println(iterator.next());
+  
   }
 }
