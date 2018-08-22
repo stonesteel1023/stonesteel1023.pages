@@ -11,40 +11,45 @@ comment : true
 
 * Earlier today, Oracle announced the introduction of the Oracle Java SE Subscription.  Simply put, you can now buy access to Java SE updates – including support from Oracle just as you would buy Linux updates and support from any distro provider.  Pricing is low and simple.  We are working to make it possible to subscribe online very soon, making it even simpler.
 
-This new offering does not change how developers will get and use Java SE from Oracle.  As announced last year, Oracle now provides OpenJDK builds under the GPL+CPE license with plans to make them functionally interchangeable with the Oracle JDK by the Java SE 11 launch in September, 2018.  Going forward, we expect most developers and organizations to be using our builds as we complete the effort of making Oracle JDK and our OpenJDK builds equivalent.  No more “BCL” license, use the JDK under the same license as Linux, with the “Classpath” exception to afford even more flexibility.
+* This new offering does not change how developers will get and use Java SE from Oracle.  As announced last year, Oracle now provides OpenJDK builds under the GPL+CPE license with plans to make them functionally interchangeable with the Oracle JDK by the Java SE 11 launch in September, 2018.  Going forward, we expect most developers and organizations to be using our builds as we complete the effort of making Oracle JDK and our OpenJDK builds equivalent.  No more “BCL” license, use the JDK under the same license as Linux, with the “Classpath” exception to afford even more flexibility.
 
-The Java SE Subscription offering adds to all of that by offering a commercial license for Java SE combined with technical support and access to updates on legacy versions so you can upgrade to later releases on your own schedule.  It also buys time for organizations that may want another year or two to transition any use of Oracle Java SE desktop deployment technologies to other solutions.  No need to buy an expensive perpetual license, just buy desktop user subscriptions on an as-needed basis.
+* The Java SE Subscription offering adds to all of that by offering a commercial license for Java SE combined with technical support and access to updates on legacy versions so you can upgrade to later releases on your own schedule.  It also buys time for organizations that may want another year or two to transition any use of Oracle Java SE desktop deployment technologies to other solutions.  No need to buy an expensive perpetual license, just buy desktop user subscriptions on an as-needed basis.
 
-For more information, please see:
+* For more information, please see:
 
-* Java SE Subscription FAQ 
-* Java SE Subscription Data Sheet
-* Java SE Subscription Oracle.Com Page
- 
-
-
+* [Java SE Subscription FAQ](http://www.oracle.com/technetwork/java/javaseproducts/overview/javasesubscriptionfaq-4891443.html)
+* [Java SE Subscription Data Sheet](http://www.oracle.com/technetwork/java/javaseproducts/javasesubscription-data-sheet-4891969.pdf)
+* [Java SE Subscription Oracle.Com Page](https://www.oracle.com/java/java-se-subscription.html)
 
 # Comments
 
 ### Bernd
-Friday, June 22, 2018
-Regarding the metrics:
+ >Friday, June 22, 2018
 
-The NamedUserPlus in the licensing model had a minimum of 2000 units, will this be a minimum of 1 in the new subscription price list? It would then be a no brainer for WebStart replacement, which is a good thing!
+* Regarding the metrics:
 
-For servers, is the unit a real physical socket/processor with no core factor and/or logical vcpu cores?
+ The NamedUserPlus in the licensing model had a minimum of 2000 units, will this be a minimum of 1 in the new subscription price list? It would then be a no brainer for WebStart replacement, which is a good thing!
+
+ For servers, is the unit a real physical socket/processor with no core factor and/or logical vcpu cores?
 
 ### Mahesh
-Saturday, June 23, 2018
-In the subscription Mode what are the commercial tools and Features that will be provided access , Can you pls be specific if the non commercial version Openjdk is deployed in production will there be any impact if the Subscription model is not opted for . This is apart from the Patching long term support , Direct Updates from Oracle , will the Open JDK user base will get information and the security patches ..etc will be made available.
-### Bernd
-Wednesday, June 27, 2018
-Any minimum license users number for the named user desktop edition?
-### Donald Smith
-Thursday, June 28, 2018
-Bernd, 
+ > Saturday, June 23, 2018
 
-There's no planned minimums at this time. We are hoping to enable online access to buying smaller volumes but exactly ability to do that is TBD, but it'll be at least a month or so. The metrics are the same as the legacy Java SE Advanced products, so you do still need to understand Processor metrics which do use core factors. The licensing policy for running on either azure/aws is here - http://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf and if you have a virtualized data center of your own, the licensing policy for that is here: http://www.oracle.com/us/corporate/pricing/partitioning-070609.pdf
+ In the subscription Mode what are the commercial tools and Features that will be provided access , Can you pls be specific if the non commercial version Openjdk is deployed in production will there be any impact if the Subscription model is not opted for . This is apart from the Patching long term support , Direct Updates from Oracle , will the Open JDK user base will get information and the security patches ..etc will be made available.
+
+### Bernd
+ > Wednesday, June 27, 2018
+ Any minimum license users number for the named user desktop edition?
+
 ### Donald Smith
-Thursday, June 28, 2018
-Mahesh, I believe this can help give more information - https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence -- our plan is to open source all the previously closed JDK features such as mission control, advanced GC features, appcds, etc. The Advanced Management console, which is an enterprise management tool, remains a commercial feature for those with large Java 8 desktop deployments
+ > Thursday, June 28, 2018
+
+ Bernd,
+
+ There's no planned minimums at this time. We are hoping to enable online access to buying smaller volumes but exactly ability to do that is TBD, but it'll be at least a month or so. The metrics are the same as the legacy Java SE Advanced products, so you do still need to understand Processor metrics which do use core factors. The licensing policy for running on either azure/aws is here - [cloud-licensing](http://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf) and if you have a virtualized data center of your own, the licensing policy for that is here: [partitioning](http://www.oracle.com/us/corporate/pricing/partitioning-070609.pdf)
+
+### Donald Smith
+ > Thursday, June 28, 2018
+ Mahesh,
+
+ I believe this can help give more information - [https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence](https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence) -- our plan is to open source all the previously closed JDK features such as mission control, advanced GC features, appcds, etc. The Advanced Management console, which is an enterprise management tool, remains a commercial feature for those with large Java 8 desktop deployments
