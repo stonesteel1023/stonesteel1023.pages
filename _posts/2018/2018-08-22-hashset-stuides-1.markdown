@@ -18,7 +18,7 @@ Collection 인터페이스를 기반으로 구현 클래스에는 List와 Set이
 
 * HashSet 클래스에는 자료를 보관하는 add 메서드, 삭제하는 remove 메서드, 모든 요소를 삭제하는 clear 메서드, 자신을 복제한 개체를 반환하는 clone 메서드, 특정 요소를 보관하였는지 판별하는 contains 메서드, 비었는지 판별하는 isEmpty 메서드, 반복자를 반환하는 iterator 메서드, 보관한 요소 개수를 반환하는 size 메서드가 있음
 
- # [Set 인터페이스 - HashSet, TreeSet, LinkedHashSet][f0d22ece]
+# [Set 인터페이스 - HashSet, TreeSet, LinkedHashSet][f0d22ece]
 
   [f0d22ece]: https://onsil-thegreenhouse.github.io/programming/java/2018/02/21/java_tutorial_1-23/ "참조 : Onsil's Blog"
 
@@ -69,14 +69,15 @@ LinkedHashSet	| 연결된 목록 타입으로 구현된 hash table에 데이터 
  2) 값을 꺼내주는 메서드를 이용한다.
 
  - iterator()
+ 
 `Iterator iterator = dateSet.iterator(); while (iterator.hasNext()) { System.out.println(iterator.next()); }`
 
-* 주의!
+ > 주의!
   HashSet 컬렉션에 값을 저장할 때,
   인스턴스의 주소가 영향을 끼치는 것이 아니라
   hashCode()의 리턴 값이 영향을 끼친다.
 
-* HashSet과 hashCode() 메서드 예제
+### HashSet과 hashCode() 메서드 예제
 
 public static void main(String[] args) {
 
