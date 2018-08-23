@@ -36,7 +36,7 @@ LinkedHashSet	| 연결된 목록 타입으로 구현된 hash table에 데이터 
 
   [683d8088]: http://uoonleen.tistory.com/22 "Flatinum' tistory"
 
-* 컬렉션 클래스 : HashSet (java.util.HashSet)
+## 컬렉션 클래스 : HashSet (java.util.HashSet)
 
  - 저장하려는 객체에 대해 hashCode()를 호출하여
 
@@ -58,7 +58,7 @@ LinkedHashSet	| 연결된 목록 타입으로 구현된 hash table에 데이터 
 
    > 예 : HashSet
 
-* Set 컬렉션에서 값을 꺼내는 방법
+## Set 컬렉션에서 값을 꺼내는 방법
 
  1) 배열을 리턴 받는다. (입력 순서대로 리턴 받을 수 없다.)
 
