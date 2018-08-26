@@ -7,14 +7,12 @@ comment: true
 
 
 * JAVA1.5(Tiger) 관련자료
+
   > 이 새로운 기능은 Java에 근본적 변화를 가져왔습니다. 이러한 기능을 언제 어떻게 사용하는지를 이해하면 더 나은 코드를 작성할 수 있을 것입니다.
 
-Enhancements in JDK 5 - the official list of the new features in JDK 5
-Generics Tutorial (PDF) - Gilad Bracha's generics tutorial
-dev2dev Developer Centers
-Jess Garms은 BEA Systems의 Javelin 컴파일러 팀의 리더입니다. 그 이전에 Jess는 BEA의 Java IDE, WebLogic Workshop에 관여했습니다. 또한 그는 암호화 관련 경험이 상당히 풍부하며 Wrox Press에서 출판한 "Professional Java Security"를 공동 저술하기도 했습니다.
-
-Tim Hanson은 BEA Systems의 Javelin 컴파일러 설계자입니다. Tim은 BEA의 Java 컴파일러(가장 초기1.5 호환 구현 중 하나)를 상당 부분 개발했습니다. 이외에도 그는 CORBA/IDL 컴파일러(IBM 재직 시) 및 XQuery 컴파일러를 비롯한 수많은 컴파일러를 작성했습니다.
+- Enhancements in JDK 5 - the official list of the new features in JDK 5
+- Generics Tutorial (PDF) - Gilad Bracha's generics tutorial
+- dev2dev Developer Centers
 
 # Enumerations
 
