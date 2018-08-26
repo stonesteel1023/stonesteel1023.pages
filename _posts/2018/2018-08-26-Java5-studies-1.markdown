@@ -5,9 +5,22 @@ date: 2018-08-26 18:00
 comment: true
 ---
 
+
+* JAVA1.5(Tiger) 관련자료
+  > 이 새로운 기능은 Java에 근본적 변화를 가져왔습니다. 이러한 기능을 언제 어떻게 사용하는지를 이해하면 더 나은 코드를 작성할 수 있을 것입니다.
+
+Enhancements in JDK 5 - the official list of the new features in JDK 5
+Generics Tutorial (PDF) - Gilad Bracha's generics tutorial
+dev2dev Developer Centers
+Jess Garms은 BEA Systems의 Javelin 컴파일러 팀의 리더입니다. 그 이전에 Jess는 BEA의 Java IDE, WebLogic Workshop에 관여했습니다. 또한 그는 암호화 관련 경험이 상당히 풍부하며 Wrox Press에서 출판한 "Professional Java Security"를 공동 저술하기도 했습니다.
+
+Tim Hanson은 BEA Systems의 Javelin 컴파일러 설계자입니다. Tim은 BEA의 Java 컴파일러(가장 초기1.5 호환 구현 중 하나)를 상당 부분 개발했습니다. 이외에도 그는 CORBA/IDL 컴파일러(IBM 재직 시) 및 XQuery 컴파일러를 비롯한 수많은 컴파일러를 작성했습니다.
+
 # Enumerations
 
 Enum은 수 년간 enum 값으로 사용되어온 public static final int 선언과 많이 유사합니다. int에서 가장 크고 확실하게 개선된 점은 type safe입니다. int와는 달리 enum 타입 중 한 가지를 다른 타입의 위치에 사용할 수 없습니다. 왜냐하면 컴파일러에게는 모든 것이 똑같아 보이기 때문입니다. 아주 드물게 예외가 있긴 하지만 이 경우에도 enum과 유사한 모든 int 구성을 enum 인스턴스로 교체해야 합니다.
+
+> enum 은 Java 5에새 새로 생긴 키워드이므로, 옛날 자바 코드에서 enum을 형의 이름(변수/클래스/메소드 이름 등)으로 사용했다면, -source 1.5 를 사용하기 위해 그것들을 모두 수정해야 한다.
 
 Enum은 여러 가지 추가 기능을 제공합니다. 유틸리티 클래스인 EnumMap 및 EnumSet은 특히 enum에 최적화된 표준 컬렉션 구현입니다. 컬렉션에 enum만 포함되는 것을 알고 있다면 HashMap 또는 HashSet 대신 이러한 특정 컬렉션을 사용해야 합니다.
 
