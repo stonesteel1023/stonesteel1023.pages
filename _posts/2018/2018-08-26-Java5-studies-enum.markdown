@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JAVA 1.5 studies #1
+title: JAVA 1.5 studies #1 Enum
 date: 2018-08-26 18:00
 comment: true
 ---
