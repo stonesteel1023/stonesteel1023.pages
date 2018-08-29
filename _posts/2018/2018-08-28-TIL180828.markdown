@@ -1,0 +1,122 @@
+---
+layout: post
+title: "Programming tip"
+date: 2018-08-28 12:30
+comment: true
+---
+
+# [General Programming Tips ][edaa83f9]
+
+  [edaa83f9]: http://studyorcrytrying.tumblr.com/post/141574889807/general-always-comment-your-code-commenting-your "Programming tips"
+
+### Always comment your code
+Commenting your code is a great way for you to not only help solidify what you’re writing in your head, but it makes your code so much clearer for you and anyone else who may be reading your code. Of course you don’t always have to document every line, but documenting lines that you find difficult to remember is a good practice to keep.
+
+### Document your methods/functions
+Documenting your methods is a great way to keep track of what methods do what - create a doc-box above them and list the name of the method, what arguments it takes, what it returns, and the purpose it serves to the program. This can also serve as a quick reference so you don’t have to dig through your paper and find out what it’s supposed to do.
+
+### Develop your own style of coding
+When you first start coding, you may end up with code everywhere - Brackets in weird places, inconsistent spaces between parentheses, etc… Over time, you should start developing your own style of coding that is yours. Decide how you like to type your brackets, how you like your parentheses to look, your general variable naming style, etc… It makes your code so much easier to look at and read.
+
+### Know the official website for the language you’re working in
+If the code you are writing has an official website, use it! Languages like C++, Android, Java, and a ton of others have a website that has an extensive dictionary of libraries available to you and how to use them. Some of them even have example programs that you can use to help you. I keep all of mine in a bookmark folder.
+
+### Experiment on your own
+If you look below, you’ll notice my tip #4 for assignments - Don’t over-complicate your code. This is best saved for your own experimenting, so do it! In your down time, learn new techniques and new ways to optimize your code to the best it can be. Doing this in your own time is the best way to do it, as you don’t jeopardize any of your points if your code ends up not being able to work or if the teacher is extremely to-the-book on their assignments.
+
+### Debug as you go
+Debugging all at once sucks. You may get so far just to find out that your code is broken at the way beginning and that nothing else works. Instead, I suggest that you debug as you go to avoid the hours of debugging and possible re-writing at the end.
+
+# Assignments for beginners by beginner
+
+### Take your time time reading the prompt
+Nothing sucks more than finishing up the assignment after a week of coding than finding out that you completely skipped a crucial part of the program. If you need to, print out the prompt and highlight the crucial parts and make a note of anything else that you might forget.
+
+### Put document boxes at the top of your code
+These are more of a preference, but I prefer to put document boxes at the top of each of my files. I normally put my school id, name, assignment #, file name, and purpose of the file at the top of every file.  This helps me remember what file is supposed to do what and keeps my code clean and keeps my programming time shorter.
+
+### Make a list of your variables
+Programming is one of those things that will frustrate the heck out of you at times. You will spend days trying to debug one thing, just to go in to the TA to find out that you missed a semi-colon or you misspelled a variable. My recommendation: Make a list of variables that are used globally as well as which ones are used privately in their respective files. You can either do this in a doc-box or you can use old-fashioned pen and paper. I also put what the variable is used for and use the sheet for quick reference.
+
+### Don’t try to over-complicate your code
+
+When you’re given an assignment, do only what the assignment says - don’t try to go above-and-beyond unless you’re told there’s extra credit or another incentive. This means; not using a switch when you’re specifically told to use if-else statements or anything else similar.
+
+### Visit your TA or teacher if you need help
+
+They are there to help you - don’t just rely on stack overflow to teach you something that you don’t understand. Sure, you may be able to fix your code from that forum post, but do you actually understand it?
+
+### Pair programming is great if you do your own part
+
+Don’t just rely on your partner to do everything while you get the grade. You won’t learn anything that way. Evenly split the work and code when you are both present. This will allow you both to learn how to do the program and prepare you both for the exam to come. Pair programming is a great way to get a more real-world experience, as many projects in the real-world are done in groups or teams. ** Pair programming may not be available for you, ask your professor first **
+
+### Do your own code
+
+Aside from pair programming, do your own code. Do not rely on git hub to have the old assignments from years past and do not rely on your friends to write your code for you. Copying code from online is not only plagiarism which can earn you a 0 in the assignments, but some schools even have a strict policy where you can fail out of the class for plagiarizing. It also does not help you to learn the material.
+
+# [Code practice for Programming Beginners][85b4302b]
+
+  [85b4302b]: https://www.codementor.io/learn-programming/steve-klabniks-9-words-advice-programming-beginners "Steve Klabnik’s 9 Tips"
+
+### Always Stick to One Task at a Time
+
+Whenever I’m trying to learn how to do new stuff, or if I have a project where I’d have to figure out how to do a lot of things, I try to just pick a particular task and attack that.
+
+Often times in programming, you’ll hold a lot of context in your head depending on what you’re working on, so it’s best to focus on one thing and try to get it done. There are a lot of ways you can tackle a single problem, so a lot of things will depend on what solution you end up choosing. For example, if you’re trying to build a CMS website that build websites where it will deploy things to each user, you could organize a site where it’s a big giant app where everyone has a specific subdomain, or you can make it so that each individual subdomain is a separate instance of your app with configuration changes. There are pros and cons to each approach, so this is where the judgment comes in and why some people say programming is an art, since you constantly have to weigh different tradeoffs.
+
+### Different People Find Different Things Easy
+
+I know people who don’t do web programming because they think operating systems programming is easier. According to their logic, they only have to write assembly code for one computer and it will do what they tell it to do. Web developers have to wrap up the markup language, programming language, and styling language before the application is sent across the network to run on a totally different computer running on a different operating system—which is very hard.
+
+Obviously, we all have different strengths and weaknesses, so I try to shy away from telling beginners things will be impossible for them because you never know whenever you run across someone who really does have intuition for, say, CMSs. It’s possible, right? We’re all different in so many ways.
+
+### Your Work Can Be Only 80% Complete
+
+One of the things about engineering is that building a commuter vehicle and a race car are two very different things, so you can get away with things in a commuter car that you wouldn’t put in a race car, and vice versa. It’s important to decide which edge cases you want to handle, but a lot of times it’s perfectly fine to just do 80% of the work, in which the other 20% is stuff people don’t really use so it’s not that important to get those things 100% right. You can track down the last 1% of bugs in your project, but you will spend a lot of time doing that.
+
+### Learn How to Google
+
+A lot of beginners under-appreciate the degree which googling things is a part of a programmer’s job. Sometimes my job is more about knowing how to search for something than it is actually programming.
+
+### Don’t Be Afraid to Ask for Help or to Help People Back
+
+Programming is actually a really social activity. I would not be as good of a programmer as I am now if I didn’t have their help—each of my friends are good at certain areas so whenever I have a problem, I know which friend to ask. I also help them out in return when they have a problem. This is really the only way to get things done.
+
+### Technology Always Changes
+
+Therefore, the language of technology also changes. However, you’ll eventually accumulate the knowledge of all those things.
+
+I like to think of myself as a programmer first and a language-ist second, since there will be a day when all of the programming languages we use right now won’t be used anymore. For example, if I started in the 80s, I would be using certain forms of assembly code that are all gone now for the most part. This will happen to all technologies no matter how good or bad. There will be a day when no one uses Rails anymore.
+
+That said, there is a broad paradigm that programming languages fall into, and there’s sort of a family tree for programming languages. So, if you know a language that is similar to another one, it can be very easy to pick that language up. For example—both Python and Ruby people hate me for saying this—Python and Ruby are almost the same programming language. It’s true that, culturally, there are huge differences. However, other than that, they’re almost the exact same thing, so learning one when you know the other is very easy.
+
+However, if you go from a dynamic, object-oriented programming language such as Pearl or Ruby, and you switch to a statically-typed programming language like Haskell, it will be a very difficult jump. This is because the languages are in totally different branches on the programming family tree. However, you’ll also learn a lot if you choose to make that leap. All in all, some languages are easy to pick up if you stay within a paradigm, and some languages are harder if you jump paradigms.
+
+In terms of actually learning new languages, what I usually do is have a project for every programming language. It’s a text adventure game where you tell the player to go north, go east, attack goblin, etc. I try to do that when I learn programming languages, because if I have a program built in another language, I’ll know I can do it, but since I’d want to explore some things that are specific to the programming language, every program will look a little different. So, I learn by trying to write some code and reading some tutorial. It’s mostly just putting in a lot of time to learn another skill, and the more you practice, the better you will get.
+
+### It’s Okay Not to Contribute to Open Source
+
+But if you do want to contribute, the way I’ve found how to do so is work on something you’ve actually used. In order to motivate yourself, you need a stronger and more precise goal than a broad desire to contribute.
+
+Even when shaving your goal down to just contributing to Rails will help you take a significant step towards accomplishing your goal. The more you can articulate what you want to accomplish, the more likely you are going to get it done. I’ve always had a love for documentation and that’s definitely an area where almost every project needs help with, but a lot of people find writing docs boring so even though I think that might be an avenue to get started, it’s not for everyone.
+
+In my example, I started wanting to contribute to Rails, so what I did was I went and read through all the open issues at the time. That helped me understand what a lot of the pain points and problems were. I picked one of the issues that seemed pretty easy to fix and ended up spending a couple of days on it before I did so. Afterwards, I submitted my fix and it got accepted, which made me really excited, so I picked a second issue and it took me only 2 days to fix it. So, it’s never harder than the first time. The first couple of patches always feel like a huge, massive effort, but the more you do it, the more familiar you will get with the tools and Github, and things become easier. By default it’s always harder for new people to contribute than for existing contributors.
+
+### Programmers Fail All the Time
+
+In Test-Driven Development, you often see things like: red, red, red, green, red, red, red, green—which means most of the time, we’re failing. If all of our programs were feature complete and we didn’t have any bugs, programming wouldn’t even be a thing. Just the fact that we are programming means we either don’t have many features yet, or our software has problems.
+
+So, in some ways, you’re always failing as a programmer. This is a weird mindset to get into, but you just have to be okay with things not being perfect and not working; it’s literally our job.
+
+### Don’t Give Up
+
+As beginners to programming, you often have no connection to what is difficult and what is easy, so you may ask me what I think of something while thinking the task to be very trivial, and I will tell you it is very difficult instead. In contrast, you may think something is very difficult and ask me what I think, and I will tell you that it’s really easy.
+
+I think this comic from XKCD perfectly illustrates the issue:
+<a href="http://xkcd.com/1425/"><img src="http://imgs.xkcd.com/comics/tasks.png" alt=""></a>
+
+As you can see, even though two functions may seem similar, the order of magnitude in their difficulty is way different. It can definitely be easy to bite off more than you can chew, but the cool thing about doing that is it means you’re going to learn a lot. I personally really like hard projects because of this. As long as you can be not frustrated by how long it is taking you to finish a project, the harder the project is, the more you have to learn. What’s more, it feels really good once you’ve accomplished your project.
+
+For example, when I took over a Ruby project called Shoes, it took me six months to even figure out how to compile it. I was pretty much banging my head on the wall day after day for months, but when I finally fixed the project, it was the best feeling I ever had.
+
+That comes in with learning, too, where things are extremely hard at the beginning and eventually they get easier because you worked at them for a long time.
