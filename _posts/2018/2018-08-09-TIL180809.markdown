@@ -2,7 +2,7 @@
 layout: post
 title: TODAY I LEARNED IT
 date: 2018-08-09 18:36
-comment : true
+comments : true
 ---
 # 인생의 다른 문을 열려면 반드시 참가비를 내라
 

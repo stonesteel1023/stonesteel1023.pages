@@ -2,7 +2,8 @@
 layout: "post"
 title: "Hashmap-studies #3"
 date: "2018-08-14 01:00"
-tag: HashMap
+tag:
+- HashMap
 comment: true
 ---
 

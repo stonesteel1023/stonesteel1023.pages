@@ -3,7 +3,7 @@ layout : post
 title : ""
 date : 2018-08-14 22:45
 tag : java
-comment : true
+comments : true
 ---
 # A Quick Summary on the new Java SE Subscription
 

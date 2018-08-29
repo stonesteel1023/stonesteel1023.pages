@@ -2,7 +2,8 @@
 layout: post
 title: "JAVA 1.5 studies #1 Enum"
 date: 2018-08-26 18:00
-comment: true
+tag : java
+comments: true
 ---
 
 * JAVA1.5(Tiger) 관련자료
@@ -48,5 +49,3 @@ public enum DatabaseType {
 DatabaseType dbType = ...;
 String jdbcURL = dbType.getJdbcUrl();
 이전에는 URL을 얻기 위해 유틸리티 메서드가 있는 장소를 알려주어야 했습니다.
-
-

@@ -2,7 +2,9 @@
 layout: post
 title: "Programming tip"
 date: 2018-08-28 12:30
-comment: true
+tag:
+  - coding
+comments: true
 ---
 
 # [General Programming Tips ][edaa83f9]

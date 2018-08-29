@@ -2,7 +2,9 @@
 layout: "post"
 title: "Hashset-stuides-2"
 date: "2018-08-23 13:45"
-comment: true
+tag:
+- HashSet
+comments: true
 ---
 
 # EnumSet and EnumMap
@@ -140,13 +142,13 @@ and
 * For immutable versions of <code>Enum{Set,Map}</code>, see the following methods from <a href="https://github.com/google/guava">Guava</a>:
 
 - Factory methods:
-    
+
     - <a href="http://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Sets.html#immutableEnumSet-E-E...-"><code>Sets.immutableEnumSet(first, rest...)</code></a>
     - <a href="http://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Sets.html#immutableEnumSet-java.lang.Iterable-"><code>Sets.immutableEnumSet(iterable)</code></a>
     - <a href="http://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Maps.html#immutableEnumMap-java.util.Map-"><code>Maps.immutableEnumMap(map)</code></a>
-  
+
 - Collectors:
-    
+
     - <a href="http://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Sets.html#toImmutableEnumSet--"><code>Sets.toImmutableEnumSet()</code></a>
     - <a href="http://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Maps.html#toImmutableEnumMap-java.util.function.Function-java.util.function.Function-"><code>Maps.toImmutableEnumMap(keyMapper, valueMapper)</code></a>
     - <a href="http://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Maps.html#toImmutableEnumMap-java.util.function.Function-java.util.function.Function-java.util.function.BinaryOperator-"><code>Maps.toImmutableEnumMap(keyMapper, valueMapper, mergeFunction)</code></a>
@@ -183,10 +185,10 @@ and
 - The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>iterable.forEach(action)</code></a> method is popular.  Optimizing it tends to affect a large audience, which increases the likelihood that the optimization (even if small) is worthwhile.  (I'd claim that <code>iterable.forEach(action)</code> is <em>too</em> popular, and I'd suggest that the traditional enhanced <code>for</code> loop should be preferred over <code>forEach</code> except when the argument to <code>forEach</code> can be written as a method reference.  That's a topic for another discussion, though.)
 - The <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html#forEachRemaining-java.util.function.Consumer-"><code>iterator.forEachRemaining(action)</code></a> method is more important than it seems.  Few people use it directly, but many people use it indirectly through streams.  The default <code>spliterator()</code> delegates to the <code>iterator()</code>, and the default <code>stream()</code> delegates to the <code>spliterator()</code>.  In the end, stream traversal may delegate to <code>iterator().forEachRemaining(...)</code>.  Given the popularity of streams, optimizing this method is a good idea!
 - The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html#spliterator--"><code>iterable.spliterator()</code></a> method is critical when it comes to stream performance, but writing a custom <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html"><code>Spliterator</code></a> from scratch is a non-trivial task.  I recommend this approach:
-   
+
     - Check whether the characteristics of the default spliterator are correct for your collection (often times the defaults are too conservative &mdash; for example, <code>EnumSet</code>'s spliterator is currently missing the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#ORDERED"><code>ORDERED</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#SORTED"><code>SORTED</code></a>, and <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#NONNULL"><code>NONNULL</code></a> characteristics).  If they're not correct, then provide a trivial override of the spliterator that uses <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterators.html#spliterator-java.util.Collection-int-"><code>Spliterators.spliterator(collection, characteristics)</code></a> to define the correct characteristics.
     - Don't go further than that until you've read through <a href="http://hg.openjdk.java.net/jdk10/jdk10/jdk/file/72f33dbfcf3b/src/java.base/share/classes/java/util/Spliterators.java#l1691">the implementation of that spliterator</a>, and you understand how it works, and you're confident that you can do better.  In particular, your <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#tryAdvance-java.util.function.Consumer-"><code>tryAdvance(action)</code></a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#trySplit--"><code>trySplit()</code></a> should both be better.  Write a benchmark afterwards to confirm your assumptions.
-    
+
 - The <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html#forEach-java.util.function.BiConsumer-"><code>map.forEach(action)</code></a> method is extremely popular and is almost always worth overriding.  This is especially true for maps like <code>EnumMap</code> that create their <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html"><code>Entry</code></a> objects on demand.
 - It's usually possible to share code across the <code>forEach</code> and <code>forEachRemaining</code> methods.  If you override one, you're already most of the way there to overriding the others.
 - I don't think it's worthwhile to override <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#removeIf-java.util.function.Predicate-"><code>collection.removeIf(filter)</code></a> in any of these classes.  For <code>RegularEnumSet</code>, where it seemed most likely to be worthwhile, I couldn't come up with a faster implementation than the default.
@@ -368,7 +370,7 @@ and
   <span class="enums kwc">&#64;Override</span> <span class="enums kwa">public</span> <span class="enums kwb">boolean</span> <span class="enums kwd">removeAll</span><span class="enums opt">(</span>Collection<span class="enums opt">&lt;</span>?<span class="enums opt">&gt;</span> c<span class="enums opt">)        {</span><span class="enums kwa">throw</span> <span class="enums kwd">uoe</span><span class="enums opt">();}</span>
   <span class="enums kwc">&#64;Override</span> <span class="enums kwa">public</span> <span class="enums kwb">boolean</span> <span class="enums kwd">removeIf</span><span class="enums opt">(</span>Predicate<span class="enums opt">&lt;</span>? <span class="enums kwa">super</span> E<span class="enums opt">&gt;</span> f<span class="enums opt">)  {</span><span class="enums kwa">throw</span> <span class="enums kwd">uoe</span><span class="enums opt">();}</span>
   <span class="enums kwc">&#64;Override</span> <span class="enums kwa">public</span> <span class="enums kwb">boolean</span> <span class="enums kwd">retainAll</span><span class="enums opt">(</span>Collection<span class="enums opt">&lt;</span>?<span class="enums opt">&gt;</span> c<span class="enums opt">)        {</span><span class="enums kwa">throw</span> <span class="enums kwd">uoe</span><span class="enums opt">();}</span>
-  
+
   <span class="enums kwa">private static</span> UnsupportedOperationException <span class="enums kwd">uoe</span><span class="enums opt">() {</span>
     <span class="enums kwa">return new</span> <span class="enums kwd">UnsupportedOperationException</span><span class="enums opt">();</span>
   <span class="enums opt">}</span>
@@ -404,7 +406,7 @@ and
 
 * Suppose we want to reuse the existing code.  I see two general approaches:
 
-1. Do what Guava did, basically.  Create unmodifiable wrappers around modifiable <code>Enum{Set,Map}</code>.  Both the wrappers and the modifiable collections should be able to unwrap intelligently to take advantage of the existing optimizations for particular <code>Enum{Set,Map}</code> types (as in <code>RegularEnumSet.equals(object)</code>). 
+1. Do what Guava did, basically.  Create unmodifiable wrappers around modifiable <code>Enum{Set,Map}</code>.  Both the wrappers and the modifiable collections should be able to unwrap intelligently to take advantage of the existing optimizations for particular <code>Enum{Set,Map}</code> types (as in <code>RegularEnumSet.equals(object)</code>).
 
 2. Extend the modifiable <code>Enum{Set,Map}</code> classes with new classes that override modifier methods to throw <code>UnsupportedOperationException</code>.  Optimizations that sniff for particular <code>Enum{Set,Map}</code> types (as in <code>RegularEnumSet.equals(object)</code>) remain exactly as effective as before without changes.
 

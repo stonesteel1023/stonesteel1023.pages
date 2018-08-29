@@ -2,6 +2,9 @@
 layout: "post"
 title: "Hashset-stuides-1"
 date: "2018-08-22 21:12"
+tag:
+- HashSet
+comments: true
 ---
 
 # [컬렉션 프레임워크 - List, Set 인터페이스][6dad1c65]
@@ -69,7 +72,7 @@ LinkedHashSet	| 연결된 목록 타입으로 구현된 hash table에 데이터 
  2) 값을 꺼내주는 메서드를 이용한다.
 
  - iterator()
- 
+
 `Iterator iterator = dateSet.iterator(); while (iterator.hasNext()) { System.out.println(iterator.next()); }`
 
  > 주의!
@@ -90,7 +93,7 @@ public static void main(String[] args) {
  set.add(new String("안중근"));
  set.add(new String("김구"));
  set.add(new String("김구"));
- 
+
    /* "김구" 문자열인 경우엔 서로 다른 인스턴스 임에도 불구하고 중복되지 않는다.
      *  왜?
      *  => Set은 객체(의 주소)를 저장할 때 그 객체에 대해 hashCode() 메소드를 호출한 후
@@ -118,6 +121,6 @@ public static void main(String[] args) {
   Iterator iterator = set.iterator();
   while (iterator.hasNext()) { // 꺼낼 데이터가 있는가?
   System.out.println(iterator.next());
-  
+
   }
 }
