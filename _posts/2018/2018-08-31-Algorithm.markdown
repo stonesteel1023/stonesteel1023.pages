@@ -61,25 +61,25 @@ public void test() {
 
 public boolean KMP(char []text, char []pattern){
 
-        int lps[] = computeTemporaryArray(pattern);
-        int i=0;
-        int j=0;
-        while(i < text.length && j < pattern.length){
-            if(text[i] == pattern[j]){
-                i++;
-                j++;
+   int lps[] = computeTemporaryArray(pattern);
+   int i=0;
+   int j=0;
+   while(i < text.length && j < pattern.length){
+       if(text[i] == pattern[j]){
+            i++;
+            j++;
+       }else{
+            if(j!=0){
+               j = lps[j-1];
             }else{
-                if(j!=0){
-                    j = lps[j-1];
-                }else{
-                    i++;
-                }
+               i++;
             }
-        }
-        if(j == pattern.length){
-            return true;
-        }
-        return false;
+       }
+    }
+       if(j == pattern.length){
+          return true;
+       }
+      return false;
  }
 
  /*
