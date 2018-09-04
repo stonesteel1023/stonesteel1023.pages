@@ -26,6 +26,7 @@ comments: false
 
 - 2014~2018 Web-Programmer & Assistant Manager in Mori System
 
+---
 # Project
 ---
 ### Github 
