@@ -24,7 +24,7 @@ comments: false
 ---
 - 2012~2013 Project Manager in Brancom
 
-- 2015~2018 Web-Programmer & Assistant Manager in Mori System
+- 2014~2018 Web-Programmer & Assistant Manager in Mori System
 
 # Project
 ---
