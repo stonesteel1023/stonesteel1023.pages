@@ -11,7 +11,7 @@ comments: false
 ## Name
 * 최석철(Choi seok cheol) lived in Seoul, Korea.
 * Michael Choi had worked in Ghana in West Africa for two years.
-* 崔錫徹(チェソクチョル) working in Tokyo, Japan since 2015.
+* 崔錫徹(チェソクチョル) working in Tokyo, Japan since 2014.
 
 
 ## Bio
