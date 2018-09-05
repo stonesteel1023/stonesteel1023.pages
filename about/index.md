@@ -11,7 +11,7 @@ comments: false
 ## Name
 * 최석철(Choi seok cheol) lived in Seoul, Korea.
 * Michael Choi had worked in Ghana in West Africa for two years.
-* 崔錫徹(チェソクチョル) working in Tokyo, Japan since 2015.
+* 崔錫徹(チェソクチョル) working in Tokyo, Japan since 2014.
 
 
 ## Bio
@@ -24,13 +24,15 @@ comments: false
 ---
 - 2012~2013 Project Manager in Brancom
 
-- 2015~2018 Web-Programmer & Assistant Manager in Mori System
+- 2014~2018 Web-Programmer & Assistant Manager in Mori System
 
+---
 # Project
 ---
 ### Github 
 * One day/one commit Project
 <img src="https://ghchart.rshah.org/stonesteel1023" alt="Github Image" style="max-width:100%">
+
 * TIL(Today I Learned It!) Posting Project
 
 ### AWS
