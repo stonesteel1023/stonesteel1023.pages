@@ -2,7 +2,6 @@
 layout: post
 title: "개발자에서 개발팀장이 되기까지 겪은 다섯가지 큰 실수"
 date: 2018-09-07 14:45
-tag: - HR
 comments: true
 ---
 
