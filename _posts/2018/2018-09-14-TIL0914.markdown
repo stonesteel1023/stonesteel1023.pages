@@ -2,6 +2,8 @@
 layout: post
 title: "TODAY I LEARNED IT - String convert"
 date: 2018-09-14 20:20
+tag:
+  -Java
 comments: true
 ---
 
@@ -14,15 +16,15 @@ So there shouldn't really be a difference except for an additional method invoca
 
 Also, in the case of Object#toString, if the instance is null, a NullPointerException will be thrown, so arguably, it's less safe.
 
-'''java
-public static void main(String args[]) {  
+```java
+public static void main(String args[]) {
     String str = null;
-    System.out.println(String.valueOf(str));  // This will print a String equal to "null"        
+    System.out.println(String.valueOf(str));  // This will print a String equal to "null"
     System.out.println(str.toString()); // This will throw a NullPointerException
 }
-'''
+```
 
-## Stephen C on Stack Overflow
+## Stephen C (Stack Overflow)
 
 Some developers acquire the (IMO) bad habit of "defending" against nulls. So you see lots of tests for nulls, and treating nulls as special cases. The idea seems to be prevent NPE from happening.
 
@@ -33,4 +35,3 @@ In general, it is better to avoid the null being there in the first place ... un
 So how does this apply here?
 
 Well, if you think about it, using String.valueOf(obj) could be a way of "making good". That is to be avoided. If it is unexpected for obj to be null in the context, it is better to use obj.toString().
-
