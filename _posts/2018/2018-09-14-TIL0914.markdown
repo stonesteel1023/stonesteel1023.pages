@@ -21,9 +21,9 @@ Also, in the case of Object#toString, if the instance is null, a NullPointerExce
 
 `String str = null;`
     
-    `System.out.println(String.valueOf(str));  // This will print a String equal to "null"`
+`System.out.println(String.valueOf(str));  // This will print a String equal to "null"`
     
-    `System.out.println(str.toString()); // This will throw a NullPointerException`
+`System.out.println(str.toString()); // This will throw a NullPointerException`
     
 `}`
 
