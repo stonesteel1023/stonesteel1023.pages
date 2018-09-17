@@ -1,47 +1,62 @@
-Why Trying New Things Is So Hard to Do
+---
+layout: post
+title: "TODAY I LEARNED IT - 결핍의 경제학"
+date: 2018-09-17 23:59
+comments: true
+---
 
-센딜 멀레이너선
-Sendhil Mullainathan is a professor of economics at Harvard. Follow him on Twitter: @m_sendhil.
+# Why Trying New Things Is So Hard to Do
+> 센딜 멀레이너선
+> Sendhil Mullainathan is a professor of economics at Harvard. Follow him on Twitter: @m_sendhil.
 
-저는 다이어트 콜라를 정말 많이 마십니다. 하루에 거의 2L씩 마시죠. 여섯 캔 정도를 마시는 셈으로, 물론 제가 자랑스레 내세울 만한 습관은 아니지만, 어쨌든 저는 그 맛에 완전히 길들었습니다.
-검소한 경제학자로서 다이어트 콜라 말고 비슷한 제품이 더 싸다는 걸 물론 잘 알고 있습니다. 게다가 이따금 더 싼 걸 사는 게 아니라 저처럼 거의 매일 달고 사는 제품을 저렴한 대체재로 바꾸면 돈을 꽤 아낄 수 있다는 것도 잘 압니다. 그렇지만 저는 지금도 늘 마시던 그 다이어트 콜라만 마십니다. 유사품은 공짜로 시음하는 코너에도 눈길조차 주지 않습니다.
-왜 그러냐고요? 무턱대고 습관을 고수하려는 건 아닙니다. 저는 앞서 이 문제에 관해 골똘히 생각해봤습니다. 그리고 다이어트 콜라를 마시느라 쓰는 돈이 결코 비싸지 않다는 결론을 내렸습니다. 절대적인 액수를 말하는 것이 아니라 이미 제게 꼭 맞는 기호식품을 찾아 오랫동안 마셔온 데서 비롯되는 행복과 효용이 충분히 그만한 값을 한다는 생각에 이르렀죠. ‘이 정도는 내 형편에 마셔도 괜찮다.’ 정도의 결론이랄까요?
-하지만 애석하게도 저 사고과정에는 명백한 실수 혹은 오류가 포함돼 있습니다. 모아놓고 보면 상당한 규모의 비용이나 소비에 관해 중요한 결정을 내릴 때 사람들이 흔히 기대는 잘못된 편향에서 저도 벗어나지 못한 것입니다. 저도 그렇지만 사람들은 대개 실생활에서 겪는 크고 작은 일에 충분한 실험 없이 무언가를 선택하고 결정을 내립니다.
-대개 실험을 해보면 그 실험에 드는 비용이나 수고를 충분히 만회하고도 남을 만큼 현명한 결정을 내릴 수 있다는 점을 생각하면 사람들이 무언가를 잘 알지 못하면서 잘 안다는 착각 속에 결정을 내리는 건 상당히 안타까운 일입니다. 저의 다이어트 콜라 사랑만 해도 그렇습니다. 제가 유사 제품이 어떤지 한 번씩 마셔보고 바꿔보는 건 대단한 희생이 필요한 일이 절대 아닙니다. 혹시 다이어트 콜라보다 제 입맛에 더 맞는 제품을 찾기라도 하는 날에는 앞으로 제가 마시는 음료수의 단가가 낮아지는 셈이니, 결코 작지 않은 돈을 절약할 수 있게 될 수도 있습니다.
-매일 똑같은 음료수만 사 마시는 것처럼 똑같은 선택을 되풀이할 때 장점은 분명합니다. 새로운 것을 고르고 고민하는 데 시간을 쓰고 수고를 들일 필요가 없죠. 똑같은 것만 매번 마셔도 좀처럼 질리지 않는 사람에게는 더욱 그럴 겁니다. 하지만 습관을 잠시 접어두고 새로운 것을 시도해보고 궁극적으로 새로운 습관을 들일 때 훨씬 더 큰 이득을 얻을 수도 있습니다. 사람들이 하는 행동의 47%를 정도의 차이는 있지만 모두 습관적인 행동으로 분류할 수 있다는 연구도 있습니다.
-그렇지만 효능이 똑같은 멀쩡한 복제약품을 두고도 여전히 이름 있는 브랜드 제품을 사는 사람들이 상당히 많습니다. 약국에서 (처방전이 필요 없는) 약을 살 때를 떠올려보면 이해가 빠를 겁니다. 분명 진열대에 아스피린 바로 옆에 아스피린과 성분이 똑같은 복제약이 더 싼 값에 놓여있는데도 사람들은 왜 계속 아스피린을 사는 걸까요? 성분이 똑같다는 건 과학자들이 여러 차례 실험을 통해 입증한 사실입니다. 굳이 이를 못 믿겠다면 직접 한번 실험해보면 될 일입니다. 복제약과 원래 제품의 약효는 이론적으로 다를 리 없습니다.
-복제약이 아니라도 사람들이 간단하게 확인해볼 수 있는 실험을 게을리한 탓에 현명하지 못한 결정을 내리는 사례는 얼마든지 많습니다. 지난 2014년 2월 5일, 런던 지하철 노조가 48시간 부분 파업을 벌였습니다. 이틀 동안 열차는 몇 개 역을 서지 않고 통과해야 했습니다. 해당 역을 이용해 출퇴근하던 시민들은 다른 방법을 찾아야 했죠.
-48시간의 파업이 끝난 뒤 시민들은 대부분 원래 하던 대로 해당 역을 이용했습니다. 파업 덕분에 새로운 경로를 찾아보고 아예 새로운 길로 출퇴근을 하기 시작한 사람은 5%에 불과한 것으로 조사됐습니다. 원래 평균 32분 걸리던 출퇴근 시간이 새로운 길로 가면 6분 40초가량 단축되는데도 많은 사람은 더 오래 걸리는 원래 습관을 버리지 않은 겁니다.
-파업 때문에 지하철역이 폐쇄되자 사람들은 새로운 출퇴근길을 찾기 시작했습니다. 찾아봤더니 훨씬 빠른 길이 있었죠. 파업이 48시간이 아니라 더 길었다면 더 편리하고 더 빠른 길도 얼마든지 발견됐을 겁니다.
-그렇지만 여기서 주목해야 하는 점은 사람들이 파업이 일어난 뒤에야 마지못해 실험에 착수했다는 점입니다. 즉, 사람들은 실험 자체를 근본적으로 꺼립니다. 예를 들어 제가 좋아해 즐겨 찾는 단골 식당을 생각해보면 의외로 아무리 많이 그곳에서 밥을 먹었어도 제가 먹은 메뉴의 가짓수는 그렇게 많지 않습니다. 늘 먹는 것만 먹기 때문이죠. 직장 주변에 점심을 해결할 만한 선택지가 상당히 많지만, 저는 이번에도 늘 가던 곳만 가는 편입니다.
-습관은 이렇게 무섭습니다. 기본적으로 우리는 현재, 지금 이 순간에 지나치게 많은 가치를 부여합니다. 그래서 무언가 고민하고 알아보는 데 드는 시간과 노력을 아깝다고 생각하며 습관대로, 익숙한 결정을 내리곤 하죠. 새로운 걸 시도해보는 일은 그 자체로 고역일 때가 많습니다. 당장 시간을 쓰고 머리를 써서 고민을 해야 하는데, 아무리 새로운 결정이 더 좋은 선택이라고 해도 그에 따른 보상이 주어지는 건 미래의 일입니다. 눈앞에 보이는, 손에 닿는 혜택이 아닌 한 좀처럼 와닿지 않죠. 요리 솜씨가 뛰어난 걸 익히 아는 단골 식당인 만큼, 다른 메뉴도 시도해보고 싶긴 하지만, 오늘은 그냥 늘 먹던 걸 먹자는 생각이 되풀이됩니다.
-과신 때문에 새로운 결정을 못 내릴 때도 있습니다. 대개 머릿속에 대안을 먼저 그려보곤 하는데, 이때 사람들은 직접 해보지도 않은 대안, 써보지도 않은 대체재가 어떨지 임의로 상상한 가정과 결과가 정확하리라고 너무 쉽게 단정합니다. 자신의 감을 너무 믿는 거죠.
-마지막으로 우리가 여러 가지 선택지 가운데 골랐다고 믿는 그 선택이 실은 진정한 의미의 선택이 아니었을 때가 많습니다. 마트에서 장을 볼 때 저는 음료수 코너를 반드시 들르지만, 멈춰 서서 무엇을 살지 고민하는 일은 절대 없습니다. 다른 제품은 거들떠보지도 않고 다이어트 콜라를 사서 장바구니에 담으니까요. 이 과정은 어떤 고민도 개입하지 않는 사실상 자동화된 행위입니다.
-우리의 일상생활에만 적용되는 이야기가 아닙니다. 기업의 CEO나 정부 정책을 결정하는 사람들도 결정하기 전에 해볼 수 있는 실험을 제대로 하지 않는 경우가 허다합니다. 많은 사람의 생활에 심대한 영향을 끼칠 수 있는 결정을 내리는 사람일수록 실험 부족으로 인해 치러야 하는 대가가 커집니다. 기업에서 사람을 뽑을 때 경영진은 대개 우리 회사에 “잘 맞는” 인재의 조건을 미리 상정해놓고 서류를 읽고 면접을 봅니다. 하지만 이런 조건은 아무리 꼼꼼해봤자 아무런 실험을 거치지 않고 경영진의 머릿속에서 나온 기준일 때가 많습니다.
-물론 우리 회사에 잘 맞지 않을 것 같은 사람을 뽑는 건 모험입니다. 하지만 이는 머릿속으로 생각해 내세운 기준이 틀렸음을 입증할 수도 있는 실험이기도 합니다. 특히 이런 기준과 가치라는 것이 암암리에 특정 성별(남성)이나 특정 인종(백인), 혹은 경제적, 문화적으로 중산층 이상의 집안에서 자란 사람들에게 유리하게 짜였다면 검증된 바 없는 기준을 토대로 사람을 뽑고 있는 셈이고, 그만큼 일을 더 잘 할 수 있는 인재를 놓치고 있는 것일지도 모릅니다.
-정부 정책을 입안하고 시행할 때도 실험을 하는 일은 결코 간단치 않은 문제입니다. 특히 사람들의 삶에 직접적인 영향을 미칠 수 있는 주제에 관해 함부로 실험해볼 수 없는 상황이 있기도 합니다. 그럴 때는 특히 더 주저하게 되곤 하죠. 하지만 동시에 그냥 하던 대로 하는 게 제일 낫다는 안이한 타성에 젖게 되는 것도 경계해야 합니다. 제대로 된 분석도 해보지 않고, ‘현행 제도가 이렇게 된 데는 다 그만한 이유가 있을 거야.’라고 무턱대고 믿어버리면 상당히 왜곡된 결정과 선택의 집합체로 형성된 잘못된 제도를 지지하고 이를 지키게 될지도 모릅니다.
-무언가 다른 것을 새로이 해보지 않고서는 그것이 진정 무엇인지 알 수 없다는 사실을 겸허히 받아들이지 않는다면 실험을 할 수도 없고, 실험 결과를 열린 마음으로 받아들일 수도 없을 겁니다.
-이 자명한 사실을 이해하는 것이 첫걸음이고, 더 중요한 것은 이를 실천에 옮기는 일입니다. 하던 대로 하면 몸과 마음은 편합니다. 그래도 저는 조만간 다이어트 콜라 대신 다른 비슷한 음료를 한 번 사볼 생각입니다. (뉴욕타임스)
-
-
+* 저는 다이어트 콜라를 정말 많이 마십니다. 하루에 거의 2L씩 마시죠. 여섯 캔 정도를 마시는 셈으로, 물론 제가 자랑스레 내세울 만한 습관은 아니지만, 어쨌든 저는 그 맛에 완전히 길들었습니다. 검소한 경제학자로서 다이어트 콜라 말고 비슷한 제품이 더 싸다는 걸 물론 잘 알고 있습니다. 게다가 이따금 더 싼 걸 사는 게 아니라 저처럼 거의 매일 달고 사는 제품을 저렴한 대체재로 바꾸면 돈을 꽤 아낄 수 있다는 것도 잘 압니다. 그렇지만 저는 지금도 늘 마시던 그 다이어트 콜라만 마십니다. 유사품은 공짜로 시음하는 코너에도 눈길조차 주지 않습니다.
 I drink a lot of Diet Coke: two liters a day, almost six cans’ worth. I’m not proud of the habit, but I really like the taste of Diet Coke.
 As a frugal economist, I’m well aware that switching to a generic brand would save me money, not just once but daily, for weeks and years to come. Yet I only drink Diet Coke. I’ve never even sampled generic soda.
+
+* 왜 그러냐고요? 무턱대고 습관을 고수하려는 건 아닙니다. 저는 앞서 이 문제에 관해 골똘히 생각해봤습니다. 그리고 다이어트 콜라를 마시느라 쓰는 돈이 결코 비싸지 않다는 결론을 내렸습니다. 절대적인 액수를 말하는 것이 아니라 이미 제게 꼭 맞는 기호식품을 찾아 오랫동안 마셔온 데서 비롯되는 행복과 효용이 충분히 그만한 값을 한다는 생각에 이르렀죠. ‘이 정도는 내 형편에 마셔도 괜찮다.’ 정도의 결론이랄까요?
 Why not? I’ve certainly thought about it. And I tell myself that the dollars involved are inconsequential, really, that I’m happy with what I’m already drinking and that I can afford to be passive about this little extravagance.
+
+* 하지만 애석하게도 저 사고과정에는 명백한 실수 혹은 오류가 포함돼 있습니다. 모아놓고 보면 상당한 규모의 비용이나 소비에 관해 중요한 결정을 내릴 때 사람들이 흔히 기대는 잘못된 편향에서 저도 벗어나지 못한 것입니다. 저도 그렇지만 사람들은 대개 실생활에서 겪는 크고 작은 일에 충분한 실험 없이 무언가를 선택하고 결정을 내립니다.
 Yet I’m clearly making an error, one that reveals a deeper decision-making bias whose cumulative cost is sizable: Like most people, I conduct relatively few experiments in my personal life, in both small and big things.
+
+* 대개 실험을 해보면 그 실험에 드는 비용이나 수고를 충분히 만회하고도 남을 만큼 현명한 결정을 내릴 수 있다는 점을 생각하면 사람들이 무언가를 잘 알지 못하면서 잘 안다는 착각 속에 결정을 내리는 건 상당히 안타까운 일입니다. 저의 다이어트 콜라 사랑만 해도 그렇습니다. 제가 유사 제품이 어떤지 한 번씩 마셔보고 바꿔보는 건 대단한 희생이 필요한 일이 절대 아닙니다. 혹시 다이어트 콜라보다 제 입맛에 더 맞는 제품을 찾기라도 하는 날에는 앞으로 제가 마시는 음료수의 단가가 낮아지는 셈이니, 결코 작지 않은 돈을 절약할 수 있게 될 수도 있습니다.
 This is a pity because experimentation can produce outsize rewards. For example, I wouldn’t be risking much by trying a generic soda, and if I liked it enough to switch, the payout could be big: All my future sodas would be cheaper.
+
+* 매일 똑같은 음료수만 사 마시는 것처럼 똑같은 선택을 되풀이할 때 장점은 분명합니다. 새로운 것을 고르고 고민하는 데 시간을 쓰고 수고를 들일 필요가 없죠. 똑같은 것만 매번 마셔도 좀처럼 질리지 않는 사람에게는 더욱 그럴 겁니다. 하지만 습관을 잠시 접어두고 새로운 것을 시도해보고 궁극적으로 새로운 습관을 들일 때 훨씬 더 큰 이득을 얻을 수도 있습니다. 사람들이 하는 행동의 47%를 정도의 차이는 있지만 모두 습관적인 행동으로 분류할 수 있다는 연구도 있습니다.
 When the same choice is made over and over again, the downside of trying something different is limited and fixed — that one soda is unappealing — while the potential gains are disproportionately large. One study estimated that 47 percent of human behaviors are of this habitual variety.
 
+* 그렇지만 효능이 똑같은 멀쩡한 복제약품을 두고도 여전히 이름 있는 브랜드 제품을 사는 사람들이 상당히 많습니다. 약국에서 (처방전이 필요 없는) 약을 살 때를 떠올려보면 이해가 빠를 겁니다. 분명 진열대에 아스피린 바로 옆에 아스피린과 성분이 똑같은 복제약이 더 싼 값에 놓여있는데도 사람들은 왜 계속 아스피린을 사는 걸까요? 성분이 똑같다는 건 과학자들이 여러 차례 실험을 통해 입증한 사실입니다. 굳이 이를 못 믿겠다면 직접 한번 실험해보면 될 일입니다. 복제약과 원래 제품의 약효는 이론적으로 다를 리 없습니다.
 Yet many people persist in buying branded products even when equivalent generics are available. These choices are noteworthy for drugs, when generics and branded options are chemically equivalent. Why continue to buy a name-brand aspirin when the same chemical compound sits nearby at a cheaper price? Scientists have already verified that the two forms of aspirin are identical. A little personal experimentation would presumably reassure you that the generic has the same effect.
+
+* 복제약이 아니라도 사람들이 간단하게 확인해볼 수 있는 실험을 게을리한 탓에 현명하지 못한 결정을 내리는 사례는 얼마든지 많습니다. 지난 2014년 2월 5일, 런던 지하철 노조가 48시간 부분 파업을 벌였습니다. 이틀 동안 열차는 몇 개 역을 서지 않고 통과해야 했습니다. 해당 역을 이용해 출퇴근하던 시민들은 다른 방법을 찾아야 했죠.
 Our common failure to experiment extends well past generics, as one recent study illustrates. On Feb. 5, 2014, London Underground workers went on a 48-hour strike, forcing the closings of several tube stops. The affected commuters had to find alternate routes.
-When the strike ended, most people reverted to their old patterns. But roughly one in 20 stuck with the new route, shaving 6.7 minutes from what had been an average 32-minute commute.
-The closings imposed by the strike forced experimentation with alternate routes, yielding valuable results. And if the strike had been longer, even more improvements would probably have been discovered.
+
+* 48시간의 파업이 끝난 뒤 시민들은 대부분 원래 하던 대로 해당 역을 이용했습니다. 파업 덕분에 새로운 경로를 찾아보고 아예 새로운 길로 출퇴근을 하기 시작한 사람은 5%에 불과한 것으로 조사됐습니다. 원래 평균 32분 걸리던 출퇴근 시간이 새로운 길로 가면 6분 40초가량 단축되는데도 많은 사람은 더 오래 걸리는 원래 습관을 버리지 않은 겁니다. 파업 때문에 지하철역이 폐쇄되자 사람들은 새로운 출퇴근길을 찾기 시작했습니다. 찾아봤더니 훨씬 빠른 길이 있었죠. 파업이 48시간이 아니라 더 길었다면 더 편리하고 더 빠른 길도 얼마든지 발견됐을 겁니다. 파업 때문에 지하철역이 폐쇄되자 사람들은 새로운 출퇴근길을 찾기 시작했습니다. 찾아봤더니 훨씬 빠른 길이 있었죠. 파업이 48시간이 아니라 더 길었다면 더 편리하고 더 빠른 길도 얼마든지 발견됐을 겁니다.
+When the strike ended, most people reverted to their old patterns. But roughly one in 20 stuck with the new route, shaving 6.7 minutes from what had been an average 32-minute commute. The closings imposed by the strike forced experimentation with alternate routes, yielding valuable results. And if the strike had been longer, even more improvements would probably have been discovered.
+
+* 그렇지만 여기서 주목해야 하는 점은 사람들이 파업이 일어난 뒤에야 마지못해 실험에 착수했다는 점입니다. 즉, 사람들은 실험 자체를 근본적으로 꺼립니다. 예를 들어 제가 좋아해 즐겨 찾는 단골 식당을 생각해보면 의외로 아무리 많이 그곳에서 밥을 먹었어도 제가 먹은 메뉴의 가짓수는 그렇게 많지 않습니다. 늘 먹는 것만 먹기 때문이죠. 직장 주변에 점심을 해결할 만한 선택지가 상당히 많지만, 저는 이번에도 늘 가던 곳만 가는 편입니다.
 Yet the fact that many people needed a strike to force them to experiment reveals the deep roots of a common reluctance to experiment. For example, when I think of my favorite restaurants, the ones I have visited many times, it is striking how few of the menu items I have tried. And when I think of all the lunch places near my workplace, I realize that I keep going to the same places again and again.
+
+* 습관은 이렇게 무섭습니다. 기본적으로 우리는 현재, 지금 이 순간에 지나치게 많은 가치를 부여합니다. 그래서 무언가 고민하고 알아보는 데 드는 시간과 노력을 아깝다고 생각하며 습관대로, 익숙한 결정을 내리곤 하죠. 새로운 걸 시도해보는 일은 그 자체로 고역일 때가 많습니다. 당장 시간을 쓰고 머리를 써서 고민을 해야 하는데, 아무리 새로운 결정이 더 좋은 선택이라고 해도 그에 따른 보상이 주어지는 건 미래의 일입니다. 눈앞에 보이는, 손에 닿는 혜택이 아닌 한 좀처럼 와닿지 않죠. 요리 솜씨가 뛰어난 걸 익히 아는 단골 식당인 만큼, 다른 메뉴도 시도해보고 싶긴 하지만, 오늘은 그냥 늘 먹던 걸 먹자는 생각이 되풀이됩니다.
 Habits are powerful. We persist with many of them because we tend to give undue emphasis to the present. Trying something new can be painful: I might not like what I get and must forgo something I already enjoy. That cost is immediate, while any benefits — even if they are large — will be enjoyed in a future that feels abstract and distant. Yes, I want to know what else my favorite restaurant does well, but today I just want my favorite dish.
+
+* 과신 때문에 새로운 결정을 못 내릴 때도 있습니다. 대개 머릿속에 대안을 먼저 그려보곤 하는데, 이때 사람들은 직접 해보지도 않은 대안, 써보지도 않은 대체재가 어떨지 임의로 상상한 가정과 결과가 정확하리라고 너무 쉽게 단정합니다. 자신의 감을 너무 믿는 거죠.
 Overconfidence also holds us back. I am unduly certain in my guesses of what the alternatives will be like, even though I haven’t tried them.
+
+* 마지막으로 우리가 여러 가지 선택지 가운데 골랐다고 믿는 그 선택이 실은 진정한 의미의 선택이 아니었을 때가 많습니다. 마트에서 장을 볼 때 저는 음료수 코너를 반드시 들르지만, 멈춰 서서 무엇을 살지 고민하는 일은 절대 없습니다. 다른 제품은 거들떠보지도 않고 다이어트 콜라를 사서 장바구니에 담으니까요. 이 과정은 어떤 고민도 개입하지 않는 사실상 자동화된 행위입니다.
 Finally, many so-called choices are not really choices at all. Walking down the supermarket aisle, I do not make a considered decision about soda. I don’t even pause at the generics. I act without thinking; I automatically grab bottles of Diet Coke as I wheel my cart by.
+
+* 우리의 일상생활에만 적용되는 이야기가 아닙니다. 기업의 CEO나 정부 정책을 결정하는 사람들도 결정하기 전에 해볼 수 있는 실험을 제대로 하지 않는 경우가 허다합니다. 많은 사람의 생활에 심대한 영향을 끼칠 수 있는 결정을 내리는 사람일수록 실험 부족으로 인해 치러야 하는 대가가 커집니다. 기업에서 사람을 뽑을 때 경영진은 대개 우리 회사에 “잘 맞는” 인재의 조건을 미리 상정해놓고 서류를 읽고 면접을 봅니다. 하지만 이런 조건은 아무리 꼼꼼해봤자 아무런 실험을 거치지 않고 경영진의 머릿속에서 나온 기준일 때가 많습니다.
 This is true not only in our personal lives. Executives and policymakers fail to experiment in their jobs, and these failures can be particularly costly. For example, in hiring, executives often apply their preconceived notions of which applicants will be a “good fit” as prospective employees. Yet those presumptions are nothing more than guesses and are rarely given the scrutiny of experimentation.
+
+* 물론 우리 회사에 잘 맞지 않을 것 같은 사람을 뽑는 건 모험입니다. 하지만 이는 머릿속으로 생각해 내세운 기준이 틀렸음을 입증할 수도 있는 실험이기도 합니다. 특히 이런 기준과 가치라는 것이 암암리에 특정 성별(남성)이나 특정 인종(백인), 혹은 경제적, 문화적으로 중산층 이상의 집안에서 자란 사람들에게 유리하게 짜였다면 검증된 바 없는 기준을 토대로 사람을 뽑고 있는 셈이고, 그만큼 일을 더 잘 할 수 있는 인재를 놓치고 있는 것일지도 모릅니다.
 Hiring someone who doesn’t appear to be a good fit is surely risky, yet it might also prove the presumptions wrong, an outcome that is especially valuable when these presumptions amount to built-in advantages for men or whites or people from economically or culturally advantaged backgrounds.
 
+* 정부 정책을 입안하고 시행할 때도 실험을 하는 일은 결코 간단치 않은 문제입니다. 특히 사람들의 삶에 직접적인 영향을 미칠 수 있는 주제에 관해 함부로 실험해볼 수 없는 상황이 있기도 합니다. 그럴 때는 특히 더 주저하게 되곤 하죠. 하지만 동시에 그냥 하던 대로 하는 게 제일 낫다는 안이한 타성에 젖게 되는 것도 경계해야 합니다. 제대로 된 분석도 해보지 않고, ‘현행 제도가 이렇게 된 데는 다 그만한 이유가 있을 거야.’라고 무턱대고 믿어버리면 상당히 왜곡된 결정과 선택의 집합체로 형성된 잘못된 제도를 지지하고 이를 지키게 될지도 모릅니다.
 For government policymakers, experimentation is a thorny issue. We are right to be wary of “experimenting” in the sense of playing with people’s lives. Yet we should also be wary of an automatic bias in favor of the status quo. That can amount to a Panglossian belief that the current policy is best, whereas the current policy may actually be a wobbly structure held together by overconfidence, historical accident and the power of precedent.
+
+* 무언가 다른 것을 새로이 해보지 않고서는 그것이 진정 무엇인지 알 수 없다는 사실을 겸허히 받아들이지 않는다면 실험을 할 수도 없고, 실험 결과를 열린 마음으로 받아들일 수도 없을 겁니다.
 Experimentation is an act of humility, an acknowledgment that there is simply no way of knowing without trying something different.
+
+* 이 자명한 사실을 이해하는 것이 첫걸음이고, 더 중요한 것은 이를 실천에 옮기는 일입니다. 하던 대로 하면 몸과 마음은 편합니다. 그래도 저는 조만간 다이어트 콜라 대신 다른 비슷한 음료를 한 번 사볼 생각입니다. (뉴욕타임스)
 Understanding that truth is a first step, but it is important to act on it. Sticking with an old habit is comforting, but one of these days, maybe, I’ll actually buy a bottle of generic soda.
