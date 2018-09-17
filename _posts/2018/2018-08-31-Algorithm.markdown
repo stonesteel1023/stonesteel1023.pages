@@ -7,12 +7,12 @@ comments: true
 
 # SOURCES
 
-import org.junit.Test;
+`import org.junit.Test;`
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+`import static org.hamcrest.CoreMatchers.is;`
+`import static org.junit.Assert.assertThat;`
 
-public class KMP_Algorithm {
+`public class KMP_Algorithm {`
 
 /*
         TASK
@@ -20,10 +20,10 @@ public class KMP_Algorithm {
         이 문자열 A 안에 특정 문자열 B가 존재하는지 알 수 있는 방법을 해결한다.
 */
 
-@Test
-public void test() {
-        assertThat(KMP("abcxabcdabcdabcy".toCharArray(), "abcdabcy".toCharArray()), is(true));
-    }
+`@Test`
+`public void test() {`
+        `assertThat(KMP("abcxabcdabcdabcy".toCharArray(), "abcdabcy".toCharArray()), is(true));`
+    `}`
 
 /*
         SOLVE
@@ -39,48 +39,48 @@ public void test() {
         TIME COMPLEXITY : O(M + N)
  */
 
- private int[] computeTemporaryArray(char[] pattern) {
-        int[] lps = new int[pattern.length];
-        int idx = 0;
-        for (int i = 1; i < pattern.length;) {
-            if (pattern[i] == pattern[idx]) {
-                lps[i] = idx + 1;
-                idx++;
-                i++;
-            } else {
-                if (idx != 0) {
-                    idx = lps[idx - 1];
-                } else {
-                    lps[i] = 0;
-                    i++;
-                }
-            }
-        }
-        return lps;
-}
+ `private int[] computeTemporaryArray(char[] pattern) {`
+        `int[] lps = new int[pattern.length];`
+        `int idx = 0;`
+        `for (int i = 1; i < pattern.length;) {`
+            `if (pattern[i] == pattern[idx]) {`
+                `lps[i] = idx + 1;`
+                `idx++;`
+                `i++;`
+            `} else {`
+                `if (idx != 0) {`
+                    `idx = lps[idx - 1];`
+                `} else {`
+                    `lps[i] = 0;`
+                    `i++;`
+                `}`
+            `}`
+        `}`
+        `return lps;`
+`}`
 
-public boolean KMP(char []text, char []pattern){
+`public boolean KMP(char []text, char []pattern){`
 
-   int lps[] = computeTemporaryArray(pattern);
-   int i=0;
-   int j=0;
-   while(i < text.length && j < pattern.length){
-       if(text[i] == pattern[j]){
-            i++;
-            j++;
-       }else{
-            if(j!=0){
-               j = lps[j-1];
-            }else{
-               i++;
-            }
-       }
-    }
-       if(j == pattern.length){
-          return true;
-       }
-      return false;
- }
+   `int lps[] = computeTemporaryArray(pattern);`
+   `int i=0;`
+   `int j=0;`
+   `while(i < text.length && j < pattern.length){`
+       `if(text[i] == pattern[j]){`
+            `i++;`
+            `j++;`
+       `}else{`
+            `if(j!=0){`
+               `j = lps[j-1];`
+            `}else{`
+               `i++;`
+            `}`
+       `}`
+    `}`
+       `if(j == pattern.length){`
+          `return true;`
+       `}`
+      `return false;`
+ `}`
 
  /*
         REFERENCE
@@ -88,4 +88,4 @@ public boolean KMP(char []text, char []pattern){
         GITHUB  : https://github.com/mission-peace/interview/blob/master/src/com/interview/string/SubstringSearch.java
  */
 
-}
+`}`
