@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TODAY I LEARNED IT - String convert"
+title: "String.valueOf(Object) vs Object.toString()"
 date: 2018-09-14 20:20
 tag:
 - java
