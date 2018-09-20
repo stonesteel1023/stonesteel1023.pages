@@ -20,13 +20,13 @@ comments: true
 
 구글링 결과로 아래와 같이 3가지로 압축이 되었지만 모두 해결책이 되진 못했다.
 
-1.
+## 1.
 
 Project > Build Automatically  의 체크가 해제되어 있는경우.
 
-▷ Solution : Project > Build Automatically 체크
+* Solution : Project > Build Automatically 체크
 
-2.
+## 2.
 
 이클립스 프로젝트 안의 .classpath 파일 내부의 
 
@@ -37,14 +37,14 @@ Project > Build Automatically  의 체크가 해제되어 있는경우.
 
 이 부분의 경로가 잘못 지정 되어있는 경우
 
-▷ Solution : 1. 소스가 있는 폴더를 kind가 src인 classpathentry에 path부분의 경로로 지정
+* Solution : 1. 소스가 있는 폴더를 kind가 src인 classpathentry에 path부분의 경로로 지정
   2. 빌드될 폴더를 kind가 output인 classpathentry에 path부분의 경로로 지정
 
-3.
+## 3.
 
 Project > Properties > Java Build Path 의 Libraries 탭의 'x' 표시나 느낌표 표시가 있는 jar파일이 있는경우
 
-▷ Solution : 'x' 표시나 느낌표 표시가 있는 jar파일을 삭제하고 올바른 경로의 jar파일로 대체
+* Solution : 'x' 표시나 느낌표 표시가 있는 jar파일을 삭제하고 올바른 경로의 jar파일로 대체
 
 
 하지만 위의 경우 모두 해결책이 되지 못했고 한참을 방황하던 중에 혹시나 하는 생각에
@@ -55,7 +55,7 @@ JRE와 Tomcat 라이브러리를 전부 새로 Add 시켰더니 문제가 해결
 
 3번 문제처럼 jar파일에 'x'나 느낌표 표시는 전혀 없었는데 이해 할 수 없었다.
 
-4. 
+## 4. 
 
 이번에 발견한 내용은 SVN을 사용하는 유저에 국한된 문제다.
 
@@ -70,7 +70,7 @@ clean, refresh 해보던 중에 해결책을 찾았다.
 * Solution
 프로젝트 트리에 프로젝트를 클릭하고 마우스 오른쪽을 클릭 > Team > Cleanup
 
-* Subversion Cleanup 기능의 정의
+> Subversion Cleanup 기능의 정의
 간혹 다른 사용자와 svn 명령이 충돌해 현제 처리 중인 svn 명령을 강제로 종료할 때가 있다. 이럴 때 잘못되면 작업 사본 디렉토리에 잠금 파일들이 생성될 수 있으며, 잠금 파일들로 인하여 svn 명령을 제대로 처리하지 못하는 일들이 발생한다. 이럴때 svn cleanup 명령을 사용하여 잠금 파일들을 정리 할 수 있다.
 
 ### 결론
