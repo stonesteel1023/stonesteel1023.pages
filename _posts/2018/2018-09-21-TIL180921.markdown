@@ -1,0 +1,58 @@
+---
+layout: post
+title: "Modifires Matrix in Java"
+date:
+tag: java
+comments: true
+---
+
+# 자바 제한자
+
+자바를 입문하면 가장 처음에 다루는 것중 하나인 제한자를 정리하는 차원에서 각 제한자별로 사용가능한 곳과 그렇지 않은 곳을 구분해
+일람을 작성해 봤습니다. 흔히 접하는 접근 제한자 외에도 잘 사용하지 않는 native라던지 strictft 같은 제한자도 함께 표기합니다.
+
+## Modifires Matrix in Java
+
+대상 변수 메소드 생성자 클래스 인터페이스 
+제한자 외부 내부 외부 내부 
+abstract X O X O O O O 
+final O O X O O X X 
+native X O X X X X X 
+private O O O X O X O 
+protected O O O X O X O 
+public O O O O O O O 
+static O O X X O X O 
+synchronized X O X X X X X 
+transient O X X X X X X 
+volatile O X X X X X X 
+strictfp X O X O O O O 
+
+
+## 제한자 사용 규칙 ( 곰곰히 따져보면 아래 룰과 같이 될 수 밖에 없습니다.)
+ - 메소드는 public, protected, private, default 중 오직 하나의 접근 제한자를 갖습니다.
+ - 클래스는 abstract와 final을 동시에 지정할 수 없습니다.
+ - abstract 메소드는 private, static, final, native, strictfp, synchronized 중 어떤 제한자도 사용할 수 없습니다.
+ - 메소드는 native, strictfp를 동시에 지정할 수 없습니다.
+ - abstract와 native 메소드는 body를 갖지 않습니다.
+     예) abstract void someMethos();
+     예) native void someMethos();
+ - abstract 메소드를 갖는 클래스는 해당 abstract메소드를 구현해야만 합니다.
+ - final 변수는 volatile일 수 없습니다.
+
+
+### java_langspec-3.0.pdf
+Java Language Spec 3.0
+
+
+
+### 위와 관련한 Sun의 공식 문서는 아래 url에서 참조하실 수 있습니다.
+ Java Language Specification SE 3.0
+  final Variables
+  Class Modifires
+  Field Modifires
+  Constructor Modifires
+  Interface Modifires
+  Evolution of Classes
+  FP-strict Expressions 
+  
+  > 출처 : http://www.yunsobi.com/blog/451
