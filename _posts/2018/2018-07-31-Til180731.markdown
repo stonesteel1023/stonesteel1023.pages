@@ -68,9 +68,8 @@ Users, Remote Desktop Users, Replicator
 
 ### 3-1
 
-* [ICACLS 파일이름 /grant(:r) SID:perm(...)][599fcda7]
-
-  [599fcda7]: http://blog.naver.com/PostView.nhn?blogId=mjnms&logNo=220464088526&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView "[출처] 파일 시스템 관리 #10 - 파일 권한 수정. ICACLS 명령|작성자 MJSoft)"
+* ICACLS 파일이름 /grant(:r) SID:perm(...)
+> 출처 : [MJSoft님의 블로그](http://blog.naver.com/PostView.nhn?blogId=mjnms&logNo=220464088526&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
 
 위 내용 중 /grant 옵션이 권한을 설정하도록 하는 옵션이며, 매우 자주 사용되는 옵션이다. 이 외에도 많은 옵션들을 제공하지만 자주 쓰이지 않고, 대부분 AD(Active Directory)에서 정책으로 설정되어 중복되므로 생략하였다. 위 /grant 옵션을 다시 보자. SID 이후에 오는 perm이 바로 권한을 어떻게 할지 결정하는 시퀸스이다. perm으로 올 수 있는 값들은 아래와 같다.
 
