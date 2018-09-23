@@ -2,6 +2,7 @@
 layout: post
 title: "TODAY I LEARNED IT - 결핍의 경제학"
 date: 2018-09-17 23:59
+tag: 동기부여
 comments: true
 ---
 

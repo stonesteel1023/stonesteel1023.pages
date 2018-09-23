@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Modifires Matrix in Java"
-date:
+date: 2018-09-21 23:59
 tag: java
 comments: true
 ---

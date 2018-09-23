@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "이클립스로 빌드하기"
 date: 2018-09-20 22:22
 tag: eclipse
 comments: true
@@ -93,7 +93,7 @@ Build 도구 없이 IDE를 통해서 빌드하고 운영 환경에 배포하는 
 이로 인해서 수동으로 진행되는 배포 과정에서 개발자의 실수들이 제품에 그대로 영향을 미칠 수 있다는 것이다.
 
 ## Mave
-> 출처 : 안녕 프로그래밍 위키
+> 출처 : [안녕 프로그래밍 위키](http://www.holaxprogramming.com/introduce/)
 
 본격적으로 Spring Framework를 공부하기 위해 http://springsource.org 에서 제공되고 있는 오픈소스 프로젝트를 살펴보기 시작했다. 샘플 프로젝트를 가져와 소스코드를 보던중에 사내에서 개발하고 있는 프로젝트 형식과 차이가 있다는 것을 발견하였다.
 예상은 했지만 Download 받은 소스코드는 기존의 개발 환경에서 동작하지 않는다!
