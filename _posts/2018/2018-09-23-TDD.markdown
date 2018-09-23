@@ -1,9 +1,31 @@
 ---
 layout: post
-title: ""
+title: "TDD(Test-Driven-Develop)의 5가지 규칙"
 date: 2018-09-23 21:35
-tag: java
+tag:
+- TDD
+- java
 comments: true
 ---
 
-# https://brunch.co.kr/@cg4jins/9
+# 우리는 몇 가지 규칙을 정해서 프로젝트에 TDD(Test-Driven-Develop)를 적용했습니다.
+> 출처 : [카카오헤어샵의 TDD](https://brunch.co.kr/@cg4jins/9)
+> - TDD(Test Driven Development)는 이제 트렌드가 아닌 필수가 됐습니다.
+
+## 깨지는 테스트 ⇒ 성공 테스트 ⇒ 리팩터링을 반복하자.
+
+## Integration Tests 위주로 작성하자.
+개발자들이 할 수 있는 테스트는 Mock을 이용한 Unit Tests와 전체 로직을 테스트하는 Integration Tests가 있습니다. 우리는 Integration Tests 위주로 작성했습니다. 그 이유는 프로젝트 일정이 한정적이어서 테스트 작성에 시간을 조정해야 했기 때문입니다. 그래서 우리는 시간 대비 효과가 가장 크다고 생각하는 Integration Tests 위주로 작성했습니다
+
+## 데이터가 없는 DB에서 테스트 하자.
+> https://github.com/cg4jins/JPATestDataCreator
+
+## 자동화 테스트 환경을 구축하자.
+> Jenkins(https://jenkins.io/)
+
+## Test를 도와주는 라이브러리
+> Hamcrest(http://hamcrest.org/JavaHamcrest/)
+> RestAssured(http://rest-assured.io/)
+
+## 정리
+Microsoft의 조사에 따르면 TDD를 하면 15~35% 개발 시간이 증가하고, 버그는 40~90% 줄어들었다고 합니다. 정말 엄청난 마법이 아닐 수 없습니다. 다행히도 카카오헤어샵 개발자들은 모두 TDD의 마법을 경험한 사람들입니다. 그래서 프로젝트 초창기에 도입에 이견이 없었습니다. 아직 프로젝트에 TDD를 적용하지 못하신 분들은 서두르세요. 버그가 40~90% 줄어드는 마법입니다.
