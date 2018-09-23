@@ -7,6 +7,7 @@ comments: true
 ---
 
 # 자바 제한자
+> 출처 : http://www.yunsobi.com/blog/451
 
 자바를 입문하면 가장 처음에 다루는 것중 하나인 제한자를 정리하는 차원에서 각 제한자별로 사용가능한 곳과 그렇지 않은 곳을 구분해
 일람을 작성해 봤습니다. 흔히 접하는 접근 제한자 외에도 잘 사용하지 않는 native라던지 strictft 같은 제한자도 함께 표기합니다.
@@ -50,5 +51,3 @@ strictfp | X |O |X |O O |O O
 - [Interface Modifires](https://docs.oracle.com/javase/specs/#9.1.1)
 - [Evolution of Classes](https://docs.oracle.com/javase/specs/#13.4)
 - [FP-strict Expressions](https://docs.oracle.com/javase/specs/#15.4)
-
-  > 출처 : http://www.yunsobi.com/blog/451

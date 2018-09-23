@@ -9,8 +9,9 @@ comments: true
 ---
 
 # 우리는 몇 가지 규칙을 정해서 프로젝트에 TDD(Test-Driven-Develop)를 적용했습니다.
-> 출처 : [카카오헤어샵의 TDD](https://brunch.co.kr/@cg4jins/9)
 > - TDD(Test Driven Development)는 이제 트렌드가 아닌 필수가 됐습니다.
+> 출처 : [카카오헤어샵의 TDD](https://brunch.co.kr/@cg4jins/9)
+
 
 ## 깨지는 테스트 ⇒ 성공 테스트 ⇒ 리팩터링을 반복하자.
 
