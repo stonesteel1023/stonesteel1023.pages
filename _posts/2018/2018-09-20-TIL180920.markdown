@@ -6,7 +6,8 @@ tag: eclipse
 comments: true
 ---
 
-# 이클립스 빌드 4가지
+# 이클립스 빌드문제 4가지 해결방안
+> 출처 : timec님의 tistory
 
 이클립스 가니메데 버전으로 개발환경을 구성해 사용하다가
 
@@ -28,7 +29,7 @@ Project > Build Automatically  의 체크가 해제되어 있는경우.
 
 ## 2.
 
-이클립스 프로젝트 안의 .classpath 파일 내부의 
+이클립스 프로젝트 안의 .classpath 파일 내부의
 
 <classpathentry kind="src" path="WEB-INF/src"/>
 ...
@@ -55,7 +56,7 @@ JRE와 Tomcat 라이브러리를 전부 새로 Add 시켰더니 문제가 해결
 
 3번 문제처럼 jar파일에 'x'나 느낌표 표시는 전혀 없었는데 이해 할 수 없었다.
 
-## 4. 
+## 4.
 
 이번에 발견한 내용은 SVN을 사용하는 유저에 국한된 문제다.
 
@@ -75,8 +76,200 @@ clean, refresh 해보던 중에 해결책을 찾았다.
 
 ### 결론
 
-1, 2, 3번으로 문제가 해결되지 않았다면 
+1, 2, 3번으로 문제가 해결되지 않았다면
 
 Project > Properties > Java Build Path 의 Libraries 탭의 모든 라이브러리 삭제하고 다시 추가해보자.
 
 이클립스의 의중을 어떻게 알겠냐마는 좀 더 깊은 연구가 필요한것 같다..
+
+# 추가내용 - Ant빌드와 Maven빌드
+
+### 빌드 도구를 모르면 생기는 재앙들
+> 안녕 프로그래밍 위키에서 퍼온 내용인데, 빌드도구를 제대로 사용 안하고 있는 것이 위의 이클립스 빌드문제 등을 일으킨 것 같아서 공부해보게 되었다. 좋은 내용.
+>
+Build 도구 없이 IDE를 통해서 빌드하고 운영 환경에 배포하는 프로세스는 여러가지 재앙을 가져다 준다.
+가장 큰 재앙은 운영 환경에 배포되는 Version이 개발자의 PC에 의해서 결정되어 진다는 것이다.
+이것을 시작으로 더욱 큰 재앙이 시작되는데 빌드 및 배포를 자동하는 것이 불가능해진다.
+이로 인해서 수동으로 진행되는 배포 과정에서 개발자의 실수들이 제품에 그대로 영향을 미칠 수 있다는 것이다.
+
+## Mave
+> 출처 : 안녕 프로그래밍 위키
+
+본격적으로 Spring Framework를 공부하기 위해 http://springsource.org 에서 제공되고 있는 오픈소스 프로젝트를 살펴보기 시작했다. 샘플 프로젝트를 가져와 소스코드를 보던중에 사내에서 개발하고 있는 프로젝트 형식과 차이가 있다는 것을 발견하였다.
+예상은 했지만 Download 받은 소스코드는 기존의 개발 환경에서 동작하지 않는다!
+
+### Maven은 무엇인가
+
+그 이유는 Spring 프로젝트 뿐만 아니라 Java의 대다수의 프로젝트는 Maven이라는 빌드(Build) 도구를 통해 개발되고 있기 때문이였다.
+
+현재 사내에서는 Maven과 같은 Build 도구를 사용하지 않고 이클립스 IDE에서 Java Project 또는 Dynamic Web Project를 통해 개발하고 로컬에서 직접 빌드하고 있다.
+
+Download한 소스 코드를 Build하고 실제로 동작을 시켜보기 위해서는 그 무엇보다 Build 도구부터 짚고 넘어가야 겠다는 생각이었다. Maven은 Java기반의 프로젝트를 효율적으로 Build 할 수 있도록 도와주는 도구이다. 그 무엇보다 Maven과 같은 Build 도구를 처음 접하게 되면서 전환된 패러다임은 프로젝트를 더 이상 개발자 PC의 IDE에서 빌드할 필요가 없어진 다는 것이였다.
+
+### 프로젝트를 모델링 - 다양한 목적을 가지고 있는 플러그인은 POM(Project Object Model)으로 정의된다. 프로젝트에 의존되는 라이브러리들은 pom.xml에서 의존관계를 정의한다.
+
+Maven 플러그인을 통한 전역적인 재사용 - Maven은 빌드에 대한 대부분의 책임을 각 플러그인에 위임한다. 이러한 플러그인들은 Maven 저장소(Repository)에 저장되어 진다.
+
+공통 인터페이스 - Maven 이전에는 각 개발환경에 대한 빌드 프로세스를 파악하는데 시간이 꽤나 소요되었는데 빌드에 필요한 프로세스를 정의하고 이를 인터페이스로 제공함으로써 문제를 해결하였다고 한다.
+
+Maven에서 제공하는 이러한 특징을 이용해서 개발자는 프로젝트에 필요한 다양한 플러그인을 효율적으로 관리하고 개발자의 IDE가 아닌 별도의 빌드 머신에서 빌드하고 결과물을 운영서버에 배포하는 과정을 자동화 할 수 있게 된다!
+
+### 실제 예시
+Spring + Maven 프로젝트를 효율적으로 관리하기 위해서 기존의 이클립스 대신 STS IDE를 사용하기로 했다. STS는 이클립스 기반에 Maven과 이클립스의 Maven 플러그인인 m2Eclipse가 포함된 통합 개발환경이라고 보면 된다.
+
+STS를 통해 새로운 Maven Project를 생성하게 되면 아래와 같은 프로젝트 구조를 가진다.
+
+- Directory	Desc
+- /src/main/java	자바 클래스 파일
+- /src/main/resource	스프링 환경 설정에 필요한 리소스 파일들
+- /src/test/java	JUnit을 이용한 단위테스트를 위한 클래스는 이곳에
+- /src/test/resource	테스트 환경에서 필요한 리소스파일들
+- pom.xml	프로젝트정보, 프로젝트에 필요한 라이브러리, 플러그인을 정의
+
+#### pom.xml
+- POM(Project Object Model)은 Maven의 근간이 되는 개념으로 현재 프로젝트의 구성과 프로젝트에서 사용하고 있는 외부 플러그인 그리고 각 플러그인들 간의 의존 관계를 pom.xml에 정의 할 수가 있다.
+
+- 프로젝트의 구조
+ |-- my-module
+ |   `-- pom.xml
+ `-- pom.xml
+
+- pom.xml 예시
+
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>my-module</module>
+  </modules>
+</project>
+
+- 이클립스의 Dynamic Web Project 구조는 웹 애플리케이션 프로젝트에 기반이 되는 Spring Framework, Database Connnection을 위한 기반 라이브러리, Freemarker와 같은 Template 엔진 등을 사용하기 위해서는 /WEB-INF/lib에 필요한 라이브러리을 개발자가 직접 복사해 사용했지만, Maven을 활용하면 pom.xml를 이용해 프로젝트에 필요한 라이브러리를 정의하고 Version도 효율적으로 관리 할 수 있다. 뿐만 아니라 pom.xml 정의한 다양한 플러그인은 Maven Repositoriy를 통해 Remote로 자동으로 Download하여 Local에서 관리 할 수 있다.
+
+### 마치며
+Maven에 대해 간략하게 한번 알아보았고, 결과적으로 실제 오픈소스 프로젝트를 다운로드한 후 동작해 볼 수 있는 행복한 결과가 찾아오게 되었다. 뿐만 아니라 Maven이라는 도구를 통해 지금까지 빌드 도구를 몰랐을 때 겪었던 재앙들에서 벗어날수 있는 실마리를 찾은 수확이 더욱 크다.
+
+## Ant
+
+Ant를 이용하여 특정 폴더를 생성하고 그 안에 이 소스를 컴파일한 후, 지정된 폴더에 JAR포맷으로 압축하여 실행하는 절차를 보이고자 한다.
+
+1. 먼저 Package Explorer 에서 적용하고자 하는 프로젝트 위에 마우스 우측을 눌러 New->File을 선택한다. Ant가 자동으로 인식하는 build.xml 파일을 생성하려고 한다.
+
+2. Eclipse의 에디터 화면에 내용이 없는 build.xml 파일이 나타난다.
+
+3. build.xml 화면을 마우스로 클릭한 후에 Ctrl + Space를 누르면 4가지 메뉴가 나타난다. 여기서 맨 위의 항목을 더블클릭하면 Eclipse는 간단한 build.xml 파일을 완성하여 보여준다.
+
+4. 간단한 build.xml 의 내용은 다음과 같다. 필자는 내용 중에서 편의상 주석문을 제거했다.
+
+5. 이제 완성된 build.xml 파일을 Ant 로 하여금 실행하도록 해 보자. Build.xml 에디터 화면에서 마우스 우측을 눌러 팝업메뉴에서 Run As->2 Ant Build 를 선택한다.
+
+6. 에디터 하단에 있는 창에 Ant 의 실행결과가 출력된다.
+
+7. build.xml에 설정된 Target 는 Ant의 작업단위이다. Ant에게 Target 별로 실행을 요청하려면 팝업메뉴에서 ‘3 Ant Build…’ 를 선택하고 실행하고자 하는 Target 을 선택하면 된다.
+
+8. 다음 화면에서 실행할 Target 에 체크하고 실행한다. 필자는 2개의 Target 모두 체크했다.
+
+9. 2개의 타겟을 모두 실행한 결과는 다음과 같다.
+
+10. 참고로, 위와 같이 ‘3 Ant Build…’ 메뉴를 이용하여 설정해 놓은 이후에는 ‘2 Ant Build’ 메뉴를 이용할 때도 그 설정이 적용되므로 필요하다면 다시 설정을 변경하여 사용해야 한다.
+
+11. 앞에서는 build.xml 파일을 생성하고 실행하는 과정만 알아보았다. 이제 build.xml 파일을 수정하여 Ant 가 소스파일을 컴파일하고 폴더를 만들고 패키징하여 실행하도록 해 본다.
+
+- Build.xml 파일을 다음과 같이 작성한다.
+
+<?xml version="1.0" encoding="EUC-KR"?>
+<project name="project" default="default">
+
+    <description> Eclipse Ant test  </description>
+
+<property name="srcDir" location="c:/eclipse/workspace/AntTest"/>
+
+    <target name="default" depends="jar"/>
+
+    <target name="compile">
+    	<!--srcdir은 필수, destdir은 비필수-->
+    	<javac srcdir="${srcDir}" destdir="${srcDir}"/>
+    </target>
+
+<target name="jar" depends="compile">
+	<jar destfile="sample.jar" basedir="${srcDir}">
+	  <manifest>
+	    <attribute name="Main-Class" value="sample.SampleClass"/>
+	  </manifest>
+	</jar>
+</target>
+</project>
+
+- 앞의 build.xml 파일을 실행하면 sample.jar 파일이 생성되고 실행 가능한 JAR파일이므로 탐색기에서 더블클릭으로 실행하거나 Command Prompt에서 java –jar sample.jar<enter> 명령으로 실행할 수 있다.
+
+12. 좀더 복잡한 build.xml 의 예제는 다음과 같다.
+
+<?xml version="1.0" encoding="EUC-KR"?>
+<project name="project" default="default">
+    <description>
+            Eclipse Ant test
+    </description>
+
+<property name="srcDir" location="c:/eclipse/workspace/AntTest"/>
+
+    <target name="default" depends="delete"/>
+	<tstamp/>
+	<target name="compile">
+		<mkdir dir="${srcDir}/classes"/>
+    	<!--srcdir은 필수, destdir은 비필수-->
+    	<javac srcdir="${srcDir}" destdir="${srcDir}/classes"/>
+    </target>
+
+<target name="jar" depends="compile">
+<mkdir dir="${srcDir}/jar"/>
+	<jar destfile="${srcDir}/jar/sample${TSTAMP}.jar" basedir="${srcDir}/classes">
+	  <manifest>
+	    <attribute name="Main-Class" value="sample.SampleClass"/>
+	  </manifest>
+	</jar>
+</target>
+
+<target name="run" depends="jar">
+<java jar="${srcDir}/jar/sample${TSTAMP}.jar" fork="true"/>
+</target>
+
+<target name="delete" depends="run">
+	  <delete file="${srcDir}/jar/sample${TSTAMP}.jar"/>
+</target>
+</project>
+
+13. 앞에서 사용된 Ant의 Element 이외에도 주로 사용되는 것들은 다음과 같은 것이 있다.
+
+- 날짜와 시간 표현에 관련된 기능
+<tstamp/>엘리먼트를 선언한 후에 사용할 수 있는 것들
+${DSTAMP}  yyyymmdd 형식으로 날짜를 출력함
+${TSTAMP}  hhmm 형식으로 시간을 출력
+${TODAY}  September 28 2006 형식으로 년월일을 출력함
+
+- 파일 복사와 관련된 기능
+ - 복사하거나 잘라내서 붙이기(파일명 변경)
+ <copy file=”src/Test.java” tofile=”src/TestCopy.java”/>
+ <move file=”src/Test.java” tofile=”src/TestCopy.java”/>
+
+ - 복사하거나 잘라내서 붙이기(파일명 불변)
+ <copy file=”src/Test.java” todir=”archive”/>
+ <move file=”src/Test.java” tofile=”archive”/>
+
+14. 사용되는 경로가 상대경로일 경우에는 현재 Eclipse 프로젝트의 소스가 있는 곳을 기준으로 한 경로가 된다. 예를 들어 build.xml 파일의 내용이 다음과 같다면…..
+
+<?xml version="1.0" encoding="EUC-KR"?>
+<project name="project" default="compile">
+
+	<target name="compile">
+    	<javac srcdir="." destdir="classes"/>
+    </target>
+
+</project>
+
+- srcdir=”.” 은 현재 프로젝트의 소스가 있는 곳을 의미하므로 절대경로로 c:/eclipse/workspace/AntTest 폴더를 의미한다. 따라서 destdir=”classes”는 c:/eclipse/workspace/AntTest/classes를 가리킨다.
+
+15. Ant가 지원하는 XML 엘리먼트나 그 속성을 알고 싶다면 항상 Ctrl + Space를 누르면 된다.

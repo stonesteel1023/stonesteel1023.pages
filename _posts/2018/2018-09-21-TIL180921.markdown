@@ -13,22 +13,21 @@ comments: true
 
 ## Modifires Matrix in Java
 
-대상 변수 메소드 생성자 클래스 인터페이스 
-제한자 외부 내부 외부 내부 
-abstract X O X O O O O 
-final O O X O O X X 
-native X O X X X X X 
-private O O O X O X O 
-protected O O O X O X O 
-public O O O O O O O 
-static O O X X O X O 
-synchronized X O X X X X X 
-transient O X X X X X X 
-volatile O X X X X X X 
-strictfp X O X O O O O 
+제한자 | 변수 | 메소드 | 생성자 | 클래스 | 인터페이스
+-|-|-|-|--|--|
+abstract | X |O |X |O O |O O
+final | O |O |X |O O |X X
+native | X |O |X |X X |X X
+private | O |O |O |X O |X O
+protected | O |O |O |X O |X O
+public | O |O |O |O O |O O
+static | O |O |X |X O |X O
+synchronized | X |O |X |X X |X X
+transient | O |X |X |X X |X X
+volatile | O |X |X |X X |X X
+strictfp | X |O |X |O O |O O
 
-
-## 제한자 사용 규칙 ( 곰곰히 따져보면 아래 룰과 같이 될 수 밖에 없습니다.)
+## 제한자 사용 규칙
  - 메소드는 public, protected, private, default 중 오직 하나의 접근 제한자를 갖습니다.
  - 클래스는 abstract와 final을 동시에 지정할 수 없습니다.
  - abstract 메소드는 private, static, final, native, strictfp, synchronized 중 어떤 제한자도 사용할 수 없습니다.
@@ -39,20 +38,17 @@ strictfp X O X O O O O
  - abstract 메소드를 갖는 클래스는 해당 abstract메소드를 구현해야만 합니다.
  - final 변수는 volatile일 수 없습니다.
 
-
 ### java_langspec-3.0.pdf
-Java Language Spec 3.0
-
-
+- Java Language Spec 3.0
 
 ### 위와 관련한 Sun의 공식 문서는 아래 url에서 참조하실 수 있습니다.
- Java Language Specification SE 3.0
-  final Variables
-  Class Modifires
-  Field Modifires
-  Constructor Modifires
-  Interface Modifires
-  Evolution of Classes
-  FP-strict Expressions 
-  
+- [Java Language Specification SE 3.0](https://docs.oracle.com/javase/specs/)
+- [final Variables](https://docs.oracle.com/javase/specs/#4.12.4)
+- [Class Modifires](https://docs.oracle.com/javase/specs/#8.1.1)
+- [Field Modifires](https://docs.oracle.com/javase/specs/#8.3.1)
+- [Constructor Modifires](https://docs.oracle.com/javase/specs/#8.8.3)
+- [Interface Modifires](https://docs.oracle.com/javase/specs/#9.1.1)
+- [Evolution of Classes](https://docs.oracle.com/javase/specs/#13.4)
+- [FP-strict Expressions](https://docs.oracle.com/javase/specs/#15.4)
+
   > 출처 : http://www.yunsobi.com/blog/451
