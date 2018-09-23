@@ -82,7 +82,6 @@ Users, Remote Desktop Users, Replicator
 일반  | R   |  읽기 전용 권한
 일반  | W   |  쓰기 전용 권한
 일반  | D   |  삭제 권한
---|--|--
 특수  | DE  |  삭제
 특수  | RC  |  읽기 제어
 특수  | WDAC|  DAC 쓰기
