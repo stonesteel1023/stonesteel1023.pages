@@ -1,0 +1,17 @@
+---
+layout: post
+title: "PG WAS ENDED"
+date: 2018-09-27 23:00
+tag: java
+comments: true
+---
+
+# PG(programming)
+
+# PT(Program Test)
+
+# IT(Intergrated Test)
+
+# ST(System Test)
+
+> V-model
