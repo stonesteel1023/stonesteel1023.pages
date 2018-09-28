@@ -31,7 +31,6 @@ e.printStackTrace();
 
 `
 File file = new File("C:/123.txt");
-
 if( file.exists() ){
 if(file.delete()){
 System.out.println("파일삭제 성공");
