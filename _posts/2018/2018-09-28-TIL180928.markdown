@@ -1,0 +1,43 @@
+---
+layout: post
+title: java file create and delete
+date: 2018-09-28 19:30
+tag: java
+comments: true
+---
+
+# CREATE
+```java
+try {
+File file = new File("C:/123.txt");
+if( file.exists()){
+System.out.println("파일생성 성공");
+}
+// FileOutputStream 은 무조건 해당 파일을 생성한다. 존재하는 파일일 경우 덮어쓰기함.
+FileOutputStream fos = new FileOutputStream(file);
+while((data = System.in.read()) != -1) {
+fos.write(data);
+}
+fos.close(); 
+}catch (FileNotFoundException e) {
+e.printStackTrace();
+} catch (Exception e) {
+e.printStackTrace();
+}
+```
+
+# DELETE
+
+```java
+File file = new File("C:/123.txt");
+         
+if( file.exists() ){
+if(file.delete()){
+System.out.println("파일삭제 성공");
+}else{
+System.out.println("파일삭제 실패");
+}
+}else{
+System.out.println("파일이 존재하지 않습니다.");
+}
+```
