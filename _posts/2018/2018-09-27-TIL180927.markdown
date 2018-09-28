@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "PG WAS ENDED"
+title: "프로젝트 개발주기방법론"
 date: 2018-09-27 23:00
 tag: java
 comments: true
 ---
+
+> V-model
 
 # PG(programming)
 
@@ -13,5 +15,3 @@ comments: true
 # IT(Intergrated Test)
 
 # ST(System Test)
-
-> V-model

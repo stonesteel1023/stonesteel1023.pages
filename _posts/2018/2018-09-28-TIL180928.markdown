@@ -1,13 +1,14 @@
 ---
 layout: post
-title: java file create and delete
+title: "java file create and delete"
 date: 2018-09-28 19:30
 tag: java
 comments: true
 ---
 
 # CREATE
-```java
+
+`
 try {
 File file = new File("C:/123.txt");
 if( file.exists()){
@@ -18,19 +19,19 @@ FileOutputStream fos = new FileOutputStream(file);
 while((data = System.in.read()) != -1) {
 fos.write(data);
 }
-fos.close(); 
+fos.close();
 }catch (FileNotFoundException e) {
 e.printStackTrace();
 } catch (Exception e) {
 e.printStackTrace();
 }
-```
+`
 
 # DELETE
 
-```java
+`
 File file = new File("C:/123.txt");
-         
+
 if( file.exists() ){
 if(file.delete()){
 System.out.println("파일삭제 성공");
@@ -40,4 +41,4 @@ System.out.println("파일삭제 실패");
 }else{
 System.out.println("파일이 존재하지 않습니다.");
 }
-```
+`
