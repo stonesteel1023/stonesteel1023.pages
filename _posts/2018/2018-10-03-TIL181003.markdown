@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Today I learned, cause I teached it"
+date: 2018-10-03 23:59
+tag: java
+comments: true
+---
+
+# Java project
+
+## Clean & build
+
+# JUnit test-case & suite-case
+
+## annotation
+
+# Selenium
+
+## 32bit & 64bit
+
+# TDD (Test-Driven Development)
+
+## Test case before
