@@ -10,7 +10,7 @@ comments: true
  web developer, linguist, reader of all things SciFi & fantasy, @wearewebclerks co-organizer
  
  
-* Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
+> Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
 
 * It’s my 32nd birthday today and I’m looking back on a year full of adventure, opportunities, new friends and scary challenges.
 
@@ -43,7 +43,8 @@ I have met some of the most amazing people at tech conferences. This industry tr
 Working as a developer is a very social experience and work doesn’t stop when you leave the office. Being a developer means to be in the loop constantly, to learn, to engage the people you meet at events, to experiment, to build, to try, to fail, to fix and improve.
 
 * This can be a big challenge for people breaking into the industry when older because some of us have families and less time to attend events. I overdid it at the beginning and almost burned out, so I limited myself to only attend 1–2 meetups a week and to leave my weekends for my husband and non-tech friends.
-Public speaking is fun!
+
+## Public speaking is fun!
 
 * I have always been ambitious, so breaking into tech for me meant to be successful. And even though I never planned on it, I’ve had the good fortune of quickly becoming a tech speaker in Vienna, where I speak at meetups and recently at a conference in front of over 1000 people. Maybe it came with age and experience, but I’m no longer bothered by standing in front of people and speaking about things I enjoy. I also started teaching what I know to others. I doubt that I, personally, would have had the confidence to do all these things at 22.
 So, all in all, it has been an amazing ride and I’m looking forward to experiencing more of this wonderful industry with all its amazing people that have taught me so much. I dove head first into an adventure and so far it looks like it has been the right decision. I’m truly grateful to everyone who supported me when I originally decided to try this out, especially my husband, who is now beyond proud of his wife.
