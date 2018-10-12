@@ -7,9 +7,12 @@ comments: true
 
 # Being a Junior Developer at 30
 > Eva Lettner
- - web developer, linguist, reader of all things SciFi & fantasy, @wearewebclerks co-organizer
- - Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
+  + web developer, linguist, reader of all things SciFi & fantasy, @wearewebclerks co-organizer
+  
+  + 커리어를 바꾸는 일은 무섭고 엄청난 위험을 동반할 수 있다. 나이가 들어갈수록 분야를 바꾸는 일은 더 위험해진다. Scratch같은 초급과정부터 모든 사람이 나보다 훨씬 어리고 뛰어난 것을 보면 사람을 한풀 꺾어버린다. 이것은 정말 사람을 의기소침하게 만든다. 나는 여기 30세 혹은 그 즈음에 테크 분야로 뛰어드는 것은 상상할 수 없는 모험이면서, 동시에 절대 잊지못할 추억이며 훌륭한 기회가 될 수 있다는 것을 말하려고 한다.
+  + Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
 
+오늘은 내 32살 생일이다. 나는 모험과 기회, 새로운 친구들 때로는 두렵기까지한 도전으로 가득찬 한 해를 뒤돌아 보고 있다.
 * It’s my 32nd birthday today and I’m looking back on a year full of adventure, opportunities, new friends and scary challenges.
 
 * When I was in my early twenties I was sure, by the time I’m 32 I would have it all figured out. I saw my future self as this put-together woman that had a great life, a career, high heels and a plan.
