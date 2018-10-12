@@ -7,54 +7,82 @@ comments: true
 
 # Being a Junior Developer at 30
 > Eva Lettner
-  + web developer, linguist, reader of all things SciFi & fantasy, @wearewebclerks co-organizer
+- web developer, linguist, reader of all things SciFi & fantasy, @wearewebclerks co-organizer
   
-  + 커리어를 바꾸는 일은 무섭고 엄청난 위험을 동반할 수 있다. 나이가 들어갈수록 분야를 바꾸는 일은 더 위험해진다. Scratch같은 초급과정부터 모든 사람이 나보다 훨씬 어리고 뛰어난 것을 보면 사람을 한풀 꺾어버린다. 이것은 정말 사람을 의기소침하게 만든다. 나는 여기 30세 혹은 그 즈음에 테크 분야로 뛰어드는 것은 상상할 수 없는 모험이면서, 동시에 절대 잊지못할 추억이며 훌륭한 기회가 될 수 있다는 것을 말하려고 한다.
-  + Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
+> 커리어를 바꾸는 일은 무섭고 엄청난 위험을 동반할 수 있다. 나이가 들어갈수록 분야를 바꾸는 일은 더 위험해진다. Scratch같은 초급과정부터 모든 사람이 나보다 훨씬 어리고 뛰어난 것을 보면 사람을 한풀 꺾어버린다. 이것은 정말 사람을 의기소침하게 만든다. 나는 여기 30세 혹은 그 즈음에 테크 분야로 뛰어드는 것은 상상할 수 없는 모험이면서, 동시에 절대 잊지못할 추억이며 훌륭한 기회가 될 수 있다는 것을 말하려고 한다.
+ + Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
 
 오늘은 내 32살 생일이다. 나는 모험과 기회, 새로운 친구들 때로는 두렵기까지한 도전으로 가득찬 한 해를 뒤돌아 보고 있다.
 * It’s my 32nd birthday today and I’m looking back on a year full of adventure, opportunities, new friends and scary challenges.
 
+20대 초반에는 32살 즈음이 되면 이 모든 것들을 헤쳐 나갈 수 있을 것이라 확신했다. 멋진 삶과 커리어, 하이힐과 미래에 대한 계획을 갖고 있는 미래를 상상했다. 흠, 여전히 어제 했던 화장 그대로이고, 내 남편한테 뺏어 입은 커다란 메탈 티셔츠를 입은 걸 보면 20대의 목표는 아마도 도전적인 목표였나보다. 학창시절 계획이 매우 어려운 것이었고 첫 번째 커리어가 막 끝나감에도 불구하고 나는 멋진 삶을 산다고 생각한다. 편한 신발을 더 좋아하기 때문에 힐을 거의 신어본적도 없고 안정적인 계획같은건 없어도 그렇다. 테크분야로 들어온 내 결정은 많은 눈물과 절망을 동반한 길고도 험난한 길이었다. 원래는 어학자가 되려고 했다. 과학자가 되어 세계를 여행하고, 고대어를 해석하고, 유명대학들에서 학생들을 가르칠 모든 것은 계획 속에 순차적으로 진행 중이었다. 그때 어머니가 암에 걸렸고 이런 계획들은 모두 의미가 없어졌다. 어머니가 돌아가시기 전까지 2년 반 동안 어머니 곁에 있었다. 나는 완전히 부셔졌다. 대학도, 학위도 모두 중요하지 않았고 계획을 잃고 표류하고 있었다.
+
 * When I was in my early twenties I was sure, by the time I’m 32 I would have it all figured out. I saw my future self as this put-together woman that had a great life, a career, high heels and a plan.
 Well, put-together might be a stretch since I'm currently wearing yesterdays makeup and a far too big metal shirt I stole from my husband. I have a great life even though it turned out very differently to what I originally planned and my career is just about to take off. I hardly ever wear heels because I prefer comfy shoes and I certainly don’t have a plan!
 My way into tech is a long and convoluted one with a lot of tears and desperation. Originally, I was going to be a linguist. Everything was planned out and set in motion, I was going to be a scientist, traveling the world, translating ancient texts and teaching at prestigious universities. Then my mother got cancer and none of that was important anymore. My life stood still for the 2.5 years it took her cancer to kill her. I was shattered. University didn’t matter, my degree didn’t matter, I had no plans anymore and I was lost.
+
+시간이 좀 걸렸지만 결국 웹디자인으로 돌아가기로 생각했다. 인생의 대부분을 이 분야에 있었지만 내 커리어가 될 것이라고 생각하지는 않았다(아마 웹디자이너 일로 아르바이트같은 것을 하면서 어학자가 될 계획을 했던 것 같습니다 — 역자 주). 그래서 나는 코드 속으로 뛰어들었고 2년 짜리 프로그램을 찾았다. 거기서 Manuel Matuzovic을 만났고 그는 나의 선생님이자 친구, 멘토가 되었다. 그는 나에게 열정을 쏟아부었고 성장하고자 하는 내 욕구를 보고 스스로 그것들을 할 수 있게 만들었다. 나는 이제 풀타임 개발자로 살아가고 있고, 서른살에 테크 분야로 뛰어들어 배우게 된 것을 공유하려고 한다.
 
 * It took a while but eventually, I thought about getting back into Webdesign. I have been doing this for most of my life but never thought I could actually turn it into a career. So I started getting into code and found my way into a 2-year program where I got to know Manuel Matuzovic, who started out as my teacher and turned into a friend and mentor. He challenged me and saw my ambition to grow and make something of myself.
 I have now been working as a full-time developer for almost a year and here are my learnings of what it’s like to get into tech in your thirties:
 
 ## Everyone is so young!
 
+개발자로 첫 번째 직장을 구했을 때, 나는 그 회사에서 가장 나이가 많으면서 가장 경력이 짧은 개발자였다. 이것은 굉장히 독특한 경험이었다. 직장을 바꾸기 전에 60명이 넘는 사람을 관리하는 자리에 있었다는 것을 생각해보면 특히나 더 그랬다. 
+
 * When I took my first job as a developer, I was the oldest person in the company and the most junior. This is a very odd experience, especially since before I switched jobs, I had held managing positions and had previously been in charge of over 60 people.
+
+나는 자주 나보다 앞서 나가는 사람들을 절대 따라잡을 수 없을 것이라고 느꼈다. 이런 느낌은 때때로 계속되었지만 잘할 수 있는 분야를 찾은 뒤에는 조금씩 진정됐다.
+나의 팁: 즐길 수 있는 것을 잘할 수 있는 수준으로 올려라. 자신감은 연습에서 비롯된다.
 
 * I constantly felt like I would never be able to catch up with my colleagues who were leagues ahead of me. This feeling still persists sometimes but ever since I found my niche where I’m really good at, it started to subside a little bit.
 So my tip is: Become good at something you enjoy, the confidence comes with practice.
 
 ## Imposter syndrome is real
 
-* You can’t really fake being good at programming. Sending your code off to code reviews is a nightmare for worriers like me. I constantly feel like a complete loser who will never get better. The key to overcoming this for me (haha, as if I had), is communication. I talk to my boss about my insecurities and ask for his feedback on the speed of my learning and the quality of my code. I ask questions when I don’t understand something and I keep learning from him and other people. This is only possible because I have a great boss and an awesome team of cool people around me that give me the confidence to ask questions.
+프로그래밍에서는 실력을 속일 수 없다. 코드리뷰를 위해 코드를 보내는 것은 나에게 악몽 그 자체였다. 나는 계속해서 결코 나아지지 않는 완벽한 루저가 된 기분을 느꼈다. 내가 이 것을 극복할 수 있었던 비결은 소통이다. 나는 나의 불안을 보스에게 이야기하고 내 학습속도와 코드 퀄리티에 대해 피드백을 요청했다. 내가 이해할 수 없을 때 질문했고 그와 다른 사람들에게 배우는 것을 유지했다. 이것이 가능했던 유일한 이유는 질문할 수 있는 자신감을 주는 훌륭한 보스와 멋진 팀 동료들이 있었다는 사실 때문이다. 
+
+* You can’t really fake being good at programming. Sending your code off to code reviews is a nightmare for worriers like me. I constantly feel like a complete loser who will never get better. The key to overcoming this for me, is communication. I talk to my boss about my insecurities and ask for his feedback on the speed of my learning and the quality of my code. I ask questions when I don’t understand something and I keep learning from him and other people. This is only possible because I have a great boss and an awesome team of cool people around me that give me the confidence to ask questions.
 
 ## It’s all about the people
+
+다른 직업처럼, 개발자가 된다는 것도 모두 사람에 관한 일이다. 동료, 클라이언트, 유저.
+나는 테크 컨퍼런스에서 정말 굉장한 사람들을 만났다. 개발분야는 진짜 엄청난 사람들이 있고 나는 그들이 서로 존중하는 문화를 경외한다. 물론 이쪽도 다른 분야와 마찬가지로 더러운 일들이 일어나기도 한다. 하지만 그런 안좋은 점에 대해 함께 의식하고 대화한다고 느낀다. 우리는 개선해야 할 것이 많지만 더욱 더 노력하고 있다.
 
 * As with any other job, being a developer is all about the people. Your colleagues, your customers, your users.
 I have met some of the most amazing people at tech conferences. This industry truly has some incredible characters and I’m still in awe of how respectful many of them treat each other. Of course, ugly things happen in tech (as in other industries) but I feel like there is a dialogue here and people are being conscious and talk about it. We have a lot to improve but people are trying.
 
 ## It’s not just a job
 
+내가 다른 직업을 가졌을 때는, 하루 업무가 끝나면 집으로 돌아가 일 생각을 하지 않으려고 노력했다. 지금 테크 분야에서 나는 종종 일주일에 2번 정도 일이 끝나자마자 집으로 가지 않고 밋업에 간다. 주말에는 해커톤이나 컨퍼런스에 가고, 이벤트를 기획한다.
+
 * For all of my other jobs, when my day was over, I left and went home to try and not think about work. Now in tech, I often don’t go home but go to meetups straight after work a couple of times a week. At weekends I attend hackathons, I travel to conferences or organize events.
 
+개발자로 일하는 것은 매우 사회적인 경험이고 퇴근 후에도 업무는 멈추지 않는다. 개발자가 된다는 의미는 지속적으로 배우고, 이벤트에서 만나는 사람들에게 영감을 불어넣고, 실험하고, 만들고, 시도하고, 실패하고, 고치고, 개선하는 loop에 들어가는 것이다. 
+
 * Working as a developer is a very social experience and work doesn’t stop when you leave the office. **Being a developer means to be in the loop constantly, to learn, to engage the people you meet at events, to experiment, to build, to try, to fail, to fix and improve.**
+
+이것은 나이가 들어 개발자가 되는 사람에게 큰 도전이다. 왜냐하면 그들 중 일부는 가족이 있고 이벤트에 참석할 시간이 상대적으로 부족하기 때문이다. 나는 시작부터 지나치게 활동했고 거의 지쳐버렸다. 이제는 스스로 일주일에 1~2회로 제한하고 주말에는 가족이나 다른 분야의 친구들을 만나러 간다.
 
 * This can be a big challenge for people breaking into the industry when older because some of us have families and less time to attend events. I overdid it at the beginning and almost burned out, so I limited myself to only attend 1–2 meetups a week and to leave my weekends for my husband and non-tech friends.
 
 ## Public speaking is fun!
 
+나는 항상 야심만만하다. 테크 분야로 들어온 이유도 성공하기 위해서다. 내가 결코 의도한 것은 아니지만, 운 좋게도 빠른 시기에 1000명 넘는 청중이 있었던 비엔나 컨퍼런스에서 발표자가 될 수 있었다. 아마도 나이와 경험 때문에 이런 기회를 얻었겠지만, 많은 사람들 앞에 서는 것이 괴롭지 않고 말하는 것이 즐겁다. 또한 내가 아는 다른 사람들을 가르치기 시작했다. 개인적으로 22세에 이런 것을 할 자신이 있었다.
+
 * I have always been ambitious, so breaking into tech for me meant to be successful. And even though I never planned on it, I’ve had the good fortune of quickly becoming a tech speaker in Vienna, where I speak at meetups and recently at a conference in front of over 1000 people. Maybe it came with age and experience, but I’m no longer bothered by standing in front of people and speaking about things I enjoy. I also started teaching what I know to others. I doubt that I, personally, would have had the confidence to do all these things at 22.
+
+이 모든 것들이 정말 멋진 여정이었고 테크 분야에서 많은 것을 가르쳐준 놀라운 사람들과 함께하기를 고대하고 있습니다. 난 모험에 머리를 들이밀었고 아직까지 이것은 올바른 결정으로 보인다. 진짜로 처음 개발자가 되기로 했을 때, 나를 지지해준 모든 사람들에게 감사한다. 특히 나를 자랑스럽게 생각하는 내 남편.
 
 * So, all in all, it has been an amazing ride and I’m looking forward to experiencing more of this wonderful industry with all its amazing people that have taught me so much. I dove head first into an adventure and so far it looks like it has been the right decision. I’m truly grateful to everyone who supported me when I originally decided to try this out, especially my husband, who is now beyond proud of his wife.
 
 ## What does the future hold for me?
 
+바라건대 더 많은 스피치, 더 많은 프로그래밍 챌린지, 더 멋진 컨퍼런스, 멋진 사람들로부터의 많은 포옹, 내 업무에서 많은 일을 해내는 것.
+
 * Hopefully more public speaking, more programming challenges, more great conferences, many hugs from awesome people and a lot of fulfilment in my work life.
+
+그리고 당신이 만약 직업을 바꾸길 원하지만 너무 늦었다고 느끼면 내가 다음과 같이 말할 수 있게 하기를: 당신은 행복하고 성공하고, 당신이 만나는 사람과 업무를 즐기기에 절대 늦지 않았습니다. 당신은 행복할 자격있고, 진짜로 당신을 흥분시킬 수 있는 일을 할 자격이 있다
 
 * So if you think of switching careers but feel that you are too old, let me tell you something: You are never too old to become happy and successful, to enjoy your job and the people you will meet through it. You deserve to be happy and to work in a field that truly excites you. I wish you good luck and all the best!
 
