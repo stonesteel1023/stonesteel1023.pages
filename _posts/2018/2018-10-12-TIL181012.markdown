@@ -12,35 +12,44 @@ comments: true
  
 * Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
 
-It’s my 32nd birthday today and I’m looking back on a year full of adventure, opportunities, new friends and scary challenges.
-When I was in my early twenties I was sure, by the time I’m 32 I would have it all figured out. I saw my future self as this put-together woman that had a great life, a career, high heels and a plan.
+* It’s my 32nd birthday today and I’m looking back on a year full of adventure, opportunities, new friends and scary challenges.
+
+* When I was in my early twenties I was sure, by the time I’m 32 I would have it all figured out. I saw my future self as this put-together woman that had a great life, a career, high heels and a plan.
 Well, put-together might be a stretch since I'm currently wearing yesterdays makeup and a far too big metal shirt I stole from my husband. I have a great life even though it turned out very differently to what I originally planned and my career is just about to take off. I hardly ever wear heels because I prefer comfy shoes and I certainly don’t have a plan!
 My way into tech is a long and convoluted one with a lot of tears and desperation. Originally, I was going to be a linguist. Everything was planned out and set in motion, I was going to be a scientist, traveling the world, translating ancient texts and teaching at prestigious universities. Then my mother got cancer and none of that was important anymore. My life stood still for the 2.5 years it took her cancer to kill her. I was shattered. University didn’t matter, my degree didn’t matter, I had no plans anymore and I was lost.
-It took a while but eventually, I thought about getting back into Webdesign. I have been doing this for most of my life but never thought I could actually turn it into a career. So I started getting into code and found my way into a 2-year program where I got to know Manuel Matuzovic, who started out as my teacher and turned into a friend and mentor. He challenged me and saw my ambition to grow and make something of myself.
+
+* It took a while but eventually, I thought about getting back into Webdesign. I have been doing this for most of my life but never thought I could actually turn it into a career. So I started getting into code and found my way into a 2-year program where I got to know Manuel Matuzovic, who started out as my teacher and turned into a friend and mentor. He challenged me and saw my ambition to grow and make something of myself.
 I have now been working as a full-time developer for almost a year and here are my learnings of what it’s like to get into tech in your thirties:
-Everyone is so young!
-When I took my first job as a developer, I was the oldest person in the company and the most junior. This is a very odd experience, especially since before I switched jobs, I had held managing positions and had previously been in charge of over 60 people.
-I constantly felt like I would never be able to catch up with my colleagues who were leagues ahead of me. This feeling still persists sometimes but ever since I found my niche where I’m really good at, it started to subside a little bit.
+
+## Everyone is so young!
+
+* When I took my first job as a developer, I was the oldest person in the company and the most junior. This is a very odd experience, especially since before I switched jobs, I had held managing positions and had previously been in charge of over 60 people.
+
+* I constantly felt like I would never be able to catch up with my colleagues who were leagues ahead of me. This feeling still persists sometimes but ever since I found my niche where I’m really good at, it started to subside a little bit.
 So my tip is: Become good at something you enjoy, the confidence comes with practice.
-Imposter syndrome is real
-You can’t really fake being good at programming. Sending your code off to code reviews is a nightmare for worriers like me. I constantly feel like a complete loser who will never get better. The key to overcoming this for me (haha, as if I had), is communication. I talk to my boss about my insecurities and ask for his feedback on the speed of my learning and the quality of my code. I ask questions when I don’t understand something and I keep learning from him and other people. This is only possible because I have a great boss and an awesome team of cool people around me that give me the confidence to ask questions.
-It’s all about the people
-As with any other job, being a developer is all about the people. Your colleagues, your customers, your users.
+
+## Imposter syndrome is real
+
+* You can’t really fake being good at programming. Sending your code off to code reviews is a nightmare for worriers like me. I constantly feel like a complete loser who will never get better. The key to overcoming this for me (haha, as if I had), is communication. I talk to my boss about my insecurities and ask for his feedback on the speed of my learning and the quality of my code. I ask questions when I don’t understand something and I keep learning from him and other people. This is only possible because I have a great boss and an awesome team of cool people around me that give me the confidence to ask questions.
+
+## It’s all about the people
+
+* As with any other job, being a developer is all about the people. Your colleagues, your customers, your users.
 I have met some of the most amazing people at tech conferences. This industry truly has some incredible characters and I’m still in awe of how respectful many of them treat each other. Of course, ugly things happen in tech (as in other industries) but I feel like there is a dialogue here and people are being conscious and talk about it. We have a lot to improve but people are trying.
-It’s not just a job
-For all of my other jobs, when my day was over, I left and went home to try and not think about work. Now in tech, I often don’t go home but go to meetups straight after work a couple of times a week. At weekends I attend hackathons, I travel to conferences or organize events.
+
+## It’s not just a job
+
+* For all of my other jobs, when my day was over, I left and went home to try and not think about work. Now in tech, I often don’t go home but go to meetups straight after work a couple of times a week. At weekends I attend hackathons, I travel to conferences or organize events.
 Working as a developer is a very social experience and work doesn’t stop when you leave the office. Being a developer means to be in the loop constantly, to learn, to engage the people you meet at events, to experiment, to build, to try, to fail, to fix and improve.
-This can be a big challenge for people breaking into the industry when older because some of us have families and less time to attend events. I overdid it at the beginning and almost burned out, so I limited myself to only attend 1–2 meetups a week and to leave my weekends for my husband and non-tech friends.
+
+* This can be a big challenge for people breaking into the industry when older because some of us have families and less time to attend events. I overdid it at the beginning and almost burned out, so I limited myself to only attend 1–2 meetups a week and to leave my weekends for my husband and non-tech friends.
 Public speaking is fun!
-I have always been ambitious, so breaking into tech for me meant to be successful. And even though I never planned on it, I’ve had the good fortune of quickly becoming a tech speaker in Vienna, where I speak at meetups and recently at a conference in front of over 1000 people. Maybe it came with age and experience, but I’m no longer bothered by standing in front of people and speaking about things I enjoy. I also started teaching what I know to others. I doubt that I, personally, would have had the confidence to do all these things at 22.
+
+* I have always been ambitious, so breaking into tech for me meant to be successful. And even though I never planned on it, I’ve had the good fortune of quickly becoming a tech speaker in Vienna, where I speak at meetups and recently at a conference in front of over 1000 people. Maybe it came with age and experience, but I’m no longer bothered by standing in front of people and speaking about things I enjoy. I also started teaching what I know to others. I doubt that I, personally, would have had the confidence to do all these things at 22.
 So, all in all, it has been an amazing ride and I’m looking forward to experiencing more of this wonderful industry with all its amazing people that have taught me so much. I dove head first into an adventure and so far it looks like it has been the right decision. I’m truly grateful to everyone who supported me when I originally decided to try this out, especially my husband, who is now beyond proud of his wife.
 What does the future hold for me?
-Hopefully more public speaking, more programming challenges, more great conferences, many hugs from awesome people and a lot of fulfilment in my work life.
-So if you think of switching careers but feel that you are too old, let me tell you something: You are never too old to become happy and successful, to enjoy your job and the people you will meet through it. You deserve to be happy and to work in a field that truly excites you. I wish you good luck and all the best!
 
-Best colleague and lovely friend Pilar Huidobro, our boss Clemens Helm and me after winning a hacka
+* Hopefully more public speaking, more programming challenges, more great conferences, many hugs from awesome people and a lot of fulfilment in my work life.
 
+* So if you think of switching careers but feel that you are too old, let me tell you something: You are never too old to become happy and successful, to enjoy your job and the people you will meet through it. You deserve to be happy and to work in a field that truly excites you. I wish you good luck and all the best!
 
-
-Hacker Noon is how hackers start their afternoons. We’re a part of the @AMI family. We are now accepting submissions and happy to discuss advertising & sponsorship opportunities.
-If you enjoyed this story, we recommend reading our latest tech stories and trending tech stories. Until next time, don’t take the realities of the world for granted!
