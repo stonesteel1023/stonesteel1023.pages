@@ -6,13 +6,15 @@ comments: true
 ---
 
 # Being a Junior Developer at 30
+
 > Eva Lettner
 - web developer, linguist, reader of all things SciFi & fantasy, @wearewebclerks co-organizer
   
 > 커리어를 바꾸는 일은 무섭고 엄청난 위험을 동반할 수 있다. 나이가 들어갈수록 분야를 바꾸는 일은 더 위험해진다. Scratch같은 초급과정부터 모든 사람이 나보다 훨씬 어리고 뛰어난 것을 보면 사람을 한풀 꺾어버린다. 이것은 정말 사람을 의기소침하게 만든다. 나는 여기 30세 혹은 그 즈음에 테크 분야로 뛰어드는 것은 상상할 수 없는 모험이면서, 동시에 절대 잊지못할 추억이며 훌륭한 기회가 될 수 있다는 것을 말하려고 한다.
- + Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
+- Changing careers is scary and can be very risky. The older you get, the more risk you are taking when switching fields of work. Starting from scratch is daunting and when everyone is a lot younger than you and more successful, it can be discouraging. I’m here to tell you that diving into tech at 30 (or any age) can be an incredible adventure filled with memorable experiences, amazing people, and great opportunities.
 
 오늘은 내 32살 생일이다. 나는 모험과 기회, 새로운 친구들 때로는 두렵기까지한 도전으로 가득찬 한 해를 뒤돌아 보고 있다.
+
 * It’s my 32nd birthday today and I’m looking back on a year full of adventure, opportunities, new friends and scary challenges.
 
 20대 초반에는 32살 즈음이 되면 이 모든 것들을 헤쳐 나갈 수 있을 것이라 확신했다. 멋진 삶과 커리어, 하이힐과 미래에 대한 계획을 갖고 있는 미래를 상상했다. 흠, 여전히 어제 했던 화장 그대로이고, 내 남편한테 뺏어 입은 커다란 메탈 티셔츠를 입은 걸 보면 20대의 목표는 아마도 도전적인 목표였나보다. 학창시절 계획이 매우 어려운 것이었고 첫 번째 커리어가 막 끝나감에도 불구하고 나는 멋진 삶을 산다고 생각한다. 편한 신발을 더 좋아하기 때문에 힐을 거의 신어본적도 없고 안정적인 계획같은건 없어도 그렇다. 테크분야로 들어온 내 결정은 많은 눈물과 절망을 동반한 길고도 험난한 길이었다. 원래는 어학자가 되려고 했다. 과학자가 되어 세계를 여행하고, 고대어를 해석하고, 유명대학들에서 학생들을 가르칠 모든 것은 계획 속에 순차적으로 진행 중이었다. 그때 어머니가 암에 걸렸고 이런 계획들은 모두 의미가 없어졌다. 어머니가 돌아가시기 전까지 2년 반 동안 어머니 곁에 있었다. 나는 완전히 부셔졌다. 대학도, 학위도 모두 중요하지 않았고 계획을 잃고 표류하고 있었다.
@@ -86,4 +88,3 @@ I have met some of the most amazing people at tech conferences. This industry tr
 당신은 행복하고 성공하고, 당신이 만나는 사람과 업무를 즐기기에 절대 늦지 않았다. 당신은 행복할 자격있고, 진짜로 당신을 흥분시킬 수 있는 일을 할 자격이 있다. 당신의   성공을 기원한다.
 
 * So if you think of switching careers but feel that you are too old, let me tell you something: You are never too old to become happy and successful, to enjoy your job and the people you will meet through it. You deserve to be happy and to work in a field that truly excites you. I wish you good luck and all the best!
-
