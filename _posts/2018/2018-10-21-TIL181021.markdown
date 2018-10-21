@@ -7,36 +7,43 @@ comments: true
 
 # 12 Things Every Junior Developer Should Learn
 
-* In no particular order:
+### In no particular order:
 
+* learn how a relational database works (this is always useful)
+1. 관계형 데이터베이스 동작 방식(언제나 유용)
 
+* learn how HTTP works in general
+2. 일반적인 HTTP 동작 방식
 
-learn how a relational database works (this is always useful)
-관계형 데이터베이스 동작 방식(언제나 유용)
+* learn how to debug code in one language (it's pretty much the same in others, you can recycle most of the knowledge)
+3. 특정 언어에서 코드 디버깅 방법(다른 언어에서도 엇비슷하므로 지식을 재사용할 수 있다)
 
-learn how HTTP works in general
-일반적인 HTTP 동작 방식
-특정 언어에서 코드 디버깅 방법(다른 언어에서도 엇비슷하므로 지식을 재사용할 수 있다)
+* be familiar with the command line
+4. 커맨드라인에 익숙해지기
 
-learn how to debug code in one language (it's pretty much the same in others, you can recycle most of the knowledge)
-be familiar with the command line
-know how to find code (either using your IDE or grep on the command line)
-knowing the basics of regular expressions will get you far (also to find code in the previous point)
-know how to find solutions using a search engine
-know how to operate git (I would say any source control but git is the de facto standard so you might as well start with that)
-ask questions, especially if you think they're not worth being asked
-learn how timezones work (not kidding, lots of devs are still fuzzy on these)
-learn how unicode and utf-8 work (same reason for timezones)
-have a general idea of how caching (CPU, in memory, disk, HTTP) works as a concept
+* know how to find code (either using your IDE or grep on the command line)
+5. 코드를 찾는 방법(IDE나 명령행에서 grep을 사용)
 
-코드를 찾는 방법(IDE나 명령행에서 grep을 사용)
-정규 표현식 기초(직전 항목에서 코드를 찾는 방법에도 적용 가능)
-검색 엔진으로 직면한 문제의 해법을 찾는 방법
-git 운영 방법(다른 형상 관리 시스템이라도 큰 문제 없음)
-질문할 가치가 없다고 생각할 때에도 질문하기
-시간대(TZ) 동작 방식(농담이 아님. 많은 개발자들이 혼동을 겪는 부분임)
-유니코드와 UTF-8 동작 방식
-캐시 동작 방식(CPU, 메모리, 디스크)
+* knowing the basics of regular expressions will get you far (also to find code in the previous point)
+6. 정규 표현식 기초(직전 항목에서 코드를 찾는 방법에도 적용 가능)
 
-notice that other than git I didn't specify any particular tool, this is because it's stuff you will bump into no matter which languages or tools you'll end up using.
-여기에 IDE 사용 방법(자유자재로...)과 셸/CMD 기초 사용법, 네트워크 관련 일반 지식이 더해지면 초급 개발자로서 한 몫을 다 하리라 생각한다.
+* know how to find solutions using a search engine
+7. 검색 엔진으로 직면한 문제의 해법을 찾는 방법
+
+* know how to operate git (I would say any source control but git is the de facto standard so you might as well start with that)
+8. git 운영 방법(다른 형상 관리 시스템이라도 큰 문제 없음)
+
+* ask questions, especially if you think they're not worth being asked
+9. 질문할 가치가 없다고 생각할 때에도 질문하기
+
+* learn how timezones work (not kidding, lots of devs are still fuzzy on these)
+10. 시간대(TZ) 동작 방식(농담이 아님. 많은 개발자들이 혼동을 겪는 부분임)
+
+* learn how unicode and utf-8 work (same reason for timezones)
+11. 유니코드와 UTF-8 동작 방식
+
+* have a general idea of how caching (CPU, in memory, disk, HTTP) works as a concept
+12. 캐시 동작 방식(CPU, 메모리, 디스크)
+
+* notice that other than git I didn't specify any particular tool, this is because it's stuff you will bump into no matter which languages or tools you'll end up using.
+- 여기에 IDE 사용 방법(자유자재로...)과 셸/CMD 기초 사용법, 네트워크 관련 일반 지식이 더해지면 초급 개발자로서 한 몫을 다 하리라 생각한다.
