@@ -9,14 +9,13 @@ comments: true
 
 * In no particular order:
 
+
+
+learn how a relational database works (this is always useful)
 관계형 데이터베이스 동작 방식(언제나 유용)
 
-여기에 IDE 사용 방법(자유자재로...)과 셸/CMD 기초 사용법, 네트워크 관련 일반 지식이 더해지면 초급 개발자로서 한 몫을 다 하리라 생각한다.
-learn how a relational database works (this is always useful)
-
-일반적인 HTTP 동작 방식
 learn how HTTP works in general
-
+일반적인 HTTP 동작 방식
 특정 언어에서 코드 디버깅 방법(다른 언어에서도 엇비슷하므로 지식을 재사용할 수 있다)
 
 learn how to debug code in one language (it's pretty much the same in others, you can recycle most of the knowledge)
@@ -40,3 +39,4 @@ git 운영 방법(다른 형상 관리 시스템이라도 큰 문제 없음)
 캐시 동작 방식(CPU, 메모리, 디스크)
 
 notice that other than git I didn't specify any particular tool, this is because it's stuff you will bump into no matter which languages or tools you'll end up using.
+여기에 IDE 사용 방법(자유자재로...)과 셸/CMD 기초 사용법, 네트워크 관련 일반 지식이 더해지면 초급 개발자로서 한 몫을 다 하리라 생각한다.
