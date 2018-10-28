@@ -151,11 +151,9 @@ Node 서버가 빠르게 요청을 처리하지 못한 탓에 로드벨런서에
 
 저는 또 다른 dyno를 추가하고 월 75달러를 지불하게 되었습니다. 그래도 좀 더 살펴보기로 했습니다. 저는 짠돌이라서 월 50달러 이상 쓰는 건 기쁜 일이 아니었습니다.
 
-
-
 ## The Investigation
 
-When I started investigating what was going on, the first thing I did was check to see how many requests per second (rps) ipify was actually getting. I was pretty surprised by the number: it was low.
+* When I started investigating what was going on, the first thing I did was check to see how many requests per second (rps) ipify was actually getting. I was pretty surprised by the number: it was low.
 
 If my memory serves me correctly, ipify was only getting around 10 rps at the time. When I saw how small the number was, I figured something bad must be happening in my code. If I can’t service 10 rps across two small web servers, I must be doing something horribly wrong.
 
@@ -171,11 +169,25 @@ At this point, the production ipify service was able to serve roughly 20 RPS acr
 
 I decided to rewrite the service in Go (which I started using a few months before) for performance purposes to see whether or not I could get more throughput out of an equivalent Go server.
 
-ipify v1
+* 수사를 시작하면서 가장 먼저 살펴본 것은 실제로 ipify가 초 당 얼마나 많은 요청을 처리하는가(requests per second, rps)를 살펴보는 일이었습니다. 숫자를 보고 상당히 놀랐습니다. 낮았거든요.
 
-Warrior Sketch
+제 기억에는 ipify는 10rps 정도였습니다. 이렇게 작은 숫자를 처리할 수 없다면 뭔가 코드가 문제라고 생각했습니다. 만약 10rps를 작은 웹 서버 두 개를 사용하는데도 처리하지 못하는 상태라면 끔찍하게 잘못된 것이 분명했습니다.
 
-Rewriting ipify in Go was a short (but fun) experiment.
+처음 알아차린 것은 단일 Node 프로세스로 처리하고 있다는 점이었습니다. Node의 클러스터 모듈을 사용해서 쉽게 고칠 수 있었습니다. 이제 각각의 CPU 코어에서 하나의 프로세스를 구동할 수 있게 되었습니다. 효과적으로 dyno에서 두 배의 처리량을 다룰 수 있게 되었습니다.
+
+하지만 20 rps는 여전히 작은 숫자로 느껴져서 좀 더 깊이 파헤쳐보기로 했습니다. Heroku에서 로드 테스트를 수행하기보다 제 랩탑에서 로컬로 테스트를 수행했습니다.
+
+제 랩탑은 512M 램의 작은 Heroku dyno보다 훨씬 강력하기 때문에 더 처리량이 많을 것으로 생각했습니다.
+
+ab 도구를 사용해서 테스트를 수행했고 놀랄 수 밖에 없었습니다. 훨씬 좋은 사양의 제 랩탑에서도 30 rps 정도 처리하지 못하는 것입니다. (제 랩탑은 리눅스로 구동되고 있었고 ab는 효율적으로 동작하는 환경이었습니다.) 그래서 기초적인 분석을 시작했고 Node에서 단순한 문자열 조작 동작을 하는데 많은 시간을 사용한다는 것을 확인할 수 있었습니다. (X-Forwarded-For 헤더에서 IP 주소를 추출하고 다듬는 일이었습니다) 여러 가지 실험을 해봤지만, 이 한계를 뛰어넘을 만큼 좋은 성능을 내는 것은 불가능했습니다.
+
+이 시점에서 ipify 서비스는 두 dyno를 통해서도 겨우 20 RPS 정도 처리할 수 있었습니다. ipify는 월 ~5200만 요청을 처리하고 있었습니다. 그다지 인상적이지 않았습니다.
+
+이 서비스를 Go로 다시 작성하기로 했습니다. (Go는 몇 달 전부터 사용하기 시작했습니다) 동일한 Go 서버를 작성했을 때 성능 측면에서 더 나은지 확인해보고 싶었습니다.
+
+## ipify v1
+
+* Rewriting ipify in Go was a short (but fun) experiment.
 
 It gave me the opportunity to mess around with many different Go routing stacks: Gorilla/mux, Martini, and httprouter. After benchmarking and playing around with all three routing tools, I ended up using httprouter as it performed significantly better than the other two more popular options.
 
@@ -189,11 +201,23 @@ Several days later, while talking to a more experienced Go developer, I ended up
 
 I was thrilled to say the least.
 
-More Popularity
+* ipify를 Go로 다시 작성하는 일은 짧은 (그리고 즐거운) 실험이었습니다.
 
-Tyrael Sketch
+이 과정에서 Gorilla/mux, Martini와 httprouter 같은 다양한 Go 라우팅 스택을 사용해볼 수 있었습니다. 이 세 가지 라우팅 도구를 사용해보고 비교해본 결과 httprouter가 다른 둘에 비교해 비약적으로 성능이 좋은 것을 확인했습니다.
 
-Although I was able to cut back my hosting cost down to a reasonable range for a short period of time, within roughly two months ipify started experiencing issues once more.
+제 랩탑에서 Go 서버는 초당 ~2,500 요청을 처리할 수 있었습니다. 엄청난 향상이었습니다. 또한, 메모리 사용량도 엄청 적어서 5M 남짓을 사용했습니다.
+
+Go와 사랑에 빠진 저는 즉시 행동으로 옮겼습니다. Go 기반 ipify 서비스를 Heroku에 배포했습니다.
+
+결과는 환상적이었습니다. 단일 dyno에서 2천 RPS 정도를 처리할 수 있었습니다. 이런 변화는 월 25달러 수준으로 월 ~52억 요청을 처리할 수 있게 되었습니다.
+
+몇일 후에 경험 있는 Go 개발자와 대화를 한 후, 문자열을 처리하는 기능 몇 가지를 다시 작성했고 그 덕분에 추가로 ~1천 RPS 정도를 확보할 수 있었습니다. 이 시점에 dyno 당 월 ~77억 요청을 처리하고 있었습니다. (조금 더 많거나 적었습니다.)
+
+저는 말할 것도 없이 흥분했습니다.
+
+## More Popularity
+
+* Although I was able to cut back my hosting cost down to a reasonable range for a short period of time, within roughly two months ipify started experiencing issues once more.
 
 It’s growth had continued to rise at an astounding rate. Around this time I had set up Google Alerts for ipify, so that I’d know when people mentioned it.
 
@@ -219,11 +243,19 @@ I eventually decided to manually involve myself and go with option #1, simply be
 
 Which brings us to the recent past.
 
-ipify Hits 30 Billion Requests
+* 지난 몇 달 동안 ipify는 새로운 기록을 냈고 월간 300억 요청을 몇 차례 넘었습니다. 이렇게 새로운 기록을 경신하는 일은 지켜보는 즐거움이 있습니다.
 
-Buzz Lightyear Proud Sketch
+오늘날 ipify는 2천에서 2만 RPS를 유지하고 있습니다. (이 수치는 항상 절대 일관적이질 않았습니다.) 트래픽은 항상 달라졌고 사용량은 정기적으로 높아졌는데 트래픽 패턴에서 의미를 찾는 걸 완전히 포기했습니다. 평균 응답 시간은 트래픽 패턴에 따라 1~20ms 사이를 유지했습니다.
 
-Over the past few months, ipify has hit a new record and surpassed 30 billion requests/mo on several occasions. It was an exciting milestone to surpass and something that has been fun to watch.
+현재 서비스는 트래픽과 여러 요인에 따라 월간 150~200달러로 운영되고 있습니다. 월간 200달러를 소비한다고 가정하고 수치를 계산해보면 ipify는 각 요청을 0.000000007달러로 운영하고 있습니다. 충격적으로 낮은 비용이죠.
+
+만약 이 서비스를 Lambda에서 돌린다고 가정하고 요금을 계산해본다면 월간 1,243.582달러 (연산) + 6,000달러 (요청) = ~ 7,243.58달러 정도를 사용하게 될 겁니다. 참고로 이건 간단한 입계산입니다. ipify의 수치를 Lambda 요금 계산기에 입력해서 얻은 결과입니다.
+
+결론적으로 ipify에 들어가는 비용에 엄청나게 만족하고 있습니다. 간단한 용도를 제공하는 짠돌이 서비스죠.
+
+## ipify Hits 30 Billion Requests
+
+* Over the past few months, ipify has hit a new record and surpassed 30 billion requests/mo on several occasions. It was an exciting milestone to surpass and something that has been fun to watch.
 
 Today, ipify routinely serves between 2k and 20k RPS (which is almost never consistent). Traffic is always variable and the usage is so routinely high that I’ve completely given up on trying to detect traffic patterns in any meaningful way. Average response time ranges between 1 and 20ms depending on traffic patterns.
 
@@ -233,18 +265,34 @@ If you compare that to the expected cost of running the same service on somethin
 
 All in all, I’m extremely satisfied with ipify’s cost. It’s a frugal service that serves a simple purpose.
 
-ipify’s Future
+* 지난 몇 달 동안 ipify는 새로운 기록을 냈고 월간 300억 요청을 몇 차례 넘었습니다. 이렇게 새로운 기록을 경신하는 일은 지켜보는 즐거움이 있습니다.
 
-Which leads me to the future. As ipify continues to grow, the service has gotten requests for a lot of different things: ipv6 support (something that Heroku does not support :(), better web design, other metadata about IP addresses, etc.
+오늘날 ipify는 2천에서 2만 RPS를 유지하고 있습니다. (이 수치는 항상 절대 일관적이질 않았습니다.) 트래픽은 항상 달라졌고 사용량은 정기적으로 높아졌는데 트래픽 패턴에서 의미를 찾는 걸 완전히 포기했습니다. 평균 응답 시간은 트래픽 패턴에 따라 1~20ms 사이를 유지했습니다.
 
-As I’m incredibly busy with other projects nowadays, I ended up passing ownership of ipify along to my good friends at https://www.whoisxmlapi.com.
+현재 서비스는 트래픽과 여러 요인에 따라 월간 150~200달러로 운영되고 있습니다. 월간 200달러를 소비한다고 가정하고 수치를 계산해보면 ipify는 각 요청을 0.000000007달러로 운영하고 있습니다. 충격적으로 낮은 비용이죠.
 
-Jonathan and team are good people working to build a portfolio of valuable and interesting developer API services.
+만약 이 서비스를 Lambda에서 돌린다고 가정하고 요금을 계산해본다면 월간 1,243.582달러 (연산) + 6,000달러 (요청) = ~ 7,243.58달러 정도를 사용하게 될 겁니다. 참고로 이건 간단한 입계산입니다. ipify의 수치를 Lambda 요금 계산기에 입력해서 얻은 결과입니다.
 
-While I still help out with things from time-to-time, Jonathan and team are currently implementing new features for ipify, and working hard to roll out some pretty cool changes that I’m excited about (including an improved UI and more data endpoint).
+결론적으로 ipify에 들어가는 비용에 엄청나게 만족하고 있습니다. 간단한 용도를 제공하는 짠돌이 서비스죠.
 
-I look forward to seeing how ipify continues to grow over the coming years.
+## ipify’s Future
 
-If you have any questions or would like to get in touch with me, please shoot me an email.
+이제 미래를 생각해보게 되었습니다. ipify는 지속해서 성장하고 있습니다. 서비스는 ipv6 지원 (Heroku가 현재 지원하지 않아요 🙁), 더 나은 웹디자인, IP 주소에 대한 다른 메타데이터 등 여러 가지 요청을 받고 있습니다.
+* Which leads me to the future. As ipify continues to grow, the service has gotten requests for a lot of different things: ipv6 support (something that Heroku does not support :(), better web design, other metadata about IP addresses, etc.
 
--R
+최근 다른 프로젝트 덕분에 엄청나게 바쁜 탓에 ipify의 소유권을 제 좋은 친구인 https://www.whoisxmlapi.com에 넘겼습니다.
+* As I’m incredibly busy with other projects nowadays, I ended up passing ownership of ipify along to my good friends at https://www.whoisxmlapi.com.
+
+조나단과 그의 팀은 가치 있고 흥미로운 개발자 API 서비스를 만드는데 제격인 포트폴리오를 갖고 있습니다.
+* Jonathan and team are good people working to build a portfolio of valuable and interesting developer API services.
+
+제가 지속해서 돕고 있긴 하지만 조나단과 그의 팀은 현재 ipify의 새로운 기능을 구현하고 있습니다. 제가 기대하는 좋은 변화를 반영하기 위해 열심히 작업하고 있습니다. (더 나은 UI와 데이터 엔드포인트를 포함해서 말입니다.)
+* While I still help out with things from time-to-time, Jonathan and team are currently implementing new features for ipify, and working hard to roll out some pretty cool changes that I’m excited about (including an improved UI and more data endpoint).
+
+저는 앞으로도 꾸준히 성장할 ipify가 기대됩니다.
+* I look forward to seeing how ipify continues to grow over the coming years.
+
+> Randall Degges (r@rdegges.com)
+ + I'm just a happy programmer that likes to hack stuff.
+
+
