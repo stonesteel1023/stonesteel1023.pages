@@ -9,10 +9,7 @@ comments: true
 
 > 출처: https://www.haruair.com/blog/4108
 
-
-Buzz Lightyear Charging Sketch
-
-Several years ago I created a free web service, ipify. ipify is a freely available, highly scalable ip address lookup service. When you query its REST API, it returns your public-facing IP address.
+* Several years ago I created a free web service, ipify. ipify is a freely available, highly scalable ip address lookup service. When you query its REST API, it returns your public-facing IP address.
 
 I created ipify because at the time I was building complex infrastructure management software and needed to dynamically discover the public IP address of some cloud instances without using any management APIs.
 
@@ -27,7 +24,7 @@ Because of all these reasons I figured I’d just throw a small service together
 
 I assumed that worst case I’d spend $30 bucks or so per month and treat it as a public service.
 
-몇 년 전에 무료 웹서비스인 ipify를 만들었습니다. ipify는 무료로 사용할 수 있는, 고도로 확장 가능한 IP 주소 검색 서비스입니다. REST API를 호출하면 어느 퍼블릭 IP 주소를 사용하고 있는지 확인 할 수 있습니다.
+* 몇 년 전에 무료 웹서비스인 ipify를 만들었습니다. ipify는 무료로 사용할 수 있는, 고도로 확장 가능한 IP 주소 검색 서비스입니다. REST API를 호출하면 어느 퍼블릭 IP 주소를 사용하고 있는지 확인 할 수 있습니다.
 
 ipify를 만든 당시에는 복잡한 인프라스트럭처 관리 소프트웨어를 만들고 있었고 클라우드 인스턴스에서 관리용 API를 사용하지 않고 동적으로 퍼블릭 IP 주소를 알아내야 했었습니다.
 
@@ -44,7 +41,7 @@ IP를 스크랩 할 수 있는 웹사이트가 있긴 했습니다. (하지만 �
 
 ## ipify v0
 
-The first iteration of ipify was quite simple. I wrote an extremely tiny (< 50 LOC) API service in Node (I was playing around with Node a lot at the time). Since the entire premise of the ipify service is returning a string, I figured this was a perfect use case for Node as a technology: handling a lot of requests with minimal CPU usage.
+* The first iteration of ipify was quite simple. I wrote an extremely tiny (< 50 LOC) API service in Node (I was playing around with Node a lot at the time). Since the entire premise of the ipify service is returning a string, I figured this was a perfect use case for Node as a technology: handling a lot of requests with minimal CPU usage.
 
 After I had the API service built in Node, I threw together a simple static site to power the front-end and deployed it into an S3 bucket on Amazon. I then configured a CloudFront origin (Amazon’s CDN service) to sit in front of the S3 bucket and cache the pages for ultra-fast load times.
 
@@ -52,7 +49,7 @@ Now, I’m not a designer by any stretch of the imagination… But, with a littl
 
 After getting everything working I did some quick testing and things seemed to be working ok so I moved onto the next phase: deployment.
 
-ipify의 첫 코드는 상당히 단순했습니다. 50줄도 되지 않는 작은 코드를 Node로 작성했습니다. (당시에 많은 시간을 Node를 갖고 놀며 지냈습니다.) ipify 서비스가 문자열을 반환하는 일이 전부라는 전제에서는 Node를 사용할 가장 적합한 경우인 것을 알 수 있었습니다. 적은 CPU 사용량으로 수많은 요청을 처리하는 작업이죠.
+* ipify의 첫 코드는 상당히 단순했습니다. 50줄도 되지 않는 작은 코드를 Node로 작성했습니다. (당시에 많은 시간을 Node를 갖고 놀며 지냈습니다.) ipify 서비스가 문자열을 반환하는 일이 전부라는 전제에서는 Node를 사용할 가장 적합한 경우인 것을 알 수 있었습니다. 적은 CPU 사용량으로 수많은 요청을 처리하는 작업이죠.
 
 API 서비스를 Node로 만들고 나서 간단한 정적 사이트를 프론트엔드로 붙여 아마존의 S3에 올렸습니다. 그리고 S3 버킷 앞에 아마존의 CDN 서비스인 CloudFront를 설정해서 페이지를 캐싱하는 것으로 엄청 빠르게 불러올 수 있도록 했습니다.
 
@@ -62,7 +59,7 @@ API 서비스를 Node로 만들고 나서 간단한 정적 사이트를 프론�
 
 ## Enter Heroku
 
-I’m a big fan of Heroku (I’ve even written a book about it). I’ve been using it for many years now and consider it to be one of the most underrated services in the developer world. If you’ve never used it, go check it out!
+* I’m a big fan of Heroku (I’ve even written a book about it). I’ve been using it for many years now and consider it to be one of the most underrated services in the developer world. If you’ve never used it, go check it out!
 
 I decided that if I wanted to run ipify in a scalable, highly available and cheap way then Heroku was the simplest and best option: so that’s what I went with.
 
@@ -85,7 +82,7 @@ I then integrated ipify into my own infrastructure management code to solve the 
 
 Things were going great for about a month before I started noticing some issues…
 
-저는 Heroku의 왕 팬입니다. (심지어 Heroku에 대한 책도 썼습니다.) Heroku를 수년 간 사용하고 있고 개발 세계에 있어서 가장 저평가되고 있는 서비스 중 하나라고 생각합니다. 한 번도 사용해본 적이 없다면 지금 확인해보시길 바랍니다!
+* 저는 Heroku의 왕 팬입니다. (심지어 Heroku에 대한 책도 썼습니다.) Heroku를 수년 간 사용하고 있고 개발 세계에 있어서 가장 저평가되고 있는 서비스 중 하나라고 생각합니다. 한 번도 사용해본 적이 없다면 지금 확인해보시길 바랍니다!
 
 ipify를 확장 가능하고 고가용성으로, 그리고 저렴하게 운영하려면 Heroku 만큼 단순하고 좋은 선택지가 없다고 생각하고는 Heroku를 사용하기로 결정했습니다.
 
@@ -110,7 +107,7 @@ Heroku는 앱으로 들어오는 모든 요청을 로드 벨런스를 거친 후
 
 ## Popularity… Ugh
 
-I never marketed ipify, but it ended up ranking really high for the “ip address api” search phrase on Google. I guess all those years working on copy editing and SEO paid off.
+* I never marketed ipify, but it ended up ranking really high for the “ip address api” search phrase on Google. I guess all those years working on copy editing and SEO paid off.
 
 Within a month or so, ipify was ranking near the top of Google search results, bringing in thousands of new users. With the increased visibility of the service, I started seeing some issues.
 
@@ -132,9 +129,31 @@ Before even a week had passed, I was already getting alerts from Heroku telling 
 
 I added another dyno (brining my monthly cost up to ~$75/mo), but decided to investigate further. I’m a frugal guy – the idea of losing > $50/mo seemed unpleasant.
 
-The Investigation
+* ipify를 홍보한 적이 없지만 “ip address api”를 구글에서 검색하면 꽤 상단에 걸리게 되었습니다. SEO와 문구 수정에 사용한 수년 간의 노력이 빛을 발한 것 같습니다.
 
-L Sketch
+그동안 ipify가 구글 검색 결과에서 상당히 높은 순위로 노출된 덕분에 수천 명의 사용자가 생겼습니다. 서비스가 많이 노출되면서 몇 이슈가 나타나기 시작했습니다.
+
+제 Heroku 로드 벨런서가 경고를 보내기 시작했습니다. Node 서버가 들어오는 요청을 충분히 빠르게 처리하지 못하고 있다는 내용이었습니다. 결과적으로 다음과 같은 일이 나타났습니다.
+
+너무 많은 사용자가 ipify에 API 요청을 보내고 있습니다
+제 Node 서버가 요청에 대해 느리게 응답해서 지연이 늘고 있었습니다
+Heroku의 로드벨런서가 이 문제를 알아차리고 Node 서버에 보내기 전에 요청을 버퍼에 저장했다가 보내기 시작했습니다.
+Node 서버가 빠르게 요청을 처리하지 못한 탓에 로드벨런서에서 사용자에게 503을 전달하고 요청을 끝내버렸습니다.
+그다지 좋은 모습이 아닙니다.
+
+이 문제를 해결하기 위해 한 일은 간단했습니다. Heroku에 dyno를 더 추가했습니다. 이 방식으로 수용량을 두 배로 늘렸고 모든 서비스가 부드럽게 동작하기 시작했습니다. 그 이면엔 두 “프로덕션” dyno를 구동한 탓에 거의 50달러 가량을 지불해야 했습니다. 첫 dyno 이후엔 일반 요금인 dyno당 월 25달러를 지불해야 했습니다.
+
+서비스가 이 정도로 인기 있다면 월 50달러를 내는 것도 나쁘지 않다고 생각해서 지불하기로 결정하고 다시 안정적인 상황으로 돌아올 수 있었습니다.
+
+하지만… 그렇게 말처럼 쉬운 문제가 아니었습니다.
+
+한주도 채 지나기 전에 Heroku에서 이전과 동일한 경고를 받았습니다. 사용량을 보니 트래픽은 두 배로 늘었고 ipify는 더 많은 사용량을 보였습니다.
+
+저는 또 다른 dyno를 추가하고 월 75달러를 지불하게 되었습니다. 그래도 좀 더 살펴보기로 했습니다. 저는 짠돌이라서 월 50달러 이상 쓰는 건 기쁜 일이 아니었습니다.
+
+
+
+## The Investigation
 
 When I started investigating what was going on, the first thing I did was check to see how many requests per second (rps) ipify was actually getting. I was pretty surprised by the number: it was low.
 
