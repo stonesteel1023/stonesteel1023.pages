@@ -1,6 +1,6 @@
-	
-Home‎ > ‎
-Signs that you're a good programmer
+ ‎
+# Signs that you're a good programmer
+
 The most frequently viewed page on this site is Signs you're a bad programmer, which has also now been published on dead trees by Hacker Monthly, and I think that behoves me to write its antithesis. "Bad programmer" is also considered inflammatory by some who think I'm speaking down to them. Not so; it was personal catharsis from an author who exhibited many of those problems himself. And what I think made the article popular was the "remedies"--I didn't want someone to get depressed when they recognized themselves, I wanted to be constructive.
 
 Therefore if you think you're missing any of the qualities below, don't be offended. I didn't pick these up for a while, either, and many of them came from watching other programmers or reading their code.
@@ -21,7 +21,7 @@ Are you excessively cautious? Are you only comfortable when you have permission?
 
 Much of what makes people timid to experiment is chemical--your brain has a small number of adrenergic receptors, so a little bit of adrenaline excites your fight-or-flight reflexes too much. But consider why people grow tolerant to coffee: the caffeine's byproducts force their brain to grow more adenosine receptors. So if you force your brain to grow more adrenaline receptors then the same amount of "fear juice" will trigger a lower percentage of them. Find some experience that scares the shit out of you, do it a few times, and you will lose your fear of venture on a physical level.
 
-Note: A programmer who "suggests wacky and unrealistic solutions" is not always a bad programmer. It can be a sign of creative thinking from someone who assumes confirmation or correction will come from somewhere else down the line. 
+Note: A programmer who "suggests wacky and unrealistic solutions" is not always a bad programmer. It can be a sign of creative thinking from someone who assumes confirmation or correction will come from somewhere else down the line.
 2. Emotional detachment from code and design
 
 Code is like kleenex: you use it when it's useful and throw it away when it no longer serves. We all like to think that code-reuse is important, and while it is, it's not meant to be about raising a child. Code doesn't feel. Code doesn't care. Code will turn on you like a Frankenstein monster. Code is just bytes. Code is a liability.
@@ -80,7 +80,7 @@ Code that doesn't exist
 Hit #5 and you can call yourself a Zen Apprentice. Do it for a decade until you do it instinctively and you can call yourself a Zen Master.
 4. Fascinated by the incomprehensible
 
-I am only just beginning to understand what a Fourier Transform does, but I've been studying them because I have the damn persistent feeling that I could be using them somehow. I don't know what I would use them for yet, but maybe I will someday. What I do know is that what I don't know will cost me in useless labor. 
+I am only just beginning to understand what a Fourier Transform does, but I've been studying them because I have the damn persistent feeling that I could be using them somehow. I don't know what I would use them for yet, but maybe I will someday. What I do know is that what I don't know will cost me in useless labor.
 Symptoms
 
 Visits Lambda The Ultimate on a regular basis
@@ -98,7 +98,7 @@ This tends to start in childhood but can be cultivated in adulthood if you can c
 
 When you hear or read something you don't recognize then Google it or hit Wikipedia. For a programmer an equally superior resource is Ward Cunningham's Wiki, which deserves weeks of your life.
 
-Computer programming has annexed all of the sciences and the feedback loop is so wide it stuns gods. From biology we took Genetic Algorithms. From climatology we took chaos theory. Biologists now use our work to fold proteins. Climatologists now use our simulations to predict armageddon. Everything informs us, and we inform everything. Either probe the unfathomable or retire on a "blub" programmer's salary. 
+Computer programming has annexed all of the sciences and the feedback loop is so wide it stuns gods. From biology we took Genetic Algorithms. From climatology we took chaos theory. Biologists now use our work to fold proteins. Climatologists now use our simulations to predict armageddon. Everything informs us, and we inform everything. Either probe the unfathomable or retire on a "blub" programmer's salary.
 5. Compelled to teach
 
 I once knew someone who thought it was good advice to "never teach everything you know" because they once lost a job after bringing a co-worker up to speed with all their skills. I stared at them with genuine incomprehension. A good manager would never get rid of someone who's not only capable of all their tasks but also demonstrates ability to train new workers. It would be like shooting the goose that lays golden eggs. If you get fired, it's probably for some other reason.
@@ -152,11 +152,11 @@ Unwilling to accept bonuses, promotion, or stock options for expediency
 Fondness for films directed by Stanley Kubrick
 How to acquire this trait
 
-As Tyler Durden says you must know--not fear--know that someday you will die. Your nice condo with Ikea furniture is a side effect, not a reward. If you are not a unique, beautiful snowflake then what you create has to be. 
+As Tyler Durden says you must know--not fear--know that someday you will die. Your nice condo with Ikea furniture is a side effect, not a reward. If you are not a unique, beautiful snowflake then what you create has to be.
 
 It's also known as pride in one's work. Remember that emotional detachment from code is a virtue, but this doesn't mean emotional detachment from your work is, too. In fact, another way to become emotionally detached from code is to put your interest into the outcome instead. The outcome you should be thinking of is a lady who's going to get fired if she doesn't deliver the output of your program at 4:59pm sharp.
 
-There's a legend about a marketing type who worked for Sam Walton at Wal-Mart and came up with a brilliant campaign to advertise a widget. Sam took a look at the proposal and said something to the effect of "this is great, now take the cost of the campaign and use it to lower the price of the widget instead." According to legend, the widget sold better and made more profit that way than if the campaign had been carried out. 
+There's a legend about a marketing type who worked for Sam Walton at Wal-Mart and came up with a brilliant campaign to advertise a widget. Sam took a look at the proposal and said something to the effect of "this is great, now take the cost of the campaign and use it to lower the price of the widget instead." According to legend, the widget sold better and made more profit that way than if the campaign had been carried out.
 
 Let the spirit of the story roll around in your head for a while and think about how it'd map to what you do at work. You boss probably isn't like Sam Walton, but perhaps there's a little bit of Sam in you. Is it better to compromise the way others want, or to make the product just a little bit better?
 
@@ -201,7 +201,7 @@ When confronted with an obstinate bug, their instinct is to get up and go for a 
 They suddenly pause and stare into space in the middle of a conversation, then abandon you to hurry back to their terminal with no explanation (AKA "A Columbo Moment" or "Gregory House behavior")
 How to acquire this trait
 
-Them darn kids and their cell phones, how does a 12 year-old teenage girl tap text messages on a numeric keypad so fast anyway? It can't be genetic, since all those damn brats can do it, no matter their gender or parentage. It can't be upbringing, cuz kids in every social class can do it. So you rule out this and that and what you're left with is an ancient truth: people think in the language they learned to speak. A teenager's thumbs already know where to go and they think in texting. When writing, typos feel wrong. People who learn multiple spoken languages and use them regularly tend to think in multiple languages, too, after they've practiced for so long that they no longer have to do a translation in their heads first. Rather than read a phrase in Russian and translate it to English in their minds before understanding it, they just understand it in Russian. 
+Them darn kids and their cell phones, how does a 12 year-old teenage girl tap text messages on a numeric keypad so fast anyway? It can't be genetic, since all those damn brats can do it, no matter their gender or parentage. It can't be upbringing, cuz kids in every social class can do it. So you rule out this and that and what you're left with is an ancient truth: people think in the language they learned to speak. A teenager's thumbs already know where to go and they think in texting. When writing, typos feel wrong. People who learn multiple spoken languages and use them regularly tend to think in multiple languages, too, after they've practiced for so long that they no longer have to do a translation in their heads first. Rather than read a phrase in Russian and translate it to English in their minds before understanding it, they just understand it in Russian.
 
 You cannot think "Fire rearward missile" and then translate it to Russian, you must think in Russian.
 
@@ -209,7 +209,7 @@ If you've heard about Sapir-Whorf or read Nineteen Eighty Four and all that jazz
 
 The best book you can read (and perform the exercises of) to acquire this trait is Structure and Interpretation of Computer Programs by Abelson, Sussman and Sussman. It uses Scheme to present its lessons, and even if that's not the language you write programs in it's still one of the best languages to program your brain with. Remember: learn math and latin and you can understand anything.
 
-Whether you have this book or not the key is to practice with coding until you can read and reason with it like your native tongue. You can't acquire this trick in 30 days, it may be more like 30 months. You'll know if you've got it when you begin to see in code as well. 
+Whether you have this book or not the key is to practice with coding until you can read and reason with it like your native tongue. You can't acquire this trick in 30 days, it may be more like 30 months. You'll know if you've got it when you begin to see in code as well.
 
 * - Shaddap Bob, and you too, Sat.
 5. When In Rome, Does As Romans Do
@@ -228,7 +228,7 @@ How to acquire this trait
 
 These guys are as comfortable with platform diversity as they are with having multiple vegetables on the same dinner plate. I said "thinking in code" and "emotional detachment" were virtues, and this is the bonus that comes for free. While these programmers appreciate abstraction they don't automatically appreciate generalization. If there was no advantage to be had in a new platform, then why was it ever created?
 
-There's a thousand computer languages because there's a thousand classes of problems we can solve with software. In the 1980s, after the Macintosh debut, a hundred DOS products were ported to the new mouse-driven platform by clubbing the Alto-inspired UI over the head and brute-forcing the keyboard-driven paradigms of PCs into the Mac's visual atmosphere. Most of these were rejected by Apple or the market, and if they came back for a second try they came back because somebody flipped open the spiral-bound HIG and read it sincerely. 
+There's a thousand computer languages because there's a thousand classes of problems we can solve with software. In the 1980s, after the Macintosh debut, a hundred DOS products were ported to the new mouse-driven platform by clubbing the Alto-inspired UI over the head and brute-forcing the keyboard-driven paradigms of PCs into the Mac's visual atmosphere. Most of these were rejected by Apple or the market, and if they came back for a second try they came back because somebody flipped open the spiral-bound HIG and read it sincerely.
 
 Maybe Excel needed to emulate Lotus 1-2-3's slash-driven menus. Maybe AutoCAD still needs to host a command line. But the designers of both never neglected the new world and that's why they're still famous today. Objective-C has Categories, C# has Extensions, but they're not quite alike and they're not quite the same. What's a Key-Value Observer to one might be like an Event to the other, which is as informative as saying an opportunity is the same as permission.
 
@@ -236,7 +236,7 @@ To acquire this trait you have to begin by learning a new platform through both 
 
 New platforms either debut a new language or new conventions that are unique, and at whatever level that is you need to learn a new vocabulary. Even if it looks like they took an existing platform and "tweaked" it, the tweak in question must have significance. They say a Big Mac's Special Sauce is just Thousand Island dressing with more sweet pickle.
 
-To manage a single product written to multiple platforms you need to abstract your product, not the platform its delivered to. You do that through elimination, by stripping platform-specific code out of your product's soul. If you can master "Eager to fix what isn't broken" then go bonkers on your code until there's only a few chunks left on the coroner's table; that's the part that stays. 
+To manage a single product written to multiple platforms you need to abstract your product, not the platform its delivered to. You do that through elimination, by stripping platform-specific code out of your product's soul. If you can master "Eager to fix what isn't broken" then go bonkers on your code until there's only a few chunks left on the coroner's table; that's the part that stays.
 
 The simpler it is, the easier to modularize. The easier to modularize, the easier to separate concerns. The easier to separate concerns, the less has to change to fix bugs and add features. The less has to change, the easier to translate those changes to another system. Don't rely on automatic methods--it's like relying on a cat to tie your shoelaces.
 6. Creates their own tools
