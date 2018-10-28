@@ -52,9 +52,15 @@ Now, I’m not a designer by any stretch of the imagination… But, with a littl
 
 After getting everything working I did some quick testing and things seemed to be working ok so I moved onto the next phase: deployment.
 
-Enter Heroku
+ipify의 첫 코드는 상당히 단순했습니다. 50줄도 되지 않는 작은 코드를 Node로 작성했습니다. (당시에 많은 시간을 Node를 갖고 놀며 지냈습니다.) ipify 서비스가 문자열을 반환하는 일이 전부라는 전제에서는 Node를 사용할 가장 적합한 경우인 것을 알 수 있었습니다. 적은 CPU 사용량으로 수많은 요청을 처리하는 작업이죠.
 
-Heroku Logo
+API 서비스를 Node로 만들고 나서 간단한 정적 사이트를 프론트엔드로 붙여 아마존의 S3에 올렸습니다. 그리고 S3 버킷 앞에 아마존의 CDN 서비스인 CloudFront를 설정해서 페이지를 캐싱하는 것으로 엄청 빠르게 불러올 수 있도록 했습니다.
+
+어떤 상상의 날개를 펼쳐봐도 저는 디자이너가 아니었습니다. 그래도 다행히 bootstrap을 사용해서 조금 나은 모습을 갖출 수 있었습니다. =)
+
+모든 준비가 끝난 후에 간단하게 테스트를 수행했습니다. 모든 것이 준비되었다는 생각에 다음 단계인 배포로 넘어갔습니다.
+
+## Enter Heroku
 
 I’m a big fan of Heroku (I’ve even written a book about it). I’ve been using it for many years now and consider it to be one of the most underrated services in the developer world. If you’ve never used it, go check it out!
 
