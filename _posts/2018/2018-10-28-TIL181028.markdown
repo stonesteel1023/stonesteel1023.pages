@@ -9,31 +9,31 @@ comments: true
 
 > 출처: https://www.haruair.com/blog/4108
 
-* Several years ago I created a free web service, ipify. ipify is a freely available, highly scalable ip address lookup service. When you query its REST API, it returns your public-facing IP address.
 몇 년 전에 무료 웹서비스인 ipify를 만들었습니다. ipify는 무료로 사용할 수 있는, 고도로 확장 가능한 IP 주소 검색 서비스입니다. REST API를 호출하면 어느 퍼블릭 IP 주소를 사용하고 있는지 확인 할 수 있습니다.
+* Several years ago I created a free web service, ipify. ipify is a freely available, highly scalable ip address lookup service. When you query its REST API, it returns your public-facing IP address.
 
-* I created ipify because at the time I was building complex infrastructure management software and needed to dynamically discover the public IP address of some cloud instances without using any management APIs. When I searched online for freely available reverse IP lookup services I didn’t find any suitable solutions:
 ipify를 만든 당시에는 복잡한 인프라스트럭처 관리 소프트웨어를 만들고 있었고 클라우드 인스턴스에서 관리용 API를 사용하지 않고 동적으로 퍼블릭 IP 주소를 알아내야 했었습니다. 무료로 사용 가능한 역 IP 검색 서비스를 검색해봤지만 적합한 해결책을 찾지 못했습니다.
+* I created ipify because at the time I was building complex infrastructure management software and needed to dynamically discover the public IP address of some cloud instances without using any management APIs. When I searched online for freely available reverse IP lookup services I didn’t find any suitable solutions:
 
-* There were websites I could attempt to scrape my IP from (but this is bad form, and would likely result in complaints from the host) There were APIs for this that charged money (yuck!) There were APIs that allowed you to do a limited number of lookups per day (which scared me as I was managing a lot of instances at the time) There were APIs that appeared to be what I wanted, but upon using them they’d error out, go down randomly, or just otherwise not be of high quality. When I inspected the dig records of a particular provider, I noticed that the entire service was running on a single server (with an A record) that was terminating requests directly: not the most scalable/highly available service in the world. There was an API service that looked somewhat OK but was trying to raise money via donations to stay alive. Integrating with an API service on the brink of death didn’t make me feel terribly comfortable. Because of all these reasons I figured I’d just throw a small service together myself and solve the problem for as many people as possible. After all: writing software to return a single string isn’t terribly hard: why shouldn’t I do it?
 IP를 스크랩 할 수 있는 웹사이트가 있긴 했습니다. (하지만 별로 좋은 형태가 아니고 호스트에서 사용하기엔 불편합니다) 비용을 청구하는 API도 있었습니다. (잌!) 일간 조회 횟수를 제한하는 API도 있었습니다. (한꺼번에 많은 인스턴스를 관리해야 했기에 사용하기 두려웠습니다) 제가 원하는 방식의 API도 있었지만, 오류가 발생하기도 하고 가끔 서비스가 내려가기도 하거나 질적으로 떨어지기도 했습니다. 어느 제공자를 dig로 살펴봤더니 전체 서비스가 단일 서버 (A 레코드)에서 동작하고 그 서버에서 요청이 직접 종료되었습니다. 세계 규모로 확장 가능하거나 고가용성의 서비스라고 말하기 어려웠습니다. 보기엔 괜찮은 API도 있었지만, 지속해서 유지하기 위한 기부를 받으려고 했습니다. 사용하려는 API 서비스가 언제 죽을지 모를 상황이라니 마음 놓고 사용할 수 없었습니다. 이런 이유로 인해 작은 서비스를 직접 만들어서 내 문제와 가능한 한 많은 사람의 문제를 해결하고 싶었습니다. 더군다나 하나의 문자열을 반환하는 소프트웨어를 작성하는 일은 그렇게 엄청 어려운 일은 아니었습니다. 하지 말아야 할 이유가 있을까요?
+* There were websites I could attempt to scrape my IP from (but this is bad form, and would likely result in complaints from the host) There were APIs for this that charged money (yuck!) There were APIs that allowed you to do a limited number of lookups per day (which scared me as I was managing a lot of instances at the time) There were APIs that appeared to be what I wanted, but upon using them they’d error out, go down randomly, or just otherwise not be of high quality. When I inspected the dig records of a particular provider, I noticed that the entire service was running on a single server (with an A record) that was terminating requests directly: not the most scalable/highly available service in the world. There was an API service that looked somewhat OK but was trying to raise money via donations to stay alive. Integrating with an API service on the brink of death didn’t make me feel terribly comfortable. Because of all these reasons I figured I’d just throw a small service together myself and solve the problem for as many people as possible. After all: writing software to return a single string isn’t terribly hard: why shouldn’t I do it?
 
-* I assumed that worst case I’d spend $30 bucks or so per month and treat it as a public service.
 가장 최악의 경우라고 상상해볼 수 있는 일은 기꺼해야 월 30달러가량 사용하고 공개 서비스라는 점을 염두에 두고 다루는 정도였습니다.
+* I assumed that worst case I’d spend $30 bucks or so per month and treat it as a public service.
 
 ## ipify v0
 
-* The first iteration of ipify was quite simple. I wrote an extremely tiny (< 50 LOC) API service in Node (I was playing around with Node a lot at the time). Since the entire premise of the ipify service is returning a string, I figured this was a perfect use case for Node as a technology: handling a lot of requests with minimal CPU usage.
 ipify의 첫 코드는 상당히 단순했습니다. 50줄도 되지 않는 작은 코드를 Node로 작성했습니다. (당시에 많은 시간을 Node를 갖고 놀며 지냈습니다.) ipify 서비스가 문자열을 반환하는 일이 전부라는 전제에서는 Node를 사용할 가장 적합한 경우인 것을 알 수 있었습니다. 적은 CPU 사용량으로 수많은 요청을 처리하는 작업이죠.
+* The first iteration of ipify was quite simple. I wrote an extremely tiny (< 50 LOC) API service in Node (I was playing around with Node a lot at the time). Since the entire premise of the ipify service is returning a string, I figured this was a perfect use case for Node as a technology: handling a lot of requests with minimal CPU usage.
 
-* After I had the API service built in Node, I threw together a simple static site to power the front-end and deployed it into an S3 bucket on Amazon. I then configured a CloudFront origin (Amazon’s CDN service) to sit in front of the S3 bucket and cache the pages for ultra-fast load times.
 API 서비스를 Node로 만들고 나서 간단한 정적 사이트를 프론트엔드로 붙여 아마존의 S3에 올렸습니다. 그리고 S3 버킷 앞에 아마존의 CDN 서비스인 CloudFront를 설정해서 페이지를 캐싱하는 것으로 엄청 빠르게 불러올 수 있도록 했습니다.
+* After I had the API service built in Node, I threw together a simple static site to power the front-end and deployed it into an S3 bucket on Amazon. I then configured a CloudFront origin (Amazon’s CDN service) to sit in front of the S3 bucket and cache the pages for ultra-fast load times.
 
-* Now, I’m not a designer by any stretch of the imagination… But, with a little bootstrap love things turned out half-decent =)
 어떤 상상의 날개를 펼쳐봐도 저는 디자이너가 아니었습니다. 그래도 다행히 bootstrap을 사용해서 조금 나은 모습을 갖출 수 있었습니다. =)
+* Now, I’m not a designer by any stretch of the imagination… But, with a little bootstrap love things turned out half-decent =)
 
-* After getting everything working I did some quick testing and things seemed to be working ok so I moved onto the next phase: deployment.
 모든 준비가 끝난 후에 간단하게 테스트를 수행했습니다. 모든 것이 준비되었다는 생각에 다음 단계인 배포로 넘어갔습니다.
+* After getting everything working I did some quick testing and things seemed to be working ok so I moved onto the next phase: deployment.
 
 ## Enter Heroku
 
