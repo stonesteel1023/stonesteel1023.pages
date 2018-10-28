@@ -85,9 +85,30 @@ I then integrated ipify into my own infrastructure management code to solve the 
 
 Things were going great for about a month before I started noticing some issues…
 
-Popularity… Ugh
+저는 Heroku의 왕 팬입니다. (심지어 Heroku에 대한 책도 썼습니다.) Heroku를 수년 간 사용하고 있고 개발 세계에 있어서 가장 저평가되고 있는 서비스 중 하나라고 생각합니다. 한 번도 사용해본 적이 없다면 지금 확인해보시길 바랍니다!
 
-Spartan Warrior Sketch
+ipify를 확장 가능하고 고가용성으로, 그리고 저렴하게 운영하려면 Heroku 만큼 단순하고 좋은 선택지가 없다고 생각하고는 Heroku를 사용하기로 결정했습니다.
+
+ipify를 Heroku에 1~2분 정도 걸려 배포하고 단일 dyno(웹서버)로 실행한 후에 제한적으로 테스트를 수행했습니다. 여전히 잘 동작하니 스스로 뿌듯한 기분이 들었습니다.
+
+Heroku에 익숙하지 않다면 ipify 인프라스트럭처가 어떻게 동작하는지 살펴봅시다.
+
+Heroku는 ipify 웹서비스를 512M 램과 제한된 CPU인 작은 dyno (웹서버)에서 구동합니다.
+만약 프로세스가 충돌하거나 어떤 심각한 문제가 발생한다면 Heroku는 자동으로 서비스를 재시작합니다.
+Heroku는 앱으로 들어오는 모든 요청을 로드 벨런스를 거친 후 요청을 처리하기 위해 dyno (웹서버)로 전달합니다.
+이런 설정이 좋은 이유는:
+
+고가용성: Heroku의 로드벨런서, 제 dyno, 모든 것이 고가용성입니다.
+유지보수도, 관리 설정도, 어떤 배포 코드도 필요하질 않습니다. 100% 자동입니다.
+저렴합니다. 단일 서버를 위해 월 ~7달러가량 냅니다.
+빠릅니다. 헤로쿠는 아마존 웹서비스(AWS) 상에서 돌아가며 모든 인프라스트럭처는 세계에서 가장 인기있는 클라우드 호스트 위치인 AWS 미동부 (버지니아)에서 운영됩니다. 이 의미는 지리적으로 US 동부 해안에서 운영된다는 점인데 물 건너 유럽이나 나머지 US 지역에서 그다지 멀지 않다는 의미입니다. 세계 대부분 지역의 사용자가 서비스를 사용한다고 해도 그렇게 오래 걸리지는 않을 겁니다.
+지금까지는 상당히 괜찮았습니다. 만들고, 설정하고, 테스트하고, 프로덕션으로 옮기기까지 1일 이하의 노력으로 끝낼 수 있었습니다.
+
+그리고나서 ipify를 제 인프라스트럭처 관리 코드와 통합하는 것으로 원래 해결하려던 문제를 처리했습니다.
+
+한 달 정도 모든 것이 잘 흘러갔습니다. 몇 가지 문제를 알아차리기 전까지는 말이죠.
+
+## Popularity… Ugh
 
 I never marketed ipify, but it ended up ranking really high for the “ip address api” search phrase on Google. I guess all those years working on copy editing and SEO paid off.
 
