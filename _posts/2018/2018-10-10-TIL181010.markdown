@@ -6,6 +6,9 @@ comments: true
 tag: intelliJ
 ---
 
+> https://m.youtube.com/watch?v=eq3KiAH4IBI&t=13s
+> 출처: https://www.popit.kr/%EC%9D%B8%ED%85%94%EB%A6%ACj-%ED%99%9C%EC%9A%A9-%EA%BF%80%ED%8C%81-42%EA%B0%80%EC%A7%80-%EC%A0%95%EB%A6%AC/?fbclid=IwAR32xYvUQfZS05gl_J0srSxZQPiC8hHddLYWHiE3R_f9aF8Qz3qFjkgVW80
+
 # 개요
 
 최근 몇년간 SNS 등을 돌아다니면 인텔리J를 사용하시는 분들이 꽤 늘었고 기업 구인광고시도 언급이 있을 정도로 예전에 비해서는 사용자가 늘어난듯 합니다.
@@ -16,7 +19,7 @@ tag: intelliJ
 
 본 포스팅은 인텔리J 초급자 보다는 중급으로 넘어가기 위한 사용자들이 타겟입니다. 동영상을 포함한 포스팅이나 질문사항 있으면 제 블로그 포스팅 참고부탁 드립니다.
 
-내용 요약
+# 내용 요약
 
 Productivity Guide
 
@@ -54,7 +57,7 @@ Presentation Assistant 플러그인
 
 동영상에서는 인텔리J가 지향/권장하는 바는 최대한 마우스 사용 없이 키보드 만으로 IDE를 사용하는 것이다. 리를 위해 인텔리J에서는 거의 모든 기능에 대해 단축키 바인딩이 가능하다. 또한 단축키를 모두 알고 있지 않아도 키보드를 사용하는 대안이나 단축키 사용 빈도를 체크할 수 있는 기능이 있다.
 
-기본 단축키 레퍼런스
+# 기본 단축키 레퍼런스
 
 군대에서 행정병이 한글/엑셀 단축키를 출력해놓고 익히듯이 주요 단축키에 대한 요약이나 프린트가 필요한 분들은 이 기능이 유용할 수 있다.
 
