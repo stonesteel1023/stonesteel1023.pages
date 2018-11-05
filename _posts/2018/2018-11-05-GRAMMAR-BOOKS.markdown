@@ -191,6 +191,7 @@ Professional Software Development: Shorter Schedules, Higher Quality Products, M
 Professional 소프트웨어 개발 / 옮긴이: 윤준호, 한지윤
 
 # 50선
+> 출처: https://www.sangkon.com/2018/08/27/good_books_for_dev_2018/
 
 <<CODE 코드 (반양장) - 하드웨어와 소프트웨어에 숨어 있는 언어, 찰스 펫졸드 (지은이), 김현규 (옮긴이), 인사이트, 2015>>
 이 책은 컴퓨터(혹은 계산기)라는 오브제(objet)에 관한 가장 원리적이고, 아름다운 이야기를 우아하게 우리에게 선사합니다. 찰스 펫졸드가 들려주는 컴퓨터의 가장 깊숙하고, 기초적인 이야기를 꼭 읽어보길 권합니다.
