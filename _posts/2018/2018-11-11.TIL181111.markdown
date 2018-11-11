@@ -1,4 +1,7 @@
-이 글이 다루게 될 내용
+자바스크립트 피로감을 줄여주기 위한 학습 계획
+ > https://medium.freecodecamp.org/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1
+ 
+# 이 글이 다루게 될 내용
 
 모던 자바스크립트 웹앱은 어떤 형태인가
 왜 단순히 jQuery를 사용하면 안되는가
