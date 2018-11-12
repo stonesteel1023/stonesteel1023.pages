@@ -1,13 +1,13 @@
 ---
 layout: post
 date: 2018-10-07 22:56
-title: ""
+title: "자바 개발자로서 스스로의 실력에 자신이 없다면"
 comments: true
 ---
 
-> 본 포스팅은 전 NHN 수석 개발자 (패스트캠퍼스 자바 웹 프로그래밍 마스터 스쿨 강사)의 인터뷰를 각색한 글입니다. 
+> 본 포스팅은 전 NHN 수석 개발자 (패스트캠퍼스 자바 웹 프로그래밍 마스터 스쿨 강사)의 인터뷰를 각색한 글입니다.
 
- > 출처 : 자바 개발자로서 스스로의 실력에 자신이 없다면|작성자 패스트캠퍼스[https://m.blog.naver.com/PostView.nhn?blogId=fastcampus&logNo=221201406423&proxyReferer=&proxyReferer=https%3A%2F%2Fwww.google.co.jp%2F]
+ > 출처 : [자바 개발자로서 스스로의 실력에 자신이 없다면|작성자 패스트캠퍼스](https://m.blog.naver.com/PostView.nhn?blogId=fastcampus&logNo=221201406423&proxyReferer=&proxyReferer=https%3A%2F%2Fwww.google.co.jp%2F)
 
 # 자바 개발자로서 스스로의 실력에 자신이 없다면
 

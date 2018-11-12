@@ -1,7 +1,7 @@
 ---
 layout : post
 date : 2018-10-21 21:32
-title:
+title: "12 Things Every Junior Developer Should Learn"
 comments: true
 ---
 
