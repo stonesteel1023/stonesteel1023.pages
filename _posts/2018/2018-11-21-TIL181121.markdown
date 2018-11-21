@@ -38,3 +38,32 @@ Xdoclet은 http://xdoclet.sourceforge.net에서 오픈소스로 개발되고 있
 ## 4. Xdoclet 예제
 Xdoclet예제는 보여주기 위하여 먼저 서블릿예제를 먼저 보도록 하자. 서블릿을 생성한 다음 웹 애플리케이션에서 사용하기 위하여 web.xml에 매핑해주어야 한다. 스트럿츠 또한 서블릿을 사용하고 있으며, web.xml에서 설정이 필요하기 때문에 서블릿예제를 먼저 살펴보는 좋다고 생각한다. 다음은 Xdoclet의 다양한 예제를 살펴보기 위하여 커스텀 태그 예제를 살펴보도록 하겠다. 하나의 커스텀 태그를 만들기 위해서는 tld파일을 생성할 필요가 있다. 개발을 진행하는 중 커스텀 태그에 애트리뷰트가 하나 추가될 때마다 tld파일을 수정해 주어야 하는 불편함이 있다. Xdoclet을 이용하여 이 같은 단계를 줄일 수 있는 방법에 대하여 살펴보도록 하겠다.
 마지막 예제로 스트럿츠 프레임워크를 이용하여 웹 애플리케이션을 Xdoclet을 이용하여 개발하는 과정에 대하여 살펴보도록 하겠다. 스트럿츠 프레임워크의 경우에 하나의 요청을 처리하기 위하여 Action, Form, Exception 정보들을 struts-config.xml에서 관리해야 한다. Xdoclet을 이용하여 수많은 클래스들과 struts-config.xml의 동시성을 유지하는 방법에 대하여 알아보겠다.
+
+> <중략> 한빛미디어,박재성 / 스트러츠 프레임워크북 예제참조
+
+## 5. ANT에서 사용할 태스크
+지금까지 살펴본 예제를 보면 알겠지만 클래스에 추가된 Xdoclet태그를 이용하여 설정파일을 생성하기 위해서는 Xdoclet에서 제공하는 ANT용 태스크를 이용하여 빌드해 주어야한다. 따라서 특정 프레임워크의 설정파일을 생성하는데 사용할 태스크를 찾을 필요가 있다. 이 정보는 http://xdoclet.sourceforge.net 의 Ant Task Reference에서 찾을 수 있다. 현재 7개의 태스크를 제공하고 있다. 
+스트럿츠 설정파일은 >webdoclet ../< 태스크를 이용하여 생성할 수 있다. http://xdoclet.sourceforge.net/ant/xdoclet/modules/web/WebDocletTask.html 을 보면 >webdoclet ../<엘리먼트에서 사용할 수 있는 속성 정보와 하위 엘리먼트 정보를 볼 수 있다. 이처럼 각각의 태스크에는 각 태스트에서 사용할 수 있는 속성과 각 태스트에서 사용할 수 있는 하위 엘리먼트를 찾을 수 있다. 위 문서에서 스트럿츠 설정파일을 생성하기 위한 엘리먼트는 strutsconfigxml라는 것을 찾을 수 있다. Strutsconfigxml항목을 클릭하고 들어가면 strutsconfigxml에서 사용할 수 있는 속성 정보와 merge할 수 있는 파일 정보가 포함되어 있다. Merge할 파일 이름 또한 이미 정해져 있기 때문에 Xdoclet의 매뉴얼을 참조하여 해당 merge파일에 작성해주면 설정파일 생성시 merge할 파일의 내용을 추가하게 된다.
+이 같은 단계를 거쳐 작성된 ANT의 타겟정보는 다음과 같다.
+
+```
+<target name="strutsgenerateDD" depends="compile">  <taskdef name="webdoclet"		   classname="xdoclet.modules.web.WebDocletTask" 		   classpathref="xdoclet.class.path"  />  <webdoclet 	 destdir="${build.dir}"	 mergedir="${merge.dir}"  > 	 <fileset dir="${src.dir}">		<include name="**/*Filter.java" /> 		<include name="**/*Action.java" />		<include name="**/*Form.java" />          	 </fileset>	 <deploymentdescriptor servletspec="2.3" 			          destdir="${build.webinf.dir}" > 	 </deploymentdescriptor>	 	 <strutsconfigxml 		version="1.1"		destdir="${build.webinf.dir}"/>  </webdoclet></target>
+```
+
+위 예제에서 deploymentdescriptor는 web.xml을 생성하는 하위 엘리먼트이다. 위 ANT용 스크립트는 Xdoclet의 매뉴얼을 이용하여 충분히 만들 수 있다.
+
+## 6. 자바소스코드에 사용할 태그 매뉴얼
+Xdoclet을 이용하여 설정파일을 자동적으로 생성하기 위해서는 자바소스에 각 프레임워크별 Xdoclet태그를 추가해야한다. 자바소스에서 사용가능한 Xdoclet태그의 정보는 http://xdoclet.sourceforge.net 왼쪽 메뉴의 Tag Reference에서 찾을 수 있다. 현재까지 지원하는 프레임워크는 수십개에 달한다. 
+먼저 스트럿츠 설정파일을 생성하기 위한 사용할 Xdoclet태그에 대한 정보는 apache(@soap @struts)에서 찾을 수 있다. http://xdoclet.sourceforge.net/tags/apache-tags.html 페이지에서 스트럿츠 항목으로 이동해 보면 클래스 레벨에서 사용가능한 태그와 메써드 레벨에서 사용 가능한 태그 정보를 찾을 수 있다. 각 태그를 클릭하면 태그에서 사용할 수 있는 속성정보를 얻을 수 있다. 이 페이지에서 제공하는 태그들을 클래스에 추가하여 스트럿츠 설정파일을 자동으로 생성할 수 있게 된다. 
+스트럿츠 설정파일을 생성하기 위하여 Xdoclet태그를 사용한 예제는 [예제 3-6]와 [예제 3-7]에서 볼 수 있다. 이책의 모든 예제가 Xdoclet을 이용하고 있기 때문에 첨부되는 예제소스를 참고한다면 Xdoclet을 사용하는데 많은 도움이 될 것이다.
+
+ANT용 스크립트를 만들거나 Xdoclet태그를 사용하기 위하여 다른 개발자가 만들어 놓은 스크립트나 소스를 복사한 다음 수정하는 방법도 좋은 방법이다. 그러나 그와 같은 방법에는 한계가 있기 마련이다. 따라서 가능하면 각각의 툴에서 제공하는 매뉴얼을 참조하는 습관을 들여 Xdoclet이 지원하는 어떠한 프레임워크도 어렵지 않게 사용할 수 있기를 바란다.
+
+## 7. 생각해볼 문제
+처음 이 장을 쓰기 시작할 때 '어떻게 하면 현업 개발자들이 스트럿츠를 기반으로 개발할 경우 툴을 사용할 수 있게 할까?'하고 많은 고민을 했다. 원고를 준비하면서 내린 결론은 '쉽고, 자세하게 써야 개발자들이 적용할 수 있다'였다. 따라서 중급 개발자들에게는 너무 자세하게 설명한 부분이 없지 않다. 하지만 아직 국내에 스트럿츠를 제대로 사용하는 개발자들이 많지 않은 상태이기 때문에 스트럿츠를 시작하려고 생각하거나, 이제 시작 단계인 개발자들을 위한 배려였다.
+필자가 위 두가지 툴을 사용하면서 느낀 점은 'Easy Struts를 이용하는 것보다는 Xdoclet을 이용하는 것이 더 좋겠다.'라는 것이다. 이유는 계속적인 통합작업이 많은 현업의 애플리케이션을 위해서는 Easy Struts보다는 Xdoclet이 더 적합하기 때문이다. Easy Struts가 자동으로 생성해주는 소스가 많기는 하지만, 소스를 수정하거나, struts-config.xml을 Easy Struts를 이용하지 않고 수정할 경우 버그가 발생하는 경우도 종종 있다. 
+
+Easy Struts를 이용하여 소스를 생성해보면 Xdoclet 태그가 생성되어 있는 것을 확인할 수 있다. 따라서 또 다른 방법으로 Easy Struts를 이용하여 기본적인 Action, ActionForm 템플릿을 생성하고, 최종 빌드는 ANT와 Xdoclet을 이용하는 것도 좋을 것으로 생각된다. Xdoclet을 이용할 경우 스트럿츠의 모듈을 위한 설정파일을 자동 생성하기가 힘들었다. 그러나 Easy Struts 플러그인은 모듈 설정파일 또한 자동 생성하기 때문에 모듈의 사용에 익숙하지 않은 개발자라면 Easy Struts플러그인을 이용하는 것이 좋은 선택이 될 것이다. 
+Xdoclet을 이용하여 최고의 개발속도를 내기 위해서는 CVS(Concurrent Version System), SourceSafe와 같은 버전 관리 시스템을 같이 사용해야한다. 버전 관리 시스템을 같이 사용하지 않을 경우 여러명의 개발자들이 각기 개발한 소스를 빌드하기 힘들다. 따라서 여러명의 개발자가 ANT와 Xdoclet을 이용할 경우 버전 관리 시스템을 꼭 사용해야 툴을 사용하는 시너지 효과를 낼 수 있다.
+
+좋은 툴을 적재적소에 사용하는 것 또한 개발자의 능력이다. 언어가 계속해서 변화하듯이 개발방법, 개발 툴 또한 변화되고 있다. 그러나 국내의 많은 개발자들을 보면 새로운 툴을 사용하는 것을 꺼리는 듯하다. 그러나 웹 애플리케이션 구조는 점점 더 복잡해지고 있으며, 기존의 툴로 점점 더 복잡해져가는 애플리케이션을 개발하기로 상당히 많은 시간을 요구하는 경우가 많다. 비즈니스 로직에 집중해야함에도 불구하고 다른 작업에 너무나 많은 시간을 빼앗기고 있다면 새로운 개발툴을 찾을 때가 된 것이다. ANT, Easy Struts플러그인과 Xdoclet 또한 그 일환이다. 개발자들의 현명한 선택이 있기를 바란다.
