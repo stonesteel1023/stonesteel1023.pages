@@ -1,7 +1,12 @@
 ---
+layout: post
+title: "Front-End-Engineer의 취업을 위해서"
+date: 2018-11-29 13:22
+comments: true
+tag : HR
 ---
 
-# 
+# Front-End-Engineer의 취업을 위해서 쓴 글 (출처 : Slack)
 
 ## 기본
 - ES6+: this, bind, call, apply, class, template literal, let & const vs var, generator, promise + async & await, XMLHttpRequest 또는 fetch 내장함수로 외부 API 호출하는 방법 + API 비동기 코드를 Promise로 관리하는 방법
