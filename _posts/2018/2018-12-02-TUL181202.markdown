@@ -2,7 +2,7 @@
 latout: post
 date: 2018-12-02 19:20
 title: "열정 월급"
-tag:인사
+tag: "인사"
 comments: true
 ---
 
