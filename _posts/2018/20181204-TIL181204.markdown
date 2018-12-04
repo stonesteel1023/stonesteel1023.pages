@@ -1,0 +1,28 @@
+---
+---
+
+> 출처 : https://stackoverflow.com/questions/22502533/entitybean-sessionbean-databean-and-accessbean
+
+# Question.
+What is the difference between EntityBean, SessionBean,  DataBean and AccessBean and how do they compare?
+
+# Answer.1.
+In Java nearly any class is called a bean. So don't confuse with that. The different bean-terms you show are concepts of the function a class has in your application.
+
+Usually the entity bean represents some entity of your domain. A user, a book, a car or what ever. Usually having some properties (firstname, lastname etc). An abstracted (or conceptual) object of your domain. Unfortunately in EJB entity bean is meant as a bussiness controller for a domain object handling all complex actions that a domain object can be involved into (like create new book with dependencies, sell book, order book and whatever your domain allows to do with a book). All of your use-cases.
+
+The domain object itself (a book) with its properties (title, ISBN number, price, amount of pages) is represented by a data bean, which usually maps to some database tables and rows.
+
+The session bean usually is some kind of a container for information bound to the session of a user (and thus has some lifecycle, as the users session will expire). This could be information, if the user is authenticated or which data the user is currently editing. Therefor the session bean should have a pointer to a entity bean representing the users core data.
+
+The access beans seem to be some clones on the "Data Access Object / DAO" pattern. This are application wide classes that allow you to access entities by providing methods like "getUserByUsername" or find methods for different searches and encapsulate accessing databases and other storages.
+
+# Answer.2.
+The entity bean represents a java bean which is coded by EJB specification and this java class is used to identify a record in a table. Session bean is also a java bean following the EJB specification ; but this bean can be considered equivalent to a java class which has business logic with or without interacting with entity bean(i.e DB Data). Therefore a Session bean e.g ProcessRegistrationBean will act on a entity bean e.g PersonBean.
+
+Now, for the second part of the question on what is access and databean : these two beans are extensions of Entity beans provided by Websphere application providing convenient access to the entity beans hiding the complexity of JNDI lookup and home/remote interface methods of EJB spec.
+This means that if you want to get a user's info, you can easily do so as just creating the UserAccessBean(which is generated from entity bean for user) via it's no arg constructor and then initialize by setting the user id. AccessBean behind the scenes uses home interface to access remote interface and all those EJB stuff happens without you need to know them explicitly - therefore making it easier for the developer.
+
+Databean are extensions of its corresponding access beans i.e UserDataBean extends UserAcessBean.
+
+The suggested use of AccesBean is in the java layer e.g SessionBean (this also means you don't have to deal with entity bean directly ) and DataBean in the JSP layer. This is how all these are related
