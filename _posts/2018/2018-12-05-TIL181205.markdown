@@ -39,6 +39,7 @@ https://tech.nikkeibp.co.jp/it/article/Research/20080610/307252/zu03.jpg
 
 
 ## Systemwalker
+https://www.superstream.co.jp/kk/alliance/core/systemwalker/images/index_il01.gif
 
 Systemwalker（システムウォーカー）は、Interstage、Symfoware Serverと並ぶ、富士通3大ミドルウェアのひとつで、Interstageがシステム構築、Symfowareがデータベースソリューションに対して、Systemwalkerは運用管理を主に行う製品群である。運用ツールとしての国内シェアは20%以上でトップクラスである。2014年2月現在の最新のバージョンは15.0である。
 
@@ -56,6 +57,7 @@ Systemwalker Centric Managerを利用してシステム全体のライフサイ�
 Systemwalker - Wikipedia
 
 ## JP1
+http://itm.news2u.net/items/output/111547/1/268/w
 
 JP1は日立製作所が開発・発売している日立オープンミドルウェアシリーズのひとつで、1994年に発売されたソフトウェア。統合システム運用管理ツールと位置付けられ、運用ツールとしての日本国内シェアは約27%でトップクラスである[1]。現在の最新バージョンは11 (2016年1月) である。
 
