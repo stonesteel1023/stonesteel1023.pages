@@ -1,4 +1,9 @@
 ---
+layout: post
+date: 2018-12-04 11:00
+title: "About DataBeans"
+tag: "java"
+comments: true
 ---
 
 > 출처 : https://stackoverflow.com/questions/22502533/entitybean-sessionbean-databean-and-accessbean
