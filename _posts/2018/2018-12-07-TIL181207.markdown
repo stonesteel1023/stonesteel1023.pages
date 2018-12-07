@@ -240,9 +240,10 @@ You will see the output of the application client in the Output pane.
 Building and Running the Client Using Ant
 In a terminal navigate to tut-install/examples/jaxws/simpleclient/ and type the following command:
 
-ant
+    > ant
+
 This command calls the default target, which builds and packages the application into a JAR file, simpleclient.jar, located in the dist directory.
 
 The run the client, type the following command:
 
-ant run
+    > ant run
