@@ -1,4 +1,9 @@
 ---
+layout: post
+date: 2017-12-14 09:00
+title: "기술 업계의 독성 말투"
+comments: true
+tag: programmer
 ---
 
 # 기술 업계의 독성 말투 문제, 고칩시다!
