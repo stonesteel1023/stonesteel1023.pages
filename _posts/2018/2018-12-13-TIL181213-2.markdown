@@ -1,12 +1,9 @@
 ---
-
-date : 2018-12-14 12:00
-
 ---
 
-개발자 역량측정 메트릭(Metric)
+# 개발자 역량측정 메트릭(Metric)
  
-원본: http://www.indiangeek.net/programmer-competency-matrix/
+> 원본: http://www.indiangeek.net/programmer-competency-matrix/
  
 다음은 개발자의 개발 역량을 종합적으로 평가할 수 있는 역량 측정용 매트릭스 평가표입니다.  각 항목별로 1 ~ 4점까지 부여하면, 140점 (보너스 포함 142점 만점)이 됩니다. 각자 자기의 개발 역량을 점수로 매겨 보시기 바랍니다.
  
