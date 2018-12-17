@@ -45,4 +45,4 @@ comments: false
 # RESUME
 ---
 * Coming soon
-{% include head.html %}
+[% include resume.html %]
