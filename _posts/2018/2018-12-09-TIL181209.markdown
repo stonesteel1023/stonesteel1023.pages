@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2017-12-09 09:00
+date: 2018-12-09 09:00
 title: "구글의 페이지 랭크 알고리즘"
 comments: true
 tag: algorithm
