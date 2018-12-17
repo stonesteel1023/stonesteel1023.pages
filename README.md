@@ -3,7 +3,7 @@ https://stonesteel1023.github.io/
 -
 * Notice ABOUT ME and post for studying programming
 
-* RESUME追加 2018/12/17　（@Skn0tt）
+* RESUME追加中 2018/12/17　（forked from @Skn0tt）
 
   Leonids features a simple resume page. It is divided up into five sections:
   
