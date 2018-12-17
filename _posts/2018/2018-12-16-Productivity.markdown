@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2017-12-16 09:00
+date: 2018-12-16 09:00
 title: "생산력 모멘텀"
 comments: true
 tag: programmer
