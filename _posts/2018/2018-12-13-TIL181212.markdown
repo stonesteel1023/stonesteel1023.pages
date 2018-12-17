@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2017-12-13 09:00
+date: 2018-12-13 09:00
 title: "'그 연차치곤 잘하네'의 함정"
 comments: true
 tag: programmer
