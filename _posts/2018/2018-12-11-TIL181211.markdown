@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2017-12-11 09:00
+date: 2018-12-11 09:00
 title: "효과적인 코드 리뷰를 위해서"
 comments: true
 tag: TEST
