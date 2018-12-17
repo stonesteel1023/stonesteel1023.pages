@@ -43,6 +43,7 @@ comments: false
 
 ---
 # RESUME
+{% include resume.html %}
 ---
 * Coming soon
-[% include resume.html %]
+
