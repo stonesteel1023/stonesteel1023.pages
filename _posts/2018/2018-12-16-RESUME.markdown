@@ -3,7 +3,7 @@ layout: post
 date: 2018-12-16 09:00
 title: "이력서"
 comments: true
-tag: programmer
+tag: RESUME
 ---
 
 > 출처: 페북 (원본이 글쓴이가 이력서를 보며 느낀 23가지였고 그 밑이 추가글이었는데 출처가 정확히 생각이 잘..)
