@@ -6,7 +6,7 @@ tag:
 comments : true
 ---
 
-# CAT vs LESS in Linux commands
+# `CAT` vs `LESS` in Linux commands
   > https://unix.stackexchange.com/questions/21548/is-there-ever-a-reason-to-use-cat-when-youve-got-less
  
 ## Question : Is there ever a reason to use `cat` when you've got `less`?
@@ -23,7 +23,7 @@ My question: Is there ever a reason to use cat instead of less? Is there any sit
 - I guess, because of the poularity of Unix variants now, many people don't have to administer their systems (with a vengence). When things go tits-up you might just be able to reboot and enter your system in what is called a restricted environment.
 - You get a command line and access to a small set of what is deemed useful commands that are small and usually statically linked. You might get vi as an editor or even the smaller ed, but not emacs or vim. You would get cat, but not less. The idea is to give you enough tools to repair your system without taking too much resources as those resources may be incorrectly configured, or all used up. the less command onder those circumstances is superfluous.
 
-### 2. cat !
+### 2. `cat` !
 ### 2-1. 
   > jasonwryan
 - Is there any situation where cat is a better solution?
