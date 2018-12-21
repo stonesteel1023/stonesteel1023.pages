@@ -85,8 +85,8 @@ My question: Is there ever a reason to use cat instead of less? Is there any sit
 - There are people who argue violently that the only purpose of cat is to concatenate files. For every other use, there is more (or less).
 - But this fails to take into account one quite important fact: cat is one character less to type. I use those commands so often that one character less is a no-brainer.
 - Another reason is when you want to create a file. I often copy-and-paste text from the web into a file like this (command prompt shown):
-`$ cat > filename
-<Cmd-V>
-<Ctrl-D>
-$`
+`$ cat > filename`
+`<Cmd-V>`
+`<Ctrl-D>`
+`$`
 - That is, I open a file filename for write access, paste the content and close the stream by pressing Ctrl-D. Neither less nor more can do that, and it’s faster than opening an editor.
