@@ -1,0 +1,92 @@
+---
+layout: post
+date:
+title:
+tag:
+comments : true
+---
+
+# CAT vs LESS in Linux commands
+  > https://unix.stackexchange.com/questions/21548/is-there-ever-a-reason-to-use-cat-when-youve-got-less
+ 
+## Question : Is there ever a reason to use `cat` when you've got `less`?
+I used to use cat to view files. Then I learned that less is usually better, and is a must if the file is longer than a few dozen rows.
+My question: Is there ever a reason to use cat instead of less? Is there any situation where cat is a better solution?
+
+## Answer
+### 1. 중도파
+### 1-1.
+  > David Heffernan
+- less and cat solve different problems and they are each better than the other in their own problem domain
+### 1-2. 
+  > Paddy3118
+- I guess, because of the poularity of Unix variants now, many people don't have to administer their systems (with a vengence). When things go tits-up you might just be able to reboot and enter your system in what is called a restricted environment.
+- You get a command line and access to a small set of what is deemed useful commands that are small and usually statically linked. You might get vi as an editor or even the smaller ed, but not emacs or vim. You would get cat, but not less. The idea is to give you enough tools to repair your system without taking too much resources as those resources may be incorrectly configured, or all used up. the less command onder those circumstances is superfluous.
+
+### 2. cat !
+### 2-1. 
+  > jasonwryan
+- Is there any situation where cat is a better solution?
+- When you are dealing with more that one file and wish to concatenate them.
+- From the man page:
+`cat f - g`
+       ` Output f's contents, then standard input, then g's contents.`
+
+### 2-2. 
+  > Michał Šrajer      
+- cat can be used to concat several binary files
+
+### 2-3.
+  > nrolans
+- Although both commands allow you to view the content of a file, their original purposes are quite different.
+- less extends the capabilities of more. The latter was created to view the content of a file one screenful at a time. less adds features such as backward movements and better memory management (no need to read the entire file before being able to see the first lines).
+- cat concatenates files and prints the result on the standard output. If you provide only one file, you will see the content of that file. It becomes 'powerful' when you provide multiple files. A good example is the combination of split and cat. The first command will divide a large file in small portions. The second one will then concatenate the small portions into a single file.
+- Back to your question, cat would be preferred in an autonomous script requiring files to be read entirely (or concatenated) without interaction. In terms of file viewing, I think it's more a question of taste.
+
+### 2-4.
+   > xin
+- And less is not pre-installed on all GNU/Linux distributions. (eg. Gentoo) cat is everywhere, probably.
+
+### 2-5.
+   > Iamwaiman1988
+- For convenience. cat have 3 characters while more/less have 4 characters. And typing cat only require your left hand only.
+
+### 3.`less` is not the best but better than `cat`
+
+### 3-1.
+    > Volker Siegel
+- In terms of how to show the characters on the screen, less can do what cat can do; And much more.
+- But there is a very good reason to use cat for some cases:
+  less is just too complex to throw it on very simple problems. I has so many options that it's hard to find the cat-related ones in the man page.
+- Want to show the tabs in a Makefile?
+  In man cat, the first option is -A.
+  The description is not helpful: -vET.
+  But the long option name sounds just right: --show-all.
+  And cat -A Makefile does what I need.
+- Now, go find that for less.
+
+### 3-2
+    > bgvaughan
+- There can be an issue with privilege escalation, as within 'less' you can press 'v' to edit a file or '!' to send a shell command.
+- You might want to allow some users to view a file that can only be read by the superuser, but not allow those users to edit the file or to use superuser privileges in general. You could do this by editing '/etc/sudoers' to allow them to use 'sudo /bin/cat /etc/importantfile'. You wouldn't want to allow 'sudo /usr/bin/less /etc/importantfile', because they could use 'v' to edit the file, or use '!' to launch a shell with full superuser privileges.
+- Of course, the users could use 'sudo /bin/cat /etc/importantfile | less' and still use 'less', without the security risks.
+
+### 4. OTHERS!! 
+
+### 4-1. 
+    > Nils
+- I personally prefer view for static content or tail -f for dynamic content.
+- This does not answer your question, though. There is a saying "why use more if you have less" ;-)
+- But there are cases where I prefer cat to less: I usually work with X11-windows. These windows have a scroll-buffer which can be set to some hundred lines.
+- Doing a cat for - let's say 200 lines and then using the mouse with the scroll-bar is more comfortable to me than using less in these cases.
+
+### 4-2. `more`!!
+    > Konrad Rudolph
+- There are people who argue violently that the only purpose of cat is to concatenate files. For every other use, there is more (or less).
+- But this fails to take into account one quite important fact: cat is one character less to type. I use those commands so often that one character less is a no-brainer.
+- Another reason is when you want to create a file. I often copy-and-paste text from the web into a file like this (command prompt shown):
+`$ cat > filename
+<Cmd-V>
+<Ctrl-D>
+$`
+- That is, I open a file filename for write access, paste the content and close the stream by pressing Ctrl-D. Neither less nor more can do that, and it’s faster than opening an editor.
