@@ -8,6 +8,7 @@ comments: true
 
 # Time complexity and Big-O notation
 > 원문 : https://medium.freecodecamp.org/time-is-complex-but-priceless-f0abd015063c?gi=8b976b56837#.j7h5s1m2p
+
 > https://joshuajangblog.wordpress.com/2016/09/21/time_complexity_big_o_in_easy_explanation/
 
 Every good developer has time on their mind. They want to give their users more of it, so they can do all those things they enjoy. They do this by minimizing time complexity.
@@ -148,12 +149,19 @@ Given this, it’s hard to say there is a single “right” or “best” answe
 Using one of our previous examples, it might be better to use React for a team project if half your team has experience with it, so it’ll take less time to get up and running.
 The ability to describe a better solution usually springs from some semblance of time complexity analysis.
 In short, if you’re going to solve a problem, solve it well. And use some Big-O to help you figure out how.
-Here’s a final recap:
+
+## Here’s a final recap:
 O(1) — Constant Time: it only takes a single step for the algorithm to accomplish the task.
 O(log n) — Logarithmic Time: The number of steps it takes to accomplish a task are decreased by some factor with each step.
 O(n) — Linear Time: The number of of steps required are directly related (1 to 1).
 O(n²) — Quadratic Time: The number of steps it takes to accomplish a task is square of n.
 O(C^n) — Exponential: The number of steps it takes to accomplish a task is a constant to the n power (pretty large number).
-And here are some helpful resources to learn more:
-Wikipedia
-The Big O Cheat Sheet is a great resource with common algorithmic time complexities and a graphical representation. Check it out
+
+## And here are some helpful resources to learn more:
+- https://en.m.wikipedia.org/wiki/Time_complexity
+- 
+
+## REF
+- https://m.youtube.com/watch?v=6Iq5iMCVsXA
+- http://theory.cs.princeton.edu/complexity/
+- https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions
