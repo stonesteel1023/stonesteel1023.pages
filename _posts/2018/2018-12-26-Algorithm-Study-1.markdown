@@ -2,6 +2,8 @@
 layout: "post"
 title: "알고리즘 공부"
 date: "2018-12-26 23:26"
+tag : algorithm
+comments : true
 ---
 
 # 알고리즘 인터뷰 가이드 1: 준비편
