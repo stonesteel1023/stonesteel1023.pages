@@ -1,0 +1,76 @@
+---
+layout:post
+date: 2018-12-28 18:30
+title: ""
+tag : git
+comments: true
+---
+
+# git add -p와 git commit -v 사용
+
+> 출처 : https://blog.outsider.ne.kr/1247
+
+얼마 전에 트위터에서 git add -p랑 git commit -v에 대해서 올렸더니 생각보다 반응해 주시는 분들이 있어서 정리해야겠다고 생각했다. git을 쓰면 파일을 변경한 후 stage 영역에 추가한 후 커밋을 하는 과정을 반복해서 수행하게 된다. 나도 처음 받을 때는 왜 불편하게 과정이 두 개로 나누어져 있는가 생각했지만, 지금은 stage와 commit이 분리되어 있는 게 너무 편해서 없는 걸 상상하지 못할 정도가 되었다.
+
+기본적으로 Git을 쓴다는 것은 히스토리를 의미 있게 남겨서 관리하겠다는 전제가 있다고 생각한다. 그 위에서 Git에 커밋을 할 때 실수를 방지할 수 있는 보호책을 만들어 놓는 것은 중요하다고 생각한다. 유닛테스트, 코드 리뷰, CI 등 코드를 개선하고 실수를 방지할 방법이 많이 있지만 개발자로서 코드를 커밋하기 전에 실수를 방지하는 습관을 지니고 있는 것은 좋다고 생각한다.
+
+여기서 흔한 실수로는 커밋하면 안되는 파일을 커밋에 추가한다거나 Debug용 메시지를 추가한 채로 커밋에 포함하는 등의 일이 있다. Git을 처음 배울 때 git add -a나 git add -am, git add .를 팁처럼 배우기도 했고 나중에 교육할 때 공유한 적도 있지만 이젠 절대로 쓰지 말아야 할 옵션이라고 생각할 정도이다. 파일명을 일일이 지정하지 않아도 되고 한 번에 되고 하니까 얼핏 편해 보이지만 어떤 내용을 커밋에 포함되는지가 완전히 감춰진다는 면에서 정말 안 좋은 습관이라고 생각한다.
+
+위에 말한 커밋에 실수를 방지하는 가장 좋은 방법은 add와 commit과정에서 어떤 내용이 추가되는지 계속 확인하는 것이다.
+
+
+git add -p
+개발할 때 당연히 여러 파일을 한꺼번에 수정하게 되고 이 중에는 커밋해야 하는 내용도 있고 코드를 추적하느라고 디버그 메시지를 출력하거나 임시로 수정하는 등 커밋에 넣지 않아야 하는 내용이 있다. 보통은 git status로 파일 목록을 보고 원하는 파일만 git add FIELNAME만 하는데 더 편한 방법이 git add -p이다.
+
+Bash
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   math.js
+위처럼 math.js라는 파일을 수정했을 때 이를 스테이징하려고 git add math.js하거나 git add .을 할 수 있다. 전자가 후자보다는 훨씬 나은 방법인데 후자는 이 저장소에 untracked 파일이 있는 경우와 같이 추가되고 의도와 달리 원치 않는 파일을 스테이징 해버릴 수도 있다. 전자도 썩 좋은 방법은 아닌데 스테이징하려고 하는 것은 파일 내의 변경사항이지 파일이 아니기 때문이다.
+
+그래서 스테이징을 하는 변경사항을 확인하면서 작업하는 것이 훨씬 좋고 여기서 많은 실수를 방지할 수 있다.
+
+git add -p를 실행한 화면
+
+git add -p를 하면 modified 된 파일의 수정 부분을 단위별로 나누어서 추가할지 안 할지를 물어본다. 여기서 보이는 변경사항의 하나의 단위를 hunk라고 부른다. 이 hunk 단위로 추가할지 말지를 정할 수 있다. ?를 입력하면 다음과 같은 각 명령어를 볼 수 있다.
+
+C-like
+y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+보통 쓰는 것은 y를 누르면 해당 hunk를 스테이징에 추가하고 n을 누르면 추가하지 않고 다음 hunk를 보여준다.. q를 입력하면 add과정을 종료한다.
+
+git add -p에서 hunk를 split한 화면
+
+git이 알아서 hunk의 단위를 나누어 주지만 원하는 것보다 그 단위가 크다면(hunk에 스테이징에 추가할 내용과 아닌 내용이 섞여 있는 경우) s를 입력하면 hunk를 더 잘게 쪼개준다.
+
+git add -p를 습관들이면 다음과 같은 장점이 있다.
+
+스테이징에 추가하기 전에 추가되는 변경사항을 눈으로 확인할 수 있다. 이 과정에서 원하지 않은 디버깅 코드나 커밋과 관련되어 있지 않지만, 수정사항에 들어가 있는 부분을 제거할 수 있다.(이런 실수는 실제로 많이 한다.)
+코드를 수정할 때 커밋단위로 나누어서 작업하지 않고 여러 작업이 섞이는 경우가 있는데(예를 들면 A 함수를 추가하다 보니 테스트를 하기 위해서 B 함수를 잠시 주석처리를 한다거나 A 함수를 추가하다 보니 B 함수에서 버그를 발견해서 버그도 수정했다거나..) 작업을 완료한 후에 관련된 부분만 나누어서 스테이징에 추가할 수 있다.
+커밋을 훨씬 논리적인 단위로 나눌 수 있다. 파일 단위로 add를 하면 이런 부분이 어렵다.
+untracked 파일은 -p를 할 때 나오지 않는다. 그래서 새로운 파일을 추가하는 행위를 의식적으로 할 수 있어서 실수를 줄여준다.
+현재는 스테이징에 추가할 때 git add -p만 사용해서 커밋할 코드의 변경사항을 내 눈으로 다시 한 번 확인하고 있다. 머릿속에 변경사항이 다 있다고 생각했음에도 이 과정에서 실수나 빠뜨린 부분을 발견할 때가 꽤 있다.
+
+
+git commit -v
+git commit -v도 git add -p와 마찬가지로 커밋하는 변경사항을 다시 한 번 확인하려는 의도이다. 코드를 올리는 과정에서 이러한 절차를 자주 넣음으로써 실수를 방지하는 거도 크게보면 코드리뷰도 비슷한 과정이라고 할 수 있다.
+
+git commit -v를 한 화면
+
+git commit -v를 하면 커밋메시지를 입력하는 화면 아래에 코드 diff가 한 번 더 나오게 된다. 작업을 하다 보면 스테이징 추가 후 바로 커밋을 하는 때도 있지만, 작업이 복잡한 경우 이 두 과정의 시차가 꽤 있는 때도 있다. 커밋을 하기 전에 git diff --staged로 확인할 수도 있지만 git commit -v로 보면 한 번 더 커밋하는 변경사항을 확인할 수 있다.(마지막에 최근 커밋이 보이는 건 git commit -v의 기능은 아니고 별도로 설정한 것이다.)
