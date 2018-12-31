@@ -35,6 +35,9 @@ comments: false
 
 * TIL(Today I Learned It!) Posting Project
 
+* github ranking
+http://git-awards.com/users/stonesteel1023
+
 ### AWS
 * Morisystem home renewal
 
@@ -43,7 +46,6 @@ comments: false
 
 ---
 # RESUME
-{% include resume.html %}
 ---
 * Coming soon
 
