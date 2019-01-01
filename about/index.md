@@ -29,14 +29,14 @@ comments: false
 ---
 # Project
 ---
-### Github 
+### Github
 * One day/one commit Project
 <img src="https://ghchart.rshah.org/stonesteel1023" alt="Github Image" style="max-width:100%">
 
 * TIL(Today I Learned It!) Posting Project
 
-* github ranking
-http://git-awards.com/users/stonesteel1023
+* github rank-up Project
+- <a href="http://git-awards.com/users/stonesteel1023">http://git-awards.com/users/stonesteel1023</a>
 
 ### AWS
 * Morisystem home renewal
@@ -47,5 +47,4 @@ http://git-awards.com/users/stonesteel1023
 ---
 # RESUME
 ---
-* Coming soon
-
+* <a href="https://stonesteel1023.github.io/resume/">https://stonesteel1023.github.io/resume/</a>
