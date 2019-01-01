@@ -1,7 +1,7 @@
 ---
-layout:post
-date: 2018-12-28 18:30
-title: "git add -p와 git commit -v 사용"
+layout : post
+date : 2018-12-28 18:30
+title : "git add -p와 git commit -v 사용"
 tag : git
 comments: true
 ---

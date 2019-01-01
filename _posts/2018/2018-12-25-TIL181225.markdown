@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 2018-12-25 21:45
-title:
-tag:
+title: "Time complexity"
+tag: algorithm
 comments: true
 ---
 
@@ -72,8 +72,8 @@ var sortedAges = [22, 24, 27, 29, 31]
 O(1) — Constant Time
 Value look ups when you know the key (objects) or the index (arrays) always take one step, and are thus constant time.
 //If I know the persons name, I only have to take one step to check:
-function isFriend(name){ //similar to knowing the index in an Array 
-  return friends[name]; 
+function isFriend(name){ //similar to knowing the index in an Array
+  return friends[name];
 };
 isFriend('Mark') // returns True and only took one step
 function add(num1,num2){ // I have two numbers, takes one step to return the value
@@ -88,9 +88,9 @@ function thisOld(num, array){
   if( array[midPoint] < num ) --> only look at second half of the array
   if( array[midpoint] > num ) --> only look at first half of the array
   //recursively repeat until you arrive at your solution
-  
+
 }
-thisOld(29, sortedAges) // returns true 
+thisOld(29, sortedAges) // returns true
 //Notes
  //There are a bunch of other checks that should go into this example for it to be truly functional, but not necessary for this explanation.
  //This solution works because our Array is sorted
@@ -159,7 +159,7 @@ O(C^n) — Exponential: The number of steps it takes to accomplish a task is
 
 ## And here are some helpful resources to learn more:
 - https://en.m.wikipedia.org/wiki/Time_complexity
-- 
+-
 
 ## REF
 - https://m.youtube.com/watch?v=6Iq5iMCVsXA

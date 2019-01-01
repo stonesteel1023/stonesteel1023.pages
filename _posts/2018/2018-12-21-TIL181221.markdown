@@ -1,14 +1,14 @@
 ---
 layout: post
-date:
-title:
-tag:
+date: 2018-12-21 23:59
+title: " `CAT` vs `LESS`"
+tag: UNIX
 comments : true
 ---
 
 # `CAT` vs `LESS` in Linux commands
   > https://unix.stackexchange.com/questions/21548/is-there-ever-a-reason-to-use-cat-when-youve-got-less
- 
+
 ## Question : Is there ever a reason to use `cat` when you've got `less`?
 I used to use cat to view files. Then I learned that less is usually better, and is a must if the file is longer than a few dozen rows.
 My question: Is there ever a reason to use cat instead of less? Is there any situation where cat is a better solution?
@@ -18,13 +18,13 @@ My question: Is there ever a reason to use cat instead of less? Is there any sit
 ### 1-1.
   > David Heffernan
 - less and cat solve different problems and they are each better than the other in their own problem domain
-### 1-2. 
+### 1-2.
   > Paddy3118
 - I guess, because of the poularity of Unix variants now, many people don't have to administer their systems (with a vengence). When things go tits-up you might just be able to reboot and enter your system in what is called a restricted environment.
 - You get a command line and access to a small set of what is deemed useful commands that are small and usually statically linked. You might get vi as an editor or even the smaller ed, but not emacs or vim. You would get cat, but not less. The idea is to give you enough tools to repair your system without taking too much resources as those resources may be incorrectly configured, or all used up. the less command onder those circumstances is superfluous.
 
 ### 2. `cat` !
-### 2-1. 
+### 2-1.
   > jasonwryan
 - Is there any situation where cat is a better solution?
 - When you are dealing with more that one file and wish to concatenate them.
@@ -32,8 +32,8 @@ My question: Is there ever a reason to use cat instead of less? Is there any sit
 `cat f - g`
        ` Output f's contents, then standard input, then g's contents.`
 
-### 2-2. 
-  > Michał Šrajer      
+### 2-2.
+  > Michał Šrajer
 - cat can be used to concat several binary files
 
 ### 2-3.
@@ -71,9 +71,9 @@ My question: Is there ever a reason to use cat instead of less? Is there any sit
 - You might want to allow some users to view a file that can only be read by the superuser, but not allow those users to edit the file or to use superuser privileges in general. You could do this by editing '/etc/sudoers' to allow them to use 'sudo /bin/cat /etc/importantfile'. You wouldn't want to allow 'sudo /usr/bin/less /etc/importantfile', because they could use 'v' to edit the file, or use '!' to launch a shell with full superuser privileges.
 - Of course, the users could use 'sudo /bin/cat /etc/importantfile | less' and still use 'less', without the security risks.
 
-### 4. OTHERS!! 
+### 4. OTHERS!!
 
-### 4-1. 
+### 4-1.
     > Nils
 - I personally prefer view for static content or tail -f for dynamic content.
 - This does not answer your question, though. There is a saying "why use more if you have less" ;-)
