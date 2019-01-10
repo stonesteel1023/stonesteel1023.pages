@@ -1,4 +1,8 @@
 ---
+layout : "post"
+date : "2019-01-03 14:44"
+title: "Milestone Effect"
+comments : true
 ---
 
 # milestone effect

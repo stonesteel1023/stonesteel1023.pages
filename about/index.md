@@ -36,7 +36,7 @@ comments: false
 * TIL(Today I Learned It!) Posting Project
 
 * github rank-up Project
-- <a href="http://git-awards.com/users/stonesteel1023">http://git-awards.com/users/stonesteel1023</a>
+<a href="http://git-awards.com/users/stonesteel1023">http://git-awards.com/users/stonesteel1023</a>
 
 ### AWS
 * Morisystem home renewal
@@ -47,4 +47,4 @@ comments: false
 ---
 # RESUME
 ---
-* <a href="https://stonesteel1023.github.io/resume/">https://stonesteel1023.github.io/resume/</a>
+* /resume/

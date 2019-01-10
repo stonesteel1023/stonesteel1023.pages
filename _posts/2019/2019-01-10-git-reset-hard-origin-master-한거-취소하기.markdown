@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: ""git reset --hard origin/master 한거 취소하기""
+title: "git reset --hard origin/master 한거 취소하기"
 date: "2019-01-10 23:58"
 tag : git
 comments : true

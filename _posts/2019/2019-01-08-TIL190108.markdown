@@ -1,6 +1,6 @@
 ---
-layout : post
-date : 2019-01-08 14:44
+layout : "post"
+date : "2019-01-08 14:44"
 title: "Tokenizing a string"
 tag : java
 comments : true
@@ -11,14 +11,14 @@ comments : true
 ##Question
 전화번호 "-" 빼고 숫자만 짤라오기
 
-## Answer 
+## Answer
 - 1. solution
-String[] temp = tel_no.split("-"); 
-String[] phoneAddr = {"","",""}; 
+String[] temp = tel_no.split("-");
+String[] phoneAddr = {"","",""};
 
-for(int i = 0; i < temp.length; i++) { 
-phoneAddr[i] = temp[i]; 
-} 
+for(int i = 0; i < temp.length; i++) {
+phoneAddr[i] = temp[i];
+}
 
 - 2. solution
 String[] phoneAddr = (tel_no.indexOf("-") >= 0)?tel_no.split("-"):new String[]{"","",""};
@@ -27,11 +27,10 @@ String[] phoneAddr = (tel_no.indexOf("-") >= 0)?tel_no.split("-"):new String[]{"
 
 1. 사용자의 input 값을 전부 숫자로 바꾼다. 숫자외의 것은 전부 버린다.
 2. 숫자길이에 따라 로직을 결정
-3. 01로 시작하는건 핸드폰, 그외의것은 일반폰(두자리02;세자리지역번호구분)으로 생각 
+3. 01로 시작하는건 핸드폰, 그외의것은 일반폰(두자리02;세자리지역번호구분)으로 생각
 4. 총길이가 않맞는건 재입력 유도
 5. 그다음 에러나지 않게 split (총길이 체크하고 split 호출)
 
 -- 이런식으로 로직 적어 놓기
 
-항상 defensive coding(방어적 프로그래밍) 
-
+항상 defensive coding(방어적 프로그래밍)
