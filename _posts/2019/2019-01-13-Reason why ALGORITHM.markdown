@@ -199,3 +199,5 @@ For more interesting data structures material, my favorite resources are:
 > 동영상강의 : https://www.youtube.com/watch?v=yRM3sc57q0c&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V
 + 숙명여대 snow
 > 망했음(https://www.snow.or.kr/field/infoandcommunication/algorithm/)
++ 포프TV(POCU)
+> https://www.udemy.com/cpp-unmanaged-programming-by-pocu/learn/v4/t/lecture/12660726?start=0
