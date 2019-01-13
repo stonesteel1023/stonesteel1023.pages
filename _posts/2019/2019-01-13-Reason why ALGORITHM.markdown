@@ -1,21 +1,57 @@
 ---
+layout : post
+date : "2019-01-13 20:20"
+title : "알고리즘 학습에 대한 조언"
+tag : "algorithm"
+comments : true
 ---
 
-The post 알고리즘 학습에 대한 조언 appeared first on Edward Kim.
-원문 : http://shlegeris.com/2016/08/14/algorithms
+# 알고리즘 학습에 대한 조언
+
+> 출처 : The post 알고리즘 학습에 대한 조언 appeared first on Edward Kim.
+> 원문 : http://shlegeris.com/2016/08/14/algorithms
 
 Software engineering interviews often ask whiteboard algorithms questions. Here’s my advice on how to study for them. (My credentials on this topic are: I have passed a lot of whiteboard interviews, including at Google and Apple; as part of my job I prepare programmers for these algorithm interviews; I have conducted more than 200 technical interviews on programmers with a very wide variety of backgrounds.)
+* 소프트웨어공학 면접에서는 화이트보드 알고리즘 질문을 종종 냅니다. 이런 질문을 어떻게 공부해야 하는지 조언을 하려고 합니다. (저는 구글과 애플을 포함한 수많은 화이트보드 면접을 통과했습니다. 그리고 프로그래머가 이런 알고리즘 면접을 준비하도록 돕는 일이 제 직업의 일부입니다. 게다가 다양한 분야의 개발자를 대상으로 200회 이상의 기술 면접을 치뤘습니다.)
+
 I’m speaking for myself, not for Triplebyte, in this post.
 Other topics than algorithms are also covered in interviews. Triplebyte has a blog post which has useful information on studying for those. I primarily intend this post to be a supplement to section 2 of that post.
-Background: why do companies ask algorithms questions?
+
+* 이 글은 Triplebyte이 아닌 제 자신으로서 쓰는 글입니다.
+알고리즘 외에도 면접에 관한 여러 주제가 있습니다. 이런 주제는 Triplebyte의 포스트에서 잘 다루고 있습니다. 이 글에서 중요하게 다루려고 하는 내용은 Triplebyte의 포스트에서 2번 항목에 해당합니다.
+
+## Background: why do companies ask algorithms questions?
 In real life, programmers spend almost none of their time implementing binary search trees or graph search algorithms. So why do companies ask so many questions about them?
+
+## 배경: 왜 회사는 알고리즘 문제를 낼까요?
+* 실생활에서 프로그래머가 이진트리 검색이나 그래프 탐색 알고리즘을 구현하는 시간은 거의 존재하지 않습니다. 그런데 왜 회사는 알고리즘에 대해 많은 질문을 낼까요?
+
 There’s both a Watsonian and a Doylist interpretation of this question–“why are algorithms questions useful to companies to ask” has one answer, and “what is the actual causal mechanism by which companies decided to ask algorithms questions” has another.
+
+* 이 질문을 존 왓슨과 코난 도일의 관점으로 해석할 수 있습니다. “회사가 알고리즘 문제를 내는 것이 왜 유용한가?”, 그리고 “어떤 회사가 알고리즘 질문을 하는 실제 일반적 원리가 무엇인가?”가 그 관점입니다.
+
 I’ll start out by explaining the reasons to ask algorithms questions, and then move on to more cynical explanations for their prevalence.
+
+* 먼저 알고리즘을 물어보는 이유를 설명하려고 합니다. 그리고 더 나아가 이 유행에 대한 냉소적인 입장에서 설명합니다.
+
 To start with, a lot of professional programmers aren’t able to do very basic things. For example, I might have a list of Customer objects, each of whom has an array of Purchase objects, and I want to get the names of the five customers who have spent the most over the last week. My guess is that maybe 50% of professional programmers would not solve this problem within 30 minutes. You don’t want to hire such people by mistake.
+
+* 먼저 직업 프로그래머 대다수가 아주 기초적인 일을 수행하지 못합니다. 예를 들어 고객 객체 목록이 있고 각 고객 객체에 구입 객체 배열이 존재합니다. 지난 주에 가장 많이 구입한 고객 다섯 명의 이름을 찾으려고 합니다. 제 예상에는 직업 프로그래머의 50%가 이 문제를 30분 이내에 풀지 못합니다. 이런 사람들을 실수로라도 채용하고 싶지 않을겁니다.
+
 Less pessimistically, when you’re interviewing someone for a programming job, you’re trying to find out how good they are at solving hard and confusing programming problems where they need to keep lots of details in their head at once. In real life, confusing complicated problems happen because you’re working on projects that are large enough to take weeks, and you need to think about a lot of different parts of software at once. But interviews don’t normally have enough time to let you get that deep into a programming problem. So instead of asking you a problem that is only difficult because of how large it is, they ask you questions which are short and difficult.
+
+* 조금 덜 비관적으로 가정해봅시다. 프로그래밍 일을 위해 누군가 면접을 볼 때 어렵고 혼란스러운 문제를 잘 풀어낼 수 있는지 알아내려고 할겁니다. 모든 세세한 내용을 머리에 담고 있어야 풀 수 있는 것을 말이죠. 실생활에서 혼란스럽고 복잡한 문제가 존재하는 이유는 그 프로젝트를 몇 주 동안 봐야 할 만큼 큰 규모고 소프트웨어의 여러 부분을 동시에 고려해야 하기 때문입니다. 하지만 면접은 일반적으로 그렇게 깊은 프로그래밍 문제를 다룰 만큼 시간이 넉넉하지 않습니다. 그래서 규모가 크기 때문에 복잡한 문제를 물어보는 것보다 짧고 복잡한 질문을 물어보는 것입니다.
+
 How can you come up with complicated but short coding problems which are also simple to describe? I think algorithmics is a good choice here. Algorithmics is the most complicated area of computer science that almost all software engineers know about, and it allows lots of easy-to-describe, tricky-to-implement problems.
+
+* 그럼 어떻게 복잡하지만 쉽게 설명할 수 있는 짧은 코딩 문제를 낼 수 있을까요? 그런 관점으로 생각해보면 제 생각에 여기서는 알고리즘이 좋은 선택입니다. 알고리즘은 컴퓨터 과학에서 대부분의 소프트웨어 엔지니어가 알고 있는 복잡한 분야며 쉽게 설명할 수 있고 구현하기 힘든 문제가 많이 존재합니다.
+
 Now here’s are some more cynical historical notes.
 Interview processes are awkwardly sticky. Engineering teams are comprised entirely of people who passed the technical interview of that team. So everyone is personally incentivised to believe and say that their interview process is extremely accurate at measuring software engineering ability. So once a culture of algorithmic interviewing gets established at a company, it’s hard to change it.
+
+여기 조금 냉소적인 설명이 따라옵니다.
+면접 프로세스는 이상할 정도로 끈적합니다. 엔지니어링팀은 팀의 기술 면접을 통과한 사람으로만 구성되어 있습니다. 그래서 모두가 면접이 옳은 방식이라고 믿게 되고 면접 과정이 소프트웨어 엔지니어링 능력을 측정하는데 매우 정확하다고 생각하게 됩니다. 그래서 회사에 알고리즘 면접 문화가 생기고 나면 그 이후로 바꾸기가 어려워집니다.
+
 Also, everyone knows that Google had an amazing team 10 years ago (and to a lesser extent still today), and Google asked algorithmic interview questions back then. Most companies are slightly insecure about not being Google (because they’re used to losing their best candidates to Google), so they are tempted to imitate Google’s interview process.
 At worst, algorithms interviews can turn into some weird hazing process. Sometimes companies get totally convinced that some random brainteaser is the secret sauce to finding great candidates, and you can never change their mind about it.
 Overall, I wouldn’t ask traditional hard algorithms questions in interviews. At worst, algorithms questions are extremely bad interview questions. I’ve written on occasion about questions I particularly hate. Algorithms questions are particularly bad when they’re more like brainteasers and require more leaps of insight. (If you want to build an algorithm interview process, feel free to email me and I can give you more detailed opinions on how to ask questions that don’t have these problems.)
@@ -64,19 +100,13 @@ Resources
 	•	Triplebyte, How To Pass A Programming Interview. I endorse most of this content.
 	•	Steve Yegge: some old posts like this one, Get That Job At Google. I think a lot of his ideas are wrong, but they’re interesting to read.
 	•	InterviewCake.com is a more fun and engaging self-study tool than Cracking the Coding Interview.
-알고리즘 학습에 대한 조언
-소프트웨어공학 면접에서는 화이트보드 알고리즘 질문을 종종 냅니다. 이런 질문을 어떻게 공부해야 하는지 조언을 하려고 합니다. (저는 구글과 애플을 포함한 수많은 화이트보드 면접을 통과했습니다. 그리고 프로그래머가 이런 알고리즘 면접을 준비하도록 돕는 일이 제 직업의 일부입니다. 게다가 다양한 분야의 개발자를 대상으로 200회 이상의 기술 면접을 치뤘습니다.)
-이 글은 Triplebyte이 아닌 제 자신으로서 쓰는 글입니다.
-알고리즘 외에도 면접에 관한 여러 주제가 있습니다. 이런 주제는 Triplebyte의 포스트에서 잘 다루고 있습니다. 이 글에서 중요하게 다루려고 하는 내용은 Triplebyte의 포스트에서 2번 항목에 해당합니다.
-배경: 왜 회사는 알고리즘 문제를 낼까요?
-실생활에서 프로그래머가 이진트리 검색이나 그래프 탐색 알고리즘을 구현하는 시간은 거의 존재하지 않습니다. 그런데 왜 회사는 알고리즘에 대해 많은 질문을 낼까요?
-이 질문을 존 왓슨과 코난 도일의 관점으로 해석할 수 있습니다. “회사가 알고리즘 문제를 내는 것이 왜 유용한가?”, 그리고 “어떤 회사가 알고리즘 질문을 하는 실제 일반적 원리가 무엇인가?”가 그 관점입니다.
-먼저 알고리즘을 물어보는 이유를 설명하려고 합니다. 그리고 더 나아가 이 유행에 대한 냉소적인 입장에서 설명합니다.
-먼저 직업 프로그래머 대다수가 아주 기초적인 일을 수행하지 못합니다. 예를 들어 고객 객체 목록이 있고 각 고객 객체에 구입 객체 배열이 존재합니다. 지난 주에 가장 많이 구입한 고객 다섯 명의 이름을 찾으려고 합니다. 제 예상에는 직업 프로그래머의 50%가 이 문제를 30분 이내에 풀지 못합니다. 이런 사람들을 실수로라도 채용하고 싶지 않을겁니다.
-조금 덜 비관적으로 가정해봅시다. 프로그래밍 일을 위해 누군가 면접을 볼 때 어렵고 혼란스러운 문제를 잘 풀어낼 수 있는지 알아내려고 할겁니다. 모든 세세한 내용을 머리에 담고 있어야 풀 수 있는 것을 말이죠. 실생활에서 혼란스럽고 복잡한 문제가 존재하는 이유는 그 프로젝트를 몇 주 동안 봐야 할 만큼 큰 규모고 소프트웨어의 여러 부분을 동시에 고려해야 하기 때문입니다. 하지만 면접은 일반적으로 그렇게 깊은 프로그래밍 문제를 다룰 만큼 시간이 넉넉하지 않습니다. 그래서 규모가 크기 때문에 복잡한 문제를 물어보는 것보다 짧고 복잡한 질문을 물어보는 것입니다.
-그럼 어떻게 복잡하지만 쉽게 설명할 수 있는 짧은 코딩 문제를 낼 수 있을까요? 그런 관점으로 생각해보면 제 생각에 여기서는 알고리즘이 좋은 선택입니다. 알고리즘은 컴퓨터 과학에서 대부분의 소프트웨어 엔지니어가 알고 있는 복잡한 분야며 쉽게 설명할 수 있고 구현하기 힘든 문제가 많이 존재합니다.
-여기 조금 냉소적인 설명이 따라옵니다.
-면접 프로세스는 이상할 정도로 끈적합니다. 엔지니어링팀은 팀의 기술 면접을 통과한 사람으로만 구성되어 있습니다. 그래서 모두가 면접이 옳은 방식이라고 믿게 되고 면접 과정이 소프트웨어 엔지니어링 능력을 측정하는데 매우 정확하다고 생각하게 됩니다. 그래서 회사에 알고리즘 면접 문화가 생기고 나면 그 이후로 바꾸기가 어려워집니다.
+
+
+
+
+
+
+
 또한 모두가 알듯 구글은 10년 전에 놀라운 팀이 있었습니다. (지금은 그 당시보다 적습니다.) 그 당시에 구글은 알고리즘 면접 질문을 했습니다. 대부분의 회사가 자신들이 구글이 아니라는 점에 조금 불안했는지 (알다시피 최고의 지원자는 구글에 다 잃었으니까요), 이 회사도 구글 면접 과정을 따라하기 시작했습니다.
 최악의 경우로 보면 알고리즘 면접은 기괴하고 못살게 구는 절차로 바뀌어 버립니다. 가끔 회사에서 무작위 난제를 내는 것이 위대한 지원자를 찾는 비밀 병기라고 단단히 착각해버려서 그런 생각을 바꾸는 일이 불가능한 경우가 있습니다.
 종합해서 말하자면, 저는 이런 전통적이고 어려운 알고리즘 문제를 면접에서 안냈으면 합니다. 최악으로는 알고리즘 문제가 극단적으로 나쁜 면접 질문이 될겁니다. 제가 특히 싫어하는 질문은 이런 상황을 위해 따로 적어뒀습니다. 알고리즘 질문은 난제나 여러 통찰을 요구하는 경우에 특히 나쁜 질문입니다. (만약 알고리즘 면접 과정을 만들고 싶다면 언제든지 이메일을 보내시기 바랍니다. 이런 문제가 없는 질문을 하는 방법에 대해 더 자세한 의견을 드릴 수 있습니다.)
