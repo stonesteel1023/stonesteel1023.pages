@@ -10,9 +10,11 @@ project : true
 # 알고리즘 학습에 대한 조언
 
 > 출처 : The post 알고리즘 학습에 대한 조언 appeared first on Edward Kim.
+
 > 원문 : http://shlegeris.com/2016/08/14/algorithms
 
 Software engineering interviews often ask whiteboard algorithms questions. Here’s my advice on how to study for them. (My credentials on this topic are: I have passed a lot of whiteboard interviews, including at Google and Apple; as part of my job I prepare programmers for these algorithm interviews; I have conducted more than 200 technical interviews on programmers with a very wide variety of backgrounds.)
+
 * 소프트웨어공학 면접에서는 화이트보드 알고리즘 질문을 종종 냅니다. 이런 질문을 어떻게 공부해야 하는지 조언을 하려고 합니다. (저는 구글과 애플을 포함한 수많은 화이트보드 면접을 통과했습니다. 그리고 프로그래머가 이런 알고리즘 면접을 준비하도록 돕는 일이 제 직업의 일부입니다. 게다가 다양한 분야의 개발자를 대상으로 200회 이상의 기술 면접을 치뤘습니다.)
 
 I’m speaking for myself, not for Triplebyte, in this post.
@@ -21,8 +23,7 @@ Other topics than algorithms are also covered in interviews. Triplebyte has a bl
 * 이 글은 Triplebyte이 아닌 제 자신으로서 쓰는 글입니다.
 알고리즘 외에도 면접에 관한 여러 주제가 있습니다. 이런 주제는 Triplebyte의 포스트에서 잘 다루고 있습니다. 이 글에서 중요하게 다루려고 하는 내용은 Triplebyte의 포스트에서 2번 항목에 해당합니다.
 
-## Background: why do companies ask algorithms questions?
-- 배경: 왜 회사는 알고리즘 문제를 낼까요?
+## Background: why do companies ask algorithms questions? (배경: 왜 회사는 알고리즘 문제를 낼까요?)
 In real life, programmers spend almost none of their time implementing binary search trees or graph search algorithms. So why do companies ask so many questions about them?
 * 실생활에서 프로그래머가 이진트리 검색이나 그래프 탐색 알고리즘을 구현하는 시간은 거의 존재하지 않습니다. 그런데 왜 회사는 알고리즘에 대해 많은 질문을 낼까요?
 
@@ -63,22 +64,22 @@ Overall, I wouldn’t ask traditional hard algorithms questions in interviews. A
 * 종합해서 말하자면, 저는 이런 전통적이고 어려운 알고리즘 문제를 면접에서 안냈으면 합니다. 최악으로는 알고리즘 문제가 극단적으로 나쁜 면접 질문이 될겁니다. 제가 특히 싫어하는 질문은 이런 상황을 위해 따로 적어뒀습니다. 알고리즘 질문은 난제나 여러 통찰을 요구하는 경우에 특히 나쁜 질문입니다. (만약 알고리즘 면접 과정을 만들고 싶다면 언제든지 이메일을 보내시기 바랍니다. 이런 문제가 없는 질문을 하는 방법에 대해 더 자세한 의견을 드릴 수 있습니다.)
 
 
-## How to study
-- 어떻게 공부하나요?
+## How to study (어떻게 공부하나요?)
 
 EDIT: I just read Haseeb Qureshi’s blog post about this again; he and I agree and I think he goes into slightly more detail. Read the “General Study Strategy” and “Programming Interview Study Guide” sections.
-> 링크 : https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/#general-study
 
 * 추가: Haseeb Qureshi의 블로그 포스트를 읽었는데 이 글에 동의합니다. 그리고 이 글이 좀 더 상세하다고 생각합니다. “일반 학습 전략”과 “프로그래밍 면접 공부 가이드” 부분을 읽으세요.
+
+> 링크 : https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/#general-study
 
 I think there’s sort of two different skills involved in answering algorithms questions. Firstly, you need to know all of the classic algorithm and data structure material. Secondly, you need to be able to quickly produce algorithmic logic on a whiteboard under pressure. I’m going to discuss these topics separately.
 
 * 저는 알고리즘 문제에 답하려면 두 가지 다른 기술이 필요로 하다고 생각합니다. 첫째로 모든 대표적 알고리즘과 자료 구조 문제를 알아야 합니다. 둘째로는 부담되는 상황에서 알고리즘 논리를 화이트보드에 빠르게 풀어나갈 수 있어야 합니다. 이 두 주제를 나눠서 얘기해보려고 합니다.
 
-### Canonical algorithms material
-- 표준 알고리즘 자료
+### Canonical algorithms material (표준 알고리즘 자료)
 
 There’s a pretty consistent set of core algorithms knowledge to acquire that companies will test you on. Companies are incentivised not to ask questions relying on material which isn’t in this list, because many good programmers don’t know it and the companies will end up failing good people.
+
 * 회사의 시험을 준비하는데 있어 습득해야 하는 거의 필수적인 핵심 알고리즘 모음이 있습니다. 회사에서는 이런 목록에 들어있지 않은 질문은 하지 않으려고 합니다. 좋은 프로그래머 다수가 이 목록에 없는 질문에 대해서는 답을 모르기 때문이며 그래서 목록 외 질문을 냈다가 회사는 좋은 사람을 뽑는데 실패하게 됩니다.
 
 Here’s a list of the data structures material you should know:
@@ -119,12 +120,12 @@ If you want a briefer explanation, I like the explanations in Craking the Coding
 
 * 이런 부분에 대략적인 설명을 보고 싶다면 Craking the Coding Interview와 InterviewCake.com의 설명이 좋습니다. 저는 Skiena의 책이 극단적일 정도로 건조하고 딱딱한 유명 CLRS 교재보다 낫다고 생각합니다. 그래프 알고리즘에 대한 글을 쓴 적이 있는데 참고가 되었으면 좋겠습니다.
 
-### Canonical algorithmic skills
-- 표준 알고리즘 기술
+### Canonical algorithmic skills (표준 알고리즘 기술)
 
 So that’s the core knowledge required for interviews. Here are the different kinds of programming skills that are tested, together with my favorite resource for learning them. Cracking the Coding Interview is an extremely useful resource for all of this. I wrote some notes on it here.
 
 * 여기까지 인터뷰에 핵심적으로 필요한 부분을 확인했습니다. 이제 다른 종류의 프로그래밍 기술로 무엇을 테스트하는지 확인하고 제가 선호하는 학습 자료도 함께 확인합니다. 이런 기술에 있어서는 Cracking the Coding Interview(이하 CtCI) 책이 가장 유용합니다. 이 책에 대해서 작성한 글입니다.
+
 > 링크 : http://shlegeris.com/2016/06/22/ctci
 
 Here are the most common central components of algorithms interview problems:
@@ -144,15 +145,13 @@ Here’s a general note on studying these problems: I think it’s probably fine
 * CtCI에서 살펴볼 수 있는 많은 문제를 살펴보는 방법이 제가 드리는 가장 주요한 조언입니다. 이 문제에서 가장 중요하다고 생각하는 부분은 위 목록과 같습니다.
 이런 부류의 문제를 어떻게 학습하는지에 대해 일반적인 생각은 이렇습니다. 제 생각엔 답안을 “훔쳐보는” 일은 그래도 괜찮다고 생각합니다. 면접 문제 푸는 일을 내던지고 아예 포기하는 것보다는 문제 풀다가 막히면 해결책을 보는 방법이 차라리 나은 접근이기 때문입니다.
 
-### Non-technical aspects of succeeding at algorithm interviews
-- 알고리즘 면접에서 성공하기 위한 비기술적 측면
+### Non-technical aspects of succeeding at algorithm interviews (알고리즘 면접에서 성공하기 위한 비기술적 측면)
 
 It’s worth practicing answering these questions under pressure, with a real human asking them to you. For more advice on this, see the Triplebyte blog post, particularly points 2, 3, and 7.
 
 * 이런 질문은 실제로 부담되는 환경에서 답하는 연습을 해야 합니다. 진짜 사람이 질문하는 상황에서 말이죠. 이 부분에 대해서는 Triplebyte의 블로그 포스트에서 다루고 있고 2, 3, 7번을 읽어보기 바랍니다.
 
-### Learning further about algorithms and data structures
-- 알고리즘과 자료구조에 대해 더 배우기
+### Learning further about algorithms and data structures (알고리즘과 자료구조에 대해 더 배우기)
 
 Suppose you’re excited about algorithms and data structures for their own sake, as opposed to for the mercentile purpose of getting a job. How should you learn more?
 
@@ -161,7 +160,6 @@ Suppose you’re excited about algorithms and data structures for their own sake
 The easiest things to learn more about are relatively simple data structures that for whatever reason aren’t part of the core data structure canon I described above. For example, treaps, skip lists, augmented BSTs, and the Disjoint set data structure are all pretty easy to understand and I think they’re all really cool. There are some data structure topics which were harder to understand but well worth the effort. For example, this set of slides which explains BTrees and 2-3-4 trees.
 
 * 가장 쉬운 방법은 위에서 필수로 배워야 한다고 한 핵심 자료 구조에 포함되지 않는 자료 구조 중 상대적으로 간단한 자료 구조를 학습하는 방법입니다. 트립, 스킵 목록, 증강 이진검색트리, 서로소 집합 자료구조가 그 예로 모두 쉽게 이해할 수 있는 편이며 모두 멋진 알고리즘입니다. 자료구조 주제 중 이해하기 어렵지만 노력해서 이해하면 좋은 주제도 있습니다. 예를 들어 이 슬라이드에서는 이진트리와 2-3-4 트리를 설명합니다.
-
 
 For more interesting data structures material, my favorite resources are:
 - 흥미로운 자료 구조를 배울 수 있는, 제가 좋아하는 자료는 다음과 같습니다.
@@ -194,10 +192,17 @@ For more interesting data structures material, my favorite resources are:
 
 ### 기타
 + MIT algorithm 강좌
+
 > https://www.youtube.com/watch?v=JPyuH4qXLZ0&list=PL8B24C31197EC371C
+
 + Stanford 강좌
+
 > 동영상강의 : https://www.youtube.com/watch?v=yRM3sc57q0c&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V
+
 + 숙명여대 snow
+
 > 망했음(https://www.snow.or.kr/field/infoandcommunication/algorithm/)
+
 + 포프TV(POCU)
+
 > https://www.udemy.com/cpp-unmanaged-programming-by-pocu/learn/v4/t/lecture/12660726?start=0
