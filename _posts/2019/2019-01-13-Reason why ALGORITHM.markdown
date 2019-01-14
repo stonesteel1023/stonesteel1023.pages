@@ -197,7 +197,7 @@ For more interesting data structures material, my favorite resources are:
 
 + Stanford 강좌
 
-> 동영상강의 : https://www.youtube.com/watch?v=yRM3sc57q0c&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V
+> https://www.youtube.com/watch?v=yRM3sc57q0c&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V
 
 + 숙명여대 snow
 
