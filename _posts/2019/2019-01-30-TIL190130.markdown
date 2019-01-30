@@ -12,10 +12,10 @@ tag : string
 > 출처 : http://www.rationaljava.com/2015/02/the-optimum-method-to-concatenate.html
 
 > Daniel Shaya
-  - All tests were done against this version:
-    java version "1.8.0_25"
-    Java(TM) SE Runtime Environment (build 1.8.0_25-b17)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.25-b02, mixed mode)
+- All tests were done against this version:
+    - java version "1.8.0_25"
+    - Java(TM) SE Runtime Environment (build 1.8.0_25-b17)
+    - Java HotSpot(TM) 64-Bit Server VM (build 25.25-b02, mixed mode)
 
 This got me thinking about the different ways in Java to concatenate Strings and how they would all perform against each other. These are the methods I'm going to investigate:
 Using the + operator
