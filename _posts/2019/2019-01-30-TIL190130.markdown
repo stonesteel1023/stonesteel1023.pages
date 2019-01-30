@@ -264,3 +264,11 @@ a string that represents the concatenation of this object's characters followed 
         }
     }
 ```
+
+## +(operator) 적용방식
+
+> 출처 : https://programmers.co.kr/learn/questions/571
+
++ 연산자는 아래 코드와 같이 StringBuilder 클래스로 변환하여 append로 문자열을 더해준 뒤 toString()으로 결과값을 변환하여 넘겨줍니다.
+
+`(new StringBuilder(String.valueOf(str1)).append(str2).toString(); // +연산자 실제 동작방식`
