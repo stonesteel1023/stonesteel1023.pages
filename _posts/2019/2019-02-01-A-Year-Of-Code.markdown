@@ -1,9 +1,14 @@
 ---
+layout : post
+date : 2019-02-01 11:00
+title: "A Year of Code"
+comments : true
+tag : github
 ---
 
 # A Year of Code
 
-> https://link.medium.com/JKvrBcs7WT
+> 출처 : https://link.medium.com/JKvrBcs7WT
 
 A few weeks ago, I marked a year since I started coding every day. Last year, for me, began with a breakup. I remember crying in bed at midnight on New Year’s Day, a few minutes after ending a three-year relationship with someone who’d been my best friend since I was eleven. It felt unimaginably final, and even though I knew that it was the right decision, it didn’t feel that way.
 This story’s not about that. It’s about a year I spent learning more than I thought was possible and doing more than I could have anticipated. But I didn’t have any expectations at that point — life just happened.
