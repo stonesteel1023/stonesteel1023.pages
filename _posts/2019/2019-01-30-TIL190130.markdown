@@ -3,7 +3,9 @@ layout : post
 date : 2019-01-30 11:00
 title: "The Optimum Method to Concatenate Strings in Java"
 comments : true
-tag : string
+tag : 
+- java
+- string
 ---
 
 # The Optimum Method to Concatenate Strings in Java
