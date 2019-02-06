@@ -1,0 +1,276 @@
+---
+layout : post
+date : 2019-01-30 11:00
+title: "The Optimum Method to Concatenate Strings in Java"
+comments : true
+tag : 
+- java
+- string
+---
+
+# The Optimum Method to Concatenate Strings in Java
+### Recently I was asked this question - Is it bad for performance to use the + operator to concatenate Strings in Java?
+
+> 출처 : http://www.rationaljava.com/2015/02/the-optimum-method-to-concatenate.html
+
+> Daniel Shaya
+- All tests were done against this version:
+    - java version "1.8.0_25"
+    - Java(TM) SE Runtime Environment (build 1.8.0_25-b17)
+    - Java HotSpot(TM) 64-Bit Server VM (build 25.25-b02, mixed mode)
+
+This got me thinking about the different ways in Java to concatenate Strings and how they would all perform against each other. These are the methods I'm going to investigate:
+Using the + operator
+Using a StringBuilder
+Using a StringBuffer
+Using String.concat()
+Using String.join (new in Java8)
+I also experimented with String.format() but that is so hideously slow that I will leave it out of this post for now.
+
+Before we go any further we should separate two use cases:
+Concatenating two Strings together as a single call, for example in a logging message. Because this is only one call you would have thought that performance is hardly an issue but the results are still interesting and shed light on the subject.
+Concatenating two Strings in a loop.  Here performance is much more of an issue especially if your loops are large.
+My initial thoughts and questions were as follows:
+The + operator is implemented with StringBuilder, so at least in the case of concatenating two Strings it should produce similar results to StringBuilder. What exactly is going on under the covers? 
+StringBuilder should be the most efficient method, after all the class was designed for the very purpose of concatenating Strings and supersedes StringBuffer. But what is the overhead of creating the StringBuilder when compared with String.concat()?
+StringBuffer was the original class for concatenating Strings - unfortunately its methods are synchronized. There really is no need for the synchronization and it was subsequently replaced by StringBuilder which is not synchronized.  The question is, does the JIT optimise away the synchronisation?
+String.concat() ought to work well for 2 strings but does it work well in a loop?
+String.join() has more functionality that StringBuilder, how does it affect performance if we instruct it to join Strings using an empty delimiter?
+The first question I wanted to get out of the way was how the + operator works. I'd always understood that it used a StringBuilder under the covers but to prove this we need to examine the byte code.
+
+The easiest way to look at byte code these days is with JITWatch which is a really excellent tool created to understand how your code is compiled by the JIT.  It has a great view where you can view your source code side by side with byte code (also machine code if you want to go to that level).
+
+
+
+Here's the byte code for a really simple method plus2() and we can see that indeed on line 6 a StringBuilder is created and appends the variables a (line 14) and b (line 18).
+
+I thought it would be interesting to compare this against a handcrafted use of the StringBuffer so I create another method build2() with results below.
+
+
+
+The byte code generated here is not quite as compact as the plus() method.  The StringBuilder is stored into the variable cache (line 13) rather than just left on the stack.  I'm not sure why this should be but the JIT might be able to do something with this, we'll have to see how the timings look. In any case it would be very surprising if the results of concatenating 2 strings with the plus operator and and the StringBuilder were significantly different.
+
+I wrote a small JMH test to determine how the different methods performed. Let's first look at the two Strings test. See code below:
+
+
+package org.sample;
+
+import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
+
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
+
+@Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Fork(1)
+@State(Scope.Thread)
+public class TwoStringsBenchmark {
+
+    private String[] strings;
+
+    @Setup
+    public void setupTest(){
+        strings = new String[2];
+        strings[0] = UUID.randomUUID().toString().substring(0,10);
+        strings[1] = UUID.randomUUID().toString().substring(0,10);
+    }
+
+    @Benchmark
+    public void testPlus(Blackhole bh) {
+        bh.consume(strings[0] + strings[1]);
+    }
+
+    @Benchmark
+    public void testStringBuilder(Blackhole bh) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(strings[0]).append(strings[1]);
+        bh.consume(sb.toString());
+    }
+
+    @Benchmark
+    public void testStringBuffer(Blackhole bh) {
+        StringBuffer sb = new StringBuffer();
+        sb.append(strings[0]).append(strings[1]);
+        bh.consume(sb.toString());
+    }
+
+    @Benchmark
+    public void testStringJoiner(Blackhole bh) {
+        bh.consume(String.join("", strings[0], strings[1]));
+    }
+
+    @Benchmark
+    public void testStringConcat(Blackhole bh) {
+        bh.consume(strings[0].concat(strings[1]));
+    }
+}
+view rawTwoStringsBenchmark.java hosted with ❤ by GitHub
+
+
+The results look like this:
+
+
+Benchmark	Score	Score Error (99.9%)	Unit
+testPlus	15750720.32	957703.6388	ops/s
+testStringBuffer	14545063.2	812623.9396	ops/s
+testStringBuilder	15671930.21	436265.5796	ops/s
+testStringConcat	24124041.47	2498000.326	ops/s
+testStringJoiner	10749530.45	388130.9845	ops/s
+
+
+
+
+The clear winner here is String.concat().  Not really surprising as it doesn't have to pay the performance penalty of creating a StringBuilder / StringBuffer for each call. It does though, have to create a new String each time (which will be significant later) but for the very simple case of joining two Stings it is faster.
+
+Another point is that as we expected plus and StringBuilder are equivalent despite the extra byte code produced. StringBuffer is only marginally slower than StringBuilder which is interesting and shows that the JIT must be doing some magic to optimise away the synchronisation.
+
+The next test creates an array of 100 Strings with 10 characters each. The benchmark compares how long it takes for the different methods to concatenate the 100 Strings together. See code below:
+
+
+package org.sample;
+
+import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
+
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
+
+@Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Fork(1)
+@State(Scope.Thread)
+public class LoopStringsBenchmark {
+
+    private String[] strings;
+
+    @Setup
+    public void setupTest(){
+        strings = new String[100];
+        for(int i = 0; i<100; i++) {
+            strings[i] = UUID.randomUUID().toString().substring(0, 10);
+        }
+    }
+
+    @Benchmark
+    public void testPlus(Blackhole bh) {
+        String combined = "";
+        for(String s : strings) {
+            combined = combined + s;
+        }
+        bh.consume(combined);
+    }
+
+    @Benchmark
+    public void testStringBuilder(Blackhole bh) {
+        StringBuilder sb = new StringBuilder();
+        for(String s : strings) {
+            sb.append(s);
+        }
+        bh.consume(sb.toString());
+    }
+
+    @Benchmark
+    public void testStringBuffer(Blackhole bh) {
+        StringBuffer sb = new StringBuffer();
+        for(String s : strings) {
+            sb.append(s);
+        }
+        bh.consume(sb.toString());
+    }
+
+    @Benchmark
+    public void testStringJoiner(Blackhole bh) {
+        bh.consume(String.join("", strings));
+    }
+
+    @Benchmark
+    public void testStringConcat(Blackhole bh) {
+        String combined = "";
+        for(String s : strings) {
+            combined.concat(s);
+        }
+        bh.consume(combined);
+    }
+}
+view rawLoopStringsBenchmark.java hosted with ❤ by GitHub
+
+
+The results look quite different this time:
+
+Benchmark	Score	Score Error (99.9%)	Unit
+testPlus	82297.2646	1496.838588	ops/s
+testStringBuffer	501613.3375	14461.60235	ops/s
+testStringBuilder	507697.9058	9510.921128	ops/s
+testStringConcat	403378.159	17458.6318	ops/s
+testStringJoiner	381805.4569	6572.704663	ops/s
+
+
+
+Here the plus method really suffers.  The overhead of creating a StringBuilder every time you go round the loop is crippling. You can see this clearly in the byte code:
+
+
+
+You can see that a new StringBuilder is created (line 30) every time the loop is executed. It is arguable that the JIT ought to spot this and be able to optimise, but it doesn't and using + becomes very slow.
+
+Again StringBuilder and StringBuffer perform exactly the same but this time they are both faster than String.concat().  The price that String.concat() pays for creating a new String on each iteration of the loop eventually mounts up and a StringBuilder becomes more efficient. 
+
+String.join() does pretty well given all the extra functionality you can add to this method but, as expected, for pure concatenation it is not the best option.
+
+Summary
+
+If you are concatenating Strings in a single line of code I would use the + operator as it is the most readable and performance really doesn't matter that much for a single call. Also beware of String.concat() as you will almost certainly need to carry out a null check which is not necessary with the other methods. 
+
+When you are concatenating Strings in a loop you should use a StringBuilder.  You could use a StringBuffer but I wouldn't necessarily trust the JIT in all circumstances to optimise away the synchronization as efficiently as it would in a benchmark. 
+
+All my results were achieved using JMH and they come with the usual health warning.
+
+## concat API
+> https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#concat-java.lang.String-
+
+### concat
+
+**`public String concat(String str)`**
+
+Concatenates the specified string to the end of this string.
+If the length of the argument string is 0, then this String object is returned. Otherwise, a String object is returned that represents a character sequence that is the concatenation of the character sequence represented by this String object and the character sequence represented by the argument string.
+
+- **Examples:**
+
+ "cares".concat("s") returns "caress"
+ "to".concat("get").concat("her") returns "together"
+ 
+- **Parameters:**
+
+str - the String that is concatenated to the end of this String.
+
+- **Returns:**
+
+a string that represents the concatenation of this object's characters followed by the string argument's characters.
+
+- **소스**
+
+```java
+   public String concat(String s)
+    {
+        int i = s.length();
+        if(i == 0)
+        {
+            return this;
+        } else
+        {
+            char ac[] = new char[count + i];
+            getChars(0, count, ac, 0);
+            s.getChars(0, i, ac, count);
+            return new String(0, count + i, ac);
+        }
+    }
+```
+
+## +(operator) 적용방식
+
+> 출처 : https://programmers.co.kr/learn/questions/571
+
++ 연산자는 아래 코드와 같이 StringBuilder 클래스로 변환하여 append로 문자열을 더해준 뒤 toString()으로 결과값을 변환하여 넘겨줍니다.
+
+`(new StringBuilder(String.valueOf(str1)).append(str2).toString(); // +연산자 실제 동작방식`

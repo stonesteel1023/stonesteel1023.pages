@@ -1,0 +1,209 @@
+---
+  layout : post
+  date : "2019-01-25 12:00"
+  title : ".git에 대하여"
+  tag : "git"
+  comments : true
+---
+
+# 개요
+
+복습겸 생활코딩의 지옥에서 온 Git을 사흘간 출퇴근하며 정주행했다.
+Git 입문하시는 분들께는 좋은 자료라는 생각이 들었으며
+개인적으로는 .git 폴더를 심지어 이고잉님 본인이 만드신 gistroy 로 분석해주시는 부분이 인상적이었다.
+
+이에 기본적인 git 의 기능들을 실행하면서 .git 폴더내의 변화를 정리해보고 싶어졌음
+- 입문하시는 분들 보다는 git 을 잘 쓰고 계신분들이 이런 내용을 한번 챙겨보시면 도움이 되시리라 싶다.
+
+(참고) 지옥에서 온 Git
+- 링크: https://opentutorials.org/course/2708
+- 유튜브 링크: https://goo.gl/tSliKG
+- gistory: https://github.com/egoing/gistory
+
+
+# .git 폴더 가볍게 둘러보기
+
+우리가 특정 폴더에서
+
+$git init
+
+을 해주면 .git 폴더가 생성되며 왼쪽과 같은 폴더구조가 생성되는데
+그 중, 아래 정도만 봐도 되겠다 싶다.
+
+- objects
+- refs
+- HEAD
+- (지금은 없지만) INDEX
+
+아래는 git-draw 라는 프로그램으로 연관관계를 들여다본 예이다.
+
+type:subtype
+id/name
+비고
+ref
+- HEAD
+ref:local branch 를 가리킨다.
+- ref:local branch 는 특정 obj:commit 을 가리킨다.
+ref:local branch
+- refs/heads/master
+특정 branch 는 특정 obj:commit 을 가리킨다.
+- master, develop, feature 등이 각각 하나의 commit 을 가리킨다.
+ref:tag
+- refs/tags/R1
+ref:tag 는 ref:local branch 와 마찬가지로 특정 obj:commit 을 가리킨다.
+- branch 는 commit 등이 일어나면서 계속 가리키는 obj:commit 이 바뀌지만
+- tag 는 바뀌지 않는다.
+Index
+- index
+index 는 commit 전에 staging 된 내용들을 가리키고 있다.
+- 가리키는 녀석들은 blob 들이다.
+reflog
+- refs/heads/master
+- HEAD
+- refs/tags/R1
+reflog 는 각각이 가리키던 commit 들의 히스토리를 기록해둔다.
+Object
+
+- obj:tag
+- obj:commit
+- obj:tree
+- obj:blob
+object 들이 진짜 값들을 가지고 있는 녀석들이다.
+
+(참고) 구글링해서 얻은 링크들
+- http://eagain.net/articles/git-for-computer-scientists/
+- https://medium.freecodecamp.org/understanding-git-for-real-by-exploring-the-git-directory-1e079c15b807
+
+이제 하나씩 분석해보자
+
+크게 4가지를 적당히 섞어서 분석해보려 한다.
+
+1) gistroy: https://github.com/egoing/gistory
+- 해당 git repository 의 .git 폴더에서 gistory 를 실행후 웹브라우저로 localhost 의 안내된 port 로 접근하면 된다.
+- git bash 가 아닌 cmd.exe 에서 실행하자
+2) git-draw: https://github.com/sensorflo/git-draw/wiki
+- 윈도우에서 해당 git repository 에서 실행하면 .dot 파일을 생성해주며
+- 윈도우용 graphviz 설치하면 생기는 Gvedit.exe 로 .dot 을 보면 된다.
+3) .git 실제로 들여다보기
+4) git cat-file 명령어: Provide content or type and size information for repository objects
+
+### 1. git init
+
+1) mygit 이라는 폴더를 생성후, 해당 폴더에서 git bash 를 열고
+
+$git init
+
+2) (git bash 가 아닌 cmd.exe로) 생성된 .git 폴더로 들어가 gistory 실행
+- 브라우저에서 http://localhost:8805 로 들어가면 .git 폴더의 내용이 보인다.
+
+gistory를 보자
+
+HEAD 로 들어가보면 ref:refs/heads/master 라고 쓰여있다.
+HEAD 는 이런식으로 checkout 된 branch 를 가리킨다.
+하지만 실제로 어떤 commit 도 이루어지지 않았기에 가리킬 실제 object 는 없다.
+
+git-draw 를 보자
+
+처음이니깐 하나씩 챙겨보면
+- type은 reference type 이며
+- id/name 은 HEAD 이다.
+- content 는 refs/head/master 이지만 실제로는 아무것도 없다
+* staging 한 것도 없으니 index 에도 아무것도 없다.
+
+### 2. git add
+
+1) a.txt 를 생성하고, a 라고 입력하고 저장
+2) git add 로 index 영역에 staging
+
+$git add a.txt
+
+gistory 를 보자
+
+index 영역에 a.txt 가 올라갔다.
+- 정확히는 index 는 object 의 파일명과 오브젝트의 이름 (정확히는 폴더명+파일명) 정보를 가지고 있다.
+- 이런 식으로 index 는 object 를 가리킨다. (포인터 개념!)
+
+object 도 추가되었다.
+(중요) id/ name 의 앞의 두 숫자를 폴더명으로 해주고 나머지를 파일명으로 하여 Object 를 저장한다.
+- type 은 obj:blob
+- id/name 은 7898….
+- content 는 a 이다.
+
+git-draw 를 보자
+
+- index 가 obj: blob 를 가리키고 있는 것이 보인다.
+- 아직 HEAD 가 가리키는 refs/heads/master 는 실체가 없다. 이제 commit 을 해주면 가리키겠지?
+
+### 3. git commit
+
+$git commit -m "a.txt a"
+
+이로서 local repository 에 저장되었다.
+
+gistory 를 보자
+
+gistory 에서 HEAD 로부터 이어지는 정보만 챙겨봐도 많은 걸 알 수 있다.
+
+1) HEAD 는 현재 자신이 가리키는 branch 정보를 담고 있다.
+
+2) 해당 branch, 즉 현재 checkout 된 branch 는 master 이다.
+- 이는 a7a5 로 시작하는 commit object 를 가리키고 있다.
+
+3) commit object 는
+- auther / commiter 의  정보와 commit 시간
+- commit message 정보를 가지고 있으며
+- 0858 로 시작하는 tree object 를 가리키고 있다.
+
+4) tree object 는 다시 7898로  시작하는 object 를 가리키고 있으며
+- 해당 object 의 파일명, 파일타입등의 정보도 가지고 있다.
+- 그러고 보니 이 7898 로 시작하는 object 는 아까 index 가 가리키고 있던 녀석
+
+git-draw를 보자
+
+위에 설명한 순서를 따라서 보면 이해가 될 것이다.
+reflog 가 어디를 가리키고 있나 한 번 보자
+index 가 아직 남아있는 것이 조금 신기하다.
+→ 이 때문에 git reset --hard 등이 가능해지는게 아닐까?
+
+### 4. git checkout -b feature
+
+$git checkout -b feature
+
+git add / commit 을 해보자
+b.txt 를 생성하고 b 라고 입력하고 저장
+
+$git add b.txt
+$git commit -m "b.txt b"
+
+HEAD 가 가리키는 값 = branch 가 달라졌다.
+
+그리고 HEAD 가 가리키는 녀석들의 히스토리도 달라졌다.
+
+feature branch 가 생겼고, 가리키는 commit 이 있다.
+
+특히 이번 commit 은 parent 가 있다. Directed Acyclic Gragh 인 Git 의 특성을 알 수 있다.
+
+아래 그림을 feature branch 에 집중해서 보면 도움이 될 것이다.
+
+obj:commit 55ad 는  parent 로 a7a5 를 가리키고 commit 한 대상인 obj:tree 로서 f4b3 을 가리키고 있다.
+
+obj:tree f4b3 이 두 개의 blob 을 가리키고 있는게 재미있다. index 도 같은 blob 들을 가리키고 있다.
+
+- 머리속 git 에 대한 이미지와는 조금 다르다.
+
+master 로 돌아보면 HEAD 가 가리키는 branch 가 달라진다.
+
+역시나 재미있게 보았던 부분은 index 이다.
+
+- feature → master 로 바뀌면서 index 의 값이 바뀌고 있다.
+-
+- 실제 우리 눈에는 보이지 않지만 특정 branch 를 checkout 하였을때에 되돌리는 등의 다양한 연산을 지원하기 위한 조치로 보인다.
+
+$git checkout master
+
+
+# 갑자기 닫으며…
+
+여기에 추가적으로  다양한 git 명령들을 시도해보려 했는데 이정도만 해두어도 충분하지 싶다.
+때로 특이한 명령들을 수행할때 내부의 메커니즘이 궁금하다면 gistory 를 이용하거나 .git 을 백업해둔 후 명령 수행후 바뀐 .git 과 비교해보면 도움이 되겠다.
+git-draw 는 내용이 조금만 많아져도 이미지가 너무 커져버려서 한계가 느껴진다.
