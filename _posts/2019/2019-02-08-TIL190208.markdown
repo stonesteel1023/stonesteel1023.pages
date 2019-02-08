@@ -173,3 +173,7 @@ Microservice is a modern term to describe the type of design described in this h
 
 In future hubs I will explore how using such a pattern will allow you to achieve the technical requirements of your application, I will cover topics such as;integrity, flexibility, performance, re-usability, scalability and security.
 
+### example
+
+http://www.java2s.com/Tutorial/Java/0540__JUnit/HowToRunAJUnitTest.htm
+
