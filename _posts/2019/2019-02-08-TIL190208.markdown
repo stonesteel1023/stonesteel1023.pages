@@ -175,5 +175,5 @@ In future hubs I will explore how using such a pattern will allow you to achieve
 
 ### example
 
-http://www.java2s.com/Tutorial/Java/0540__JUnit/HowToRunAJUnitTest.htm
+http://www.java2s.com/Tutorial/Java/0410__Web-Services-SOA/0060__SOAP.htm
 
