@@ -1,0 +1,25 @@
+---
+layout : post
+date : 2019-02-11 22:26
+title: "내일 해야하는 일들"
+comments : true
+tag : environment
+---
+
+# 도커 설치
+
+- https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
+- https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+- https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
+
+# 자바 1.8 인스톨
+
+# 이클립스 인스톨(버전 뭐 였드라)
+
+# 스프링 설치
+
+- https://addio3305.tistory.com/35?category=772645
+
+# 메이븐 설치
+
+- https://addio3305.tistory.com/33?category=772645
