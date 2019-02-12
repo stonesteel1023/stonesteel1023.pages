@@ -5,3 +5,5 @@ https://stonesteel1023.github.io/
 
 - java-1.8.0-openjdk-1.8.0.121-0.b13.el7_
 - GlassFish 4(paraya41)
+- spring-aop-4.3.7.RELEASE
+- spring-core-4.3.7.RELEASE
