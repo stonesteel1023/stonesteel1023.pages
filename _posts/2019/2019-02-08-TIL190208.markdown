@@ -1,0 +1,179 @@
+---
+---
+
+# Checkstyle
+
+# SpotBugs
+
+# SOA
+
+## SOA Design Patterns: Managers, Engines, Gateways, Interfaces and Microservices
+
+> 출처 : https://hubpages.com/technology/SOA-Design-Pattern-WCF
+
+> MetalLemon profile imageAllan Rees  moreContact Author
+
+* SOA design patterns Managers, Engines and Gateways
+- This hub offers practical patterns for building Service Orientated Applications using service oriented programming (SO) as an approach.
+
+It demonstrates that every component can be a service while still maintaining the technical requirements that modern applications are required to exhibit and in most cases surpassing what many application frameworks offer to date.
+
+By building a solid “Little” SOA base, the platform is set at an enterprise level to realize the composition and reuse that is the value proposition of SOA, as without a “Little” SOA that is properly portioned, rock solid and composeable, attempts to realize more will fail.
+
+I will present the examples using Windows Communication Foundation (WCF) as it is what I am most comfortable with, but the taxonomy of services and principles presented have also been implemented using Java EJB, and so I believe they transcend any language.
+
+I hope to share some of the best practices, techniques and tools that I have learned from the last four years of applying WCF to the construction of service orientated applications (microservice architecture) and also to provide an insight to application architects on how to achieve the non functional specifications that many projects only play lip service to.
+
+Microservice Application Design Model (SOAD)
+The model contains a small set of components from which a solution for any problem domain can be formulated.
+
+Every component of the model is service and each has a well defined architecture, they will differ only in implementation and composition between different projects and domains.
+
+They have a well defined interaction pattern, and a clear set of guidelines of what their function is and their responsibility within the model, making the implementers decision of what goes where easier. 
+
+
+They are;
+
+Channel
+Manager
+Engine
+Gateway
+Agent
+Container (Capability Bunker)
+
+Design Pattern
+
+> https://usercontent2.hubstatic.com/3588119_f520.jpg
+
+
+Channels, Managers, Engines and Gateways
+
+### Channel Layer
+
+Channels should not contain any business logic. They should just delegate down to the business layer components to get the real work of the use cases done. The channel exists to isolate the business logic from needing to know about the service boundary specifics. Channels form the boundary between client and the application. The channel may implement the interface of the manager component or it may act as a facade to the manager service.
+
+Thus the relationship particulars to any one client are encapsulated into a single layer, allowing the layers below to remain reusable and client agnostic thus when any set of managers is reused, they do not carry any of the restrictions of the older client, we would typically build a channel layer for the new client and enforce its application specific security demands in that layer.
+
+The channel layer, in this framework has an added responsibility of inspecting the validation property of Data Contracts; this can loosely be considered a type of “Design by Data Contract”. 
+
+In the scenario where a client calls a channel, it is possible to have the Data Contracts validate the data that is bound to them, if you own the user interface (UI) components as well as the service connector it is possible to combine the two techniques to leverage the .Net framework to do client side validation on input, and then use the same mechanism to reject invalid input at the connector before any service operations have been invoked. 
+
+The best way of using the validation is by both sides being .Net, but if some other technology calls the service, as soon as that call hits the channel and the WCF stack has translated the contract we essentially have a .Net contract again, and validation will continue as normal. So when something other than .Net calls the service, they won’t have validation, but the service will always validate.
+
+This technique is valuable as it reduces the amount of error handling code needed in the layers below to protect against things like parameters exceeding their maximum length, rather the data contract assert it as incorrect and reject the call with a suitable error message, or flag it in the user interface thus preventing the invocation of the business logic only to have an error thrown in the gateway.
+
+In a development where an Enterprise Service Bus Pattern is being utilized the channel layer may become optional if the Service Bus assumes the responsibility of resolving the application specific security requests and validation of the data flowing over the Bus.
+
+### Business Logic Layer
+The business layer components are broken into two main types: manager and engine components.
+
+### Managers
+
+Manager components are the code manifestation of a use case; they should bare a close resemblance to the implemented use case functionality. This aids system validation as it is easy to see what a system does by looking at the managers.
+
+Manager components are focused on implementing the work-flow or business process for the use case to which it is aligned and may determine the API exposed to its clients.
+
+[OperationBehavior(TransactionScopeRequired = true)]
+
+```
+Deduction CreateDeductionForBudgetItem(Deduction deduction, BudgetLineItem item)
+{
+using (var gateway = new ProxyHelper<BudgetLineItemGateway, IRepository<BudgetLineItem>>())
+{
+  gateway.Execute(g => g.Delete(item.Id));
+}
+ 
+using (var gateway = new ProxyHelper<DeductionGateway, IRepository<Deduction>>())
+ {
+  return gateway.Execute(g => g.Create(deduction));
+ }
+}
+```
+Notice that in the above example the manager operation is controlling the flow of events, not implementing them.
+
+Managers can interact with gateways and engines directly, but never other managers, we will use an event driven architecture to achieve this to avoid the coupling and reduction in performance this introduces in a system.
+
+Managers are prime candidates for the introduction of work-flow technology; this will allow a more visual programming experience, aiding maintenance and understanding of the system. Technologies like Windows Azure AppFabric are important here as they are beginning to offer the unification of hosting, in other words, whether you host in the cloud or on site you code in the same way, deploy in the same way and host in the same way.
+
+### Engines
+The engine components encapsulate the business rules that support the business process. This separation of managers and engines is intentional for maintenance reasons. 
+
+Business rules are likely to change more frequently than the business processes. Keeping them isolated in their own component allows the developer to more easily locate and update the business rule code without needing to check in many locations throughout the architecture. The engine components can potentially be deployed and updated separately from the rest of the architecture to minimize any potential breakage with deploying updates.
+
+Engines encapsulate volatility, they can be thought of as a strategy around a concept. They contain the business rules and logic around the strategy that they encapsulate. They do validations and throw business exceptions. 
+
+Business exceptions are exceptions where the client is able to modify their action and try again, this may be unnatural for many developers who are taught to Try...Catch...Throw exceptions whenever there is a chance of an exception occurring, this is a waste of effort in my opinion as nobody ever codes for all circumstances. 
+
+When last did anyone write a disk crash exception? Rather let the framework catch, log and shield all application exceptions, as the client could not do anything about your server disk crash anyway, this way you have a log of what went wrong and where, and the client is not exposed to the inner workings of your service. As a side effect you also reduce the complexity of your code and increase the maintainability.
+
+Fault contracts are also not recommended at any layer of the model as you introduce coupling between your service and client, this is a bad coupling as they are coupled on exception type, if that type changes in the service, the client also needs to change. Rather throw only business exceptions, and when you do throw them, throw them as FaultException<T> with a message of a suitable nature so that the client can take corrective action and try again.
+
+?
+```
+throw new FaultException<ApplicationException>(
+                               new ApplicationException(Messages.UnableToActivateAccount),
+                               Messages.UnableToActivateAccount);
+```
+
+You should avoid creating references between engines and gateways, this increases code coupling, and will cripple reuse. Where ever possible do the calls to fetch and save data from the manager and pass just the data to the engine to apply its strategy. One caveat here is the big data set problem, this occurs when the amount of data that needs to be passed to the engine is very large. I would consider either batching the calls and processing chunks of data, or re-engineer the problem to either be an off-line process that does not keep the user waiting. These kinds of problems rarely occur in the development phase, but rather a few months or years into production, my advice is to never attempt to optimize to early, solve the problem when it manifests itself.
+
+### Gateways - Data Access Layer
+
+The data access components isolate the business layer from the details of data retrieval in the same way that the connector layer isolates the business layer from the details of exposing remotely accessible services. No data access code should reside outside the data access layer.
+
+Gateways are responsible for the data access and contract transformation between the above layers and the data store. It is here that the impedance mismatch between schema and domain is resolved. 
+
+An example would be a derived attribute on a contract, the underlying schema would not store the derived data it would be calculated and added to the contract during the transformation from schema to contract.
+
+This is not to be confused with the type of logic that is found in engines, engines exist to encapsulate business logic volatility, so that logic is gleaned from the business, the type of logic here is as a result of our choice of implementation and is unlikely to be as volatile as the engine logic.
+
+They follow a bounded context pattern, in a bounded context pattern each model has a context, the main idea is to define the scope of a model, to draw up the boundaries of its context, and to try to keep it unified.
+
+Gateways try to encapsulate their own representation of the domain as they need it to be for the interaction that they require with it. It is important to use an explicit name when naming your context to avoid potential conflicts later on.
+
+This eliminates the coupling and dependency problem of sharing a domain across every gateway in the application, they simply have their own context of the domain that is rich enough for them to do what they need to only.
+
+It is normal to have a gateway per data contract, for contracts that are composed of multiple contracts we still have a gateway for each contract; we simply interact with the composed contracts from the base or container contract, in data driven design terms think of this as an aggregate root. We use the term aggregates to describe the situation as the entire group is considered one unit with regard to data changes. Each aggregate has one root and it is the service with which the outside manager interacts, the manager holds only a reference to the root.
+
+> https://usercontent1.hubstatic.com/3588170_f520.jpg
+
+### Aggregate Root
+
+An example could be a Client contract that has an employer property, in SOA we pass contracts as messages and not objects by reference, so employer is also a data contract. We would therefore have a ClientGateway and an EmployerGateway, but the call chain would be ClientManager to ClientGateway to EmployerGateway. We interact with the base contract Client and resolve the calls to the other contracts within the ClientGateway.
+
+An interesting observation here is how the concept of the domain has changed from object orientation to service orientation, one is no longer passing objects with state and behaviour, with service orientation you pass only the state as a message and delegate the behaviour to the service.
+
+Gateways implement two important interfaces, IRepository<T> and IMapper<C, E>. IRepository is responsible for the CRUD (Create, Read, Update, Delete) like operations and IMapper is responsible for mapping the domain entity to the data contract that is to be passed back to the manager.
+
+### Agents
+
+Agents are a specialization of Gateways, Agents call other services, a hold the proxy to that other service, they typically only implement IMapper<C, E>, which is used to map the other services contract to the contract we expect in our application. This also isolates any changes in third party applications to a single component.
+
+### Container/Bunker
+
+The container/capability bunker is our unit of hosting, it translates to a file that packages all the related services together and allows an IT Professional to install it on the host server. The factoring of services into a container/capability bunker is a discipline in its own right, interested parties should read Roger Sessions works regarding this, I would suggest starting with Simple Architectures for Complex Enterprises before progressing to the Software Fortress book.
+
+Docker and Kubernetes are examples of software which can help you manage this concept in practice.
+
+### Call patterns
+
+In Rogers Sessions book on Software Fortresses he is speaking to the enterprise architect, to the “Big SOA” paradigm, this pattern seeks to drive these ideas down deeper into the enterprise and is looking at ways to apply them at the application or “Little SOA” level.
+
+Containers/Capability Bunkers are the Fortresses of the application world, they apply the concepts of simplicity at the application level.
+
+Synchronous calls between managers, and by default Channels, as they implement the managers interface, are forbidden, if a manager needs to call another manager they will use the publish/subscribe utility using an asynchronous queued protocol, we apply an event driven paradigm in the implementation of this.
+
+Within the Bunker, in Sessions terminology, intra-fortress or in our case intra-bunker, synchronous calls and transactions are allowed. In this model calls between the managers and engines or manager and gateway can be synchronous and utilize transactions, but manager to manager calls are always asynchronous.
+
+### Microservices
+
+Microservice is a modern term to describe the type of design described in this hub. Remember that every component of this pattern is a service in its own right, and can be hosted independently or as a cohesive package or container. I reading recommend Sam Newman’s book Building Microservices if found it to be a good resource for learning more about this architectural pattern.
+
+### Next...
+
+In future hubs I will explore how using such a pattern will allow you to achieve the technical requirements of your application, I will cover topics such as;integrity, flexibility, performance, re-usability, scalability and security.
+
+### example
+
+http://www.java2s.com/Tutorial/Java/0410__Web-Services-SOA/0060__SOAP.htm
+
