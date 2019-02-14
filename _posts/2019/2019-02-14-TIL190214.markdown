@@ -1,0 +1,11 @@
+---
+---
+
+# (Web Security)로그인 시도 횟수 제한 예제 및 쿼리 
+
+> 출처 : https://m.blog.naver.com/PostView.nhn?blogId=p952973&logNo=220991799675&proxyReferer=http%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dweb%26cd%3D5%26ved%3D2ahUKEwiczpKF87rgAhXGV7wKHdtpBCkQFjAEegQIBRAB%26url%3Dhttp%253A%252F%252Fm.blog.naver.com%252Fp952973%252F220991799675%26usg%3DAOvVaw0uSWXPXShQdGfO9SQe3Z2n
+
+# 로그인 시도 횟수 제한
+
+> 출처 : http://gnujava.com/board/article_view.jsp?article_no=7143&menu_cd=16&idx_notice=NOTICE_FLAG+DESC%2C&board_no=3
+
