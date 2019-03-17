@@ -16,6 +16,10 @@ tag : shell
 # theme 設定
 > https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
 
+### zshが遅くなっちゃたら
+>　https://github.com/robbyrussell/oh-my-zsh/issues/5327
+
+
 # zshで”code”入力するとVisualStudioが起動する
 
 .zshrcを編集
@@ -44,6 +48,12 @@ function code {
 例）
 ’code ~/.zshcr’
 
-###　zshが遅くなっちゃたら
->　https://github.com/robbyrussell/oh-my-zsh/issues/5327
+# yarn install & 設定
 
+’brew install yarn’
+
+.zshrcを編集
+’nano ~/.zshrc’
+
+以下を追記する
+export PATH="$PATH:`yarn global bin`"
