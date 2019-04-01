@@ -29,14 +29,17 @@ SHA-512/384 | 512/384 | 512 | 1024 | 128 | 64 | 80 | +,and,or,xor,shr,rotr	|-
 ## 자바 method
 
 ```java
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 	private String getSHA1(String str) throws NoSuchAlgorithmException {
-		// SHA1名生成
+		// SHA1
 		MessageDigest md = MessageDigest.getInstance("SHA-1");
 		md.update(str.getBytes());
 		byte[] digest = md.digest();
 
 		StringBuffer hexstr = new StringBuffer();
-		String shaHex = EMPTY_STRING;
+		String shaHex = "";
 		for (int i = 0; i < digest.length; i++) {
 			shaHex = Integer.toHexString(digest[i] & 0xFF);
 			if (shaHex.length() < 2) {
