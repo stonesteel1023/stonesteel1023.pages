@@ -1,8 +1,9 @@
 ---
-post
+layout : post
 date : 2019-06-19 18:01
 title: "Today I learned It"
 tag: common
+comment : true
 ---
 
 # CSV 파일 validation 체크하기
@@ -46,3 +47,8 @@ double値の正しく丸めた正の平方根を返します。特例として:
     
 * StrictMath.sqrt(a)
 - double値の正しく丸めた正の平方根を返します。
+
+# 원 그리기
+> 참조 : https://today-shot.tistory.com/entry/Java-%EB%B0%B0%EC%97%B4%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4-%EC%9E%85%EB%A0%A5%EB%B0%9B%EC%9D%80-%EC%A0%95%EC%88%98%EC%97%90-%EB%94%B0%EB%9D%BC-%EC%A0%90%EC%A0%90-%EC%BB%A4%EC%A7%80%EB%8A%94-%EC%9B%90-%EA%B7%B8%EB%A6%AC%EA%B8%B0-%ED%94%BC%ED%83%80%EA%B3%A0%EB%9D%BC%EC%8A%A4-%EC%A0%95%EB%A6%AC-%EC%82%AC%EC%9A%A9
+
+
