@@ -1,6 +1,8 @@
 ---
 ---
 
+> link : https://www.sejuku.net/blog/13215
+
 <div class="entry-content">
 <p>こんにちは！エンジニアの中沢です。</p>
 <p><a href="https://www.sejuku.net/blog/3686" target="_blank" rel="noopener">Java</a>には文字列から特定のパターンを検索して、一致する文字列があるかをチェックするための<span class="green_strong">正規表現</span>があります。</p>
@@ -99,7 +101,6 @@
 </tbody>
 </table>
 </p>
-<a href="https://www.sejuku.net/blog/programming-introduction/?cid=article01" target="_blank"><img style="margin: 0 auto; display: block;" src="https://www.sejuku.net/blog/wp-content/themes/voice_child/images/banner/banner_curriculum_pc.png"></a><h2><span id="i">正規表現の使い方</span></h2>
 <p>ここでは正規表現の使い方をサンプルコードを交えて解説していきます。</p>
 <h3><span id="matches">matchesメソッドでチェックする方法</span></h3>
 <p>初めに正規表現で指定したパターンと一致するかを確認する簡単な方法として、Stringクラスの<span class="green_strong">matchesメソッド</span>の使い方を解説します。</p>
@@ -107,7 +108,6 @@
 <p>Stringクラスのmatchesメソッドの使い方を次のプログラムで確認してみましょう。</p>
 [matcheメソッドのサンプルコード]
 
-<link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bc9755813901" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
 public class Main {
@@ -158,15 +158,6 @@ false</textarea></div>
 
 このプログラムではmatchesメソッドを使って、正規表現で表現した文字列が含まれているかを判定しています。matchesメソッドは完全一致のときに”true”を返すので、検索したい文字列の前後に他の文字があると”false”を返します。</p>
 <p>そのため、正規表現のパターンの前後に「任意の文字がいくつかある」という意味の「.*」を追加して完全一致させることで”true”を返しています。</p>
-<p>Stringクラスのmatchesメソッドの使い方はこちらで詳しく解説しているので、ぜひ確認してください。<br />
-<a href="https://www.sejuku.net/blog/19341" class="blog-card-anchor">
-<div class="blog-card">
-<div class="blog-card-content">
-<div class="blog-card-thumbnail"><img class="blog-card-thumbnail-img" src="https://s3-ap-northeast-1.amazonaws.com/samurai-blog-media/blog/wp-content/uploads/2017/03/java_mojiretu-150x85.jpg"></div>
-<div class="blog-card-title-wrap">
-<div class="blog-card-title">Javaで文字列を検索する方法（matches・indexOf・equalsなど）</div>
-<div class="blog-card-update-date">更新日 : 2019年5月28日</div>
-</div>
 </div>
 </div>
 </a></p>
