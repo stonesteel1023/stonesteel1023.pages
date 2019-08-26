@@ -3,7 +3,7 @@
 
 > link : https://www.sejuku.net/blog/13215
 
-<div class="entry-content">
+se<div class="entry-content">
 <p>こんにちは！エンジニアの中沢です。</p>
 <p><a href="https://www.sejuku.net/blog/3686" target="_blank" rel="noopener">Java</a>には文字列から特定のパターンを検索して、一致する文字列があるかをチェックするための<span class="green_strong">正規表現</span>があります。</p>
 <p>正規表現を使えば文字列の中から数字だけを抽出したり、メールアドレスを抽出することができます。</p>
@@ -263,6 +263,8 @@ true</textarea></div>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd2500274253" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -280,7 +282,10 @@ public class Main {
             System.out.println("一致した部分は : " + m.group());
         }
     }
-}</textarea></div>
+}
+``` 
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -366,6 +371,8 @@ public class Main {
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd9496513020" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -381,7 +388,10 @@ public class Main {
  
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+``` 
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -437,6 +447,8 @@ true</textarea></div>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bdd902497003" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -452,7 +464,10 @@ public class Main {
  
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+```
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -503,24 +518,12 @@ true</textarea></div>
 
 <p>
 日付を正規表現で厳密にチェックしようとすると、うるう年などがあり大変なので、<b>厳密にチェックする場合は日付型のオブジェクトにしてチェックする方が実用的</b>です。</p>
-<p>日付が正しいかをSimpleDateFormatクラスのsetLenientメソッドを使用して厳密にチェックする方法はこちらで詳しく解説しているので参考にしてください。</p>
-<a href="https://www.sejuku.net/blog/20994" class="blog-card-anchor">
-<div class="blog-card">
-<div class="blog-card-content">
-<div class="blog-card-thumbnail"><img class="blog-card-thumbnail-img" src="https://s3-ap-northeast-1.amazonaws.com/samurai-blog-media/blog/wp-content/uploads/2017/04/JAVA-209941-150x85.jpg"></div>
-<div class="blog-card-title-wrap">
-<div class="blog-card-title">【Java入門】SimpleDateFormatで日付フォーマットの設定</div>
-<div class="blog-card-update-date">更新日 : 2019年5月28日</div>
-</div>
-</div>
-</div>
-</a>
-<p><span class="red_strong">正規表現で簡易的にチェックする方法</span>を次のプログラムで確認してみましょう。</p>
-[日付のチェックをするサンプルコード]
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be1187390847" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -536,7 +539,10 @@ public class Main {
  
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+```
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -593,6 +599,8 @@ true</textarea></div>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be5105843512" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -608,7 +616,10 @@ public class Main {
  
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+```
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -664,6 +675,8 @@ true</textarea></div>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be9304545844" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -679,7 +692,10 @@ public class Main {
  
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+``` 
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -738,6 +754,8 @@ IPv4のIPアドレスは、.(ドット)で区切られた0～255の4つの値な
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bed790164709" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -755,7 +773,10 @@ public class Main {
         System.out.println(m.find());
  
     }
-}</textarea></div>
+}
+```
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -814,6 +835,9 @@ true</textarea></div>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bf3958824701" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -848,7 +872,10 @@ public class Main {
         m = p.matcher(str4);
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+```
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -911,6 +938,8 @@ true</textarea></div>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bf9973872259" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -937,7 +966,10 @@ public class Main {
         m = p.matcher(str3);
         System.out.println(str3 + " = " + m.find());
     }
-}</textarea></div>
+}
+```
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -995,6 +1027,9 @@ Samurai..Engineer@gmail.com = false
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bfd002406925" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
 <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+    
+
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
  
@@ -1010,7 +1045,10 @@ public class Main {
  
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+```
+
+</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
