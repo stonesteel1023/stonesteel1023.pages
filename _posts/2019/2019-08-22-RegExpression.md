@@ -3,9 +3,8 @@
 
 > link : https://www.sejuku.net/blog/13215
 
-se<div class="entry-content">
-<p>こんにちは！エンジニアの中沢です。</p>
-<p><a href="https://www.sejuku.net/blog/3686" target="_blank" rel="noopener">Java</a>には文字列から特定のパターンを検索して、一致する文字列があるかをチェックするための<span class="green_strong">正規表現</span>があります。</p>
+<div class="entry-content">
+<p>Javaには文字列から特定のパターンを検索して、一致する文字列があるかをチェックするための正規表現あります。</p>
 <p>正規表現を使えば文字列の中から数字だけを抽出したり、メールアドレスを抽出することができます。</p>
 <p>この記事では、<br />
 <div class="box01"></p>
@@ -20,20 +19,14 @@ se<div class="entry-content">
 などの基本的な内容から、応用的な使い方に関しても解説していきます。</p>
 <p>さらに、数字やメールアドレスなどのよく使う正規表現の書き方のサンプル一覧もあるので、忘れてしまったらこちらを確認してください。</p>
 <p>今回はこれらの方法を覚えるために、正規表現のさまざまな使い方をわかりやすく解説します！</p>
-<p><div class="box01"><b>イチオシの記事</b></p>
-<ul>
-<li><b>&gt;&gt;<a href="https://www.sejuku.net/blog/59584/?cid=tecv_13215">フリーランスエンジニアを目指すために知るべき4つの真実</a></b></li>
-<li><b>&gt;&gt;<a href="https://www.sejuku.net/blog/60101/?cid=tecv_13215">あなたは大丈夫？プログラミングが上達しない人の共通点</a></b></li>
-</ul>
-</div>
+
 <div id="toc_container" class="no_bullets"><p class="toc_title">この記事の目次</p><ul class="toc_list"><li><a href="#Java"><span class="toc_number toc_depth_1">1</span> Javaの正規表現とは</a></li><li><a href="#i"><span class="toc_number toc_depth_1">2</span> 正規表現の使い方</a><ul><li><a href="#matches"><span class="toc_number toc_depth_2">2.1</span> matchesメソッドでチェックする方法</a></li><li><a href="#Pattern"><span class="toc_number toc_depth_2">2.2</span> パターンの作り方(Patternクラス)</a></li><li><a href="#Matcher"><span class="toc_number toc_depth_2">2.3</span> 一致するかチェックする方法(Matcherクラス)</a></li><li><a href="#i-2"><span class="toc_number toc_depth_2">2.4</span> 一致する複数の文字をすべて抽出する方法</a></li></ul></li><li><a href="#i-3"><span class="toc_number toc_depth_1">3</span> 特殊文字のエスケープ処理について</a></li><li><a href="#i-4"><span class="toc_number toc_depth_1">4</span> 正規表現の書き方サンプル一覧</a><ul><li><a href="#i-5"><span class="toc_number toc_depth_2">4.1</span> 数字のチェック</a></li><li><a href="#i-6"><span class="toc_number toc_depth_2">4.2</span> 英数字のチェック</a></li><li><a href="#i-7"><span class="toc_number toc_depth_2">4.3</span> 日付のチェック</a></li><li><a href="#i-8"><span class="toc_number toc_depth_2">4.4</span> 電話番号のチェック</a></li><li><a href="#i-9"><span class="toc_number toc_depth_2">4.5</span> 郵便番号のチェック</a></li><li><a href="#IPIPv4_IPv6"><span class="toc_number toc_depth_2">4.6</span> IPアドレス(IPv4, IPv6)のチェック</a></li><li><a href="#i-10"><span class="toc_number toc_depth_2">4.7</span> メールアドレスのチェック</a></li><li><a href="#URL"><span class="toc_number toc_depth_2">4.8</span> URLのチェック</a></li></ul></li><li><a href="#i-11"><span class="toc_number toc_depth_1">5</span> まとめ</a></li></ul></div>
 <h2><span id="Java">Javaの正規表現とは</span></h2>
 <p><span class="green_strong">正規表現</span>とは<b>文字列のパターンを一つの形式でまとめて表現するために使うもののこと</b>です。</p>
 <p>例えば、文字列の中から&#8221;123-4567”のような郵便番号を検索したい場合には次のような正規表現の記述を使います。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bc3768885463" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-[0-9]{3}-[0-9]{4}</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -106,10 +99,12 @@ se<div class="entry-content">
 <p>初めに正規表現で指定したパターンと一致するかを確認する簡単な方法として、Stringクラスの<span class="green_strong">matchesメソッド</span>の使い方を解説します。</p>
 <p>matchesメソッドは指定した文字列と正規表現が完全に一致した場合に”true”を返します。一部が一致しただけでは”false&#8221;を返すので注意してください！</p>
 <p>Stringクラスのmatchesメソッドの使い方を次のプログラムで確認してみましょう。</p>
-[matcheメソッドのサンプルコード]
+
+### matcheメソッドのサンプルコード
 
 <div id="crayon-5d5de958a1bc9755813901" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+
+```java
 public class Main {
     public static void main(String[] args) {
 
@@ -122,7 +117,9 @@ public class Main {
         System.out.println(str.matches(".*123-4567.*"));
         System.out.println(str.matches("123-4567"));
     }
-}</textarea></div>
+}
+```
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -135,15 +132,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bcb432730109" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true
-false
-true
-false</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -156,21 +149,21 @@ false</textarea></div>
 </div>
 </div>
 
-このプログラムではmatchesメソッドを使って、正規表現で表現した文字列が含まれているかを判定しています。matchesメソッドは完全一致のときに”true”を返すので、検索したい文字列の前後に他の文字があると”false”を返します。</p>
+このプログラムではmatchesメソッドを使って、正規表現で表現した文字列が含まれているかを判定しています。matchesメソッドは完全一致のときに”true”を返すので、検索したい文字列の前後に他の文字があると”false”を返します。
 <p>そのため、正規表現のパターンの前後に「任意の文字がいくつかある」という意味の「.*」を追加して完全一致させることで”true”を返しています。</p>
-</div>
-</div>
-</a></p>
+
 <h3><span id="Pattern">パターンの作り方(Patternクラス)</span></h3>
 <p>ここではPatternクラスを使って正規表現のパターンを作る方法を解説します。</p>
 <p>正規表現のパターンオブジェクトを作るには、Patternクラスのcompileメソッドの引数に正規表現のパターンを指定します。</p>
 <p>次に、Patternクラスのmatcherメソッドの引数にパターンとマッチさせる文字列を指定してMatcherオブジェクトを作成します。</p>
 <p>正規表現のパターンを作る方法を次のプログラムで確認してみましょう。</p>
-[正規表現のパターンの作り方のサンプルコード]
+
+### 正規表現のパターンの作り方のサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bcd173085216" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -184,7 +177,9 @@ public class Main {
         Pattern p = Pattern.compile("[0-9]{3}-[0-9]{4}");
         Matcher m = p.matcher(str);
     }
-}</textarea></div>
+}
+```
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -203,11 +198,13 @@ public class Main {
 <p>ここではMatcherクラスのfindメソッドを使って、<span class="red_strong">文字列が正規表現のパターンに一致するかをチェックする方法</span>を解説します。</p>
 <p>Matcherクラスのfindメソッドは、文字列の中に正規表現のパターンが含まれる場合に”true”を返し、それ以外の場合には”false”を返します。</p>
 <p>次のプログラムでfindメソッドの使い方を確認してみましょう。</p>
-[findメソッドの使い方のサンプルコード]
+
+### findメソッドの使い方のサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bcf238412064" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -223,7 +220,9 @@ public class Main {
 
         System.out.println(m.find());
     }
-}</textarea></div>
+}
+```
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -236,12 +235,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd0945552279" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -258,11 +256,11 @@ true</textarea></div>
 <h3><span id="i-2">一致する複数の文字をすべて抽出する方法</span></h3>
 <p>ここではMatcherクラスのgroupメソッドを使って、<span class="red_strong">正規表現のパターンに一致した文字列を抽出する方法</span>を解説します。</p>
 <p>groupメソッドはfindメソッドで一致した文字列を返します。次のプログラムで確認してみましょう。</p>
-[groupメソッドのサンプルコード]
+
+### groupメソッドのサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd2500274253" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
 
 ```java
 import java.util.regex.Matcher;
@@ -285,7 +283,6 @@ public class Main {
 }
 ``` 
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -298,13 +295,14 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd4381980823" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+
 一致した部分は : 123-4567
-一致した部分は : 111-2233</textarea></div>
+一致した部分は : 111-2233
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -327,10 +325,11 @@ public class Main {
 <p>エスケープ処理の例は以下のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd6201799099" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+
 \  →  \\\
 *  →  \\*
-{} →  \\{\\}</textarea></div>
+{} →  \\{\\}
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -350,8 +349,9 @@ public class Main {
 <p>数字のチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd7335882549" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^[0-9]+$</textarea></div>
+
+^[0-9]+$
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -366,11 +366,11 @@ public class Main {
 
 <p>
 次のプログラムで確認してみましょう。</p>
-[数字のチェックをするサンプルコード]
+
+### 数字のチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bd9496513020" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
     
 ```java
 import java.util.regex.Matcher;
@@ -391,7 +391,6 @@ public class Main {
 }
 ``` 
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -404,12 +403,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bda012944083" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -426,8 +424,7 @@ true</textarea></div>
 <p>英数字のチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bdb656745243" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^[0-9a-zA-Z]+$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -442,11 +439,11 @@ true</textarea></div>
 
 <p>
 次のプログラムで確認してみましょう。</p>
-[英数字のチェックをするサンプルコード]
+
+### 英数字のチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bdd902497003" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
     
 ```java
 import java.util.regex.Matcher;
@@ -467,7 +464,6 @@ public class Main {
 }
 ```
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -480,12 +476,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bde110765501" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -502,8 +497,7 @@ true</textarea></div>
 <p>日付のチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bdf012796726" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^[0-9]{4}/[0-9]{2}/[0-9]{2}$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -521,7 +515,6 @@ true</textarea></div>
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be1187390847" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
     
 ```java
 import java.util.regex.Matcher;
@@ -542,7 +535,6 @@ public class Main {
 }
 ```
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -555,12 +547,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be2174456946" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -577,8 +568,7 @@ true</textarea></div>
 <p>電話番号のチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be4997122816" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^[0-9]{3}-[0-9]{4}-[0-9]{4}$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -594,11 +584,11 @@ true</textarea></div>
 <p>
 区切りや桁数を変えることで他のパターンの電話番号にも対応できます。</p>
 <p>次のプログラムで確認してみましょう。</p>
-[電話番号のチェックをするサンプルコード]
+
+### 電話番号のチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be5105843512" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
     
 ```java
 import java.util.regex.Matcher;
@@ -619,7 +609,6 @@ public class Main {
 }
 ```
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -632,12 +621,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be6217131078" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -654,8 +642,7 @@ true</textarea></div>
 <p>郵便番号のチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be8445941819" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^[0-9]{3}-[0-9]{4}$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -670,11 +657,11 @@ true</textarea></div>
 
 <p>
 次のプログラムで確認してみましょう。</p>
-[郵便番号のチェックをするサンプルコード]
+
+### 郵便番号のチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1be9304545844" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
     
 ```java
 import java.util.regex.Matcher;
@@ -695,7 +682,6 @@ public class Main {
 }
 ``` 
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -708,12 +694,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bea430642836" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -732,8 +717,7 @@ true</textarea></div>
 <p>IPv4のIPアドレスのチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bec081337518" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^(([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -749,11 +733,12 @@ true</textarea></div>
 <p>
 IPv4のIPアドレスは、.(ドット)で区切られた0～255の4つの値なので、その範囲の値かどうかをチェックしています。</p>
 <p>次のプログラムで確認してみましょう。</p>
-[IPv4のアドレスのチェックをするサンプルコード]
+
+### IPv4のアドレスのチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bed790164709" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
+
     
 ```java
 import java.util.regex.Matcher;
@@ -776,7 +761,6 @@ public class Main {
 }
 ```
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -789,12 +773,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bef147717154" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -811,8 +794,7 @@ true</textarea></div>
 <p>IPv6のIPアドレスのチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bf0387044596" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^\\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))(%.+)?\\s*$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -830,13 +812,12 @@ true</textarea></div>
 リンク先：<a href="https://community.helpsystems.com/forums/intermapper/miscellaneous-topics/5acc4fcf-fa83-e511-80cf-0050568460e4#aac8bffd-fc83-e511-80d0-005056842064">helpsystems.com</a></p>
 <p>IPv6のIPアドレスは省略して書けるためパターンが複雑になります。</p>
 <p>次のプログラムで確認してみましょう。</p>
-[IPv6のアドレスのチェックをするサンプルコード]
+
+### IPv6のアドレスのチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bf3958824701" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-    
-    
+
 ```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -875,7 +856,6 @@ public class Main {
 }
 ```
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -888,15 +868,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bf6862146072" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true
-true
-true
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -913,8 +889,7 @@ true</textarea></div>
 <p>メールアドレスのチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bf7932610548" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^(([0-9a-zA-Z!#\\$%&amp;'\\*\\+\\-/=\\?\\^_`\\{\\}\\|~]+(\\.[0-9a-zA-Z!#\\$%&amp;'\\*\\+\\-/=\\?\\^_`\\{\\}\\|~]+)*)|(\"[^\"]*\"))@[0-9a-zA-Z!#\\$%&amp;'\\*\\+\\-/=\\?\\^_`\\{\\}\\|~]+(\\.[0-9a-zA-Z!#\\$%&amp;'\\*\\+\\-/=\\?\\^_`\\{\\}\\|~]+)*$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -933,11 +908,11 @@ true</textarea></div>
 <p>そのため、英数字の他にも記号を含むパターンを作成しています。エスケープ処理が必要な記号もあるので間違えないように気をつけましょう！</p>
 <p>次に、.(ドット)が2つ以上連続してはいけないのでそれもチェックしています。ただし、”(ダブルクォーテーション)で囲んだ場合は.(ドット)が2つ以上連続してもOKなので、それも判定しています。</p>
 <p>次のプログラムで確認してみましょう。</p>
-[メールアドレスのチェックをするサンプルコード]
+
+### メールアドレスのチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bf9973872259" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
     
 ```java
 import java.util.regex.Matcher;
@@ -969,7 +944,6 @@ public class Main {
 }
 ```
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -982,14 +956,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bfb107983660" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-Samurai+Engineer.123@gmail.com = true
-Samurai..Engineer@gmail.com = false
-"Samurai..Engineer"@gmail.com = true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -1006,8 +977,7 @@ Samurai..Engineer@gmail.com = false
 <p>URLのチェックをする正規表現のパターンは次のとおりです。</p>
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bfc646726037" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-^https?://[a-z\\.:/\\+\\-\\#\\?\\=\\&amp;\\;\\%\\~]+$</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -1022,12 +992,11 @@ Samurai..Engineer@gmail.com = false
 
 <p>
 次のプログラムで確認してみましょう。</p>
-[URLのチェックをするサンプルコード]
+
+### URLのチェックをするサンプルコード
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bfd002406925" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-    
 
 ```java
 import java.util.regex.Matcher;
@@ -1048,7 +1017,6 @@ public class Main {
 }
 ```
 
-</textarea></div>
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
@@ -1061,12 +1029,11 @@ public class Main {
 </div>
 </div>
 
-[実行結果]
+### 実行結果
 
 <link rel="stylesheet" type="text/css" href="https://www.sejuku.net/blog/wp-content/plugins/crayon-syntax-highlighter/themes/tomorrow-night/tomorrow-night.css" />
 <div id="crayon-5d5de958a1bff394109116" class="crayon-syntax crayon-theme-tomorrow-night crayon-font-liberation-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-bottom: 6px; font-size: 15px !important; line-height: 22px !important;">
-<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 15px !important; line-height: 22px !important;">
-true</textarea></div>
+
 <div class="crayon-main" style="">
 <table class="crayon-table">
 <tr class="crayon-row">
