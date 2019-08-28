@@ -2,7 +2,7 @@
 layout : post
 date : 2019-08-28 10:30
 title : "이중 for문 성능개선"
-comment : true
+comments : true
 tag : java
 ---
 
