@@ -1,7 +1,10 @@
 # 브라우저에 뜨는 에러메시지 : 리다이렉션한 횟수가 너무 많습니다
 
+## 가장 먼저, 쿠키를 지워서 해결되는지 확인
+- 크롬의 경우 브라우저 설정에서 쿠키 삭제 
+- CTR + SHIFT + F5 시도
 
-## 출처 : !(디스프로그래머님 블로그)[https://this-programmer.com/entry/%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98%ED%95%9C-%ED%9A%9F%EC%88%98%EA%B0%80-%EB%84%88%EB%AC%B4-%EB%A7%8E%EC%8A%B5%EB%8B%88%EB%8B%A4]
+## 출처 : [디스프로그래머님 블로그](https://this-programmer.com/entry/%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98%ED%95%9C-%ED%9A%9F%EC%88%98%EA%B0%80-%EB%84%88%EB%AC%B4-%EB%A7%8E%EC%8A%B5%EB%8B%88%EB%8B%A4)
 
 - 가끔씩 뭔가 뚜렷한 전조증상 없이 이 에러가 뜨는 경우가 있는데 
 이유는 서버에서 링크이동이 반복해서 이뤄지게 됐을 때 브라우저가 임의로 이 에러를 일으키는 것이다. 
