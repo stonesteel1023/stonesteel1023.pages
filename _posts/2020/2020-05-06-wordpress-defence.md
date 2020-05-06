@@ -1,5 +1,5 @@
 # 워드프레스(WordPress) xmlrpc.php 취약점 공격 막는 방법
-- 스크랩 : https://www.itopening.com/379/ , ![그외](https://www.thewordcracker.com/intermediate/%EC%9B%8C%EB%93%9C%ED%94%84%EB%A0%88%EC%8A%A4-xmlrpc-php%EB%A5%BC-%ED%86%B5%ED%95%9C-brute-force-%EA%B3%B5%EA%B2%A9-%EC%B0%A8%EB%8B%A8%ED%95%98%EA%B8%B0/)
+- 스크랩 : https://www.itopening.com/379/ , [그외](https://www.thewordcracker.com/intermediate/%EC%9B%8C%EB%93%9C%ED%94%84%EB%A0%88%EC%8A%A4-xmlrpc-php%EB%A5%BC-%ED%86%B5%ED%95%9C-brute-force-%EA%B3%B5%EA%B2%A9-%EC%B0%A8%EB%8B%A8%ED%95%98%EA%B8%B0/)
 
 
 개인홈페이지 및 블로그 운영을 하다보면 신경써야될 문제들이 한 두가지가 아니다. 
@@ -31,4 +31,9 @@ allow from 123.123.123.123
 
 allow from 부분에서는 접근 허용하고 싶은 ip를 입력해주면 된다. 위와 같이 처리하면 더 이상 xmlrpc.php 공격을 당하지 않게 된다.
 
-# 그외 방법 - 보안 플러그인에서 XML-RPC 비활성화 설정하기, XML-RPC 비활성화 플러그인 사용
+# 그외 방법
+## 보안 플러그인에서 XML-RPC 비활성화 설정하기, XML-RPC 비활성화 플러그인 사용
+
+- iThemes Security 같은 일부 보안 플러그인에서 XML-RPC를 비활성화하는 옵션을 제공합니다. iThemes에서는 워드프레스 알림판 > Security > Settings > WordPress Tweaks로 이동하여 XML-RPC 옵션을 "Disable XML-PRC"로 설정하면 됩니다.
+
+- XML-RPC를 비활성화하기 위해 플러그인까지 사용하는 것은 별로 바람직하지 않지만, FTP에 접속할 수 없는 경우 워드프레스 알림판 > 플러그인 > 새로 추가로 이동하여 disable xml-rpc를 검색하여 Disable XML-RPC 또는 manage-xml-rpc 플러그인을 설치하여 활성화할 수 있습니다.
