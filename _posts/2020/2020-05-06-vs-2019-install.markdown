@@ -1,0 +1,16 @@
+# 개발툴 Visual Studio 2019 professional 도입
+
+## vs 2019 pro(약칭) 스펙
+- https://visualstudio.microsoft.com/ko/vs/ (마이크로소프트)
+  - 최소사양 : CPU 클럭 1.8GHz, 쿼드 코어 CPU, 메모리 용량도 최소 용량은 2GB이지만 권장 용량은 8GB
+- https://namu.wiki/w/%EB%B9%84%EC%A3%BC%EC%96%BC%20%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4#s-4.12 (나무위키)
+
+### 현재 회사 컴퓨터 사양
+- https://ark.intel.com/content/www/kr/ko/ark/products/126686/intel-core-i7-8700-processor-12m-cache-up-to-4-60-ghz.html
+  - 8세대 인텔® 코어™ i7 프로세서(i7-8700)
+
+## 가격
+- 월간 구독($45/매월)
+- 표준 구독($1,199첫해갱신/$799구독 갱신) 영구 라이센스
+
+### 회사에서 마이크로소프트에서 비영리 승인받은 후 영구 라이센스 구입 
