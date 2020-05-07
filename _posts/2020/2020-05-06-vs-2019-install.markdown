@@ -12,7 +12,7 @@
 ## 가격
 - 월간 구독($45/매월)
 - 표준 구독($1,199첫해갱신/$799구독 갱신) 영구 라이센스
-- 그런데 11번가에tj 556,740원? ![vs2019pro](https://user-images.githubusercontent.com/36417514/81247390-d8f7ea00-9054-11ea-8a73-3032a9efbc18.JPG)
+- 그런데 11번가에서 556,740원? ![vs2019pro](https://user-images.githubusercontent.com/36417514/81247390-d8f7ea00-9054-11ea-8a73-3032a9efbc18.JPG)
 
 
 ### 회사에서 마이크로소프트에서 비영리 승인받은 후 영구 라이센스 구입
