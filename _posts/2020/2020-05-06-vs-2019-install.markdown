@@ -59,7 +59,7 @@ Visual Studio 클라우드 구독을 갱신해야 하세요? Visual Studio 제�
 
 - 참조
 
-+ [Visual Studio 설명서]( https://docs.microsoft.com/visualstudio/ )
-+ [Azure DevOps 설명서]( https://docs.microsoft.com/azure/devops/ )
-+ [Azure 설명서]( https://docs.microsoft.com/azure/ )
-+ [Microsoft 365 설명서]( https://docs.microsoft.com/microsoft-365/ )
+  + [Visual Studio 설명서]( https://docs.microsoft.com/visualstudio/ )
+  + [Azure DevOps 설명서]( https://docs.microsoft.com/azure/devops/ )
+  + [Azure 설명서]( https://docs.microsoft.com/azure/ )
+  + [Microsoft 365 설명서]( https://docs.microsoft.com/microsoft-365/ )
